@@ -1,6 +1,6 @@
 # Overview of software potentially affected by php2shell
 
-This directory contains an overview of software products that may be affected by CVE-2026-109618 and CVE-2026-109619. As of 21 October 2026, PHP has not yet published affected or fixed versions, so entries should be treated as investigation leads until they are backed by an upstream or vendor source.
+This directory contains an overview of software products that may be affected by CVE-2026-109618 and CVE-2026-109619. PHP's official advisory states that all PHP installations serving web requests are at risk and identifies PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35 as fixed upstream releases. Product entries should still be treated as investigation leads until they are backed by an upstream or vendor source, because products may ship embedded runtimes, delayed rebuilds or vendor backports.
 
 Please note that these vulnerabilities may also occur in custom PHP applications deployed within your organisation. Those occurrences are not registered in this overview.
 
@@ -19,6 +19,8 @@ The following status labels are in use:
 The `Version` column in the software list relates to the status of the entry. For `Vulnerable`, it identifies known vulnerable versions when available. For `Fix`, it identifies the version in which the fix was introduced.
 
 See [software_list.md](software_list.md) for the current list.
+
+For upstream PHP remediation guidance, see the [official PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5).
 
 The source of truth for this overview is the SPDX document(s) in [spdx](spdx/). The alphabetized Markdown pages are generated automatically from that data using the tooling in [../tools](../tools/). Status values in the current list are derived from the VEX assessment relationships in the SPDX document.
 
