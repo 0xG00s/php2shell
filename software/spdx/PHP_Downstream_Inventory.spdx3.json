@@ -3831,7 +3831,9 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:4292cdcd32c3",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f70b575bbd8c",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9f0e21803ee8",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9f0e21803ee8"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9f0e21803ee8",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:b3d5811e7062",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:b3d5811e7062"
       ]
     },
     {
@@ -16512,7 +16514,7 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cloudlinux-tuxcare:f11bd01ef3af",
-      "summary": "CloudLinux documents separately installed Alt-PHP families and PHP Selector\u2019s per-user version and module configuration.",
+      "summary": "CloudLinux identifies Alt-PHP as affected by CVE-2026-109618 and CVE-2026-109619; affected versions are not specified.",
       "description": "Parallel /opt/alt/phpXX PHP builds and selected user extensions",
       "comment": "Inventory record: PHP-0387\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Parallel /opt/alt/phpXX PHP builds and selected user extensions\nPHP version scope: CloudLinux version/OS compatibility matrix includes legacy and 8.x families through 8.5; exact RPM/DEB build and backports unresolved\nExtensions: Per-user selected modules and version defaults differ; complete required and loaded list unknown\nLimitations: Alt-PHP is not the same package family as ea-PHP. Extension selection does not enable modules in every PHP version. CageFS/LVE prerequisites and a single-user mode do not prove deployed isolation. No package/image was installed, pulled, built, executed or tested. No deployment, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied.\nPatch owner: CloudLinux/TuxCare for Alt-PHP packages and covered backports; hosting operator for entitlements, updates and selected-user configuration\nDownstream surface: Only the named PHP component and its callers\nRelease pin: Moving official documentation; immutable runtime build pin pending\nSource accessed: 2026-10-17\nAliases: cloudlinux:alt-php, cloudlinux:php-selector-runtimes\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through customer application inputs, possible effects include worker denial of service, disclosure of app-accessible secrets, data modification or code execution with the worker identity. Crossing customer, container or provider boundaries requires separate evidence; runtime presence alone establishes none of these outcomes.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
       "externalRef": [
@@ -16523,6 +16525,14 @@
             "https://docs.cloudlinux.com/cloudlinuxos/cloudlinux_os_components/"
           ],
           "comment": "Official PHP component, runtime or hosting declaration"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5"
+          ],
+          "comment": "CloudLinux - Critical PHP vulnerabilities CVE-2026-109618 / CVE-2026-109619"
         }
       ]
     },
@@ -31201,6 +31211,14 @@
         },
         {
           "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5"
+          ],
+          "comment": "CloudLinux - Critical PHP vulnerabilities CVE-2026-109618 / CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
           "externalRefType": "securityOther",
           "locator": [
             "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/"
@@ -31291,6 +31309,14 @@
             "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
           ],
           "comment": "Plesk - Vulnerability CVE-2026-109618 and CVE-2026-109619: Remote code execution in PHP shipped with Plesk"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5"
+          ],
+          "comment": "CloudLinux - Critical PHP vulnerabilities CVE-2026-109618 / CVE-2026-109619"
         },
         {
           "type": "ExternalRef",
@@ -31945,7 +31971,6 @@
         "urn:php2shell:inventory:package:PHP-0382",
         "urn:php2shell:inventory:package:PHP-0384",
         "urn:php2shell:inventory:package:PHP-0385",
-        "urn:php2shell:inventory:package:PHP-0387",
         "urn:php2shell:inventory:package:PHP-0388",
         "urn:php2shell:inventory:package:PHP-0389",
         "urn:php2shell:inventory:package:PHP-0390",
@@ -32661,7 +32686,6 @@
         "urn:php2shell:inventory:package:PHP-0382",
         "urn:php2shell:inventory:package:PHP-0384",
         "urn:php2shell:inventory:package:PHP-0385",
-        "urn:php2shell:inventory:package:PHP-0387",
         "urn:php2shell:inventory:package:PHP-0388",
         "urn:php2shell:inventory:package:PHP-0389",
         "urn:php2shell:inventory:package:PHP-0390",
@@ -32803,6 +32827,34 @@
       "security_actionStatement": "Apply fixed Plesk PHP packages when available from Plesk.",
       "summary": "CVE-2026-109619 assessment: Affected: all PHP versions shipped with Plesk",
       "comment": "Added from the Plesk security advisory published 2026-10-20."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:b3d5811e7062",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0387"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: CloudLinux OS Components (Alt-PHP); affected versions unspecified",
+      "security_actionStatement": "Apply updated Alt-PHP packages when available from CloudLinux.",
+      "summary": "CVE-2026-109618 assessment: Affected: CloudLinux OS Components (Alt-PHP); affected versions unspecified",
+      "comment": "Added from the CloudLinux incident notice published 2026-10-20."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:b3d5811e7062",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0387"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: CloudLinux OS Components (Alt-PHP); affected versions unspecified",
+      "security_actionStatement": "Apply updated Alt-PHP packages when available from CloudLinux.",
+      "summary": "CVE-2026-109619 assessment: Affected: CloudLinux OS Components (Alt-PHP); affected versions unspecified",
+      "comment": "Added from the CloudLinux incident notice published 2026-10-20."
     }
   ]
 }
