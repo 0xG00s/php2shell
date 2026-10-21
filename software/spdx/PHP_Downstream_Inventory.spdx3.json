@@ -3272,6 +3272,7 @@
         "urn:php2shell:inventory:package:PHP-0630",
         "urn:php2shell:inventory:package:PHP-0631",
         "urn:php2shell:inventory:package:PHP-0632",
+        "urn:php2shell:inventory:package:PHP-0633",
         "urn:php2shell:inventory:relationship:PHP-0001",
         "urn:php2shell:inventory:relationship:PHP-0002",
         "urn:php2shell:inventory:relationship:PHP-0003",
@@ -3873,6 +3874,7 @@
         "urn:php2shell:inventory:relationship:PHP-0629",
         "urn:php2shell:inventory:relationship:PHP-0631",
         "urn:php2shell:inventory:relationship:PHP-0632",
+        "urn:php2shell:inventory:relationship:PHP-0633",
         "urn:php2shell:inventory:relationship:PHP-0627:parent",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
@@ -3905,7 +3907,9 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:53d7de272a14",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:53d7de272a14",
         "urn:php2shell:inventory:vex:CVE-2026-109618:doesNotAffect:f13f6e246bc6",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:f13f6e246bc6"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:f13f6e246bc6",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:c140e8fdd7e2",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:c140e8fdd7e2"
       ]
     },
     {
@@ -24516,6 +24520,35 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0633",
+      "creationInfo": "_:creationinfo",
+      "name": "Red Hat Enterprise Linux 9 php:8.2 module",
+      "software_primaryPurpose": "other",
+      "software_packageVersion": "8.2.35-1.module+el9.8.0+25111+a1450321",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0633"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:red-hat:2c30c5da9571",
+      "summary": "Red Hat RHSA-2026:87072 provides fixed RHEL 9 php:8.2 module packages for CVE-2026-109618 and CVE-2026-109619.",
+      "description": "Red Hat Enterprise Linux 9 php:8.2 module packages",
+      "comment": "Inventory record: PHP-0633\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed fixed package\nDeployment status: Not measured\nPHP surface: RHEL 9 php:8.2 module packages\nPHP version scope: RHSA-2026:87072 lists php-8.2.35-1.module+el9.8.0+25111+a1450321.src.rpm as an updated package for affected RHEL 9 variants.\nLimitations: This advisory confirms the php:8.2 module scope only. Other RHEL 9 PHP RPM/AppStream branches remain outside this advisory scope and require separate vendor evidence.\nPatch owner: Red Hat for supported backported RPMs/AppStreams; subscriber/operator for update and restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: RHSA-2026:87072 issued and updated 2026-10-21\nSource accessed: 2026-10-21\nAliases: rhel9:php:8.2\nVulnerability status: Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321.\nCVE-2026-109618: Fixed in php-8.2.35-1.module+el9.8.0+25111+a1450321\nCVE-2026-109619: Fixed in php-8.2.35-1.module+el9.8.0+25111+a1450321\nCVE assessment limit: Vendor advisory establishes fixed package scope, not deployment status or whether an operator has applied the update.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://access.redhat.com/errata/RHSA-2026:87072"
+          ],
+          "comment": "Red Hat RHSA-2026:87072 - Important: php:8.2 security update"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -31729,6 +31762,18 @@
     },
     {
       "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0633",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0633",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0633: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0627:parent",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:package:PHP-0626",
@@ -33610,6 +33655,34 @@
       "security_impactStatement": "PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
       "summary": "CVE-2026-109619 assessment: PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
       "comment": "Added from supplier email confirmation."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:c140e8fdd7e2",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0633"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
+      "security_actionStatement": "Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems.",
+      "summary": "CVE-2026-109618 assessment: Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
+      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:c140e8fdd7e2",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0633"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
+      "security_actionStatement": "Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems.",
+      "summary": "CVE-2026-109619 assessment: Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
+      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21."
     }
   ]
 }
