@@ -2097,6 +2097,12 @@
     },
     {
       "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:trend-micro:ddb8e439b1bf",
+      "creationInfo": "_:creationinfo",
+      "name": "Trend Micro"
+    },
+    {
+      "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:turnkey-linux:b8edb376138d",
       "creationInfo": "_:creationinfo",
       "name": "TurnKey Linux"
@@ -3264,6 +3270,8 @@
         "urn:php2shell:inventory:package:PHP-0628",
         "urn:php2shell:inventory:package:PHP-0629",
         "urn:php2shell:inventory:package:PHP-0630",
+        "urn:php2shell:inventory:package:PHP-0631",
+        "urn:php2shell:inventory:package:PHP-0632",
         "urn:php2shell:inventory:relationship:PHP-0001",
         "urn:php2shell:inventory:relationship:PHP-0002",
         "urn:php2shell:inventory:relationship:PHP-0003",
@@ -3863,6 +3871,8 @@
         "urn:php2shell:inventory:relationship:PHP-0627",
         "urn:php2shell:inventory:relationship:PHP-0628",
         "urn:php2shell:inventory:relationship:PHP-0629",
+        "urn:php2shell:inventory:relationship:PHP-0631",
+        "urn:php2shell:inventory:relationship:PHP-0632",
         "urn:php2shell:inventory:relationship:PHP-0627:parent",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
@@ -24450,6 +24460,62 @@
       "comment": "Source: Supplier email\nEvidence: Supplier confirmed that PHP is not used in iBabs.\nVulnerability status: Not affected because the PHP component is not present."
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0631",
+      "creationInfo": "_:creationinfo",
+      "name": "Apex One",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0631"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:trend-micro:ddb8e439b1bf",
+      "summary": "Trend Micro's critical-patch readme states that a PHP module is used in Apex One and records an update to PHP 8.2.30.",
+      "description": "Bundled PHP module in the Apex One server; exact SAPI and reachable paths unspecified",
+      "comment": "Inventory record: PHP-0631\nCategory: Monitoring and administration\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Bundled PHP module in the Apex One server; exact SAPI and reachable paths unspecified\nPHP version scope: Apex One Service Pack 1 Critical Patch Server Build 20105 readme includes prior Critical Patch 18012 text stating that the PHP module used in Apex One was updated to 8.2.30.\nLimitations: The vendor readme confirms a PHP module in Apex One, but does not identify CVE-2026-109618 or CVE-2026-109619, affected/fixed product builds, enabled features, reachability or deployment status.\nPatch owner: Trend Micro for bundled product components; operator for patch rollout\nDownstream surface: Apex One server and management interfaces\nRelease pin: Apex One Service Pack 1 Critical Patch Server Build 20105 readme; last updated 2026-10-08\nSource accessed: 2026-10-21\nAliases: Trend Micro Apex One\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Vendor readme confirms a bundled PHP component, but not applicability of the reviewed CVEs.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://files.trendmicro.com/documentation/readme/Apex%20One/2020/apex_one_2019_win_cp_b20105_EN_hotfix_Readme.html"
+          ],
+          "comment": "Official Trend Micro Apex One critical patch readme"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0632",
+      "creationInfo": "_:creationinfo",
+      "name": "Apex Central",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0632"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:trend-micro:ddb8e439b1bf",
+      "summary": "Trend Micro's hotfix readme lists PHP 8.2.33 among Apex Central third-party modules updated to prevent potential vulnerabilities.",
+      "description": "Bundled PHP module in the Apex Central server; exact SAPI and reachable paths unspecified",
+      "comment": "Inventory record: PHP-0632\nCategory: Monitoring and administration\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Bundled PHP module in the Apex Central server; exact SAPI and reachable paths unspecified\nPHP version scope: Apex Central Hotfix Build 7328 readme lists PHP 8.2.33 among third-party modules updated to prevent potential vulnerabilities.\nLimitations: The vendor readme confirms a PHP module in Apex Central, but does not identify CVE-2026-109618 or CVE-2026-109619, affected/fixed product builds, enabled features, reachability or deployment status.\nPatch owner: Trend Micro for bundled product components; operator for patch rollout\nDownstream surface: Apex Central server and management interfaces\nRelease pin: Apex Central Hotfix Build 7328 readme; last updated 2026-10-06\nSource accessed: 2026-10-21\nAliases: Trend Micro Apex Central\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Vendor readme confirms a bundled PHP component, but not applicability of the reviewed CVEs.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://files.trendmicro.com/documentation/readme/CP/apexcentral_win_en_criticalpatch_b7328_Readme.html"
+          ],
+          "comment": "Official Trend Micro Apex Central hotfix readme"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -31639,6 +31705,30 @@
     },
     {
       "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0631",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0631",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0631: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0632",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0632",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0632: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0627:parent",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:package:PHP-0626",
@@ -32593,7 +32683,9 @@
         "urn:php2shell:inventory:package:PHP-0626",
         "urn:php2shell:inventory:package:PHP-0627",
         "urn:php2shell:inventory:package:PHP-0628",
-        "urn:php2shell:inventory:package:PHP-0629"
+        "urn:php2shell:inventory:package:PHP-0629",
+        "urn:php2shell:inventory:package:PHP-0631",
+        "urn:php2shell:inventory:package:PHP-0632"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
@@ -33310,7 +33402,9 @@
         "urn:php2shell:inventory:package:PHP-0626",
         "urn:php2shell:inventory:package:PHP-0627",
         "urn:php2shell:inventory:package:PHP-0628",
-        "urn:php2shell:inventory:package:PHP-0629"
+        "urn:php2shell:inventory:package:PHP-0629",
+        "urn:php2shell:inventory:package:PHP-0631",
+        "urn:php2shell:inventory:package:PHP-0632"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
