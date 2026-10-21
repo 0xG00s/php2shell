@@ -2558,6 +2558,36 @@
       "name": "webonyx / GraphQL-PHP project"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:palo-alto-networks:02fbd33c10a8",
+      "creationInfo": "_:creationinfo",
+      "name": "Palo Alto Networks"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "creationInfo": "_:creationinfo",
+      "name": "NetScaler / Citrix, Cloud Software Group"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:f5:6cd28ed32abf",
+      "creationInfo": "_:creationinfo",
+      "name": "F5"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
+      "creationInfo": "_:creationinfo",
+      "name": "Fortinet"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:juniper-networks:d899c5f10f6d",
+      "creationInfo": "_:creationinfo",
+      "name": "Juniper Networks"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -3220,6 +3250,13 @@
         "urn:php2shell:inventory:package:PHP-0620",
         "urn:php2shell:inventory:package:PHP-0621",
         "urn:php2shell:inventory:package:PHP-0622",
+        "urn:php2shell:inventory:package:PHP-0623",
+        "urn:php2shell:inventory:package:PHP-0624",
+        "urn:php2shell:inventory:package:PHP-0625",
+        "urn:php2shell:inventory:package:PHP-0626",
+        "urn:php2shell:inventory:package:PHP-0627",
+        "urn:php2shell:inventory:package:PHP-0628",
+        "urn:php2shell:inventory:package:PHP-0629",
         "urn:php2shell:inventory:relationship:PHP-0001",
         "urn:php2shell:inventory:relationship:PHP-0002",
         "urn:php2shell:inventory:relationship:PHP-0003",
@@ -3812,6 +3849,14 @@
         "urn:php2shell:inventory:relationship:PHP-0618",
         "urn:php2shell:inventory:relationship:PHP-0619",
         "urn:php2shell:inventory:relationship:PHP-0620",
+        "urn:php2shell:inventory:relationship:PHP-0623",
+        "urn:php2shell:inventory:relationship:PHP-0624",
+        "urn:php2shell:inventory:relationship:PHP-0625",
+        "urn:php2shell:inventory:relationship:PHP-0626",
+        "urn:php2shell:inventory:relationship:PHP-0627",
+        "urn:php2shell:inventory:relationship:PHP-0628",
+        "urn:php2shell:inventory:relationship:PHP-0629",
+        "urn:php2shell:inventory:relationship:PHP-0627:parent",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
         "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:5d17eab4e4a1",
@@ -24087,6 +24132,258 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0623",
+      "creationInfo": "_:creationinfo",
+      "name": "PAN-OS",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0623"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:palo-alto-networks:02fbd33c10a8",
+      "summary": "12.2 catalogue includes PHP; older-branch advisory identifies management PHP. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "12.2 catalogue includes PHP; older-branch advisory identifies management PHP.",
+      "comment": "Inventory record: PHP-0623\nEdge inventory record: EDGE-001\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Network firewall; scoped management interface\nPHP surface: 12.2 catalogue includes PHP; older-branch advisory identifies management PHP.\nPHP version scope: 12.2 list: PHP 8.0.30 plus related packages. Management-role advisory: 10.1/10.2/11.1/11.2 scopes.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Do not transfer older management implementation to 12.2, or infer PHP in packet inspection/forwarding.\nPatch owner: Palo Alto Networks for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Stopping the whole firewall could interrupt traffic through it if an alternative path/failover does not preserve connectivity.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.paloaltonetworks.com/oss-listings/pan-os-oss-listings/pan-os-12-2-open-source-software-oss-listing"
+          ],
+          "comment": "Project Initium edge evidence - PAN-OS 12.2 OSS Listing"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://security.paloaltonetworks.com/CVE-2025-0108"
+          ],
+          "comment": "Project Initium edge evidence - Management PHP role: CVE-2025-0108 advisory"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0624",
+      "creationInfo": "_:creationinfo",
+      "name": "NetScaler ADC",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0624"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "summary": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.",
+      "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: 14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.\nPHP version scope: 14.1 FreeBSD pooled notice: PHP 8.0.16. Legacy 12.1 notice in master: PHP 7.0.13. Current patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Do not extend PHP evidence to all Gateway login/VPN paths, BLX/CPX, SDX or NetScaler Console by association.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://www.citrix.com/content/dam/citrix/en_us/documents/downloads/netscaler-adc/NetScaler_ADC_ADM_FreeBSD_14.1_Third_Party_Notices.pdf"
+          ],
+          "comment": "Project Initium edge evidence - ADC/ADM 14.1 FreeBSD third-party notices"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://prod-docs.netscaler.com/en-us/citrix-adc/current-release/application-firewall/signatures/signature-auto-update"
+          ],
+          "comment": "Project Initium edge evidence - 14.1 administration PHP controller"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0625",
+      "creationInfo": "_:creationinfo",
+      "name": "Panorama",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0625"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:palo-alto-networks:02fbd33c10a8",
+      "summary": "12.2 catalogue includes PHP; its precise active function is not established. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "12.2 catalogue includes PHP; its precise active function is not established.",
+      "comment": "Inventory record: PHP-0625\nEdge inventory record: EDGE-003\nCategory: Appliances and embedded\nScope group: Adjacent central management\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Central firewall configuration, updates and logging\nPHP surface: 12.2 catalogue includes PHP; its precise active function is not established.\nPHP version scope: 12.2 list: PHP 8.0.30; CLI, embedded, FPM and related packages. No firmware digest.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: A central manager can affect several devices, but this does not establish equivalent authority for its PHP process.\nPatch owner: Palo Alto Networks for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: Only if the affected PHP function has access to management data/actions could those be misused. The PHP-to-controller permission path is unknown.\nPHP component loss: Unknown: package inclusion does not identify the PHP-dependent management or logging function.\nWhole appliance loss: Whole-manager shutdown could obstruct central changes, updates or logging. It does not establish that every managed firewall stops forwarding.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.paloaltonetworks.com/oss-listings/panorama-oss-listings/panorama-12-2-open-source-software-oss-listing"
+          ],
+          "comment": "Project Initium edge evidence - Panorama 12.2 OSS Listing"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.paloaltonetworks.com/panorama/getting-started/panorama-overview/about-panorama"
+          ],
+          "comment": "Project Initium edge evidence - About Panorama"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0626",
+      "creationInfo": "_:creationinfo",
+      "name": "BIG-IP TMOS platform PHP",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0626"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:f5:6cd28ed32abf",
+      "summary": "Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text.",
+      "comment": "Inventory record: PHP-0626\nEdge inventory record: EDGE-004\nCategory: Appliances and embedded\nScope group: Platform component\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Appliance platform; administration uploads indicated\nPHP surface: Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text.\nPHP version scope: F5 issue ID1270257: opened 2023, modified 2025. Current PHP version/build unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: All modules in the issue record is a platform scope, not a statement that every module or packet path is PHP.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole BIG-IP shutdown could interrupt the application-delivery/access/security functions actually provisioned on that unit.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://cdn.f5.com/product/bugtracker/ID1270257.html"
+          ],
+          "comment": "Project Initium edge evidence - BIG-IP PHP issue record ID 1270257"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://my.f5.com/manage/s/article/K000133753"
+          ],
+          "comment": "Project Initium edge evidence - Configuration-utility PHP role: K000133753"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0627",
+      "creationInfo": "_:creationinfo",
+      "name": "BIG-IP APM PHP page templates",
+      "software_primaryPurpose": "module",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0627"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:f5:6cd28ed32abf",
+      "summary": "F5 explicitly documents PHP inside APM UI templates. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "F5 explicitly documents PHP inside APM UI templates.",
+      "comment": "Inventory record: PHP-0627\nEdge inventory record: EDGE-005\nCategory: Appliances and embedded\nScope group: User access component\nOriginal relationship: component\nRelationship direction: depends_on_php\nParent component: PHP-0626 (EDGE-004)\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: User access: logon, access-profile and webtop pages\nPHP surface: F5 explicitly documents PHP inside APM UI templates.\nPHP version scope: Version-labelled 16.1 guide with moving Applies To list; Modern/Standard template sets differ. Exact runtime unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This is a component of BIG-IP, not another device. Browser/mobile/Edge Client pages do not prove PHP executes on those clients.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching PHP page function is compromised, information it handles or page behaviour could be misused. Credential/session theft or access-policy control needs evidence of the actual path and permissions.\nPHP component loss: Relevant logon/webtop/access pages may fail. Effects on existing sessions and non-page VPN traffic remain unestablished.\nWhole appliance loss: Whole provisioned APM/BIG-IP shutdown can interrupt remote access and applications behind it, subject to actual redundancy.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-access-policy-manager-customization/coding-tips-and-examples.html"
+          ],
+          "comment": "Project Initium edge evidence - APM Advanced Customization Coding"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-access-policy-manager-customization/advanced-customization-using-logon-page-templates.html"
+          ],
+          "comment": "Project Initium edge evidence - APM Advanced Customization Using Templates"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0628",
+      "creationInfo": "_:creationinfo",
+      "name": "FortiADC",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0628"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
+      "summary": "7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text.",
+      "comment": "Inventory record: PHP-0628\nEdge inventory record: EDGE-006\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery; PHP-FPM management processes\nPHP surface: 7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text.\nPHP version scope: FortiADC 7.4.8 CLI Reference, printed page 563; 7.4.11 troubleshooting excerpt. PHP patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: An official process example is not a live device observation. Do not attribute the separate load-balancing process to PHP.\nPatch owner: Fortinet for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could make the applications/services it fronts unavailable unless another route/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://fortinetweb.s3.amazonaws.com/docs.fortinet.com/v2/attachments/db39ff41-6283-11f0-a9d0-d2b0d2e22f7d/fortiadc-v7.4.8-cli-reference-guide.pdf"
+          ],
+          "comment": "Project Initium edge evidence - FortiADC 7.4.8 CLI Reference"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs2.fortinet.com/document/fortiadc/7.4.11/handbook/406890/solutions-by-issue-type"
+          ],
+          "comment": "Project Initium edge evidence - FortiADC 7.4.11: Solutions by issue type"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0629",
+      "creationInfo": "_:creationinfo",
+      "name": "Junos OS J-Web (EX/SRX scope)",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0629"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:juniper-networks:d899c5f10f6d",
+      "summary": "Juniper-authored CVE record expressly identifies PHP in J-Web; later vendor bulletin corroborates inclusion. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "description": "Juniper-authored CVE record expressly identifies PHP in J-Web; later vendor bulletin corroborates inclusion.",
+      "comment": "Inventory record: PHP-0629\nEdge inventory record: EDGE-019\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Network/security device web administration\nPHP surface: Juniper-authored CVE record expressly identifies PHP in J-Web; later vendor bulletin corroborates inclusion.\nPHP version scope: Historical 2023 EX/SRX CNA scope; 2024 indexed JSA88120 through23.4. Exact current PHP build unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Only the named J-Web/release scope is supported. Enabling conditions of an older flaw are not automatically those of the 2026 pair.\nPatch owner: Juniper Networks for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole SRX/EX shutdown could interrupt firewall/switch connectivity. Disabling only J-Web is a narrower scenario; actual remaining operations must be verified.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://raw.githubusercontent.com/CVEProject/cvelistV5/main/cves/2023/36xxx/CVE-2023-36845.json"
+          ],
+          "comment": "Project Initium edge evidence - CVE-2023-36845 vendor record"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://supportportal.juniper.net/s/article/2024-10-Security-Bulletin-Junos-OS-J-Web-Multiple-vulnerabilities-resolved-in-PHP-software"
+          ],
+          "comment": "Project Initium edge evidence - JSA88120: PHP in J-Web"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -31191,6 +31488,102 @@
       "comment": "Mapped from inventory relationship 'component' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0623",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0623",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0623: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0624",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0624",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0624: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0625",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0625",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0625: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0626",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0626",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0626: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0627",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0627",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Edge inventory relationship for PHP-0627: component (depends_on_php)",
+      "comment": "Mapped from Project Initium edge relationship 'component' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0628",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0628",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0628: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0629",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0629",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory relationship for PHP-0629: bundles (distributes_php)",
+      "comment": "Mapped from Project Initium edge relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0627:parent",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0626",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0627"
+      ],
+      "relationshipType": "contains",
+      "summary": "Edge inventory parent relationship for PHP-0627: PHP-0626 contains PHP-0627",
+      "comment": "Mapped from Project Initium edge parent_scope 'EDGE-004'."
+    },
+    {
       "type": "security_Vulnerability",
       "spdxId": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
       "creationInfo": "_:creationinfo",
@@ -32114,7 +32507,14 @@
         "urn:php2shell:inventory:package:PHP-0615",
         "urn:php2shell:inventory:package:PHP-0616",
         "urn:php2shell:inventory:package:PHP-0617",
-        "urn:php2shell:inventory:package:PHP-0618"
+        "urn:php2shell:inventory:package:PHP-0618",
+        "urn:php2shell:inventory:package:PHP-0623",
+        "urn:php2shell:inventory:package:PHP-0624",
+        "urn:php2shell:inventory:package:PHP-0625",
+        "urn:php2shell:inventory:package:PHP-0626",
+        "urn:php2shell:inventory:package:PHP-0627",
+        "urn:php2shell:inventory:package:PHP-0628",
+        "urn:php2shell:inventory:package:PHP-0629"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
@@ -32827,7 +33227,14 @@
         "urn:php2shell:inventory:package:PHP-0615",
         "urn:php2shell:inventory:package:PHP-0616",
         "urn:php2shell:inventory:package:PHP-0617",
-        "urn:php2shell:inventory:package:PHP-0618"
+        "urn:php2shell:inventory:package:PHP-0618",
+        "urn:php2shell:inventory:package:PHP-0623",
+        "urn:php2shell:inventory:package:PHP-0624",
+        "urn:php2shell:inventory:package:PHP-0625",
+        "urn:php2shell:inventory:package:PHP-0626",
+        "urn:php2shell:inventory:package:PHP-0627",
+        "urn:php2shell:inventory:package:PHP-0628",
+        "urn:php2shell:inventory:package:PHP-0629"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
