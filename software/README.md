@@ -18,8 +18,6 @@ The following status labels are in use:
 
 The `Version` column in the software list relates to the status of the entry. For `Vulnerable`, it identifies known vulnerable versions when available. For `Fix`, it identifies the version in which the fix was introduced.
 
-For runtime-induced findings, SPDX VEX relationships may mark an application product as affected while using `security_assessedElement` to identify the affected PHP runtime variant. In those cases, the action statement points to upgrading PHP itself and restarting PHP workers rather than changing application code alone.
-
 See [software_list.md](software_list.md) for the current list.
 
 For upstream PHP remediation guidance, see the [official PHP security advisory](https://www.php.net/archive/2026.php#2026-10-21-5).
