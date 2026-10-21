@@ -4033,7 +4033,14 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:0a31d605017b",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:29024f127941",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:84c88194b33f",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:33a49ae2c02b"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:33a49ae2c02b",
+        "urn:php2shell:inventory:package:PHP-0649",
+        "urn:php2shell:inventory:package:PHP-0650",
+        "urn:php2shell:inventory:relationship:PHP-0037:variants",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-upstream-affected-ranges-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-upstream-affected-ranges-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:calif-confirmed-php-apps-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:calif-confirmed-php-apps-20261021"
       ]
     },
     {
@@ -5501,7 +5508,6 @@
       "spdxId": "urn:php2shell:inventory:package:PHP-0037",
       "creationInfo": "_:creationinfo",
       "name": "PHP core and Zend Engine",
-      "software_packageVersion": "8.5.12, 8.4.27, 8.3.36, 8.2.35",
       "software_primaryPurpose": "platform",
       "externalIdentifier": [
         {
@@ -5511,9 +5517,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:the-php-group:dee81afa915f",
-      "summary": "Pinned source contains PHP lifecycle code in main/main.c and the Zend Engine in Zend/zend.c. Official support dates identify branches 8.2\u20138.5.",
+      "summary": "Unversioned PHP runtime family anchor for downstream dependency links; version-scoped affected and fixed runtime variants are recorded separately.",
       "description": "Engine shared by selected SAPIs; request lifecycle, parser and execution engine",
-      "comment": "Inventory record: PHP-0037\nCategory: PHP core\nOriginal relationship: component\nRelationship direction: part_of_php\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Engine shared by selected SAPIs; request lifecycle, parser and execution engine\nPHP version scope: PHP 8.5.10 release source pinned; upstream supports branches 8.2\u20138.5 on 2026-10-16\nExtensions: Enabled extensions vary by binary; main runtime and Zend Engine are core components\nLimitations: Engine presence does not establish a vulnerable build or an externally reachable flaw. This parent overlaps with SAPIs, modules and downstream application records.\nPatch owner: PHP upstream, binary/image/distribution publisher, and deploying operator\nDownstream surface: Common language runtime beneath web apps, scheduled jobs, build tools and embedded PHP\nRelease pin: php-8.5.10, commit 34308a6666b2d489c509541ea9befea9e2b42348\nSource accessed: 2026-10-16\nAliases: Zend Engine, php-src/main, php-src/Zend\nConditional downstream consequence: A reachable matching engine flaw could affect multiple application families using the same binary. Severity, worker privileges and isolation determine disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0037\nCategory: PHP core\nOriginal relationship: component\nRelationship direction: part_of_php\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Engine shared by selected SAPIs; request lifecycle, parser and execution engine\nPHP version scope: Unversioned runtime family node; affected and fixed release scopes are represented by PHP-0649 and PHP-0650 variants.\nExtensions: Enabled extensions vary by binary; main runtime and Zend Engine are core components\nLimitations: This family anchor does not itself assert a vulnerable or fixed build. It overlaps with SAPIs, modules and downstream application records; version-scoped VEX is carried by dedicated variant nodes.\nPatch owner: PHP upstream, binary/image/distribution publisher, and deploying operator\nDownstream surface: Common language runtime beneath web apps, scheduled jobs, build tools and embedded PHP\nRelease pin: php-8.5.10, commit 34308a6666b2d489c509541ea9befea9e2b42348\nSource accessed: 2026-10-21\nAliases: Zend Engine, php-src/main, php-src/Zend\nConditional downstream consequence: A reachable matching engine flaw could affect multiple application families using the same binary. Severity, worker privileges and isolation determine disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Version-scoped VEX is represented on PHP-0649 (affected runtime scope) and PHP-0650 (fixed upstream releases).\nCVE-2026-109618: See version-scoped PHP runtime variants\nCVE-2026-109619: See version-scoped PHP runtime variants\nCVE assessment limit: Installed version, backport, configuration, SAPI and reachable path still need deployment-specific evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -25666,6 +25672,90 @@
       "software_packageVersion": "7.2.24-0"
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0649",
+      "creationInfo": "_:creationinfo",
+      "name": "PHP core and Zend Engine affected web-serving release scope",
+      "software_packageVersion": ">=5.4.0 before fixed release or vendor backport; supported branches <8.2.35, <8.3.36, <8.4.27, <8.5.12",
+      "software_primaryPurpose": "platform",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0649"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:the-php-group:dee81afa915f",
+      "summary": "Version-scoped PHP runtime variant for affected web-serving releases. PHP says all PHP installations serving web requests are at risk; Calif found affected paths back to PHP 5.4.0.",
+      "description": "Affected web-serving PHP runtime scope for php2shell CVEs",
+      "comment": "Inventory record: PHP-0649\nCategory: PHP core\nOriginal relationship: variant\nRelationship direction: version_scope_of_php\nParent component: PHP-0037\nEvidence status: Upstream and primary-research confirmed affected runtime scope\nDeployment status: Not measured\nPHP surface: Web-serving PHP runtime and Zend Engine\nPHP version scope: PHP >=5.4.0 before a fixed release or vendor backport; supported upstream branches are affected below 8.2.35, 8.3.36, 8.4.27 and 8.5.12.\nExtensions: Enabled extensions vary by binary; main runtime and Zend Engine are core components\nLimitations: This aggregate scope node is not a single distributable artifact. Exploitation path and reliability depend on SAPI, build, enabled extensions, worker lifecycle and reachable request path. Vendor backports can make an older upstream version fixed.\nPatch owner: PHP upstream, binary/image/distribution publisher, and deploying operator\nDownstream surface: Web applications and other request-serving PHP workloads\nRelease pin: PHP advisory and php-src security advisories published 2026-10-21; Calif primary research reviewed 2026-10-21\nSource accessed: 2026-10-21\nAliases: affected php-src runtime scope, affected Zend Engine runtime scope\nConditional downstream consequence: Products executing on this runtime scope can be affected even when their own application code is unchanged; worker privileges and isolation determine downstream impact.\nVulnerability status: Affected runtime scope for CVE-2026-109618 and CVE-2026-109619.\nCVE-2026-109618: Affected web-serving PHP runtime scope\nCVE-2026-109619: Affected web-serving PHP runtime scope\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5"
+          ],
+          "comment": "PHP official security advisory for CVE-2026-109618 and CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+            "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+          ],
+          "comment": "php-src advisories listing supported affected and patched release thresholds"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://calif.io/php2shell/"
+          ],
+          "comment": "Calif primary research describing affected paths back to PHP 5.4.0 and representative application validation"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0650",
+      "creationInfo": "_:creationinfo",
+      "name": "PHP core and Zend Engine fixed upstream releases",
+      "software_packageVersion": "8.5.12, 8.4.27, 8.3.36, 8.2.35",
+      "software_primaryPurpose": "platform",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0650"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:the-php-group:dee81afa915f",
+      "summary": "Version-scoped PHP runtime variant for the upstream fixed releases 8.5.12, 8.4.27, 8.3.36 and 8.2.35.",
+      "description": "Fixed upstream PHP runtime releases for php2shell CVEs",
+      "comment": "Inventory record: PHP-0650\nCategory: PHP core\nOriginal relationship: variant\nRelationship direction: version_scope_of_php\nParent component: PHP-0037\nEvidence status: Upstream-confirmed fixed release scope\nDeployment status: Not measured\nPHP surface: Web-serving PHP runtime and Zend Engine\nPHP version scope: Fixed upstream releases 8.5.12, 8.4.27, 8.3.36 and 8.2.35.\nExtensions: Enabled extensions vary by binary; main runtime and Zend Engine are core components\nLimitations: This aggregate scope node records the first fixed upstream releases for supported branches, not every downstream package or backport. Package availability does not prove operator rollout or worker restart.\nPatch owner: PHP upstream, binary/image/distribution publisher, and deploying operator\nDownstream surface: Web applications and other request-serving PHP workloads\nRelease pin: PHP advisory and php-src security advisories published 2026-10-21\nSource accessed: 2026-10-21\nAliases: fixed php-src runtime scope, fixed Zend Engine runtime scope\nConditional downstream consequence: Updating the runtime removes the underlying php2shell flaws for workloads actually served by the updated workers.\nVulnerability status: Fixed upstream in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35.\nCVE-2026-109618: Fixed upstream runtime releases\nCVE-2026-109619: Fixed upstream runtime releases\nCVE assessment limit: Downstream packages, vendor backports, installed versions and worker restart remain deployment-specific.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5"
+          ],
+          "comment": "PHP official security advisory naming fixed upstream releases"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+            "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+          ],
+          "comment": "php-src advisories listing patched versions"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -33316,6 +33406,19 @@
       "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0037:variants",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0037",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0649",
+        "urn:php2shell:inventory:package:PHP-0650"
+      ],
+      "relationshipType": "hasVariant",
+      "summary": "PHP core runtime family has affected and fixed version-scope variants",
+      "comment": "Version-scoped VEX is carried by PHP-0649 and PHP-0650 so PHP-0037 remains an unversioned dependency anchor for downstream products."
+    },
+    {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:5d17eab4e4a1",
       "creationInfo": "_:creationinfo",
@@ -33551,23 +33654,14 @@
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
       "to": [
         "urn:php2shell:inventory:package:PHP-0004",
-        "urn:php2shell:inventory:package:PHP-0006",
-        "urn:php2shell:inventory:package:PHP-0007",
-        "urn:php2shell:inventory:package:PHP-0008",
         "urn:php2shell:inventory:package:PHP-0009",
         "urn:php2shell:inventory:package:PHP-0010",
-        "urn:php2shell:inventory:package:PHP-0011",
         "urn:php2shell:inventory:package:PHP-0012",
         "urn:php2shell:inventory:package:PHP-0013",
-        "urn:php2shell:inventory:package:PHP-0014",
         "urn:php2shell:inventory:package:PHP-0016",
-        "urn:php2shell:inventory:package:PHP-0017",
-        "urn:php2shell:inventory:package:PHP-0018",
         "urn:php2shell:inventory:package:PHP-0022",
         "urn:php2shell:inventory:package:PHP-0023",
         "urn:php2shell:inventory:package:PHP-0024",
-        "urn:php2shell:inventory:package:PHP-0025",
-        "urn:php2shell:inventory:package:PHP-0026",
         "urn:php2shell:inventory:package:PHP-0027",
         "urn:php2shell:inventory:package:PHP-0030",
         "urn:php2shell:inventory:package:PHP-0031",
@@ -33787,7 +33881,6 @@
         "urn:php2shell:inventory:package:PHP-0263",
         "urn:php2shell:inventory:package:PHP-0264",
         "urn:php2shell:inventory:package:PHP-0265",
-        "urn:php2shell:inventory:package:PHP-0266",
         "urn:php2shell:inventory:package:PHP-0267",
         "urn:php2shell:inventory:package:PHP-0268",
         "urn:php2shell:inventory:package:PHP-0269",
@@ -34226,23 +34319,14 @@
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
       "to": [
         "urn:php2shell:inventory:package:PHP-0004",
-        "urn:php2shell:inventory:package:PHP-0006",
-        "urn:php2shell:inventory:package:PHP-0007",
-        "urn:php2shell:inventory:package:PHP-0008",
         "urn:php2shell:inventory:package:PHP-0009",
         "urn:php2shell:inventory:package:PHP-0010",
-        "urn:php2shell:inventory:package:PHP-0011",
         "urn:php2shell:inventory:package:PHP-0012",
         "urn:php2shell:inventory:package:PHP-0013",
-        "urn:php2shell:inventory:package:PHP-0014",
         "urn:php2shell:inventory:package:PHP-0016",
-        "urn:php2shell:inventory:package:PHP-0017",
-        "urn:php2shell:inventory:package:PHP-0018",
         "urn:php2shell:inventory:package:PHP-0022",
         "urn:php2shell:inventory:package:PHP-0023",
         "urn:php2shell:inventory:package:PHP-0024",
-        "urn:php2shell:inventory:package:PHP-0025",
-        "urn:php2shell:inventory:package:PHP-0026",
         "urn:php2shell:inventory:package:PHP-0027",
         "urn:php2shell:inventory:package:PHP-0030",
         "urn:php2shell:inventory:package:PHP-0031",
@@ -34462,7 +34546,6 @@
         "urn:php2shell:inventory:package:PHP-0263",
         "urn:php2shell:inventory:package:PHP-0264",
         "urn:php2shell:inventory:package:PHP-0265",
-        "urn:php2shell:inventory:package:PHP-0266",
         "urn:php2shell:inventory:package:PHP-0267",
         "urn:php2shell:inventory:package:PHP-0268",
         "urn:php2shell:inventory:package:PHP-0269",
@@ -34674,7 +34757,7 @@
         "urn:php2shell:inventory:package:PHP-0001",
         "urn:php2shell:inventory:package:PHP-0002",
         "urn:php2shell:inventory:package:PHP-0003",
-        "urn:php2shell:inventory:package:PHP-0037",
+        "urn:php2shell:inventory:package:PHP-0650",
         "urn:php2shell:inventory:package:PHP-0109"
       ],
       "relationshipType": "fixedIn",
@@ -34691,7 +34774,7 @@
         "urn:php2shell:inventory:package:PHP-0001",
         "urn:php2shell:inventory:package:PHP-0002",
         "urn:php2shell:inventory:package:PHP-0003",
-        "urn:php2shell:inventory:package:PHP-0037",
+        "urn:php2shell:inventory:package:PHP-0650",
         "urn:php2shell:inventory:package:PHP-0109"
       ],
       "relationshipType": "fixedIn",
@@ -34931,11 +35014,12 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0015"
       ],
+      "security_assessedElement": "urn:php2shell:inventory:package:PHP-0649",
       "relationshipType": "affects",
       "security_statusNotes": "Affected: Nextcloud deployments using affected PHP versions; apply a vendor-appropriate fixed PHP runtime or rebuilt image",
       "summary": "CVE-2026-109618 assessment: Affected: Nextcloud deployments using affected PHP versions; apply a vendor-appropriate fixed PHP runtime or rebuilt image",
       "comment": "Added from the Nextcloud Server issue updated 2026-10-21.",
-      "security_actionStatement": "Apply fixed PHP releases when available and follow Nextcloud guidance; consider shutting down affected PHP-based services until then."
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers and follow Nextcloud guidance."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -34945,11 +35029,12 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0015"
       ],
+      "security_assessedElement": "urn:php2shell:inventory:package:PHP-0649",
       "relationshipType": "affects",
       "security_statusNotes": "Affected: Nextcloud deployments using affected PHP versions; apply a vendor-appropriate fixed PHP runtime or rebuilt image",
       "summary": "CVE-2026-109619 assessment: Affected: Nextcloud deployments using affected PHP versions; apply a vendor-appropriate fixed PHP runtime or rebuilt image",
       "comment": "Added from the Nextcloud Server issue updated 2026-10-21.",
-      "security_actionStatement": "Apply fixed PHP releases when available and follow Nextcloud guidance; consider shutting down affected PHP-based services until then."
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers and follow Nextcloud guidance."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -36158,6 +36243,156 @@
       "security_statusNotes": "HestiaCP's maintainer confirms patched PHP packages are available for hosted websites. Operators must install them and restart hosted PHP; this does not fix the separately bundled hestia-php panel runtime.",
       "summary": "CVE-2026-109619 assessment: HestiaCP's maintainer confirms patched PHP packages are available for hosted websites. Operators must install them and restart hosted PHP; this does not fix the separately bundled hestia-php panel runtime.",
       "comment": "Public vendor assessment reviewed 2026-10-21. Sources: https://github.com/hestiacp/hestiacp/issues/5817#issuecomment-6318435423\nAction statement: Install the confirmed PHP packages for each hosted-site runtime and restart workers; separately track the hestia-php panel update."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-upstream-affected-ranges-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0649"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected web-serving PHP runtime scope; supported upstream branches are affected below 8.2.35, 8.3.36, 8.4.27 and 8.5.12, while older branches require vendor backports or upgrade.",
+      "summary": "CVE-2026-109618 assessment: Affected web-serving PHP runtime scope; supported upstream branches are affected below 8.2.35, 8.3.36, 8.4.27 and 8.5.12, while older branches require vendor backports or upgrade.",
+      "comment": "Added from the PHP security advisory and php-src GHSA published 2026-10-21; Calif primary research records affected paths back to PHP 5.4.0.",
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5",
+            "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w"
+          ],
+          "comment": "PHP upstream affected and fixed runtime scope for CVE-2026-109618"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://calif.io/php2shell/"
+          ],
+          "comment": "Calif primary research on older affected PHP paths"
+        }
+      ]
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-upstream-affected-ranges-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0649"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected web-serving PHP runtime scope; supported upstream branches are affected below 8.2.35, 8.3.36, 8.4.27 and 8.5.12, while older branches require vendor backports or upgrade.",
+      "summary": "CVE-2026-109619 assessment: Affected web-serving PHP runtime scope; supported upstream branches are affected below 8.2.35, 8.3.36, 8.4.27 and 8.5.12, while older branches require vendor backports or upgrade.",
+      "comment": "Added from the PHP security advisory and php-src GHSA published 2026-10-21; Calif primary research records affected paths back to PHP 5.4.0.",
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5",
+            "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp"
+          ],
+          "comment": "PHP upstream affected and fixed runtime scope for CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://calif.io/php2shell/"
+          ],
+          "comment": "Calif primary research on older affected PHP paths"
+        }
+      ]
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:calif-confirmed-php-apps-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0006",
+        "urn:php2shell:inventory:package:PHP-0007",
+        "urn:php2shell:inventory:package:PHP-0008",
+        "urn:php2shell:inventory:package:PHP-0011",
+        "urn:php2shell:inventory:package:PHP-0014",
+        "urn:php2shell:inventory:package:PHP-0017",
+        "urn:php2shell:inventory:package:PHP-0018",
+        "urn:php2shell:inventory:package:PHP-0025",
+        "urn:php2shell:inventory:package:PHP-0026",
+        "urn:php2shell:inventory:package:PHP-0266"
+      ],
+      "security_assessedElement": "urn:php2shell:inventory:package:PHP-0649",
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected when deployed on an affected web-serving PHP runtime; PHP upstream confirms this runtime scope and Calif confirmed representative application-level pre-auth RCE. The remediation is the PHP runtime upgrade.",
+      "summary": "CVE-2026-109618 assessment: Affected when deployed on an affected web-serving PHP runtime; PHP upstream confirms this runtime scope and Calif confirmed representative application-level pre-auth RCE. The remediation is the PHP runtime upgrade.",
+      "comment": "Primary research reviewed 2026-10-21. Calif confirms pre-auth RCE on WordPress 7.1.2, Drupal 11.4.3, Joomla 6.1.4, Magento 2.4.9, MediaWiki 1.46.2, Laravel 13.11, Symfony 8.1, phpMyAdmin 5.2.3, Roundcube 1.7.4 and WHMCS. The assessed element is the affected PHP runtime scope, not an application-code defect.",
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers; updating application code alone does not remediate this PHP flaw.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://calif.io/php2shell/"
+          ],
+          "comment": "Calif primary research confirming representative application exploitation"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5"
+          ],
+          "comment": "PHP upstream remediation guidance for the assessed runtime"
+        }
+      ]
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:calif-confirmed-php-apps-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0006",
+        "urn:php2shell:inventory:package:PHP-0007",
+        "urn:php2shell:inventory:package:PHP-0008",
+        "urn:php2shell:inventory:package:PHP-0011",
+        "urn:php2shell:inventory:package:PHP-0014",
+        "urn:php2shell:inventory:package:PHP-0017",
+        "urn:php2shell:inventory:package:PHP-0018",
+        "urn:php2shell:inventory:package:PHP-0025",
+        "urn:php2shell:inventory:package:PHP-0026",
+        "urn:php2shell:inventory:package:PHP-0266"
+      ],
+      "security_assessedElement": "urn:php2shell:inventory:package:PHP-0649",
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected when deployed on an affected web-serving PHP runtime; PHP upstream confirms this runtime scope and Calif confirmed representative application-level pre-auth RCE. The remediation is the PHP runtime upgrade.",
+      "summary": "CVE-2026-109619 assessment: Affected when deployed on an affected web-serving PHP runtime; PHP upstream confirms this runtime scope and Calif confirmed representative application-level pre-auth RCE. The remediation is the PHP runtime upgrade.",
+      "comment": "Primary research reviewed 2026-10-21. Calif confirms pre-auth RCE on WordPress 7.1.2, Drupal 11.4.3, Joomla 6.1.4, Magento 2.4.9, MediaWiki 1.46.2, Laravel 13.11, Symfony 8.1, phpMyAdmin 5.2.3, Roundcube 1.7.4 and WHMCS. The assessed element is the affected PHP runtime scope, not an application-code defect.",
+      "security_actionStatement": "Upgrade the serving PHP runtime to 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply a vendor backport, then restart PHP workers; updating application code alone does not remediate this PHP flaw.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://calif.io/php2shell/"
+          ],
+          "comment": "Calif primary research confirming representative application exploitation"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5"
+          ],
+          "comment": "PHP upstream remediation guidance for the assessed runtime"
+        }
+      ]
     }
   ]
 }
