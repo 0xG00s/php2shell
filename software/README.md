@@ -20,7 +20,7 @@ The `Version` column in the software list relates to the status of the entry. Fo
 
 See [software_list.md](software_list.md) for the current list.
 
-The alphabetized list is generated from an automated inventory of PHP systems exported as SPDX 3. Status values in the current list are derived from the VEX assessment relationships in that document.
+The source of truth for this overview is the SPDX document(s) in [spdx](spdx/). The alphabetized Markdown pages are generated automatically from that data using the tooling in [../tools](../tools/). Status values in the current list are derived from the VEX assessment relationships in the SPDX document.
 
 > **Disclaimer:** No guarantees are made regarding the completeness or accuracy of this inventory. Verify entries against upstream or vendor sources before acting on them.
 
