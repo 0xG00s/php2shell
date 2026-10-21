@@ -2403,6 +2403,12 @@
     },
     {
       "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:ibabs:d92a87126ecf",
+      "creationInfo": "_:creationinfo",
+      "name": "iBabs"
+    },
+    {
+      "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:inextrix-astpp:5cadc909e4cb",
       "creationInfo": "_:creationinfo",
       "name": "iNextrix / ASTPP"
@@ -3257,6 +3263,7 @@
         "urn:php2shell:inventory:package:PHP-0627",
         "urn:php2shell:inventory:package:PHP-0628",
         "urn:php2shell:inventory:package:PHP-0629",
+        "urn:php2shell:inventory:package:PHP-0630",
         "urn:php2shell:inventory:relationship:PHP-0001",
         "urn:php2shell:inventory:relationship:PHP-0002",
         "urn:php2shell:inventory:relationship:PHP-0003",
@@ -3878,7 +3885,17 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9f0e21803ee8",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9f0e21803ee8",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:b3d5811e7062",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:b3d5811e7062"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:b3d5811e7062",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9c85bdebe018",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9c85bdebe018",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:019fdb7ba4c6",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:019fdb7ba4c6",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:ae38229d0a7b",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:ae38229d0a7b",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:53d7de272a14",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:53d7de272a14",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:doesNotAffect:f13f6e246bc6",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:f13f6e246bc6"
       ]
     },
     {
@@ -4039,9 +4056,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:frankenphp:c752b8206ab0",
-      "summary": "FrankenPHP documents binaries embedding PHP and configurable extensions.",
+      "summary": "PHP names FrankenPHP among web-serving installations at risk from both CVEs; FrankenPHP maintainers are preparing rebuilt artifacts.",
       "description": "Embedded PHP / ZTS",
-      "comment": "Inventory record: PHP-0005\nCategory: Embedded runtimes\nOriginal relationship: embeds\nRelationship direction: distributes_php\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Embedded PHP / ZTS\nPHP version scope: Selected at build\nExtensions: Selected at build\nLimitations: Do not assume an OS PHP update changes PHP embedded in a binary.\nPatch owner: Binary or image publisher and operator\nDownstream surface: Long-running application server\nRelease pin: Documentation URL; immutable release pin pending\nSource accessed: 2026-10-16\nConditional downstream consequence: Analyst judgment: a matching flaw in the PHP or extension code embedded in a selected static binary could affect requests and data accessible to that process. Remediation requires a rebuilt replacement binary or image and restart. Updating separate system PHP does not update the embedded runtime.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0005\nCategory: Embedded runtimes\nOriginal relationship: embeds\nRelationship direction: distributes_php\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Embedded PHP / ZTS\nPHP version scope: Selected at build\nExtensions: Selected at build\nLimitations: Do not assume an OS PHP update changes PHP embedded in a binary.\nPatch owner: Binary or image publisher and operator\nDownstream surface: Long-running application server\nRelease pin: Documentation URL; immutable release pin pending\nSource accessed: 2026-10-21\nConditional downstream consequence: Analyst judgment: a matching flaw in the PHP or extension code embedded in a selected static binary could affect requests and data accessible to that process. Remediation requires a rebuilt replacement binary or image and restart. Updating separate system PHP does not update the embedded runtime.\nVulnerability status: Vendor/upstream notice 2026-10-21: PHP names FrankenPHP among web-serving installations at risk and FrankenPHP maintainers state rebuilt artifacts are being prepared.\nCVE-2026-109618: Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending\nCVE-2026-109619: Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending\nCVE assessment limit: PHP confirms web-serving FrankenPHP scope; exact affected FrankenPHP artifact versions and completed rebuilt release identifiers remain pending.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -4050,6 +4067,22 @@
             "https://frankenphp.dev/docs/static/"
           ],
           "comment": "FrankenPHP static-build documentation"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-1"
+          ],
+          "comment": "PHP security advisory naming FrankenPHP web-serving installations as at risk"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/php/frankenphp/issues/2732"
+          ],
+          "comment": "FrankenPHP issue tracking rebuilt images, packages and binaries for the CVEs"
         }
       ]
     },
@@ -17335,9 +17368,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:bref-project:1aa69468cecc",
-      "summary": "Bref explicitly supplies PHP runtimes as Lambda layers or images and maps its logical PHP names onto the AWS custom-runtime environment.",
+      "summary": "Bref maintainers acknowledge that current v2 PHP Docker images need rebuilt PHP artifacts for both CVEs and plan a release.",
       "description": "Function PHP, web PHP-FPM and console PHP runtimes",
-      "comment": "Inventory record: PHP-0411\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Function PHP, web PHP-FPM and console PHP runtimes\nPHP version scope: Twelve documented runtime IDs: php-{82,83,84,85} with plain,-fpm,-console forms; layers map to provided.al2023\nExtensions: ARM runtimes are supported; bref-extra-extensions is documented unavailable for ARM. Other extension inventories unresolved\nLimitations: IDs select a minor family, not an arbitrary patch. Layer ARN/version, architecture, region and image digest must be matched. These are third-party PHP runtimes, not native AWS PHP support. No package/image was installed, pulled, built, executed or tested. No deployment, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied.\nPatch owner: Bref for compiled runtimes and package-to-layer mapping; customer updates Composer/runtime references and redeploys\nDownstream surface: Only the named PHP component and its callers\nRelease pin: Moving official documentation; immutable runtime build pin pending\nSource accessed: 2026-10-17\nAliases: bref:php-runtimes\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through customer application inputs, possible effects include worker denial of service, disclosure of app-accessible secrets, data modification or code execution with the worker identity. Crossing customer, container or provider boundaries requires separate evidence; runtime presence alone establishes none of these outcomes.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0411\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Function PHP, web PHP-FPM and console PHP runtimes\nPHP version scope: Twelve documented runtime IDs: php-{82,83,84,85} with plain,-fpm,-console forms; layers map to provided.al2023\nExtensions: ARM runtimes are supported; bref-extra-extensions is documented unavailable for ARM. Other extension inventories unresolved\nLimitations: IDs select a minor family, not an arbitrary patch. Layer ARN/version, architecture, region and image digest must be matched. These are third-party PHP runtimes, not native AWS PHP support. No package/image was installed, pulled, built, executed or tested. No deployment, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied.\nPatch owner: Bref for compiled runtimes and package-to-layer mapping; customer updates Composer/runtime references and redeploys\nDownstream surface: Only the named PHP component and its callers\nRelease pin: Moving official documentation; immutable runtime build pin pending\nSource accessed: 2026-10-21\nAliases: bref:php-runtimes\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through customer application inputs, possible effects include worker denial of service, disclosure of app-accessible secrets, data modification or code execution with the worker identity. Crossing customer, container or provider boundaries requires separate evidence; runtime presence alone establishes none of these outcomes.\nVulnerability status: Vendor issue 2026-10-21: Bref maintainers acknowledge current v2 PHP Docker images need rebuilds for the two PHP CVEs; layer scope is not confirmed.\nCVE-2026-109618: Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed\nCVE-2026-109619: Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed\nCVE assessment limit: Bref issue confirms v2 Docker image scope only; Lambda layer versions and completed rebuilt release identifiers remain pending.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -17346,6 +17379,14 @@
             "https://bref.sh/docs/runtimes"
           ],
           "comment": "Official PHP component, runtime or hosting declaration"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/brefphp/bref/issues/2222"
+          ],
+          "comment": "Bref issue tracking rebuilt v2 PHP Docker images for the CVEs"
         }
       ]
     },
@@ -24390,6 +24431,23 @@
           "comment": "Project Initium edge evidence - JSA88120: PHP in J-Web"
         }
       ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0630",
+      "creationInfo": "_:creationinfo",
+      "name": "iBabs bestuursportaal",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0630"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:ibabs:d92a87126ecf",
+      "summary": "PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
+      "comment": "Source: Supplier email\nEvidence: Supplier confirmed that PHP is not used in iBabs.\nVulnerability status: Not affected because the PHP component is not present."
     },
     {
       "type": "Relationship",
@@ -32074,7 +32132,6 @@
         "urn:php2shell:inventory:package:PHP-0002",
         "urn:php2shell:inventory:package:PHP-0003",
         "urn:php2shell:inventory:package:PHP-0004",
-        "urn:php2shell:inventory:package:PHP-0005",
         "urn:php2shell:inventory:package:PHP-0006",
         "urn:php2shell:inventory:package:PHP-0007",
         "urn:php2shell:inventory:package:PHP-0008",
@@ -32433,7 +32490,6 @@
         "urn:php2shell:inventory:package:PHP-0393",
         "urn:php2shell:inventory:package:PHP-0409",
         "urn:php2shell:inventory:package:PHP-0410",
-        "urn:php2shell:inventory:package:PHP-0411",
         "urn:php2shell:inventory:package:PHP-0412",
         "urn:php2shell:inventory:package:PHP-0423",
         "urn:php2shell:inventory:package:PHP-0425",
@@ -32793,7 +32849,6 @@
         "urn:php2shell:inventory:package:PHP-0002",
         "urn:php2shell:inventory:package:PHP-0003",
         "urn:php2shell:inventory:package:PHP-0004",
-        "urn:php2shell:inventory:package:PHP-0005",
         "urn:php2shell:inventory:package:PHP-0006",
         "urn:php2shell:inventory:package:PHP-0007",
         "urn:php2shell:inventory:package:PHP-0008",
@@ -33152,7 +33207,6 @@
         "urn:php2shell:inventory:package:PHP-0393",
         "urn:php2shell:inventory:package:PHP-0409",
         "urn:php2shell:inventory:package:PHP-0410",
-        "urn:php2shell:inventory:package:PHP-0411",
         "urn:php2shell:inventory:package:PHP-0412",
         "urn:php2shell:inventory:package:PHP-0423",
         "urn:php2shell:inventory:package:PHP-0425",
@@ -33378,6 +33432,90 @@
       "security_actionStatement": "Apply fixed PHP releases when available and follow Nextcloud guidance; consider shutting down affected PHP-based services until then.",
       "summary": "CVE-2026-109619 assessment: Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified",
       "comment": "Added from the Nextcloud security notice published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:ae38229d0a7b",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0005"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending",
+      "security_actionStatement": "Apply rebuilt FrankenPHP images, packages or binaries containing fixed PHP releases when available.",
+      "summary": "CVE-2026-109618 assessment: Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending",
+      "comment": "Added from the PHP security advisory and FrankenPHP project issue published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:ae38229d0a7b",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0005"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending",
+      "security_actionStatement": "Apply rebuilt FrankenPHP images, packages or binaries containing fixed PHP releases when available.",
+      "summary": "CVE-2026-109619 assessment: Affected: FrankenPHP web-serving builds embedding affected PHP versions; rebuilds pending",
+      "comment": "Added from the PHP security advisory and FrankenPHP project issue published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:53d7de272a14",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0411"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed",
+      "security_actionStatement": "Apply rebuilt Bref PHP Docker images containing fixed PHP releases when available.",
+      "summary": "CVE-2026-109618 assessment: Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed",
+      "comment": "Added from the Bref project issue published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:53d7de272a14",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0411"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed",
+      "security_actionStatement": "Apply rebuilt Bref PHP Docker images containing fixed PHP releases when available.",
+      "summary": "CVE-2026-109619 assessment: Affected: Bref v2 Docker images embedding affected PHP 8.4; layer scope not yet confirmed",
+      "comment": "Added from the Bref project issue published 2026-10-21."
+    },
+    {
+      "type": "security_VexNotAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:doesNotAffect:f13f6e246bc6",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0630"
+      ],
+      "relationshipType": "doesNotAffect",
+      "security_justificationType": "componentNotPresent",
+      "security_impactStatement": "PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
+      "summary": "CVE-2026-109618 assessment: PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
+      "comment": "Added from supplier email confirmation."
+    },
+    {
+      "type": "security_VexNotAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:f13f6e246bc6",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0630"
+      ],
+      "relationshipType": "doesNotAffect",
+      "security_justificationType": "componentNotPresent",
+      "security_impactStatement": "PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
+      "summary": "CVE-2026-109619 assessment: PHP is not being used in iBabs. This is confirmed by an email of the supplier.",
+      "comment": "Added from supplier email confirmation."
     }
   ]
 }
