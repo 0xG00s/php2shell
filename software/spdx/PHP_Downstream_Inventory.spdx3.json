@@ -2565,9 +2565,9 @@
     },
     {
       "type": "Organization",
-      "spdxId": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "spdxId": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
       "creationInfo": "_:creationinfo",
-      "name": "NetScaler / Citrix, Cloud Software Group"
+      "name": "Citrix / NetScaler"
     },
     {
       "type": "Organization",
@@ -24180,7 +24180,7 @@
           "identifier": "PHP-0624"
         }
       ],
-      "suppliedBy": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "suppliedBy": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
       "summary": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
       "description": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.",
       "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: 14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.\nPHP version scope: 14.1 FreeBSD pooled notice: PHP 8.0.16. Legacy 12.1 notice in master: PHP 7.0.13. Current patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Do not extend PHP evidence to all Gateway login/VPN paths, BLX/CPX, SDX or NetScaler Console by association.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
