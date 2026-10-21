@@ -1,6 +1,6 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Last updated: 21 October 2026
+Last updated: 21 October 2026 16:00
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -13,6 +13,8 @@ On 21 October 2026, PHP published fixed releases for CVE-2026-109618 and CVE-202
 
 PHP describes CVE-2026-109618 as remote code execution via out-of-memory corruption during request cleanup, and CVE-2026-109619 as remote code execution via stale request-owned global state reused by a later request on the same worker. PHP 8.1 and older are no longer supported by the PHP project; distributions and LTS vendors may provide backported packages, and PHP has published minimal source backports for PHP 7.4, 8.0 and 8.1.
 
+Update 21-10-2026 16:00: The PHP Foundation released two patches as a fix for CVE-2026-109618 and CVE-2026-109619. More details can be found on the [PHP-website](https://www.php.net/).
+
 ## Recommended actions
 
 - Identify PHP-based applications and their runtime versions, with priority on internet-facing systems and web-serving SAPIs.
@@ -24,7 +26,8 @@ PHP describes CVE-2026-109618 as remote code execution via out-of-memory corrupt
 For additional information see:
 
 - [CERT-EU Security Advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/)
-- [PHP security advisory: Critical remote code execution vulnerabilities, update now](https://www.php.net/archive/2026.php#2026-10-21-5)
+- [PHP announcement: Upcoming Critical PHP Security Release](https://www.php.net/archive/2026.php#2026-10-20-1)
+- [List of advisories from other EU national CSIRT's](https://github.com/enisaeu/CNW/blob/main/advisories/2026/CNW-2026-04_php.md)
 
 ## Repository contents
 
