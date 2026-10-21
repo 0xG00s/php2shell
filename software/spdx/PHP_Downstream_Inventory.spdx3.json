@@ -2225,7 +2225,7 @@
       "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:webpros-plesk:93657c157beb",
       "creationInfo": "_:creationinfo",
-      "name": "WebPros / Plesk"
+      "name": "Plesk"
     },
     {
       "type": "Organization",
@@ -3218,6 +3218,8 @@
         "urn:php2shell:inventory:package:PHP-0618",
         "urn:php2shell:inventory:package:PHP-0619",
         "urn:php2shell:inventory:package:PHP-0620",
+        "urn:php2shell:inventory:package:PHP-0621",
+        "urn:php2shell:inventory:package:PHP-0622",
         "urn:php2shell:inventory:relationship:PHP-0001",
         "urn:php2shell:inventory:relationship:PHP-0002",
         "urn:php2shell:inventory:relationship:PHP-0003",
@@ -3827,7 +3829,9 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:9fe2f4bd84e1",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:6f4f7fc812ed",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:4292cdcd32c3",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f70b575bbd8c"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f70b575bbd8c",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9f0e21803ee8",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9f0e21803ee8"
       ]
     },
     {
@@ -23991,6 +23995,64 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0621",
+      "creationInfo": "_:creationinfo",
+      "name": "Plesk for Linux",
+      "software_primaryPurpose": "platform",
+      "software_packageVersion": "All shipped PHP versions",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0621"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:webpros-plesk:93657c157beb",
+      "summary": "Plesk confirms that all PHP versions shipped with Plesk for Linux are affected; patched versions are pending a PHP vendor fix.",
+      "description": "Plesk for Linux product shipping PHP runtimes",
+      "comment": "Source: Plesk security advisory updated 2026-10-20\nAffected versions: All shipped PHP versions\nPatched versions: Pending fix from the PHP vendor\nImpact: Remote code execution is possible on affected PHP versions.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
+          ],
+          "comment": "Plesk - Vulnerability CVE-2026-109618 and CVE-2026-109619: Remote code execution in PHP shipped with Plesk"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0622",
+      "creationInfo": "_:creationinfo",
+      "name": "Plesk for Windows",
+      "software_primaryPurpose": "platform",
+      "software_packageVersion": "All shipped PHP versions",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0622"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:webpros-plesk:93657c157beb",
+      "summary": "Plesk confirms that all PHP versions shipped with Plesk for Windows are affected; patched versions are pending a PHP vendor fix.",
+      "description": "Plesk for Windows product shipping PHP runtimes",
+      "comment": "Source: Plesk security advisory updated 2026-10-20\nAffected versions: All shipped PHP versions\nPatched versions: Pending fix from the PHP vendor\nImpact: Remote code execution is possible on affected PHP versions.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
+          ],
+          "comment": "Plesk - Vulnerability CVE-2026-109618 and CVE-2026-109619: Remote code execution in PHP shipped with Plesk"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -31131,6 +31193,14 @@
         },
         {
           "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
+          ],
+          "comment": "Plesk - Vulnerability CVE-2026-109618 and CVE-2026-109619: Remote code execution in PHP shipped with Plesk"
+        },
+        {
+          "type": "ExternalRef",
           "externalRefType": "securityOther",
           "locator": [
             "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/"
@@ -31213,6 +31283,14 @@
             "https://cert.europa.eu/publications/security-advisories/2026-018/"
           ],
           "comment": "CERT-EU - Security Advisory 2026-018: Critical Vulnerabilities in PHP"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-Remote-code-execution-in-PHP-shipped-with-Plesk"
+          ],
+          "comment": "Plesk - Vulnerability CVE-2026-109618 and CVE-2026-109619: Remote code execution in PHP shipped with Plesk"
         },
         {
           "type": "ExternalRef",
@@ -32695,6 +32773,36 @@
       "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
       "summary": "CVE-2026-109619 assessment: PHP relationship confirmed; CVE match unknown",
       "comment": "Generated from inventory field 'cve_2026_109619'. This assessment preserves the source inventory wording and does not assert an affected deployment."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9f0e21803ee8",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0621",
+        "urn:php2shell:inventory:package:PHP-0622"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: all PHP versions shipped with Plesk",
+      "security_actionStatement": "Apply fixed Plesk PHP packages when available from Plesk.",
+      "summary": "CVE-2026-109618 assessment: Affected: all PHP versions shipped with Plesk",
+      "comment": "Added from the Plesk security advisory published 2026-10-20."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9f0e21803ee8",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0621",
+        "urn:php2shell:inventory:package:PHP-0622"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: all PHP versions shipped with Plesk",
+      "security_actionStatement": "Apply fixed Plesk PHP packages when available from Plesk.",
+      "summary": "CVE-2026-109619 assessment: Affected: all PHP versions shipped with Plesk",
+      "comment": "Added from the Plesk security advisory published 2026-10-20."
     }
   ]
 }
