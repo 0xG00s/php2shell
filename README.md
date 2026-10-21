@@ -13,13 +13,13 @@ On 21 October 2026, PHP published fixed releases for CVE-2026-109618 and CVE-202
 
 PHP describes CVE-2026-109618 as remote code execution via out-of-memory corruption during request cleanup, and CVE-2026-109619 as remote code execution via stale request-owned global state reused by a later request on the same worker. PHP 8.1 and older are no longer supported by the PHP project; distributions and LTS vendors may provide backported packages, and PHP has published minimal source backports for PHP 7.4, 8.0 and 8.1.
 
-Update 21-10-2026 16:00: The PHP Foundation released two patches as a fix for CVE-2026-109618 and CVE-2026-109619. More details can be found on the [PHP-website](https://www.php.net/).
+The impact is not limited to websites: PHP is also embedded in appliances, network devices, management interfaces and other vendor products where administrators may not be able to update PHP directly.
 
 ## Recommended actions
 
 - Identify PHP-based applications and their runtime versions, with priority on internet-facing systems and web-serving SAPIs.
 - Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35, or apply vendor-provided backported packages.
-- Check third-party images, appliances and embedded runtimes separately; updating host PHP does not necessarily update bundled PHP.
+- Check third-party images, appliances and embedded runtimes separately; for products that bundle PHP, apply vendor updates as soon as they become available.
 - If immediate patching is not possible, follow PHP's temporary mitigations, including disabling `session.upload_progress`, restarting workers, and reviewing the official `memory_limit`, `post_max_size` and PHP 8.5 `fatal_error_backtraces` guidance. PHP states that these measures are not complete fixes.
 - Monitor vendor advisories, internet-facing logs, and public exploit activity.
 
