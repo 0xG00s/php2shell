@@ -24643,6 +24643,93 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0634",
+      "creationInfo": "_:creationinfo",
+      "name": "Ubuntu Stonking php8.5-fpm binary package",
+      "software_primaryPurpose": "other",
+      "software_packageVersion": "8.5.9-0ubuntu2.1",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0634"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:canonical-ubuntu-package-maintainers:689af08e8a74",
+      "summary": "Ubuntu USN-8948-1 fixes CVE-2026-109618 and CVE-2026-109619 in Stonking php8.5-fpm 8.5.9-0ubuntu2.1.",
+      "description": "PHP-FPM FastCGI binary package for Ubuntu 26.10 Stonking",
+      "comment": "Inventory record: PHP-0634\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0358\nEvidence status: Vendor-confirmed fixed package\nDeployment status: Not measured\nPHP surface: PHP-FPM FastCGI binary package\nPHP version scope: Ubuntu USN-8948-1 fixes Stonking php8.5-fpm at 8.5.9-0ubuntu2.1; published advisory scope, not a measured installed build.\nExtensions: Package-specific; loaded extensions and release-matched dependencies are not resolved in this advisory.\nLimitations: This row covers the named FPM package for Ubuntu 26.10 only, not every Ubuntu installation or all Ubuntu PHP packages. Package availability does not prove operator rollout or process restart.\nPatch owner: Ubuntu package/security maintainers for distro patches; operator for selected pocket/entitlement, rollout and FPM restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: USN-8948-1; php8.5-fpm 8.5.9-0ubuntu2.1; Ubuntu 26.10 Stonking\nSource accessed: 2026-10-21\nAliases: ubuntu:stonking/php8.5-fpm\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1.\nCVE-2026-109618: Fixed in php8.5-fpm 8.5.9-0ubuntu2.1\nCVE-2026-109619: Fixed in php8.5-fpm 8.5.9-0ubuntu2.1\nCVE assessment limit: Vendor advisory establishes fixed package scope, not deployment status or whether an operator has applied the update.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://ubuntu.com/security/notices/USN-8948-1"
+          ],
+          "comment": "Ubuntu USN-8948-1 - PHP vulnerabilities"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0635",
+      "creationInfo": "_:creationinfo",
+      "name": "Ubuntu Resolute php8.5-fpm binary package",
+      "software_primaryPurpose": "other",
+      "software_packageVersion": "8.5.4-0ubuntu1.5",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0635"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:canonical-ubuntu-package-maintainers:689af08e8a74",
+      "summary": "Ubuntu USN-8948-1 fixes CVE-2026-109618 and CVE-2026-109619 in Resolute php8.5-fpm 8.5.4-0ubuntu1.5.",
+      "description": "PHP-FPM FastCGI binary package for Ubuntu 26.04 LTS Resolute",
+      "comment": "Inventory record: PHP-0635\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0358\nEvidence status: Vendor-confirmed fixed package\nDeployment status: Not measured\nPHP surface: PHP-FPM FastCGI binary package\nPHP version scope: Ubuntu USN-8948-1 fixes Resolute php8.5-fpm at 8.5.4-0ubuntu1.5; published advisory scope, not a measured installed build.\nExtensions: Package-specific; loaded extensions and release-matched dependencies are not resolved in this advisory.\nLimitations: This row covers the named FPM package for Ubuntu 26.04 LTS only, not every Ubuntu installation or all Ubuntu PHP packages. Package availability does not prove operator rollout or process restart.\nPatch owner: Ubuntu package/security maintainers for distro patches; operator for selected pocket/entitlement, rollout and FPM restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: USN-8948-1; php8.5-fpm 8.5.4-0ubuntu1.5; Ubuntu 26.04 LTS Resolute\nSource accessed: 2026-10-21\nAliases: ubuntu:resolute/php8.5-fpm\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5.\nCVE-2026-109618: Fixed in php8.5-fpm 8.5.4-0ubuntu1.5\nCVE-2026-109619: Fixed in php8.5-fpm 8.5.4-0ubuntu1.5\nCVE assessment limit: Vendor advisory establishes fixed package scope, not deployment status or whether an operator has applied the update.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://ubuntu.com/security/notices/USN-8948-1"
+          ],
+          "comment": "Ubuntu USN-8948-1 - PHP vulnerabilities"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0636",
+      "creationInfo": "_:creationinfo",
+      "name": "Ubuntu Jammy php8.1-fpm binary package",
+      "software_primaryPurpose": "other",
+      "software_packageVersion": "8.1.2-1ubuntu2.28",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0636"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:canonical-ubuntu-package-maintainers:689af08e8a74",
+      "summary": "Ubuntu USN-8948-1 fixes CVE-2026-109618 and CVE-2026-109619 in Jammy php8.1-fpm 8.1.2-1ubuntu2.28.",
+      "description": "PHP-FPM FastCGI binary package for Ubuntu 22.04 LTS Jammy",
+      "comment": "Inventory record: PHP-0636\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0358\nEvidence status: Vendor-confirmed fixed package\nDeployment status: Not measured\nPHP surface: PHP-FPM FastCGI binary package\nPHP version scope: Ubuntu USN-8948-1 fixes Jammy php8.1-fpm at 8.1.2-1ubuntu2.28; published advisory scope, not a measured installed build.\nExtensions: Package-specific; loaded extensions and release-matched dependencies are not resolved in this advisory.\nLimitations: This row covers the named FPM package for Ubuntu 22.04 LTS only, not every Ubuntu installation or all Ubuntu PHP packages. Package availability does not prove operator rollout or process restart.\nPatch owner: Ubuntu package/security maintainers for distro patches; operator for selected pocket/entitlement, rollout and FPM restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: USN-8948-1; php8.1-fpm 8.1.2-1ubuntu2.28; Ubuntu 22.04 LTS Jammy\nSource accessed: 2026-10-21\nAliases: ubuntu:jammy/php8.1-fpm\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28.\nCVE-2026-109618: Fixed in php8.1-fpm 8.1.2-1ubuntu2.28\nCVE-2026-109619: Fixed in php8.1-fpm 8.1.2-1ubuntu2.28\nCVE assessment limit: Vendor advisory establishes fixed package scope, not deployment status or whether an operator has applied the update.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://ubuntu.com/security/notices/USN-8948-1"
+          ],
+          "comment": "Ubuntu USN-8948-1 - PHP vulnerabilities"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0001",
       "creationInfo": "_:creationinfo",
@@ -31868,6 +31955,42 @@
     },
     {
       "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0634",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0634",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0358"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0634: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0635",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0635",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0358"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0635: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0636",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0636",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0358"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0636: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0627:parent",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:package:PHP-0626",
@@ -33852,6 +33975,90 @@
       "security_statusNotes": "Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
       "security_actionStatement": "Apply USN-8948-1 updated php8.3 packages for affected Ubuntu 24.04 LTS systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:8948a261085f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0634"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems.",
+      "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:8948a261085f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0634"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems.",
+      "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:8948a264085f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0635"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems.",
+      "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:8948a264085f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0635"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems.",
+      "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:8948a220081f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0636"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems.",
+      "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:8948a220081f",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0636"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
+      "security_actionStatement": "Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems.",
+      "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
       "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
     },
     {
