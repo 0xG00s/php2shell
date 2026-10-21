@@ -30,6 +30,7 @@ For additional information see:
 | Directory | Purpose |
 | --- | --- |
 | [software](software) | Contains inventory lists of software products with a PHP dependency potentially affected by the vulnerabilities. |
+| [tools](tools) | Contains tools for using/generating files within this repo |
 
 Please note that this repository is not complete and is currently being expanded.
 
