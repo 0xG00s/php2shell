@@ -15764,7 +15764,6 @@
       "name": "Debian trixie PHP 8.4 FPM package",
       "software_packageVersion": "8.4.27-1~deb13u1",
       "software_primaryPurpose": "other",
-      "software_packageVersion": "8.4.27-1~deb13u1",
       "externalIdentifier": [
         {
           "type": "ExternalIdentifier",
@@ -23313,7 +23312,6 @@
       "name": "Ubuntu Noble php8.3-fpm binary package",
       "software_packageVersion": "8.3.6-0ubuntu0.24.04.13",
       "software_primaryPurpose": "other",
-      "software_packageVersion": "8.3.6-0ubuntu0.24.04.13",
       "externalIdentifier": [
         {
           "type": "ExternalIdentifier",
@@ -33759,9 +33757,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed upstream in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; advisory names PHP-FPM, Apache with mod_php, php-cgi and LiteSpeed among at-risk web request handlers",
-      "security_actionStatement": "Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35 and restart PHP workers.",
       "summary": "CVE-2026-109618 assessment: Fixed upstream in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; advisory names PHP-FPM, Apache with mod_php, php-cgi and LiteSpeed among at-risk web request handlers",
-      "comment": "Added from the PHP security advisory published 2026-10-21."
+      "comment": "Added from the PHP security advisory published 2026-10-21.\nAction statement: Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35 and restart PHP workers."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33777,9 +33774,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed upstream in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; advisory names PHP-FPM, Apache with mod_php, php-cgi and LiteSpeed among at-risk web request handlers",
-      "security_actionStatement": "Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35 and restart PHP workers.",
       "summary": "CVE-2026-109619 assessment: Fixed upstream in PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35; advisory names PHP-FPM, Apache with mod_php, php-cgi and LiteSpeed among at-risk web request handlers",
-      "comment": "Added from the PHP security advisory published 2026-10-21."
+      "comment": "Added from the PHP security advisory published 2026-10-21.\nAction statement: Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35 and restart PHP workers."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33791,9 +33787,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed upstream Windows binaries are available for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
-      "security_actionStatement": "Replace affected Windows PHP binaries with a fixed release.",
       "summary": "CVE-2026-109618 assessment: Fixed upstream Windows binaries are available for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
-      "comment": "Added from the PHP security advisory published 2026-10-21."
+      "comment": "Added from the PHP security advisory published 2026-10-21.\nAction statement: Replace affected Windows PHP binaries with a fixed release."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33805,9 +33800,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed upstream Windows binaries are available for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
-      "security_actionStatement": "Replace affected Windows PHP binaries with a fixed release.",
       "summary": "CVE-2026-109619 assessment: Fixed upstream Windows binaries are available for PHP 8.5.12, 8.4.27, 8.3.36 and 8.2.35",
-      "comment": "Added from the PHP security advisory published 2026-10-21."
+      "comment": "Added from the PHP security advisory published 2026-10-21.\nAction statement: Replace affected Windows PHP binaries with a fixed release."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33819,9 +33813,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Arch Linux php 8.5.12-1",
-      "security_actionStatement": "Upgrade Arch Linux php to 8.5.12-1 or later.",
       "summary": "CVE-2026-109618 assessment: Fixed in Arch Linux php 8.5.12-1",
-      "comment": "Added from the Arch Linux security news item and package page published 2026-10-21."
+      "comment": "Added from the Arch Linux security news item and package page published 2026-10-21.\nAction statement: Upgrade Arch Linux php to 8.5.12-1 or later."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33833,9 +33826,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Arch Linux php 8.5.12-1",
-      "security_actionStatement": "Upgrade Arch Linux php to 8.5.12-1 or later.",
       "summary": "CVE-2026-109619 assessment: Fixed in Arch Linux php 8.5.12-1",
-      "comment": "Added from the Arch Linux security news item and package page published 2026-10-21."
+      "comment": "Added from the Arch Linux security news item and package page published 2026-10-21.\nAction statement: Upgrade Arch Linux php to 8.5.12-1 or later."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33847,9 +33839,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Google App Engine Standard supported PHP 8.2+ runtimes are patched automatically",
-      "security_actionStatement": "Upgrade unsupported App Engine Standard PHP runtimes to PHP 8.2 or newer and redeploy.",
       "summary": "CVE-2026-109618 assessment: Google App Engine Standard supported PHP 8.2+ runtimes are patched automatically",
-      "comment": "Added from the Google Cloud bulletin and blog post published 2026-10-21."
+      "comment": "Added from the Google Cloud bulletin and blog post published 2026-10-21.\nAction statement: Upgrade unsupported App Engine Standard PHP runtimes to PHP 8.2 or newer and redeploy."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -33861,9 +33852,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Google App Engine Standard supported PHP 8.2+ runtimes are patched automatically",
-      "security_actionStatement": "Upgrade unsupported App Engine Standard PHP runtimes to PHP 8.2 or newer and redeploy.",
       "summary": "CVE-2026-109619 assessment: Google App Engine Standard supported PHP 8.2+ runtimes are patched automatically",
-      "comment": "Added from the Google Cloud bulletin and blog post published 2026-10-21."
+      "comment": "Added from the Google Cloud bulletin and blog post published 2026-10-21.\nAction statement: Upgrade unsupported App Engine Standard PHP runtimes to PHP 8.2 or newer and redeploy."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -34133,9 +34123,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
-      "security_actionStatement": "Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
-      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21."
+      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21.\nAction statement: Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34147,9 +34136,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
-      "security_actionStatement": "Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Red Hat Enterprise Linux 9 php:8.2 module package php-8.2.35-1.module+el9.8.0+25111+a1450321",
-      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21."
+      "comment": "Added from Red Hat RHSA-2026:87072 issued 2026-10-21.\nAction statement: Apply RHSA-2026:87072 updated php:8.2 module packages for affected Red Hat Enterprise Linux 9 systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34165,9 +34153,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in current Docker Official PHP image tags based on PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12",
-      "security_actionStatement": "Pull rebuilt Docker Official PHP images and rebuild/redeploy derived images and running containers.",
       "summary": "CVE-2026-109618 assessment: Fixed in current Docker Official PHP image tags based on PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12",
-      "comment": "Added from the official docker-library/php security update pull request and current versions manifest on 2026-10-21."
+      "comment": "Added from the official docker-library/php security update pull request and current versions manifest on 2026-10-21.\nAction statement: Pull rebuilt Docker Official PHP images and rebuild/redeploy derived images and running containers."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34183,9 +34170,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in current Docker Official PHP image tags based on PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12",
-      "security_actionStatement": "Pull rebuilt Docker Official PHP images and rebuild/redeploy derived images and running containers.",
       "summary": "CVE-2026-109619 assessment: Fixed in current Docker Official PHP image tags based on PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12",
-      "comment": "Added from the official docker-library/php security update pull request and current versions manifest on 2026-10-21."
+      "comment": "Added from the official docker-library/php security update pull request and current versions manifest on 2026-10-21.\nAction statement: Pull rebuilt Docker Official PHP images and rebuild/redeploy derived images and running containers."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34197,9 +34183,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Debian trixie php8.4 8.4.27-1~deb13u1",
-      "security_actionStatement": "Apply DSA-6574-1 updated php8.4 packages for affected Debian trixie systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Debian trixie php8.4 8.4.27-1~deb13u1",
-      "comment": "Added from Debian DSA-6574-1 issued 2026-10-21."
+      "comment": "Added from Debian DSA-6574-1 issued 2026-10-21.\nAction statement: Apply DSA-6574-1 updated php8.4 packages for affected Debian trixie systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34211,9 +34196,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Debian trixie php8.4 8.4.27-1~deb13u1",
-      "security_actionStatement": "Apply DSA-6574-1 updated php8.4 packages for affected Debian trixie systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Debian trixie php8.4 8.4.27-1~deb13u1",
-      "comment": "Added from Debian DSA-6574-1 issued 2026-10-21."
+      "comment": "Added from Debian DSA-6574-1 issued 2026-10-21.\nAction statement: Apply DSA-6574-1 updated php8.4 packages for affected Debian trixie systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34225,9 +34209,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.3 packages for affected Ubuntu 24.04 LTS systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.3 packages for affected Ubuntu 24.04 LTS systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34239,9 +34222,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.3 packages for affected Ubuntu 24.04 LTS systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Noble php8.3-fpm 8.3.6-0ubuntu0.24.04.13",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.3 packages for affected Ubuntu 24.04 LTS systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34253,9 +34235,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34267,9 +34248,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Stonking php8.5-fpm 8.5.9-0ubuntu2.1",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.10 systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34281,9 +34261,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34295,9 +34274,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Resolute php8.5-fpm 8.5.4-0ubuntu1.5",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.5 packages for affected Ubuntu 26.04 LTS systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34309,9 +34287,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems.",
       "summary": "CVE-2026-109618 assessment: Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -34323,9 +34300,8 @@
       ],
       "relationshipType": "fixedIn",
       "security_statusNotes": "Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
-      "security_actionStatement": "Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems.",
       "summary": "CVE-2026-109619 assessment: Fixed in Ubuntu Jammy php8.1-fpm 8.1.2-1ubuntu2.28",
-      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21."
+      "comment": "Added from Ubuntu USN-8948-1 issued 2026-10-21.\nAction statement: Apply USN-8948-1 updated php8.1 packages for affected Ubuntu 22.04 LTS systems."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
