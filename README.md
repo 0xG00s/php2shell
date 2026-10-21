@@ -37,3 +37,5 @@ Please note that this repository is not complete and is currently being expanded
 ## Contributions welcome
 
 If you have additional information relevant to these PHP vulnerabilities, please open a pull request with a source that can be verified.
+
+For updates to the paginated software list, please edit the SPDX source files in `software/spdx/`. The Markdown list pages are generated automatically from those files, so pull requests that only modify generated Markdown will not be merged.

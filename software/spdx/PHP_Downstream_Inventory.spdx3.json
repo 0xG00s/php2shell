@@ -2565,9 +2565,9 @@
     },
     {
       "type": "Organization",
-      "spdxId": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "spdxId": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
       "creationInfo": "_:creationinfo",
-      "name": "NetScaler / Citrix, Cloud Software Group"
+      "name": "Citrix / NetScaler"
     },
     {
       "type": "Organization",
@@ -4407,9 +4407,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:nextcloud:337128aac2bf",
-      "summary": "A pinned official-repository wiki revision gives the compatibility matrix. The 35.0.2 release commit changes version.php from RC2 to the final release; this confirms an actual release identity beyond a moving manual label.",
+      "summary": "Nextcloud states that the PHP issue affects Nextcloud deployments and may allow server compromise and data access; affected PHP versions and Nextcloud updates remain pending.",
       "description": "mod_php or PHP-FPM",
-      "comment": "Inventory record: PHP-0015\nCategory: Collaboration and storage\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: mod_php or PHP-FPM\nPHP version scope: Revision-pinned project matrix: Nextcloud 35 PHP 8.3/8.4/8.5; 33\u201334 PHP 8.2\u20138.5; 31\u201332 PHP 8.1\u20138.4. All 27 listed major versions 9\u201335 are retained in a bounded catalogue. Current observed release identities: 35.0.2, 34.0.5 and 33.0.10 (15 October 2026), not a support-lifetime claim.\nExtensions: Required in current guide: ctype, curl, dom, fileinfo, gd, xml, simplexml, xmlreader, xmlwriter, mbstring, openssl, posix, session, zip, zlib. Choose one database PDO driver. Optional caching/media/CLI and app modules are feature-specific; filter is documented only for Mageia/FreeBSD.\nLimitations: The matrix is project documentation, not exact patch-level runtime constraints or an installed module measurement. The release commit only shows version.php, not full PHP prerequisites. Calendar\u2019s complete app/core release pairing remains unread. AIO/Snap/NCP/Docker and operator services need separate builds; browser/mobile/desktop and office/signaling clients are not PHP servers. No deployed build or vulnerability inferred.\nPatch owner: Hosting provider or operator; image publisher for bundled distributions\nDownstream surface: Files, sharing, identity and apps\nRelease pin: Compatibility wiki revision d90292c6b2f2d0707fc61571364185fa311525bb (1 September 2026); 35.0.2 source commit ba900af933e61ffa005315b09d6454bfbbcbcc81 (published 15 October 2026). Not a verified distribution archive.\nSource accessed: 2026-10-19\nAliases: Nextcloud Server core, Nextcloud Hub server runtime\nConditional downstream consequence: A matching PHP parser or memory-safety flaw reachable through requests, uploads, previews or archive handling could cause denial of service, disclosure or worker-level code execution. The worker\u2019s actual file, database and configured-service permissions determine possible document loss, alteration or credential access. Host compromise, tenant escape and lateral movement require additional conditions.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0015\nCategory: Collaboration and storage\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: mod_php or PHP-FPM\nPHP version scope: Revision-pinned project matrix: Nextcloud 35 PHP 8.3/8.4/8.5; 33\u201334 PHP 8.2\u20138.5; 31\u201332 PHP 8.1\u20138.4. All 27 listed major versions 9\u201335 are retained in a bounded catalogue. Current observed release identities: 35.0.2, 34.0.5 and 33.0.10 (15 October 2026), not a support-lifetime claim.\nExtensions: Required in current guide: ctype, curl, dom, fileinfo, gd, xml, simplexml, xmlreader, xmlwriter, mbstring, openssl, posix, session, zip, zlib. Choose one database PDO driver. Optional caching/media/CLI and app modules are feature-specific; filter is documented only for Mageia/FreeBSD.\nLimitations: The matrix is project documentation, not exact patch-level runtime constraints or an installed module measurement. The release commit only shows version.php, not full PHP prerequisites. Calendar\u2019s complete app/core release pairing remains unread. AIO/Snap/NCP/Docker and operator services need separate builds; browser/mobile/desktop and office/signaling clients are not PHP servers. No deployed build or vulnerability inferred.\nPatch owner: Hosting provider or operator; image publisher for bundled distributions\nDownstream surface: Files, sharing, identity and apps\nRelease pin: Compatibility wiki revision d90292c6b2f2d0707fc61571364185fa311525bb (1 September 2026); 35.0.2 source commit ba900af933e61ffa005315b09d6454bfbbcbcc81 (published 15 October 2026). Not a verified distribution archive.\nSource accessed: 2026-10-21\nAliases: Nextcloud Server core, Nextcloud Hub server runtime\nConditional downstream consequence: A matching PHP parser or memory-safety flaw reachable through requests, uploads, previews or archive handling could cause denial of service, disclosure or worker-level code execution. The worker\u2019s actual file, database and configured-service permissions determine possible document loss, alteration or credential access. Host compromise, tenant escape and lateral movement require additional conditions.\nVulnerability status: Vendor notice 2026-10-21: Nextcloud states the PHP issue affects Nextcloud deployments; affected PHP versions and Nextcloud updates are pending.\nCVE-2026-109618: Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified\nCVE-2026-109619: Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified\nCVE assessment limit: Nextcloud confirms product impact but does not yet identify affected/fixed PHP versions or Nextcloud releases. Installed version, backport, configuration and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -4450,6 +4450,14 @@
             "https://github.com/nextcloud/server/commit/ba900af933e61ffa005315b09d6454bfbbcbcc81"
           ],
           "comment": "Primary application release, compatibility or installer evidence - Pinned diff changes 35.0.2 RC2 to 35.0.2 final."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/nextcloud/server/issues/65754"
+          ],
+          "comment": "Nextcloud - PHP CVEs. Attention required!"
         }
       ]
     },
@@ -24180,7 +24188,7 @@
           "identifier": "PHP-0624"
         }
       ],
-      "suppliedBy": "urn:php2shell:inventory:organization:netscaler-citrix-cloud-software-group:ab7397eb1060",
+      "suppliedBy": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
       "summary": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
       "description": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.",
       "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: 14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.\nPHP version scope: 14.1 FreeBSD pooled notice: PHP 8.0.16. Legacy 12.1 notice in master: PHP 7.0.13. Current patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Do not extend PHP evidence to all Gateway login/VPN paths, BLX/CPX, SDX or NetScaler Console by association.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
@@ -31644,6 +31652,14 @@
         },
         {
           "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/nextcloud/server/issues/65754"
+          ],
+          "comment": "Nextcloud - PHP CVEs. Attention required!"
+        },
+        {
+          "type": "ExternalRef",
           "externalRefType": "securityOther",
           "locator": [
             "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/"
@@ -31750,6 +31766,14 @@
             "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
           ],
           "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/nextcloud/server/issues/65754"
+          ],
+          "comment": "Nextcloud - PHP CVEs. Attention required!"
         },
         {
           "type": "ExternalRef",
@@ -32060,7 +32084,6 @@
         "urn:php2shell:inventory:package:PHP-0012",
         "urn:php2shell:inventory:package:PHP-0013",
         "urn:php2shell:inventory:package:PHP-0014",
-        "urn:php2shell:inventory:package:PHP-0015",
         "urn:php2shell:inventory:package:PHP-0016",
         "urn:php2shell:inventory:package:PHP-0017",
         "urn:php2shell:inventory:package:PHP-0018",
@@ -32780,7 +32803,6 @@
         "urn:php2shell:inventory:package:PHP-0012",
         "urn:php2shell:inventory:package:PHP-0013",
         "urn:php2shell:inventory:package:PHP-0014",
-        "urn:php2shell:inventory:package:PHP-0015",
         "urn:php2shell:inventory:package:PHP-0016",
         "urn:php2shell:inventory:package:PHP-0017",
         "urn:php2shell:inventory:package:PHP-0018",
@@ -33328,6 +33350,34 @@
       "security_actionStatement": "Apply updated CloudLinux or TuxCare PHP packages when available.",
       "summary": "CVE-2026-109619 assessment: Affected package streams: CloudLinux ea-php and TuxCare PHP ELS; affected versions unspecified",
       "comment": "Added from the CloudLinux knowledge base article published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:019fdb7ba4c6",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0015"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified",
+      "security_actionStatement": "Apply fixed PHP releases when available and follow Nextcloud guidance; consider shutting down affected PHP-based services until then.",
+      "summary": "CVE-2026-109618 assessment: Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified",
+      "comment": "Added from the Nextcloud security notice published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:019fdb7ba4c6",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0015"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified",
+      "security_actionStatement": "Apply fixed PHP releases when available and follow Nextcloud guidance; consider shutting down affected PHP-based services until then.",
+      "summary": "CVE-2026-109619 assessment: Affected: Nextcloud deployments using affected PHP versions; affected PHP versions unspecified",
+      "comment": "Added from the Nextcloud security notice published 2026-10-21."
     }
   ]
 }
