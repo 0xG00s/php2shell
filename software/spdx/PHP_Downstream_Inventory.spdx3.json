@@ -2660,6 +2660,54 @@
       "name": "wallabag project"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:coolify:df9a9413e059",
+      "creationInfo": "_:creationinfo",
+      "name": "Coolify"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:firefly-iii-project:cda8b88c4699",
+      "creationInfo": "_:creationinfo",
+      "name": "Firefly III project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:monica-project:a5b33fcf8db8",
+      "creationInfo": "_:creationinfo",
+      "name": "Monica project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:cachet-project:999592b06608",
+      "creationInfo": "_:creationinfo",
+      "name": "Cachet project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:krayin:de0598c27179",
+      "creationInfo": "_:creationinfo",
+      "name": "Krayin"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:qloapps:78f5576c47cf",
+      "creationInfo": "_:creationinfo",
+      "name": "QloApps"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:unopim:5e2db77c3503",
+      "creationInfo": "_:creationinfo",
+      "name": "UnoPim"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:crater-invoice:12a8781dbd68",
+      "creationInfo": "_:creationinfo",
+      "name": "Crater Invoice"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4134,7 +4182,25 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:vendor-php2shell-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:vendor-php2shell-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:official-php-requirement-candidates-20261021",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:official-php-requirement-candidates-20261021"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:official-php-requirement-candidates-20261021",
+        "urn:php2shell:inventory:package:PHP-0665",
+        "urn:php2shell:inventory:package:PHP-0666",
+        "urn:php2shell:inventory:package:PHP-0667",
+        "urn:php2shell:inventory:package:PHP-0668",
+        "urn:php2shell:inventory:package:PHP-0669",
+        "urn:php2shell:inventory:package:PHP-0670",
+        "urn:php2shell:inventory:package:PHP-0671",
+        "urn:php2shell:inventory:package:PHP-0672",
+        "urn:php2shell:inventory:relationship:PHP-0665",
+        "urn:php2shell:inventory:relationship:PHP-0666",
+        "urn:php2shell:inventory:relationship:PHP-0667",
+        "urn:php2shell:inventory:relationship:PHP-0668",
+        "urn:php2shell:inventory:relationship:PHP-0669",
+        "urn:php2shell:inventory:relationship:PHP-0670",
+        "urn:php2shell:inventory:relationship:PHP-0671",
+        "urn:php2shell:inventory:relationship:PHP-0672",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021"
       ]
     },
     {
@@ -36953,6 +37019,294 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0665",
+      "creationInfo": "_:creationinfo",
+      "name": "Coolify",
+      "software_primaryPurpose": "platform",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0665"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:coolify:df9a9413e059",
+      "summary": "The official Coolify Composer manifest declares PHP ^8.4 for the self-hostable PaaS, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Self-hosted PaaS and deployment control plane",
+      "comment": "Inventory record: PHP-0665\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime and control-plane workers\nPHP version scope: Official main Composer manifest declares PHP ^8.4; exact released artifact pin pending.\nExtensions: Manifest-declared extension set not exhaustively resolved in this candidate pass\nLimitations: A moving branch manifest and repository SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Coolify maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Deployment credentials, hosted service configuration, secrets and administrative workflows\nRelease pin: Moving official composer.json and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: coollabsio/coolify\nConditional downstream consequence: If untrusted requests or control-plane workflows reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Managed workloads, stored credentials and configuration could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/coollabsio/coolify/blob/main/composer.json"
+          ],
+          "comment": "Official Coolify Composer manifest"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/coollabsio/coolify/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0666",
+      "creationInfo": "_:creationinfo",
+      "name": "Firefly III",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0666"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:firefly-iii-project:cda8b88c4699",
+      "summary": "The official Firefly III repository identifies a self-hosted personal finance manager with a PHP application tree, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Self-hosted personal finance web application",
+      "comment": "Inventory record: PHP-0666\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime and REST API\nPHP version scope: Official repository metadata and Composer application structure establish PHP runtime scope; exact supported release and runtime pin pending.\nExtensions: Repository manifest and deployment-specific extension set not exhaustively resolved in this candidate pass\nLimitations: Repository metadata and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Firefly III maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Personal finance records, imported transactions, API tokens and administrative configuration\nRelease pin: Moving official repository and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: firefly-iii/firefly-iii\nConditional downstream consequence: If untrusted requests or imported data reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Financial data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official repository and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/firefly-iii/firefly-iii"
+          ],
+          "comment": "Official Firefly III repository"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/firefly-iii/firefly-iii/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0667",
+      "creationInfo": "_:creationinfo",
+      "name": "Monica",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0667"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:monica-project:a5b33fcf8db8",
+      "summary": "The official Monica Composer manifest declares PHP ^8.3 for the personal CRM, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Personal CRM web application",
+      "comment": "Inventory record: PHP-0667\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime\nPHP version scope: Official main Composer manifest declares PHP ^8.3; exact released artifact pin pending.\nExtensions: Official Composer manifest lists required PHP extensions; exact deployed set not measured\nLimitations: A moving branch manifest and repository SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Monica maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Contacts, reminders, notes, identity data and administrative workflows\nRelease pin: Moving official composer.json and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: monicahq/monica\nConditional downstream consequence: If untrusted requests or imports reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Personal relationship data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/monicahq/monica/blob/main/composer.json"
+          ],
+          "comment": "Official Monica Composer manifest"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/monicahq/monica/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0668",
+      "creationInfo": "_:creationinfo",
+      "name": "Cachet",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0668"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:cachet-project:999592b06608",
+      "summary": "The official Cachet repository requires PHP 8.3 or later for the self-hosted status page system, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Self-hosted status page system",
+      "comment": "Inventory record: PHP-0668\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime\nPHP version scope: Official repository requirements state PHP 8.3 or later; exact released artifact pin pending.\nExtensions: Official repository requirements and manifest are not exhaustively resolved in this candidate pass\nLimitations: Moving repository requirements and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Cachet maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Incident data, component status, administrative accounts and integrations\nRelease pin: Moving official repository requirements and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: cachethq/cachet\nConditional downstream consequence: If untrusted requests reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Status data, admin sessions and configured integrations could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/cachethq/cachet"
+          ],
+          "comment": "Official Cachet repository and requirements"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/cachethq/cachet/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0669",
+      "creationInfo": "_:creationinfo",
+      "name": "Krayin CRM",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0669"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:krayin:de0598c27179",
+      "summary": "The official Krayin CRM repository requires PHP 8.3 or higher for the Laravel CRM, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "CRM web application",
+      "comment": "Inventory record: PHP-0669\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime\nPHP version scope: Official repository requirements state PHP 8.3 or higher; exact released artifact pin pending.\nExtensions: Official repository requirements and manifest are not exhaustively resolved in this candidate pass\nLimitations: Moving repository requirements and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Krayin maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Customer records, leads, sales pipelines, integrations and administrative workflows\nRelease pin: Moving official repository requirements and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: krayin/laravel-crm\nConditional downstream consequence: If untrusted requests or imports reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. CRM data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/krayin/laravel-crm"
+          ],
+          "comment": "Official Krayin CRM repository and requirements"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/krayin/laravel-crm/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0670",
+      "creationInfo": "_:creationinfo",
+      "name": "QloApps",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0670"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qloapps:78f5576c47cf",
+      "summary": "The official QloApps repository identifies a hotel management and reservation platform with PHP application code, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Hotel property-management and reservation web application",
+      "comment": "Inventory record: PHP-0670\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime and back-office workflows\nPHP version scope: Official repository metadata and project guidance establish a PHP backend; exact supported release and runtime pin pending.\nExtensions: Official project guidance lists PHP extensions; exact deployed set not measured\nLimitations: Repository metadata and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: QloApps maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Guest records, bookings, room inventory, payments and administrative workflows\nRelease pin: Moving official repository and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: Qloapps/QloApps\nConditional downstream consequence: If untrusted requests or booking workflows reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Guest, booking and payment-adjacent data could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official repository and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/Qloapps/QloApps"
+          ],
+          "comment": "Official QloApps repository"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/Qloapps/QloApps/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0671",
+      "creationInfo": "_:creationinfo",
+      "name": "UnoPim",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0671"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:unopim:5e2db77c3503",
+      "summary": "The official UnoPim repository documents a Laravel PIM/DAM platform requiring PHP 8.4.1+, and GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Product information and digital asset management web application",
+      "comment": "Inventory record: PHP-0671\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime and queue workers\nPHP version scope: Official repository requirements state PHP 8.4.1+; exact released artifact pin pending.\nExtensions: Official repository requirements list PHP extensions; exact deployed set not measured\nLimitations: Moving repository requirements and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: UnoPim maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Product catalogues, digital assets, import/export jobs, APIs and administrative workflows\nRelease pin: Moving official repository requirements and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: unopim/unopim\nConditional downstream consequence: If untrusted requests, imports or assets reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Product data, media and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/unopim/unopim"
+          ],
+          "comment": "Official UnoPim repository and requirements"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/unopim/unopim/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0672",
+      "creationInfo": "_:creationinfo",
+      "name": "Crater",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0672"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:crater-invoice:12a8781dbd68",
+      "summary": "The official Crater repository identifies an invoicing application and its installer config sets a minimum PHP version of 7.4.0; GitHub exposes an SPDX dependency-graph SBOM for the repository.",
+      "description": "Self-hosted invoicing web application",
+      "comment": "Inventory record: PHP-0672\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side Laravel/PHP web runtime\nPHP version scope: Official installer config sets minPhpVersion to 7.4.0; exact released artifact pin pending.\nExtensions: Official installer config lists required PHP extensions; exact deployed set not measured\nLimitations: Moving repository files and dependency-graph SBOM do not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Crater maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Invoices, customer records, payment workflows and administrative configuration\nRelease pin: Moving official installer config and GitHub dependency-graph SBOM export reviewed 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: crater-invoice-inc/crater\nConditional downstream consequence: If untrusted requests or imports reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Billing data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and GitHub dependency-graph SBOM evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/crater-invoice-inc/crater/blob/master/config/installer.php"
+          ],
+          "comment": "Official Crater installer requirements"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://api.github.com/repos/crater-invoice-inc/crater/dependency-graph/sbom"
+          ],
+          "comment": "GitHub dependency-graph SPDX SBOM export endpoint"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -37121,6 +37475,102 @@
       "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0665",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0665",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0665: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0666",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0666",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0666: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0667",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0667",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0667: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0668",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0668",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0668: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0669",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0669",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0669: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0670",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0670",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0670: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0671",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0671",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0671: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0672",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0672",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0672: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:vendor-php2shell-candidates-20261021",
       "creationInfo": "_:creationinfo",
@@ -37195,6 +37645,46 @@
       "security_statusNotes": "Official PHP requirement or SBOM evidence only; CVE match unknown",
       "summary": "CVE-2026-109619 assessment: Official PHP requirement or SBOM evidence only; CVE match unknown",
       "comment": "Added from official product manifests, requirements pages or SBOM documentation reviewed 2026-10-21. These sources establish PHP product relationships, not CVE-specific affected or fixed deployment scope."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0665",
+        "urn:php2shell:inventory:package:PHP-0666",
+        "urn:php2shell:inventory:package:PHP-0667",
+        "urn:php2shell:inventory:package:PHP-0668",
+        "urn:php2shell:inventory:package:PHP-0669",
+        "urn:php2shell:inventory:package:PHP-0670",
+        "urn:php2shell:inventory:package:PHP-0671",
+        "urn:php2shell:inventory:package:PHP-0672"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Official PHP requirement or GitHub SBOM evidence only; CVE match unknown",
+      "summary": "CVE-2026-109618 assessment: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown",
+      "comment": "Added from official repositories, manifests, requirements and GitHub dependency-graph SPDX SBOM exports reviewed 2026-10-21. These sources establish PHP product relationships and dependency-graph presence, not CVE-specific affected or fixed deployment scope."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0665",
+        "urn:php2shell:inventory:package:PHP-0666",
+        "urn:php2shell:inventory:package:PHP-0667",
+        "urn:php2shell:inventory:package:PHP-0668",
+        "urn:php2shell:inventory:package:PHP-0669",
+        "urn:php2shell:inventory:package:PHP-0670",
+        "urn:php2shell:inventory:package:PHP-0671",
+        "urn:php2shell:inventory:package:PHP-0672"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Official PHP requirement or GitHub SBOM evidence only; CVE match unknown",
+      "summary": "CVE-2026-109619 assessment: Official PHP requirement or GitHub SBOM evidence only; CVE match unknown",
+      "comment": "Added from official repositories, manifests, requirements and GitHub dependency-graph SPDX SBOM exports reviewed 2026-10-21. These sources establish PHP product relationships and dependency-graph presence, not CVE-specific affected or fixed deployment scope."
     }
   ]
 }
