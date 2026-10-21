@@ -16533,6 +16533,14 @@
             "https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5"
           ],
           "comment": "CloudLinux - Critical PHP vulnerabilities CVE-2026-109618 / CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
+          ],
+          "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
         }
       ]
     },
@@ -16550,7 +16558,7 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cloudlinux:daf109985d8c",
-      "summary": "CloudLinux states it supplies older EOL ea-PHP security patches beyond cPanel\u2019s standard support.",
+      "summary": "CloudLinux scopes ea-php in its CVE-2026-109618 and CVE-2026-109619 package-availability notice; affected versions are not specified.",
       "description": "EasyApache ea-PHP packages managed through MultiPHP/EasyApache",
       "comment": "Inventory record: PHP-0388\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0028\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: EasyApache ea-PHP packages managed through MultiPHP/EasyApache\nPHP version scope: Vendor documents older EOL ea-PHP on CloudLinux 6\u20139; exact covered branches, package releases and entitlement unresolved\nExtensions: Required/available/loaded module inventory unknown; resolve the selected version and configuration\nLimitations: This page\u2019s general Linux discussion does not override its compatibility rows: ea-PHP is marked unavailable for Ubuntu/Debian there. No promise that every flaw/build is fixed follows from the product description. No package/image was installed, pulled, built, executed or tested. No deployment, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied.\nPatch owner: CloudLinux for its backported packages; hosting operator for subscription, package update and service rollout\nDownstream surface: Only the named PHP component and its callers\nRelease pin: Moving official documentation; immutable runtime build pin pending\nSource accessed: 2026-10-17\nAliases: cloudlinux:ea-php-extended-support\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through customer application inputs, possible effects include worker denial of service, disclosure of app-accessible secrets, data modification or code execution with the worker identity. Crossing customer, container or provider boundaries requires separate evidence; runtime presence alone establishes none of these outcomes.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
       "externalRef": [
@@ -16561,6 +16569,14 @@
             "https://docs.cloudlinux.com/cloudlinuxos/alt-ea_packages/"
           ],
           "comment": "Official PHP component, runtime or hosting declaration"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
+          ],
+          "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
         }
       ]
     },
@@ -17606,7 +17622,7 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:tuxcare-cloudlinux:44063b555f7c",
-      "summary": "TuxCare documents a Windows PHP distribution with its installer, runtime archives and built-in versus loadable extensions.",
+      "summary": "CloudLinux scopes TuxCare PHP ELS in its CVE-2026-109618 and CVE-2026-109619 package-availability notice; affected versions are not specified.",
       "description": "Vendor PHP Windows binaries; optional IIS integration and selected loadable DLLs",
       "comment": "Inventory record: PHP-0422\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Vendor PHP Windows binaries; optional IIS integration and selected loadable DLLs\nPHP version scope: Vendor matrix lists WindowsServer2019/2022/2025, x64/x86, selected PHP5.2\u20138.2 families; exact package build not pinned\nExtensions: Built-in and loadable sets differ by PHP version/TS/NTS build; DLL enablement is optional and must be verified\nLimitations: The sample PHP5.6.40 CLI output is not a current package pin. Optional ELS installation does not put PHP on all Windows hosts; vendor assurance wording is not a guarantee of no vulnerabilities. No package/image was installed, pulled, built, executed or tested. No deployment, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied.\nPatch owner: TuxCare for licensed PHP backport builds; Windows administrator for selected modules, runtime update and service rollout\nDownstream surface: Only the named PHP component and its callers\nRelease pin: Moving official documentation; immutable runtime build pin pending\nSource accessed: 2026-10-17\nAliases: tuxcare:els-php-windows\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through customer application inputs, possible effects include worker denial of service, disclosure of app-accessible secrets, data modification or code execution with the worker identity. Crossing customer, container or provider boundaries requires separate evidence; runtime presence alone establishes none of these outcomes.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
       "externalRef": [
@@ -17617,6 +17633,14 @@
             "https://docs.tuxcare.com/els-for-runtimes/php/"
           ],
           "comment": "Official PHP component, runtime or hosting declaration"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
+          ],
+          "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
         }
       ]
     },
@@ -31219,6 +31243,14 @@
         },
         {
           "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
+          ],
+          "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
+        },
+        {
+          "type": "ExternalRef",
           "externalRefType": "securityOther",
           "locator": [
             "https://watchtowr.com/intelligence/php-cve-2026-109618-faq/"
@@ -31317,6 +31349,14 @@
             "https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5"
           ],
           "comment": "CloudLinux - Critical PHP vulnerabilities CVE-2026-109618 / CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://cloudlinux.zendesk.com/hc/en-us/articles/31194180517916-PHP-CVE-2026-109618-CVE-2026-109619-reported-pre-disclosure-RCEs-updated-package-availability"
+          ],
+          "comment": "CloudLinux - PHP CVE-2026-109618 / CVE-2026-109619 updated package availability"
         },
         {
           "type": "ExternalRef",
@@ -31971,7 +32011,6 @@
         "urn:php2shell:inventory:package:PHP-0382",
         "urn:php2shell:inventory:package:PHP-0384",
         "urn:php2shell:inventory:package:PHP-0385",
-        "urn:php2shell:inventory:package:PHP-0388",
         "urn:php2shell:inventory:package:PHP-0389",
         "urn:php2shell:inventory:package:PHP-0390",
         "urn:php2shell:inventory:package:PHP-0391",
@@ -31980,7 +32019,6 @@
         "urn:php2shell:inventory:package:PHP-0410",
         "urn:php2shell:inventory:package:PHP-0411",
         "urn:php2shell:inventory:package:PHP-0412",
-        "urn:php2shell:inventory:package:PHP-0422",
         "urn:php2shell:inventory:package:PHP-0423",
         "urn:php2shell:inventory:package:PHP-0425",
         "urn:php2shell:inventory:package:PHP-0426",
@@ -32686,7 +32724,6 @@
         "urn:php2shell:inventory:package:PHP-0382",
         "urn:php2shell:inventory:package:PHP-0384",
         "urn:php2shell:inventory:package:PHP-0385",
-        "urn:php2shell:inventory:package:PHP-0388",
         "urn:php2shell:inventory:package:PHP-0389",
         "urn:php2shell:inventory:package:PHP-0390",
         "urn:php2shell:inventory:package:PHP-0391",
@@ -32695,7 +32732,6 @@
         "urn:php2shell:inventory:package:PHP-0410",
         "urn:php2shell:inventory:package:PHP-0411",
         "urn:php2shell:inventory:package:PHP-0412",
-        "urn:php2shell:inventory:package:PHP-0422",
         "urn:php2shell:inventory:package:PHP-0423",
         "urn:php2shell:inventory:package:PHP-0425",
         "urn:php2shell:inventory:package:PHP-0426",
@@ -32855,6 +32891,36 @@
       "security_actionStatement": "Apply updated Alt-PHP packages when available from CloudLinux.",
       "summary": "CVE-2026-109619 assessment: Affected: CloudLinux OS Components (Alt-PHP); affected versions unspecified",
       "comment": "Added from the CloudLinux incident notice published 2026-10-20."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:9c85bdebe018",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0388",
+        "urn:php2shell:inventory:package:PHP-0422"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected package streams: CloudLinux ea-php and TuxCare PHP ELS; affected versions unspecified",
+      "security_actionStatement": "Apply updated CloudLinux or TuxCare PHP packages when available.",
+      "summary": "CVE-2026-109618 assessment: Affected package streams: CloudLinux ea-php and TuxCare PHP ELS; affected versions unspecified",
+      "comment": "Added from the CloudLinux knowledge base article published 2026-10-21."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:9c85bdebe018",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0388",
+        "urn:php2shell:inventory:package:PHP-0422"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Affected package streams: CloudLinux ea-php and TuxCare PHP ELS; affected versions unspecified",
+      "security_actionStatement": "Apply updated CloudLinux or TuxCare PHP packages when available.",
+      "summary": "CVE-2026-109619 assessment: Affected package streams: CloudLinux ea-php and TuxCare PHP ELS; affected versions unspecified",
+      "comment": "Added from the CloudLinux knowledge base article published 2026-10-21."
     }
   ]
 }
