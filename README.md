@@ -1,6 +1,6 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Last updated: 21 October 2026
+Last updated: 21 October 2026 16:00
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -13,10 +13,12 @@ Public reporting indicates that both vulnerabilities can be triggered with a sim
 
 PHP announced a security release for 21 October 2026 at 14:00 UTC (16:00 CEST). Until that release is published, technical details and fixed versions remain unconfirmed. Multiple public proof-of-concept exploits are already available. As of 21 October 2026, NCSC has no indication of active exploitation, but considers large-scale exploitation likely in the short term.
 
+Update 21-10-2026 16:00: The PHP Foundation released two patches as a fix for CVE-2026-109618 and CVE-2026-109619. More details can be found on the [PHP-website](https://www.php.net/).
+
 ## Recommended actions
 
 - Identify PHP-based applications and their runtime versions, with priority on internet-facing systems.
-- Patch to fixed PHP releases as soon as they become available.
+- Update to PHP 8.5.12, 8.4.27, 8.3.36 or 8.2.35.
 - If immediate patching is not possible, consider isolating internet-facing PHP applications from public networks until a fix is applied.
 - Monitor vendor advisories, internet-facing logs, and public exploit activity.
 
@@ -24,6 +26,7 @@ For additional information see:
 
 - [CERT-EU Security Advisory 2026-018](https://cert.europa.eu/publications/security-advisories/2026-018/)
 - [PHP announcement: Upcoming Critical PHP Security Release](https://www.php.net/archive/2026.php#2026-10-20-1)
+- [List of advisories from other EU national CSIRT's](https://github.com/enisaeu/CNW/blob/main/advisories/2026/CNW-2026-04_php.md)
 
 ## Repository contents
 
