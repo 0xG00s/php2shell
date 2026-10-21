@@ -2600,6 +2600,66 @@
       "name": "Juniper Networks"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:akeneo:d033cb250354",
+      "creationInfo": "_:creationinfo",
+      "name": "Akeneo"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:clientexec:5a15539081ae",
+      "creationInfo": "_:creationinfo",
+      "name": "Clientexec"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:freshrss-project:25e2a9a0ea24",
+      "creationInfo": "_:creationinfo",
+      "name": "FreshRSS project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:humhub:e385677572e6",
+      "creationInfo": "_:creationinfo",
+      "name": "HumHub"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:n-able:664d55891d79",
+      "creationInfo": "_:creationinfo",
+      "name": "N-able"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:openemr-project:6c4b2911c944",
+      "creationInfo": "_:creationinfo",
+      "name": "OpenEMR project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:scalingo:7a107972d9c8",
+      "creationInfo": "_:creationinfo",
+      "name": "Scalingo"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:sophos:2fd5c42d49f9",
+      "creationInfo": "_:creationinfo",
+      "name": "Sophos"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:phpmyfaq-project:ab2e5ba5d190",
+      "creationInfo": "_:creationinfo",
+      "name": "phpMyFAQ project"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:wallabag-project:4347649a11df",
+      "creationInfo": "_:creationinfo",
+      "name": "wallabag project"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4042,7 +4102,39 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:calif-confirmed-php-apps-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:calif-confirmed-php-apps-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:documented-php-web-products-20261021",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:documented-php-web-products-20261021"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:documented-php-web-products-20261021",
+        "urn:php2shell:inventory:package:PHP-0651",
+        "urn:php2shell:inventory:package:PHP-0652",
+        "urn:php2shell:inventory:package:PHP-0653",
+        "urn:php2shell:inventory:package:PHP-0654",
+        "urn:php2shell:inventory:package:PHP-0655",
+        "urn:php2shell:inventory:package:PHP-0656",
+        "urn:php2shell:inventory:package:PHP-0657",
+        "urn:php2shell:inventory:package:PHP-0658",
+        "urn:php2shell:inventory:package:PHP-0659",
+        "urn:php2shell:inventory:package:PHP-0660",
+        "urn:php2shell:inventory:package:PHP-0661",
+        "urn:php2shell:inventory:package:PHP-0662",
+        "urn:php2shell:inventory:package:PHP-0663",
+        "urn:php2shell:inventory:package:PHP-0664",
+        "urn:php2shell:inventory:relationship:PHP-0651",
+        "urn:php2shell:inventory:relationship:PHP-0652",
+        "urn:php2shell:inventory:relationship:PHP-0653",
+        "urn:php2shell:inventory:relationship:PHP-0654",
+        "urn:php2shell:inventory:relationship:PHP-0655",
+        "urn:php2shell:inventory:relationship:PHP-0656",
+        "urn:php2shell:inventory:relationship:PHP-0657",
+        "urn:php2shell:inventory:relationship:PHP-0658",
+        "urn:php2shell:inventory:relationship:PHP-0659",
+        "urn:php2shell:inventory:relationship:PHP-0660",
+        "urn:php2shell:inventory:relationship:PHP-0661",
+        "urn:php2shell:inventory:relationship:PHP-0662",
+        "urn:php2shell:inventory:relationship:PHP-0663",
+        "urn:php2shell:inventory:relationship:PHP-0664",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:vendor-php2shell-candidates-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:vendor-php2shell-candidates-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:official-php-requirement-candidates-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:official-php-requirement-candidates-20261021"
       ]
     },
     {
@@ -36459,6 +36551,650 @@
           "comment": "Wiz Research explains that exploitation is in PHP itself and can affect any PHP web application"
         }
       ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0651",
+      "creationInfo": "_:creationinfo",
+      "name": "Scalingo PaaS",
+      "software_primaryPurpose": "platform",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0651"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:scalingo:7a107972d9c8",
+      "summary": "Scalingo's php2shell bulletin says PHP applications hosted on Scalingo may be affected and lists patched PHP releases.",
+      "description": "Hosted PHP application runtime",
+      "comment": "Inventory record: PHP-0651\nCategory: Hosting and cloud\nOriginal relationship: hosts\nRelationship direction: hosts_customer_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Hosted PHP application runtime; exact tenant SAPI and selected stack are not measured\nPHP version scope: Scalingo SSB-2026-005 lists fixed PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12; exact tenant runtime selection and rollout are not measured.\nExtensions: Tenant/buildpack-specific; complete loaded module set unknown\nLimitations: A platform bulletin does not prove every application uses PHP, an affected version or a reachable path. Customer rebuild/redeploy state and worker restart are not measured.\nPatch owner: Scalingo for managed runtime availability; customer for selected runtime and redeploy\nDownstream surface: Hosted customer PHP applications and workers\nRelease pin: Scalingo SSB-2026-005 published 2026-10-21; runtime artifact identifiers not pinned\nSource accessed: 2026-10-21\nAliases: Scalingo hosted PHP applications\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor bulletin 2026-10-21: Scalingo states hosted PHP applications are potentially affected and patched PHP releases are available; tenant runtime scope remains unmeasured.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://doc.scalingo.com/security/bulletins/ssb-2026-005"
+          ],
+          "comment": "Scalingo security bulletin SSB-2026-005 for php2shell"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0652",
+      "creationInfo": "_:creationinfo",
+      "name": "Scalingo PHP buildpack",
+      "software_primaryPurpose": "platform",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0652"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:scalingo:7a107972d9c8",
+      "summary": "Scalingo says applications using its PHP buildpack must rebuild and redeploy to receive the updated PHP runtime and workaround.",
+      "description": "PHP buildpack runtime distribution",
+      "comment": "Inventory record: PHP-0652\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Buildpack-provided PHP runtime for web and worker applications\nPHP version scope: Scalingo SSB-2026-005 identifies patched PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12; selected buildpack/runtime artifacts are not independently pinned.\nExtensions: Buildpack/application-specific; complete loaded module set unknown\nLimitations: A buildpack update is not proof that an existing slug was rebuilt or redeployed. Application constraints, cached layers and worker restart remain deployment-specific.\nPatch owner: Scalingo for buildpack runtime updates; customer for rebuild, redeploy and restart\nDownstream surface: Applications built with the Scalingo PHP buildpack\nRelease pin: Scalingo SSB-2026-005 published 2026-10-21; buildpack commit or artifact digest not pinned\nSource accessed: 2026-10-21\nAliases: Scalingo buildpack-php\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor bulletin 2026-10-21: Scalingo requires rebuild and redeploy for PHP buildpack users to receive patched PHP; deployed artifact scope remains unmeasured.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://doc.scalingo.com/security/bulletins/ssb-2026-005"
+          ],
+          "comment": "Scalingo security bulletin SSB-2026-005 for php2shell"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0653",
+      "creationInfo": "_:creationinfo",
+      "name": "Take Control Session routing",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0653"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:n-able:664d55891d79",
+      "summary": "N-able scoped emergency php2shell maintenance to Take Control session routing rather than the whole Take Control product family.",
+      "description": "Hosted remote-access session routing service component",
+      "comment": "Inventory record: PHP-0653\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Hosted web-facing service component named in N-able's php2shell maintenance update\nPHP version scope: Vendor update names PHP vulnerabilities but does not publish the component's exact PHP build.\nExtensions: Unknown\nLimitations: N-able names the session-routing scope separately from the broader Take Control product. Exact PHP build, SAPI, service boundary and customer exposure are not published.\nPatch owner: N-able for hosted service remediation\nDownstream surface: Remote-access session routing and associated service state\nRelease pin: N-able php2shell update published 2026-10-21; service artifact identity not published\nSource accessed: 2026-10-21\nAliases: Take Control session routing\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor update 2026-10-21: N-able names Take Control session routing in emergency php2shell maintenance; exact affected/fixed service scope remains pending.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.n-able.com/blog/n-able-update-on-the-global-php-issue"
+          ],
+          "comment": "N-able update on the global PHP issue"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0654",
+      "creationInfo": "_:creationinfo",
+      "name": "N-sight",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0654"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:n-able:664d55891d79",
+      "summary": "N-able lists N-sight among products receiving emergency maintenance and updates for php2shell.",
+      "description": "Hosted monitoring and management service",
+      "comment": "Inventory record: PHP-0654\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Hosted product surface named in N-able's php2shell maintenance update\nPHP version scope: Vendor update names PHP vulnerabilities but does not publish N-sight's exact PHP build.\nExtensions: Unknown\nLimitations: The vendor update establishes product-level maintenance scope, not the exact PHP component, version, SAPI or reachable service path.\nPatch owner: N-able for hosted service remediation\nDownstream surface: Remote monitoring and management service data and workflows\nRelease pin: N-able php2shell update published 2026-10-21; service artifact identity not published\nSource accessed: 2026-10-21\nAliases: N-sight RMM\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor update 2026-10-21: N-able names N-sight in emergency php2shell maintenance; exact affected/fixed service scope remains pending.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.n-able.com/blog/n-able-update-on-the-global-php-issue"
+          ],
+          "comment": "N-able update on the global PHP issue"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0655",
+      "creationInfo": "_:creationinfo",
+      "name": "Mail Assure / Spam Experts",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0655"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:n-able:664d55891d79",
+      "summary": "N-able lists Mail Assure / Spam Experts among products receiving emergency maintenance and updates for php2shell.",
+      "description": "Hosted mail-security service",
+      "comment": "Inventory record: PHP-0655\nCategory: Mail and analytics\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Hosted product surface named in N-able's php2shell maintenance update\nPHP version scope: Vendor update names PHP vulnerabilities but does not publish the service's exact PHP build.\nExtensions: Unknown\nLimitations: The vendor update establishes product-level maintenance scope, not the exact PHP component, version, SAPI or reachable service path.\nPatch owner: N-able for hosted service remediation\nDownstream surface: Mail-security administration, quarantine and service workflows\nRelease pin: N-able php2shell update published 2026-10-21; service artifact identity not published\nSource accessed: 2026-10-21\nAliases: Mail Assure, Spam Experts\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor update 2026-10-21: N-able names Mail Assure / Spam Experts in emergency php2shell maintenance; exact affected/fixed service scope remains pending.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.n-able.com/blog/n-able-update-on-the-global-php-issue"
+          ],
+          "comment": "N-able update on the global PHP issue"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0656",
+      "creationInfo": "_:creationinfo",
+      "name": "Passportal",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0656"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:n-able:664d55891d79",
+      "summary": "N-able lists Passportal among products receiving emergency maintenance and updates for php2shell.",
+      "description": "Hosted password and documentation service",
+      "comment": "Inventory record: PHP-0656\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Hosted product surface named in N-able's php2shell maintenance update\nPHP version scope: Vendor update names PHP vulnerabilities but does not publish Passportal's exact PHP build.\nExtensions: Unknown\nLimitations: The vendor update establishes product-level maintenance scope, not the exact PHP component, version, SAPI or reachable service path.\nPatch owner: N-able for hosted service remediation\nDownstream surface: Password, documentation and administrative service workflows\nRelease pin: N-able php2shell update published 2026-10-21; service artifact identity not published\nSource accessed: 2026-10-21\nAliases: N-able Passportal\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor update 2026-10-21: N-able names Passportal in emergency php2shell maintenance; exact affected/fixed service scope remains pending.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.n-able.com/blog/n-able-update-on-the-global-php-issue"
+          ],
+          "comment": "N-able update on the global PHP issue"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0657",
+      "creationInfo": "_:creationinfo",
+      "name": "MyUTM portal",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0657"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:sophos:2fd5c42d49f9",
+      "summary": "Sophos says its legacy MyUTM portal ran an affected PHP version and was taken offline for update, while stating that Sophos products themselves are not affected.",
+      "description": "Legacy hosted licensing portal",
+      "comment": "Inventory record: PHP-0657\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Legacy hosted portal web runtime\nPHP version scope: Sophos states the MyUTM portal ran an affected PHP version; exact version and fixed deployment identity are not published.\nExtensions: Unknown\nLimitations: This row covers the legacy hosted MyUTM portal only. Sophos explicitly says no Sophos products are affected, so this must not be generalized to Sophos UTM or other product lines.\nPatch owner: Sophos for hosted portal remediation\nDownstream surface: Legacy licensing portal accounts and service operations\nRelease pin: Sophos advisory SA-20261021-PHP2SHELL published 2026-10-21; portal build not published\nSource accessed: 2026-10-21\nAliases: Sophos MyUTM portal\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the hosted service, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the service identity. Provider boundaries, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor advisory 2026-10-21: Sophos states the legacy MyUTM portal ran an affected PHP version and was taken offline for update; exact fixed portal deployment remains unpublished.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.sophos.com/en-us/security-advisories/sophos-sa-20261021-php2shell"
+          ],
+          "comment": "Sophos advisory SA-20261021-PHP2SHELL"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0658",
+      "creationInfo": "_:creationinfo",
+      "name": "phpMyFAQ",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0658"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:phpmyfaq-project:ab2e5ba5d190",
+      "summary": "The official phpMyFAQ Composer manifest declares PHP >=8.4.0, and the release process documents signed CycloneDX SBOM publication.",
+      "description": "Self-hosted FAQ and knowledge-base web application",
+      "comment": "Inventory record: PHP-0658\nCategory: Education and knowledge\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime and CLI tooling where configured\nPHP version scope: Official main Composer manifest declares PHP >=8.4.0; exact released artifact pin pending.\nExtensions: Manifest-declared extension set not exhaustively resolved in this candidate pass\nLimitations: A moving branch manifest and release-process SBOM documentation do not prove an installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: phpMyFAQ maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: FAQ content, administration and configured integrations\nRelease pin: Moving official composer.json and release documentation retrieved 2026-10-21\nSource accessed: 2026-10-21\nAliases: thorsten/phpMyFAQ\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement and SBOM publication evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/thorsten/phpMyFAQ/blob/main/composer.json"
+          ],
+          "comment": "Official phpMyFAQ Composer manifest"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/thorsten/phpMyFAQ/blob/main/docs/release.md"
+          ],
+          "comment": "Official phpMyFAQ release documentation describing signed CycloneDX SBOMs"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0659",
+      "creationInfo": "_:creationinfo",
+      "name": "OpenEMR",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0659"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:openemr-project:6c4b2911c944",
+      "summary": "The official OpenEMR Composer manifest pins its platform runtime to PHP 8.3 and lists required PHP extensions.",
+      "description": "Self-hosted EHR and practice-management web application",
+      "comment": "Inventory record: PHP-0659\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web application runtime\nPHP version scope: Official master Composer manifest config.platform.php is 8.3; this is a dependency-resolution target rather than an independently measured deployed runtime.\nExtensions: Official Composer manifest lists required PHP extensions; exact deployed set not measured\nLimitations: A moving branch manifest and Composer platform pin do not establish the exact supported release matrix, installed runtime, loaded modules or reachable affected path.\nPatch owner: OpenEMR maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Clinical records, scheduling, billing and administrative workflows\nRelease pin: Moving official composer.json retrieved 2026-10-21; immutable release artifact pin pending\nSource accessed: 2026-10-21\nAliases: openemr/openemr\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/openemr/openemr/blob/master/composer.json"
+          ],
+          "comment": "Official OpenEMR Composer manifest"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0660",
+      "creationInfo": "_:creationinfo",
+      "name": "Akeneo PIM Community Edition",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0660"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:akeneo:d033cb250354",
+      "summary": "The official Akeneo PIM Community Edition Composer manifest declares PHP 8.1.* and required extensions.",
+      "description": "Product information management web application",
+      "comment": "Inventory record: PHP-0660\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web application and CLI runtime\nPHP version scope: Official master Composer manifest declares PHP 8.1.*; exact released artifact pin pending.\nExtensions: Official Composer manifest lists required PHP extensions; exact deployed set not measured\nLimitations: A moving branch manifest does not establish the exact release support matrix, installed runtime, loaded modules or reachable affected path.\nPatch owner: Akeneo for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Product catalogue, imports, APIs and administrative workflows\nRelease pin: Moving official composer.json retrieved 2026-10-21; immutable release artifact pin pending\nSource accessed: 2026-10-21\nAliases: akeneo/pim-community-dev\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/akeneo/pim-community-dev/blob/master/composer.json"
+          ],
+          "comment": "Official Akeneo PIM Community Edition Composer manifest"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0661",
+      "creationInfo": "_:creationinfo",
+      "name": "FreshRSS",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0661"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:freshrss-project:25e2a9a0ea24",
+      "summary": "Official FreshRSS server requirements state that current releases are PHP web applications requiring PHP 8.1+.",
+      "description": "Self-hosted RSS web application",
+      "comment": "Inventory record: PHP-0661\nCategory: CMS and publishing\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime\nPHP version scope: Official current server requirements state PHP 8.1+; exact release artifact pin pending.\nExtensions: Official requirements page lists required modules; exact deployed set not measured\nLimitations: Moving requirements documentation does not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: FreshRSS maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Feed ingestion, reader sessions and administrative configuration\nRelease pin: Moving official server requirements retrieved 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: FreshRSS/FreshRSS\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://freshrss.github.io/FreshRSS/en/admins/02_Prerequisites.html"
+          ],
+          "comment": "Official FreshRSS server requirements"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0662",
+      "creationInfo": "_:creationinfo",
+      "name": "HumHub",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0662"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:humhub:e385677572e6",
+      "summary": "Official HumHub requirements document Apache/mod_php or PHP-FPM deployment options and a current PHP compatibility matrix.",
+      "description": "Social-network web application",
+      "comment": "Inventory record: PHP-0662\nCategory: Collaboration and storage\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime via Apache/mod_php or PHP-FPM\nPHP version scope: Official requirements page publishes a current PHP compatibility matrix; exact release row not pinned here.\nExtensions: Official requirements page lists PHP modules; exact deployed set not measured\nLimitations: A moving requirements page does not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: HumHub maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Community content, identity, messaging and administrative workflows\nRelease pin: Moving official requirements documentation retrieved 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: humhub/humhub\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.humhub.org/docs/admin/requirements/"
+          ],
+          "comment": "Official HumHub system requirements"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0663",
+      "creationInfo": "_:creationinfo",
+      "name": "wallabag",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0663"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:wallabag-project:4347649a11df",
+      "summary": "Official wallabag requirements state compatibility with PHP >=7.4 and require PHP-FPM plus extensions.",
+      "description": "Self-hosted read-it-later web application",
+      "comment": "Inventory record: PHP-0663\nCategory: Collaboration and storage\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP-FPM web runtime\nPHP version scope: Official requirements state PHP >=7.4; exact release artifact pin pending.\nExtensions: Official requirements page lists PHP extensions; exact deployed set not measured\nLimitations: Moving requirements documentation does not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: wallabag maintainers for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Saved content, user sessions, imports and administrative configuration\nRelease pin: Moving official requirements documentation retrieved 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: wallabag/wallabag\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://doc.wallabag.org/admin/installation/requirements/"
+          ],
+          "comment": "Official wallabag requirements"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0664",
+      "creationInfo": "_:creationinfo",
+      "name": "Clientexec",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0664"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:clientexec:5a15539081ae",
+      "summary": "Official Clientexec system requirements list PHP runtime support for Clientexec 6.x and 7.x plus required extensions and ionCube Loader versions.",
+      "description": "Commercial billing and hosting-management web application",
+      "comment": "Inventory record: PHP-0664\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime\nPHP version scope: Official requirements page lists PHP support by Clientexec 6.x and 7.x branch; exact installed branch not measured.\nExtensions: Official requirements page lists required PHP extensions and ionCube Loader versions; exact deployed set not measured\nLimitations: Branch-level requirements documentation does not prove a particular installed release, PHP build, loaded modules or reachable affected path.\nPatch owner: Clientexec for application releases; PHP runtime provider and operator for runtime fixes\nDownstream surface: Billing, hosting management, customer accounts and administrative workflows\nRelease pin: Moving official system requirements retrieved 2026-10-21; immutable release pin pending\nSource accessed: 2026-10-21\nAliases: Clientexec 6.x, Clientexec 7.x\nConditional downstream consequence: If untrusted requests or media reach a matching PHP core/extension flaw, the PHP worker could suffer denial of service, disclosure or code execution. Application data and configured credentials could then be affected within that worker's permissions; host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Candidate added from official PHP requirement evidence; no product-specific php2shell assessment located in this pass.\nCVE-2026-109618: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE-2026-109619: Official PHP requirement or SBOM evidence only; CVE match unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.clientexec.com/en/article/system-requirements-yl750s/"
+          ],
+          "comment": "Official Clientexec system requirements"
+        }
+      ]
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0651",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory relationship for PHP-0651: hosts (hosts_customer_php)",
+      "comment": "Mapped from inventory relationship 'hosts' and direction 'hosts_customer_php' to SPDX relationshipType 'other'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0652",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0652",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0652: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0653",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0653",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0653: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0654",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0654",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0654: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0655",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0655",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0655: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0656",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0656",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0656: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0657",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0657",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0657: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0658",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0658",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0658: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0659",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0659",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0659: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0660",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0660",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0660: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0661",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0661",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0661: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0662",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0662",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0662: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0663",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0663",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0663: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0664",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0664",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0664: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:vendor-php2shell-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0651",
+        "urn:php2shell:inventory:package:PHP-0652",
+        "urn:php2shell:inventory:package:PHP-0653",
+        "urn:php2shell:inventory:package:PHP-0654",
+        "urn:php2shell:inventory:package:PHP-0655",
+        "urn:php2shell:inventory:package:PHP-0656",
+        "urn:php2shell:inventory:package:PHP-0657"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
+      "summary": "CVE-2026-109618 assessment: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
+      "comment": "Added from vendor php2shell notices reviewed 2026-10-21. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:vendor-php2shell-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0651",
+        "urn:php2shell:inventory:package:PHP-0652",
+        "urn:php2shell:inventory:package:PHP-0653",
+        "urn:php2shell:inventory:package:PHP-0654",
+        "urn:php2shell:inventory:package:PHP-0655",
+        "urn:php2shell:inventory:package:PHP-0656",
+        "urn:php2shell:inventory:package:PHP-0657"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
+      "summary": "CVE-2026-109619 assessment: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
+      "comment": "Added from vendor php2shell notices reviewed 2026-10-21. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:official-php-requirement-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0658",
+        "urn:php2shell:inventory:package:PHP-0659",
+        "urn:php2shell:inventory:package:PHP-0660",
+        "urn:php2shell:inventory:package:PHP-0661",
+        "urn:php2shell:inventory:package:PHP-0662",
+        "urn:php2shell:inventory:package:PHP-0663",
+        "urn:php2shell:inventory:package:PHP-0664"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Official PHP requirement or SBOM evidence only; CVE match unknown",
+      "summary": "CVE-2026-109618 assessment: Official PHP requirement or SBOM evidence only; CVE match unknown",
+      "comment": "Added from official product manifests, requirements pages or SBOM documentation reviewed 2026-10-21. These sources establish PHP product relationships, not CVE-specific affected or fixed deployment scope."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:official-php-requirement-candidates-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0658",
+        "urn:php2shell:inventory:package:PHP-0659",
+        "urn:php2shell:inventory:package:PHP-0660",
+        "urn:php2shell:inventory:package:PHP-0661",
+        "urn:php2shell:inventory:package:PHP-0662",
+        "urn:php2shell:inventory:package:PHP-0663",
+        "urn:php2shell:inventory:package:PHP-0664"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Official PHP requirement or SBOM evidence only; CVE match unknown",
+      "summary": "CVE-2026-109619 assessment: Official PHP requirement or SBOM evidence only; CVE match unknown",
+      "comment": "Added from official product manifests, requirements pages or SBOM documentation reviewed 2026-10-21. These sources establish PHP product relationships, not CVE-specific affected or fixed deployment scope."
     }
   ]
 }
