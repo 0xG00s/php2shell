@@ -1,0 +1,15 @@
+# List of software with PHP dependency potentially affected by php2shell CVEs
+[About this list](README.md)
+
+[0-9](software_list_0-9.md) [A](software_list_a.md) [B](software_list_b.md) [C](software_list_c.md) [D](software_list_d.md) [E](software_list_e.md) [F](software_list_f.md) [G](software_list_g.md) [H](software_list_h.md) [I](software_list_i.md) [J](software_list_j.md) [K](software_list_k.md) [L](software_list_l.md) [M](software_list_m.md) [N](software_list_n.md) [O](software_list_o.md) [P](software_list_p.md) [Q](software_list_q.md) [R](software_list_r.md) [S](software_list_s.md) [T](software_list_t.md) [U](software_list_u.md) [V](software_list_v.md) [W](software_list_w.md) [X](software_list_x.md) [Y](software_list_y.md) [Z](software_list_z.md)
+
+### J
+
+| Supplier | Product | Version (see Status) | Status CVE-2026-109618 | Status CVE-2026-109619 | Notes | Links |
+|:---------|:--------|:--------------------:|:----------------------:|:----------------------:|:------|------:|
+|Jakub Vrana / Adminer project|Adminer||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>The official site describes a database administration application shipped as a single PHP file and requiring PHP session support.|[source](<https://www.adminer.org/>)|
+|JBMC Software / DirectAdmin|DirectAdmin CustomBuild hosted PHP||Investigation|Investigation|CVE assessment: Hosted PHP option; CVE match unknown<br>DirectAdmin documents multiple installed PHP versions and per-domain/subdomain selection.|[source 1](<https://docs.directadmin.com/webservices/php/multiple-php.html>)<br>[source 2](<https://docs.directadmin.com/webservices/php/php-options.html>)|
+|JetBrains|PhpStorm external PHP interpreter integration||Investigation|Investigation|CVE assessment: Optional PHP path; CVE match unknown<br>The guide requires a separately installed PHP engine and configures its executable/php.ini, interpreter selection and optional Xdebug integration.|[source](<https://www.jetbrains.com/help/phpstorm/configuring-local-interpreter.html>)|
+|Joomla project|Joomla 6.x||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>The stable/current Joomla documentation identifies version 6.1 and gives a PHP 8.3.0 minimum, PHP 8.4 recommendation and required modules.|[source](<https://manual.joomla.org/docs/get-started/technical-requirements/>)|
+|Jordi Boggiano / Monolog contributors|Monolog||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>Monolog is a PHP logging library; handler-dependent modules and service clients are optional, and several integrations appear only in require-dev.|[source](<https://packagist.org/packages/monolog/monolog>)|
+|JPHP Group|JPHP JVM compiler and runtime||Investigation|Investigation|CVE assessment: Independent engine; no automatic inheritance<br>JPHP compiles PHP source to JVM bytecode and distinguishes its own runtime library from Zend PHP.|[source](<https://github.com/jphp-group/jphp>)|

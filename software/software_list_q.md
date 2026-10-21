@@ -1,0 +1,12 @@
+# List of software with PHP dependency potentially affected by php2shell CVEs
+[About this list](README.md)
+
+[0-9](software_list_0-9.md) [A](software_list_a.md) [B](software_list_b.md) [C](software_list_c.md) [D](software_list_d.md) [E](software_list_e.md) [F](software_list_f.md) [G](software_list_g.md) [H](software_list_h.md) [I](software_list_i.md) [J](software_list_j.md) [K](software_list_k.md) [L](software_list_l.md) [M](software_list_m.md) [N](software_list_n.md) [O](software_list_o.md) [P](software_list_p.md) [Q](software_list_q.md) [R](software_list_r.md) [S](software_list_s.md) [T](software_list_t.md) [U](software_list_u.md) [V](software_list_v.md) [W](software_list_w.md) [X](software_list_x.md) [Y](software_list_y.md) [Z](software_list_z.md)
+
+### Q
+
+| Supplier | Product | Version (see Status) | Status CVE-2026-109618 | Status CVE-2026-109619 | Notes | Links |
+|:---------|:--------|:--------------------:|:----------------------:|:----------------------:|:------|------:|
+|QNAP|QNAP PHP7.4 optional application before5.2 migration||Investigation|Investigation|CVE assessment: Historical scope; current use unknown<br>QNAP documents a separate PHP7.4 application and its firmware-transition disablement.|[source](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)|
+|QNAP|QNAP QTS built-in PHP runtime||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>Prior built-in firmware mappings are retained. A separate QNAP FAQ documents retirement/disablement of the optional PHP7.4 application after5.1.x->5.2.0; this is not a replacement built-in PHP version table.|[source 1](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)<br>[source 2](<https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero>)|
+|QNAP|QNAP QuTS hero built-in PHP runtime||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>Prior built-in firmware mappings are retained. A separate QNAP FAQ documents retirement/disablement of the optional PHP7.4 application after5.1.x->5.2.0; this is not a replacement built-in PHP version table.|[source 1](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)<br>[source 2](<https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero>)|

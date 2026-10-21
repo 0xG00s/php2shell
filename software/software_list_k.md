@@ -1,0 +1,15 @@
+# List of software with PHP dependency potentially affected by php2shell CVEs
+[About this list](README.md)
+
+[0-9](software_list_0-9.md) [A](software_list_a.md) [B](software_list_b.md) [C](software_list_c.md) [D](software_list_d.md) [E](software_list_e.md) [F](software_list_f.md) [G](software_list_g.md) [H](software_list_h.md) [I](software_list_i.md) [J](software_list_j.md) [K](software_list_k.md) [L](software_list_l.md) [M](software_list_m.md) [N](software_list_n.md) [O](software_list_o.md) [P](software_list_p.md) [Q](software_list_q.md) [R](software_list_r.md) [S](software_list_s.md) [T](software_list_t.md) [U](software_list_u.md) [V](software_list_v.md) [W](software_list_w.md) [X](software_list_x.md) [Y](software_list_y.md) [Z](software_list_z.md)
+
+### K
+
+| Supplier | Product | Version (see Status) | Status CVE-2026-109618 | Status CVE-2026-109619 | Notes | Links |
+|:---------|:--------|:--------------------:|:----------------------:|:----------------------:|:------|------:|
+|Kanboard project|Kanboard||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>The server-side requirements distinguish PHP versions and extensions from ordinary browser/device requirements.|[source](<https://docs.kanboard.org/v1/admin/requirements/>)|
+|Kevin Papst / Kimai project|Kimai||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>Official source and registry identify a PHP/Symfony time-tracking application and native module requirements.|[source 1](<https://packagist.org/packages/kimai/kimai>)<br>[source 2](<https://github.com/kimai/kimai>)<br>[source 3](<https://github.com/kimai/kimai/blob/main/composer.json>)<br>[source 4](<https://www.kimai.org/documentation/installation.html>)|
+|Kinsta|Kinsta managed WordPress PHP hosting||Investigation|Investigation|CVE assessment: Hosted PHP option; CVE match unknown<br>Kinsta's WordPress hosting guide documents selectable PHP engine families.|[source](<https://kinsta.com/docs/wordpress-hosting/php/>)|
+|Kirby CMS project|Kirby CMS||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>Kirby provides version-specific PHP support and required, recommended and optional extension lists.|[source](<https://getkirby.com/docs/reference/system/requirements>)|
+|Klemen Stirn / Hesk|Hesk Free self-hosted helpdesk||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>The vendor identifies Hesk Free as self-hosted PHP/MySQL software and publishes its version and PHP range.|[source](<https://www.hesk.com/download.php>)|
+|Kopano / Kopano-dev|Kopano WebApp||Investigation|Investigation|CVE assessment: PHP relationship confirmed; CVE match unknown<br>The official WebApp mirror explicitly lists PHP server dependencies and a separate native MAPI interface.|[source](<https://github.com/Kopano-dev/kopano-webapp>)|

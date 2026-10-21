@@ -1,10 +1,24 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Last updated: 21 October 2026
+TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
 
-On 20 October 2026, the PHP security team announced an upcoming security release scheduled for 21 October 2026 at 14:00 UTC. PHP states that both vulnerabilities are rated CVSS v4.0 9.2 and that full details, affected versions, and fixed versions will be published with the release.
+PHP is a widely used open-source server-side scripting language, so these vulnerabilities may affect a broad range of internet-facing web applications and products that embed or depend on PHP.
+
+## Current status
+
+Public reporting indicates that both vulnerabilities can be triggered with a simple POST request and may lead to unauthenticated remote code execution and shell access. PHP rates both issues CVSS v4.0 9.2. CERT-EU reports that PHP 5 and later versions may be affected; earlier versions have not been assessed.
+
+PHP announced a security release for 21 October 2026 at 14:00 UTC (16:00 CEST). Until that release is published, technical details and fixed versions remain unconfirmed. Multiple public proof-of-concept exploits are already available. As of 21 October 2026, NCSC has no indication of active exploitation, but considers large-scale exploitation likely in the short term.
+
+## Recommended actions
+
+- Identify PHP-based applications and their runtime versions, with priority on internet-facing systems.
+- Patch to fixed PHP releases as soon as they become available.
+- If immediate patching is not possible, consider isolating internet-facing PHP applications from public networks until a fix is applied.
+- Monitor vendor advisories, internet-facing logs, and public exploit activity.
 
 For additional information see:
 
@@ -15,13 +29,9 @@ For additional information see:
 
 | Directory | Purpose |
 | --- | --- |
-| [software](software) | Contains a list of software products potentially affected by the PHP vulnerabilities. |
+| [software](software) | Contains inventory lists of software products with a PHP dependency potentially affected by the vulnerabilities. |
 
 Please note that this repository is not complete and is currently being expanded.
-
-## Current status
-
-As of 21 October 2026, PHP has not yet published technical details or confirmed affected and fixed versions. CERT-EU reports that the vulnerabilities could affect PHP versions from PHP 5 onwards, while noting that technical details are not yet public. CERT-EU advises organisations to identify PHP-based applications and prepare to patch as soon as fixed versions become available. Where immediate remediation is not feasible, CERT-EU advises considering isolation of internet-facing applications from public networks until a fix can be applied.
 
 ## Contributions welcome
 
