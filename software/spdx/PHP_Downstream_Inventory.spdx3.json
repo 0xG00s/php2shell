@@ -38594,7 +38594,7 @@
       "relationshipType": "affects",
       "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
       "summary": "CVE-2026-109618 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
-      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded."
+      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -38607,7 +38607,7 @@
       "relationshipType": "affects",
       "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
       "summary": "CVE-2026-109619 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
-      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded."
+      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
