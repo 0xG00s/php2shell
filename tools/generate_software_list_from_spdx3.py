@@ -185,22 +185,34 @@ def package_statuses(
 def external_links(package: dict[str, Any]) -> str:
     refs = package.get("externalRef") or []
     urls: list[str] = []
+    notes: list[str] = []
     for ref in refs:
         if not isinstance(ref, dict):
             continue
         locators = ref.get("locator") or []
         if isinstance(locators, str):
             locators = [locators]
+        has_locator = False
         for locator in locators:
             locator_text = raw_text(locator)
-            if locator_text and locator_text not in urls:
-                urls.append(locator_text)
+            if locator_text:
+                has_locator = True
+                if locator_text not in urls:
+                    urls.append(locator_text)
+        if not has_locator:
+            comment = raw_text(ref.get("comment"))
+            if comment and comment not in notes:
+                notes.append(comment)
 
-    if not urls:
+    if not urls and not notes:
         return ""
+    rendered: list[str] = []
     if len(urls) == 1:
-        return markdown_link("source", urls[0])
-    return "<br>".join(markdown_link(f"source {index}", url) for index, url in enumerate(urls, 1))
+        rendered.append(markdown_link("source", urls[0]))
+    else:
+        rendered.extend(markdown_link(f"source {index}", url) for index, url in enumerate(urls, 1))
+    rendered.extend(markdown_cell(note) for note in notes)
+    return "<br>".join(rendered)
 
 
 def package_notes(package: dict[str, Any], status_notes: list[str]) -> str:
