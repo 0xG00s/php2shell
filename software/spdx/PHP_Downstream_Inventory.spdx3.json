@@ -4258,7 +4258,13 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:8bf06dd91156",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:9c29bbfd04c7",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:8d49eb06dd8b",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:001a66361324"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:001a66361324",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:netscaler-management-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:netscaler-management-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:f5-bigip-research-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f5-bigip-research-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:fortiadc-research-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:fortiadc-research-20261021"
       ]
     },
     {
@@ -25289,9 +25295,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
-      "summary": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "summary": "Official vendor assessment: Vulnerable for CVE-2026-109618 and CVE-2026-109619 in the PHP-based NetScaler Management Portal; fixed package pending.",
       "description": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.",
-      "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: 14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.\nPHP version scope: 14.1 FreeBSD pooled notice: PHP 8.0.16. Legacy 12.1 notice in master: PHP 7.0.13. Current patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: Do not extend PHP evidence to all Gateway login/VPN paths, BLX/CPX, SDX or NetScaler Console by association.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Vendor-confirmed affected product scope\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: NetScaler Product Security states that the NetScaler Management Portal uses PHP; affected management access includes the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI.\nPHP version scope: All supported NetScaler software versions are impacted; Citrix is working to upgrade the PHP software package to a fixed version.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This assessment is limited to PHP-based management access. NetScaler Console (Service and on premises) and NetScaler SVM are not impacted; do not extend it to all Gateway login/VPN or data-plane paths.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://community.citrix.com/techzone-blogs/110_security-updates/protecting-netscaler-management-access-from-php-cve-2026-109618-cve-2026-109619-r1640/\nVulnerability status: Vendor bulletin 2026-10-21: NetScaler is impacted by both CVEs through the PHP-based Management Portal; a fixed PHP package is pending.\nCVE-2026-109618: Affected in all supported NetScaler software versions for PHP-based management access; fixed PHP package pending\nCVE-2026-109619: Affected in all supported NetScaler software versions for PHP-based management access; fixed PHP package pending\nCVE assessment limit: The VEX relationships state the current vendor-confirmed management-interface scope. Installed builds, runtime activation, access control and deployment were not tested.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -25308,8 +25314,17 @@
             "https://prod-docs.netscaler.com/en-us/citrix-adc/current-release/application-firewall/signatures/signature-auto-update"
           ],
           "comment": "Project Initium edge evidence - 14.1 administration PHP controller"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://community.citrix.com/techzone-blogs/110_security-updates/protecting-netscaler-management-access-from-php-cve-2026-109618-cve-2026-109619-r1640/"
+          ],
+          "comment": "NetScaler Product Security guidance reviewed 2026-10-22"
         }
-      ]
+      ],
+      "software_packageVersion": "All supported NetScaler software versions impacted; fixed PHP package pending"
     },
     {
       "type": "software_Package",
@@ -25370,9 +25385,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:f5:6cd28ed32abf",
-      "summary": "Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "summary": "F5 K000163821 lists BIG-IP (all modules) 21.x under investigation for CVE-2026-109618 and CVE-2026-109619; confirmation of vulnerability or non-vulnerability is not yet available.",
       "description": "Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text.",
-      "comment": "Inventory record: PHP-0626\nEdge inventory record: EDGE-004\nCategory: Appliances and embedded\nScope group: Platform component\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Appliance platform; administration uploads indicated\nPHP surface: Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text.\nPHP version scope: F5 issue ID1270257: opened 2023, modified 2025. Current PHP version/build unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: All modules in the issue record is a platform scope, not a statement that every module or packet path is PHP.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole BIG-IP shutdown could interrupt the application-delivery/access/security functions actually provisioned on that unit.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "comment": "Inventory record: PHP-0626\nEdge inventory record: EDGE-004\nCategory: Appliances and embedded\nScope group: Platform component\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Vendor advisory under investigation\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Appliance platform; administration uploads indicated\nPHP surface: Official issue record confirms PHP in BIG-IP; administration-upload role is described in indexed vendor text.\nPHP version scope: F5 issue ID1270257 confirms a BIG-IP PHP component, while K000163821 lists BIG-IP (all modules) 21.x with research placeholders and no affected/fixed release confirmation.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: The advisory's all-modules evaluation scope is not a statement that every module or packet path is PHP, and F5 has not yet confirmed vulnerability or non-vulnerability.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole BIG-IP shutdown could interrupt the application-delivery/access/security functions actually provisioned on that unit.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://my.f5.com/manage/s/article/K000163821\nVulnerability status: F5 K000163821 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.\nCVE-2026-109618: Vendor advisory under investigation; no affected/fixed BIG-IP release confirmed\nCVE-2026-109619: Vendor advisory under investigation; no affected/fixed BIG-IP release confirmed\nCVE assessment limit: The VEX relationships state the current vendor research status. Installed builds, runtime activation, enabled features, reachable inputs and exploitation remain unestablished.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -25389,8 +25404,17 @@
             "https://my.f5.com/manage/s/article/K000133753"
           ],
           "comment": "Project Initium edge evidence - Configuration-utility PHP role: K000133753"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://my.f5.com/manage/s/article/K000163821"
+          ],
+          "comment": "F5 K000163821 public CVE assessment reviewed 2026-10-22"
         }
-      ]
+      ],
+      "software_packageVersion": "BIG-IP (all modules) 21.x under investigation; no affected/fixed release confirmed"
     },
     {
       "type": "software_Package",
@@ -25406,9 +25430,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:f5:6cd28ed32abf",
-      "summary": "F5 explicitly documents PHP inside APM UI templates. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "summary": "F5 K000163821 lists BIG-IP (all modules) 21.x under investigation for CVE-2026-109618 and CVE-2026-109619; confirmation of vulnerability or non-vulnerability is not yet available.",
       "description": "F5 explicitly documents PHP inside APM UI templates.",
-      "comment": "Inventory record: PHP-0627\nEdge inventory record: EDGE-005\nCategory: Appliances and embedded\nScope group: User access component\nOriginal relationship: component\nRelationship direction: depends_on_php\nParent component: PHP-0626 (EDGE-004)\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: User access: logon, access-profile and webtop pages\nPHP surface: F5 explicitly documents PHP inside APM UI templates.\nPHP version scope: Version-labelled 16.1 guide with moving Applies To list; Modern/Standard template sets differ. Exact runtime unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This is a component of BIG-IP, not another device. Browser/mobile/Edge Client pages do not prove PHP executes on those clients.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching PHP page function is compromised, information it handles or page behaviour could be misused. Credential/session theft or access-policy control needs evidence of the actual path and permissions.\nPHP component loss: Relevant logon/webtop/access pages may fail. Effects on existing sessions and non-page VPN traffic remain unestablished.\nWhole appliance loss: Whole provisioned APM/BIG-IP shutdown can interrupt remote access and applications behind it, subject to actual redundancy.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "comment": "Inventory record: PHP-0627\nEdge inventory record: EDGE-005\nCategory: Appliances and embedded\nScope group: User access component\nOriginal relationship: component\nRelationship direction: depends_on_php\nParent component: PHP-0626 (EDGE-004)\nEvidence status: Vendor advisory under investigation\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: User access: logon, access-profile and webtop pages\nPHP surface: F5 explicitly documents PHP inside APM UI templates.\nPHP version scope: Version-labelled 16.1 guide with moving Applies To list; K000163821 separately lists current BIG-IP (all modules) 21.x under investigation. Exact runtime and component applicability remain unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This is a component of BIG-IP, not another device. Browser/mobile/Edge Client pages do not prove PHP executes on those clients, and F5 has not yet confirmed vulnerability or non-vulnerability.\nPatch owner: F5 for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching PHP page function is compromised, information it handles or page behaviour could be misused. Credential/session theft or access-policy control needs evidence of the actual path and permissions.\nPHP component loss: Relevant logon/webtop/access pages may fail. Effects on existing sessions and non-page VPN traffic remain unestablished.\nWhole appliance loss: Whole provisioned APM/BIG-IP shutdown can interrupt remote access and applications behind it, subject to actual redundancy.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://my.f5.com/manage/s/article/K000163821\nVulnerability status: F5 K000163821 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.\nCVE-2026-109618: Vendor advisory under investigation; no affected/fixed BIG-IP release confirmed\nCVE-2026-109619: Vendor advisory under investigation; no affected/fixed BIG-IP release confirmed\nCVE assessment limit: The VEX relationships state the current vendor research status. Installed builds, runtime activation, enabled features, reachable inputs and exploitation remain unestablished.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -25425,8 +25449,17 @@
             "https://techdocs.f5.com/en-us/bigip-16-1-0/big-ip-access-policy-manager-customization/advanced-customization-using-logon-page-templates.html"
           ],
           "comment": "Project Initium edge evidence - APM Advanced Customization Using Templates"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://my.f5.com/manage/s/article/K000163821"
+          ],
+          "comment": "F5 K000163821 public CVE assessment reviewed 2026-10-22"
         }
-      ]
+      ],
+      "software_packageVersion": "BIG-IP (all modules) 21.x under investigation; no affected/fixed release confirmed"
     },
     {
       "type": "software_Package",
@@ -25442,9 +25475,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
-      "summary": "7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text. Applicability of CVE-2026-109618 and CVE-2026-109619 is not established for this scope.",
+      "summary": "Fortinet PSIRT FG-IR-26-186 lists FortiADC among products under investigation for CVE-2026-109618 and CVE-2026-109619; exact affected/fixed product scope remains unresolved.",
       "description": "7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text.",
-      "comment": "Inventory record: PHP-0628\nEdge inventory record: EDGE-006\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Confirmed relationship\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery; PHP-FPM management processes\nPHP surface: 7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text.\nPHP version scope: FortiADC 7.4.8 CLI Reference, printed page 563; 7.4.11 troubleshooting excerpt. PHP patch unknown.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: An official process example is not a live device observation. Do not attribute the separate load-balancing process to PHP.\nPatch owner: Fortinet for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could make the applications/services it fronts unavailable unless another route/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-21\nVendor advisory status: No direct vendor confirmation for CVE-2026-109618 or CVE-2026-109619 identified in official-site review on 2026-10-21.\nVulnerability status: PHP relationship confirmed; product/build applicability of CVE-2026-109618 and CVE-2026-109619 not established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: The edge inventory confirms a PHP relationship in the cited scope only. Affected/fixed appliance builds, vendor backports, enabled features, reachable inputs and exploitation remain unestablished.",
+      "comment": "Inventory record: PHP-0628\nEdge inventory record: EDGE-006\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Vendor advisory under investigation\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery; PHP-FPM management processes\nPHP surface: 7.4.8 vendor CLI example shows PHP-FPM; web-interface role is corroborated by indexed troubleshooting text.\nPHP version scope: FortiADC 7.4.8 CLI Reference, printed page 563; 7.4.11 troubleshooting excerpt. FG-IR-26-186 names FortiADC under investigation without affected or fixed versions.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: An official process example is not a live device observation. Do not attribute the separate load-balancing process to PHP, and do not infer a FortiADC affected or fixed release before Fortinet publishes one.\nPatch owner: Fortinet for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could make the applications/services it fronts unavailable unless another route/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://fortiguard.fortinet.com/psirt/FG-IR-26-186\nVulnerability status: Fortinet PSIRT FG-IR-26-186 lists FortiADC under investigation; exact affected/fixed product scope remains unresolved.\nCVE-2026-109618: Vendor advisory under investigation; exact affected/fixed FortiADC scope unresolved\nCVE-2026-109619: Vendor advisory under investigation; exact affected/fixed FortiADC scope unresolved\nCVE assessment limit: The VEX relationships state the current vendor research status. Installed builds, runtime activation, enabled features, reachable inputs and exploitation remain unestablished.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -25461,6 +25494,14 @@
             "https://docs2.fortinet.com/document/fortiadc/7.4.11/handbook/406890/solutions-by-issue-type"
           ],
           "comment": "Project Initium edge evidence - FortiADC 7.4.11: Solutions by issue type"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
+          ],
+          "comment": "Fortinet PSIRT FG-IR-26-186 public CVE assessment reviewed 2026-10-22"
         }
       ]
     },
@@ -34305,10 +34346,6 @@
         "urn:php2shell:inventory:package:PHP-0616",
         "urn:php2shell:inventory:package:PHP-0617",
         "urn:php2shell:inventory:package:PHP-0618",
-        "urn:php2shell:inventory:package:PHP-0624",
-        "urn:php2shell:inventory:package:PHP-0626",
-        "urn:php2shell:inventory:package:PHP-0627",
-        "urn:php2shell:inventory:package:PHP-0628",
         "urn:php2shell:inventory:package:PHP-0629",
         "urn:php2shell:inventory:package:PHP-0631",
         "urn:php2shell:inventory:package:PHP-0632"
@@ -34785,10 +34822,6 @@
         "urn:php2shell:inventory:package:PHP-0616",
         "urn:php2shell:inventory:package:PHP-0617",
         "urn:php2shell:inventory:package:PHP-0618",
-        "urn:php2shell:inventory:package:PHP-0624",
-        "urn:php2shell:inventory:package:PHP-0626",
-        "urn:php2shell:inventory:package:PHP-0627",
-        "urn:php2shell:inventory:package:PHP-0628",
         "urn:php2shell:inventory:package:PHP-0629",
         "urn:php2shell:inventory:package:PHP-0631",
         "urn:php2shell:inventory:package:PHP-0632"
@@ -38549,6 +38582,86 @@
       "security_statusNotes": "Firefly III's maintainer JC5 explicitly confirms that Firefly III and its data importer now run PHP 8.5.12 and closes the CVE issue. Existing image tags were rebuilt without a new application release. This confirms the container runtime fix, not a PHP update for independently hosted non-container installations.",
       "summary": "CVE-2026-109619 assessment: Fix available for the named runtime/build scope",
       "comment": "Official public vendor/upstream evidence independently reviewed 2026-10-22: https://github.com/firefly-iii/firefly-iii/issues/13087#issuecomment-6324447202\nAction statement: Pull the rebuilt container tag and recreate the workload, then verify PHP 8.5.12. Non-container installations must update their own PHP runtime."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:netscaler-management-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0624"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "summary": "CVE-2026-109618 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:netscaler-management-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0624"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "summary": "CVE-2026-109619 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:f5-bigip-research-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0626",
+        "urn:php2shell:inventory:package:PHP-0627"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "F5 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.",
+      "summary": "CVE-2026-109618 assessment: F5 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.",
+      "comment": "Added from F5 K000163821 published 2026-10-21 and reviewed 2026-10-22. F5 lists BIG-IP (all modules) 21.x with research placeholders and says confirmation of vulnerability or non-vulnerability is not presently available while research continues."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f5-bigip-research-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0626",
+        "urn:php2shell:inventory:package:PHP-0627"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "F5 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.",
+      "summary": "CVE-2026-109619 assessment: F5 lists BIG-IP (all modules) 21.x under investigation; confirmation of vulnerability or non-vulnerability is not presently available.",
+      "comment": "Added from F5 K000163821 published 2026-10-21 and reviewed 2026-10-22. F5 lists BIG-IP (all modules) 21.x with research placeholders and says confirmation of vulnerability or non-vulnerability is not presently available while research continues."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:fortiadc-research-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0628"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Fortinet PSIRT lists FortiADC under investigation; exact affected/fixed product scope remains unresolved.",
+      "summary": "CVE-2026-109618 assessment: Fortinet PSIRT lists FortiADC under investigation; exact affected/fixed product scope remains unresolved.",
+      "comment": "Added from Fortinet PSIRT FG-IR-26-186 published 2026-10-21 and reviewed 2026-10-22. Fortinet lists FortiADC under Products Under Investigation and does not publish affected or fixed FortiADC versions in the advisory."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:fortiadc-research-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0628"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Fortinet PSIRT lists FortiADC under investigation; exact affected/fixed product scope remains unresolved.",
+      "summary": "CVE-2026-109619 assessment: Fortinet PSIRT lists FortiADC under investigation; exact affected/fixed product scope remains unresolved.",
+      "comment": "Added from Fortinet PSIRT FG-IR-26-186 published 2026-10-21 and reviewed 2026-10-22. Fortinet lists FortiADC under Products Under Investigation and does not publish affected or fixed FortiADC versions in the advisory."
     }
   ]
 }
