@@ -2720,6 +2720,12 @@
       "name": "Checkmk GmbH"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:securepoint-gmbh:5a4cf0fa8caa",
+      "creationInfo": "_:creationinfo",
+      "name": "Securepoint GmbH"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4217,6 +4223,10 @@
         "urn:php2shell:inventory:relationship:PHP-0674",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:checkmk-appliance-1725-20261021",
+        "urn:php2shell:inventory:package:PHP-0675",
+        "urn:php2shell:inventory:relationship:PHP-0675",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:securepoint-resellerportal-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:securepoint-resellerportal-20261022",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021"
       ]
@@ -37406,6 +37416,42 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0675",
+      "creationInfo": "_:creationinfo",
+      "name": "Securepoint Resellerportal",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0675"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:securepoint-gmbh:5a4cf0fa8caa",
+      "summary": "Securepoint's live Resellerportal login HTML exposes Laravel application markers and a Securepoint resellerportal session cookie.",
+      "description": "Hosted reseller portal web application",
+      "comment": "Inventory record: PHP-0675\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Live vendor portal implementation evidence\nDeployment status: Not measured\nPHP surface: Server-side Laravel web application exposed by the vendor-operated reseller portal login page\nPHP version scope: The live login HTML exposes window.Laravel and a Securepoint resellerportal session cookie, but does not disclose the Laravel release, PHP branch, patch level, SAPI or loaded modules.\nExtensions: Unknown\nLimitations: Live HTML markers establish a Laravel/PHP relationship, not an affected PHP build or a product-specific php2shell advisory. No authenticated area, application version, deployment topology, reachable vulnerable path or fix state was measured.\nPatch owner: Securepoint for hosted portal remediation\nDownstream surface: Reseller portal authentication and account workflows\nRelease pin: Live portal HTML observed 2026-10-22; immutable release or deployment artifact not published\nSource accessed: 2026-10-22\nAliases: Securepoint Reseller Portal, my.securepoint.de\nConditional downstream consequence: If untrusted requests reach a matching PHP core or enabled-extension flaw in the portal worker, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the portal service identity. Host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope remain unknown.\nCVE-2026-109618: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown\nCVE-2026-109619: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://my.securepoint.de/"
+          ],
+          "comment": "Securepoint Resellerportal login page exposing Laravel application markers"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://laravel.com/framework/docs/deployment"
+          ],
+          "comment": "Laravel deployment documentation establishing PHP runtime requirements for Laravel applications"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -37694,6 +37740,18 @@
       "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0675",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0675",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0675: requires (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
       "type": "security_VexFixedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
       "creationInfo": "_:creationinfo",
@@ -37718,6 +37776,32 @@
       "security_statusNotes": "Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
       "summary": "CVE-2026-109619 assessment: Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
       "comment": "Added from the Checkmk Appliance 1.7.25 changed-package manifest published 2026-10-21 and the PHP upstream advisory. The manifest upgrades bundled PHP 8.2 packages from 8.2.34-1~deb12u1 to 8.2.35-1~deb12u1; PHP upstream identifies 8.2.35 as fixed for both CVEs.\nAction statement: Update the appliance to firmware 1.7.25 or later and verify the running appliance services use the updated packages."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:securepoint-resellerportal-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0675"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
+      "summary": "CVE-2026-109618 assessment: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
+      "comment": "Added from the Securepoint Resellerportal login page reviewed 2026-10-22. The live vendor page exposes Laravel application markers, but does not publish the portal's PHP runtime version, SAPI, loaded modules or a product-specific php2shell assessment."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:securepoint-resellerportal-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0675"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
+      "summary": "CVE-2026-109619 assessment: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
+      "comment": "Added from the Securepoint Resellerportal login page reviewed 2026-10-22. The live vendor page exposes Laravel application markers, but does not publish the portal's PHP runtime version, SAPI, loaded modules or a product-specific php2shell assessment."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
