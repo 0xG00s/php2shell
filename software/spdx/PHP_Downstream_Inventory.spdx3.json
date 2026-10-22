@@ -2726,6 +2726,12 @@
       "name": "Securepoint GmbH"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:check-point:dbbe390ad85f",
+      "creationInfo": "_:creationinfo",
+      "name": "Check Point"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4227,6 +4233,10 @@
         "urn:php2shell:inventory:relationship:PHP-0675",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:securepoint-resellerportal-20261022",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:securepoint-resellerportal-20261022",
+        "urn:php2shell:inventory:package:PHP-0676",
+        "urn:php2shell:inventory:relationship:PHP-0676",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:checkpoint-firewall-web-interfaces-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:checkpoint-firewall-web-interfaces-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:5d78e9533f60",
@@ -37734,6 +37744,35 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0676",
+      "creationInfo": "_:creationinfo",
+      "name": "Check Point firewall web interfaces",
+      "software_primaryPurpose": "module",
+      "software_packageVersion": "Force/Cloud: R81.20, R82, R82.10, R82.20; EoS R80, R80.10, R80.20, R80.30, R80.40, R81, R81.10. Spark: R81.10.x, R82.00.x; EoS R77.20.x, R80.20.x",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0676"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:check-point:dbbe390ad85f",
+      "summary": "Check Point sk1000302 identifies both CVEs as affecting listed Force, Spark and Cloud Firewall web interfaces only when specified portal or VPN features are enabled; Check Point Portal and SaaS services are already patched.",
+      "description": "Vendor-confirmed feature-dependent firewall web-interface scope",
+      "comment": "Inventory record: PHP-0676\nCategory: Appliances and embedded\nOriginal relationship: component\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Check Point says PHP vulnerabilities may allow remote code execution through firewall web interfaces under certain circumstances.\nPHP version scope: Force and Cloud Firewalls: R81.20, R82, R82.10, R82.20; EoS R80, R80.10, R80.20, R80.30, R80.40, R81 and R81.10. Spark Firewalls: R81.10.x and R82.00.x; EoS R77.20.x and R80.20.x.\nExtensions: Unknown\nImportant boundary: Exposure requires one or more listed features: Mobile Access Portal, Remote Access VPN with SSL Network Extender, Remote Access VPN with SAML Realm authentication, or Identity Awareness Captive Portal. Mobile Access Portal and SSL Network Extender do not apply to Spark Firewalls. Check Point Portal and SaaS services are already patched, and this assessment does not extend to unrelated firewall paths.\nPatch owner: Check Point for firewall software and mitigations; operator for Automatic Updates, manual mitigation and future Jumbo Hotfix rollout\nPossible abuse: The vendor states that the PHP flaws may allow remote code execution through the affected firewall web interfaces. Wider appliance control and downstream impact remain deployment-specific.\nPHP component loss: The affected portal or authentication interface could be unavailable after mitigation or compromise; packet forwarding and other appliance functions are not independently assessed here.\nWhole appliance loss: Whole-firewall shutdown could interrupt protected traffic if failover or alternative routing does not preserve connectivity.\nConditions: Requires an affected listed version and at least one vendor-listed portal or VPN feature enabled; deployment, exposure and mitigation state remain unmeasured.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://support.checkpoint.com/results/sk/sk1000302\nVulnerability status: Check Point sk1000302 identifies both CVEs as affecting listed Force, Spark and Cloud Firewall web interfaces when specified portal or VPN features are enabled; fixes are planned for 2026-11-11.\nCVE-2026-109618: Vendor-confirmed affected firewall web-interface scope with feature-dependent exposure; fix planned for 2026-11-11\nCVE-2026-109619: Vendor-confirmed affected firewall web-interface scope with feature-dependent exposure; fix planned for 2026-11-11\nCVE assessment limit: Installed versions, enabled features, Automatic Updates state, manual mitigation state, reachable inputs and exploitation remain deployment-specific.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.checkpoint.com/results/sk/sk1000302"
+          ],
+          "comment": "Check Point sk1000302 public CVE assessment reviewed 2026-10-22"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -38034,6 +38073,18 @@
       "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0676",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0676",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0676: component (depends_on_php)",
+      "comment": "Mapped from inventory relationship 'component' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
       "type": "security_VexFixedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
       "creationInfo": "_:creationinfo",
@@ -38084,6 +38135,34 @@
       "security_statusNotes": "Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
       "summary": "CVE-2026-109619 assessment: Live vendor portal exposes Laravel application markers; exact PHP runtime and CVE scope unknown",
       "comment": "Added from the Securepoint Resellerportal login page reviewed 2026-10-22. The live vendor page exposes Laravel application markers, but does not publish the portal's PHP runtime version, SAPI, loaded modules or a product-specific php2shell assessment."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:checkpoint-firewall-web-interfaces-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0676"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Check Point sk1000302 identifies listed Force, Spark and Cloud Firewall web interfaces as affected when specified portal or VPN features are enabled; Jumbo Hotfix fixes are planned for 2026-11-11.",
+      "summary": "CVE-2026-109618 assessment: Check Point sk1000302 identifies listed Force, Spark and Cloud Firewall web interfaces as affected when specified portal or VPN features are enabled; Jumbo Hotfix fixes are planned for 2026-11-11.",
+      "comment": "Added from Check Point sk1000302 created 2026-10-21 and updated/reviewed 2026-10-22. The vendor identifies both CVEs as affecting listed Force, Spark and Cloud Firewall versions that use Mobile Access Portal, Remote Access VPN with SSL Network Extender, Remote Access VPN with SAML Realm authentication, or Identity Awareness Captive Portal. Check Point says Portal and SaaS services are already patched, plans an Automatic Updates mitigation before 2026-10-22 21:00 GMT, and plans fixes in Jumbo Hotfix Accumulators on 2026-11-11.",
+      "security_actionStatement": "Follow the vendor mitigation guidance pending the planned Jumbo Hotfix release, and verify Automatic Updates or manual mitigation state on affected firewall deployments."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:checkpoint-firewall-web-interfaces-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0676"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Check Point sk1000302 identifies listed Force, Spark and Cloud Firewall web interfaces as affected when specified portal or VPN features are enabled; Jumbo Hotfix fixes are planned for 2026-11-11.",
+      "summary": "CVE-2026-109619 assessment: Check Point sk1000302 identifies listed Force, Spark and Cloud Firewall web interfaces as affected when specified portal or VPN features are enabled; Jumbo Hotfix fixes are planned for 2026-11-11.",
+      "comment": "Added from Check Point sk1000302 created 2026-10-21 and updated/reviewed 2026-10-22. The vendor identifies both CVEs as affecting listed Force, Spark and Cloud Firewall versions that use Mobile Access Portal, Remote Access VPN with SSL Network Extender, Remote Access VPN with SAML Realm authentication, or Identity Awareness Captive Portal. Check Point says Portal and SaaS services are already patched, plans an Automatic Updates mitigation before 2026-10-22 21:00 GMT, and plans fixes in Jumbo Hotfix Accumulators on 2026-11-11.",
+      "security_actionStatement": "Follow the vendor mitigation guidance pending the planned Jumbo Hotfix release, and verify Automatic Updates or manual mitigation state on affected firewall deployments."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
