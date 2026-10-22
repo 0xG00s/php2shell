@@ -2714,6 +2714,12 @@
       "name": "Quest Software"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:checkmk-gmbh:9de9bc86859d",
+      "creationInfo": "_:creationinfo",
+      "name": "Checkmk GmbH"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4207,6 +4213,10 @@
         "urn:php2shell:inventory:relationship:PHP-0672",
         "urn:php2shell:inventory:package:PHP-0673",
         "urn:php2shell:inventory:relationship:PHP-0673",
+        "urn:php2shell:inventory:package:PHP-0674",
+        "urn:php2shell:inventory:relationship:PHP-0674",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:checkmk-appliance-1725-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021"
       ]
@@ -37351,6 +37361,51 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0674",
+      "creationInfo": "_:creationinfo",
+      "name": "Checkmk Appliance",
+      "software_packageVersion": "1.7.25",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0674"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:checkmk-gmbh:9de9bc86859d",
+      "summary": "Checkmk's appliance 1.7.25 release manifest upgrades bundled PHP 8.2 packages from 8.2.34 to 8.2.35, the upstream fixed release for both php2shell CVEs.",
+      "description": "Monitoring appliance firmware",
+      "comment": "Inventory record: PHP-0674\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor release manifest plus upstream fixed release\nDeployment status: Not measured\nPHP surface: Appliance-bundled PHP 8.2 packages, including php8.2-cgi and libphp8.2-embed; exact reachable appliance web paths and SAPI use are not independently measured\nPHP version scope: Checkmk Appliance 1.7.25 ChangedPackages upgrades libphp8.2-embed, php8.2, php8.2-cgi, php8.2-cli, php8.2-common and related modules from 8.2.34-1~deb12u1 to 8.2.35-1~deb12u1. PHP upstream identifies 8.2.35 as a fixed release for both CVEs.\nExtensions: ChangedPackages lists gd, opcache, readline, snmp, sqlite3 and xml packages alongside common/CGI/CLI/embed; full loaded module set remains deployment-specific\nLimitations: This row records the fixed 1.7.25 appliance firmware scope only. It does not prove update rollout, worker restart, the exact vulnerable path in earlier firmware, or applicability to separately installed Checkmk packages, Docker images or hosted services.\nPatch owner: Checkmk for appliance firmware; operator for firmware rollout and service restart\nDownstream surface: Appliance administration and embedded monitoring workflows\nRelease pin: Checkmk Appliance 1.7.25 published 2026-10-21; ChangedPackages manifest reviewed 2026-10-22\nSource accessed: 2026-10-22\nAliases: CMA, Checkmk virtual appliance, Checkmk physical appliance\nConditional downstream consequence: Updating to the fixed bundled PHP package removes the underlying php2shell runtime flaws for workers actually using the updated appliance firmware. Older appliance builds and services still running pre-update workers remain separate deployment questions.\nVulnerability status: Fixed in Checkmk Appliance 1.7.25 by bundled PHP 8.2.35 package update, based on the vendor release manifest and PHP upstream's fixed-release advisory.\nCVE-2026-109618: Fixed in appliance firmware 1.7.25 via bundled PHP 8.2.35 package update\nCVE-2026-109619: Fixed in appliance firmware 1.7.25 via bundled PHP 8.2.35 package update\nCVE assessment limit: Vendor manifest proves the 1.7.25 package delta; installed firmware, service restart, configuration, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://checkmk.com/werks?product=cma"
+          ],
+          "comment": "Checkmk Appliance Werks page listing version 1.7.25"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://download.checkmk.com/appliance/1.7.25/ChangedPackages"
+          ],
+          "comment": "Checkmk Appliance 1.7.25 changed-package manifest"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.php.net/archive/2026.php#2026-10-21-5"
+          ],
+          "comment": "PHP upstream advisory identifying 8.2.35 as fixed for both php2shell CVEs"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -37625,6 +37680,44 @@
       "relationshipType": "dependsOn",
       "summary": "Inventory relationship for PHP-0673: requires (product_depends_on_php)",
       "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0674",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0674",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "contains",
+      "summary": "Inventory relationship for PHP-0674: bundles (distributes_php)",
+      "comment": "Mapped from inventory relationship 'bundles' and direction 'distributes_php' to SPDX relationshipType 'contains'."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0674"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
+      "summary": "CVE-2026-109618 assessment: Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
+      "comment": "Added from the Checkmk Appliance 1.7.25 changed-package manifest published 2026-10-21 and the PHP upstream advisory. The manifest upgrades bundled PHP 8.2 packages from 8.2.34-1~deb12u1 to 8.2.35-1~deb12u1; PHP upstream identifies 8.2.35 as fixed for both CVEs.\nAction statement: Update the appliance to firmware 1.7.25 or later and verify the running appliance services use the updated packages."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:checkmk-appliance-1725-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0674"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
+      "summary": "CVE-2026-109619 assessment: Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
+      "comment": "Added from the Checkmk Appliance 1.7.25 changed-package manifest published 2026-10-21 and the PHP upstream advisory. The manifest upgrades bundled PHP 8.2 packages from 8.2.34-1~deb12u1 to 8.2.35-1~deb12u1; PHP upstream identifies 8.2.35 as fixed for both CVEs.\nAction statement: Update the appliance to firmware 1.7.25 or later and verify the running appliance services use the updated packages."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
