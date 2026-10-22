@@ -18,6 +18,6 @@ By default, the tool updates only the alphabetized `software_list*.md` pages. To
 python tools/generate_software_list_from_spdx3.py PHP_Downstream_Inventory.spdx3.json -o software --update-history --update-readme
 ```
 
-The generated history file is `software/changelog_software_list.md`. It and the README latest-updates table use a leading `Date and time` column in `YYYY-MM-DD HH:MM:SS +/-HHMM` format.
+The generated history file is `software/changelog_software_list.md`. It and the README latest-updates table use a leading `Date and time` column in `YYYY-MM-DD HH:MM:SS +/-HHMM` format. The README table is compact: it merges the per-CVE statuses into one column and omits notes.
 
 When only a filename is provided, the tool reads it from `software/spdx/`. An explicit path may also be provided.
