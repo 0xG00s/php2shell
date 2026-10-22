@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Operational information last significant change: 21 October 2026 17:25 CEST
-Software list last status update: 22 October 2026 17:23 CEST
+Operational information last significant change: 21 October 2026 17:25 CEST<br>
+Software list last status update: 22 October 2026 17:23 CEST<br>
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.

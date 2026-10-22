@@ -534,6 +534,17 @@ def write_generated_text(path: Path, content: str, default_newline: str = "\n") 
         path.write_bytes(rendered)
 
 
+def ensure_readme_hard_break(text: str, prefix: str) -> str:
+    pattern = re.compile(rf"^{re.escape(prefix)}.*$", re.MULTILINE)
+    match = pattern.search(text)
+    if not match:
+        return text
+    line = match.group(0)
+    if line.endswith("<br>"):
+        return text
+    return text[: match.start()] + line + "<br>" + text[match.end() :]
+
+
 def write_readme_updates(
     repo_root: Path,
     cves: list[str],
@@ -566,7 +577,7 @@ def write_readme_updates(
                 README_OPERATIONAL_TIMESTAMP_PREFIX,
                 1,
             )
-        software_timestamp = f"{README_SOFTWARE_TIMESTAMP_PREFIX} {timestamp}"
+        software_timestamp = f"{README_SOFTWARE_TIMESTAMP_PREFIX} {timestamp}<br>"
         timestamp_pattern = re.compile(
             rf"^{re.escape(README_SOFTWARE_TIMESTAMP_PREFIX)}.*$",
             re.MULTILINE,
@@ -583,6 +594,8 @@ def write_readme_updates(
                     "README is missing an operational timestamp line for software timestamp insertion."
                 )
             updated = operational_pattern.sub(rf"\1\n{software_timestamp}", updated, count=1)
+    updated = ensure_readme_hard_break(updated, README_OPERATIONAL_TIMESTAMP_PREFIX)
+    updated = ensure_readme_hard_break(updated, README_SOFTWARE_TIMESTAMP_PREFIX)
     write_generated_text(readme_path, updated)
 
 
