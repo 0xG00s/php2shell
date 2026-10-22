@@ -38,7 +38,7 @@ For additional information see:
 | [software](software) | Contains inventory lists of software products with a PHP dependency potentially affected by the vulnerabilities. |
 | [tools](tools) | Contains tools for using/generating files within this repo |
 
-Please note that this repository is not complete and is currently being expanded.
+The repository is being updated as the situation develops. Check back for updates.
 
 ## Latest software status updates
 
