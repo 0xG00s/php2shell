@@ -2738,6 +2738,18 @@
       "name": "Cisco"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:efficientip:b1b0f0c4c32a",
+      "creationInfo": "_:creationinfo",
+      "name": "EfficientIP"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:entelliweb:73c2d38cb10f",
+      "creationInfo": "_:creationinfo",
+      "name": "Entelliweb"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4360,7 +4372,13 @@
         "urn:php2shell:inventory:relationship:PHP-0721",
         "urn:php2shell:inventory:relationship:PHP-0722",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:qnap-qsa-26-18-20261022",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:qnap-qsa-26-18-20261022"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:qnap-qsa-26-18-20261022",
+        "urn:php2shell:inventory:package:PHP-0723",
+        "urn:php2shell:inventory:package:PHP-0724",
+        "urn:php2shell:inventory:relationship:PHP-0723",
+        "urn:php2shell:inventory:relationship:PHP-0724",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:trusted-party-php-url-observations-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:trusted-party-php-url-observations-20261022"
       ]
     },
     {
@@ -38915,6 +38933,56 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0723",
+      "creationInfo": "_:creationinfo",
+      "name": "EfficientIP DNS and network automation product suite",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0723"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:efficientip:b1b0f0c4c32a",
+      "summary": "A trusted party reported to NCSC-NL that EfficientIP management interfaces for DNS and network automation products use .php URL paths; exact product scope and PHP runtime details are not publicly confirmed.",
+      "description": "DNS and network automation management interfaces",
+      "comment": "Inventory record: PHP-0723\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Trusted-party report; product scope unresolved\nDeployment status: Not measured\nPHP surface: A trusted party reported to NCSC-NL that EfficientIP management interfaces for DNS and network automation products expose .php URL paths.\nPHP version scope: Unknown; no official vendor product or release scope has been published.\nExtensions: Unknown\nLimitations: .php URL paths are an indicator of PHP-backed routing or legacy naming, not proof of a specific PHP runtime, affected build, enabled extension set, reachable vulnerable path or exploitation. Exact EfficientIP product names, versions and deployment scope remain unresolved.\nPatch owner: EfficientIP for product assessment and updates; operator for exposure review\nDownstream surface: DNS and network automation management workflows\nRelease pin: Trusted-party report received by NCSC-NL; no public vendor artifact or advisory available\nSource accessed: 2026-10-22\nVulnerability status: Under investigation based on trusted-party report of .php management URL paths; no official vendor confirmation or product-specific php2shell assessment available.\nCVE-2026-109618: Trusted-party report indicates possible PHP management surface; exact product and CVE scope unknown\nCVE-2026-109619: Trusted-party report indicates possible PHP management surface; exact product and CVE scope unknown\nCVE assessment limit: This candidate record captures a suspected PHP relationship only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "comment": "Reported to NCSC-NL by trusted party; no official vendor information available."
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0724",
+      "creationInfo": "_:creationinfo",
+      "name": "Entelliweb building management system",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0724"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:entelliweb:73c2d38cb10f",
+      "summary": "A trusted party reported to NCSC-NL that the Entelliweb building management system uses .php URL paths in its management interface; exact product release and PHP runtime details are not publicly confirmed.",
+      "description": "Building management system management interface",
+      "comment": "Inventory record: PHP-0724\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Trusted-party report; product scope unresolved\nDeployment status: Not measured\nPHP surface: A trusted party reported to NCSC-NL that the Entelliweb building management system management interface exposes .php URL paths.\nPHP version scope: Unknown; no official vendor product or release scope has been published.\nExtensions: Unknown\nLimitations: .php URL paths are an indicator of PHP-backed routing or legacy naming, not proof of a specific PHP runtime, affected build, enabled extension set, reachable vulnerable path or exploitation. Exact Entelliweb release, version and deployment scope remain unresolved.\nPatch owner: Entelliweb for product assessment and updates; operator for exposure review\nDownstream surface: Building management administration workflows\nRelease pin: Trusted-party report received by NCSC-NL; no public vendor artifact or advisory available\nSource accessed: 2026-10-22\nVulnerability status: Under investigation based on trusted-party report of .php management URL paths; no official vendor confirmation or product-specific php2shell assessment available.\nCVE-2026-109618: Trusted-party report indicates possible PHP management surface; exact product and CVE scope unknown\nCVE-2026-109619: Trusted-party report indicates possible PHP management surface; exact product and CVE scope unknown\nCVE assessment limit: This candidate record captures a suspected PHP relationship only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "comment": "Reported to NCSC-NL by trusted party; no official vendor information available."
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -39668,6 +39736,30 @@
       ],
       "relationshipType": "dependsOn",
       "summary": "Inventory relationship for PHP-0722: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0723",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0723",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0723: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0724",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0724",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0724: requires (product_depends_on_php)",
       "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
@@ -40479,6 +40571,34 @@
       "summary": "CVE-2026-109619 assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.",
       "comment": "Added from QNAP Security Advisory QSA-26-18 released 2026-10-22 and reviewed 2026-10-22. The advisory states that PHP is used in web components of QNAP operating systems and several QNAP applications, lists these product versions as affected, and says fixed versions will be published later. The QuMagie scope is taken from the advisory's explicit affected-products header; the rendered affected-products table on the same page omits a separate QuMagie row.",
       "security_actionStatement": "Keep affected devices off the internet where possible, disable direct exposure and unnecessary PHP-based services, use VPN and trusted-network restrictions, and apply QNAP fixes when released."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:trusted-party-php-url-observations-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0723",
+        "urn:php2shell:inventory:package:PHP-0724"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Trusted-party reporting to NCSC-NL indicates .php URL paths in these management interfaces; exact product scope, PHP runtime details and CVE applicability are unconfirmed, and no official vendor information is available.",
+      "summary": "CVE-2026-109618 assessment: Trusted-party reporting to NCSC-NL indicates .php URL paths in these management interfaces; exact product scope, PHP runtime details and CVE applicability are unconfirmed, and no official vendor information is available.",
+      "comment": "Added from trusted-party reporting received by NCSC-NL and reviewed 2026-10-22. The reporting indicates .php URL paths in EfficientIP DNS/network automation management interfaces and the Entelliweb building management system interface. This is implementation-surface evidence only; no official vendor advisory, product/version scope or affected/fixed conclusion is available."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:trusted-party-php-url-observations-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0723",
+        "urn:php2shell:inventory:package:PHP-0724"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Trusted-party reporting to NCSC-NL indicates .php URL paths in these management interfaces; exact product scope, PHP runtime details and CVE applicability are unconfirmed, and no official vendor information is available.",
+      "summary": "CVE-2026-109619 assessment: Trusted-party reporting to NCSC-NL indicates .php URL paths in these management interfaces; exact product scope, PHP runtime details and CVE applicability are unconfirmed, and no official vendor information is available.",
+      "comment": "Added from trusted-party reporting received by NCSC-NL and reviewed 2026-10-22. The reporting indicates .php URL paths in EfficientIP DNS/network automation management interfaces and the Entelliweb building management system interface. This is implementation-surface evidence only; no official vendor advisory, product/version scope or affected/fixed conclusion is available."
     }
   ]
 }

@@ -1,6 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Readme last significant change: 21 October 2026 17:25 CEST
+Operational information last significant change: 21 October 2026 17:25 CEST
+Software list last status update: 22 October 2026 16:11 CEST
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -38,6 +39,18 @@ For additional information see:
 | [tools](tools) | Contains tools for using/generating files within this repo |
 
 Please note that this repository is not complete and is currently being expanded.
+
+## Latest software status updates
+
+| Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
+|:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
+|2026-10-22 16:11:12 +0200|EfficientIP|EfficientIP DNS and network automation product suite||Investigation|Reported to NCSC-NL by trusted party; no official vendor information available.|
+|2026-10-22 16:11:12 +0200|Entelliweb|Entelliweb building management system||Investigation|Reported to NCSC-NL by trusted party; no official vendor information available.|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP Note Station 3|Note Station 3 3.9.14 and earlier|Vulnerable|[source](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QNE (ADRA)|QNE (ADRA) 1.0.7 and earlier|Vulnerable|[source](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QTS built-in PHP runtime|QTS 6.1.0; QTS 5.2.11 and earlier|Vulnerable|[source 1](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)<br>[source 2](<https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero>)<br>[source 3](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+
+See the [full software status update history](software/changelog_software_list.md).
 
 ## Contributions welcome
 
