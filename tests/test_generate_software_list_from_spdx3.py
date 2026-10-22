@@ -11,7 +11,7 @@ from tools import generate_software_list_from_spdx3 as generator
 
 
 class GeneratedUpdatesTests(unittest.TestCase):
-    def test_readme_uses_list_columns_and_five_latest_history_rows(self):
+    def test_readme_uses_compact_columns_and_five_latest_history_rows(self):
         cves = ["CVE-2026-109618", "CVE-2026-109619"]
         entries = [
             {
@@ -32,11 +32,121 @@ class GeneratedUpdatesTests(unittest.TestCase):
         latest = generator.latest_update_entries(events)
         rendered = generator.render_readme_updates(cves, latest)
         table = [line for line in rendered.splitlines() if line.startswith("|")]
-        self.assertEqual(table[:2], generator.table_header(cves, include_date_time=True))
+        self.assertEqual(table[:2], generator.readme_table_header(cves))
         self.assertEqual(len(table[2:]), 5)
         self.assertEqual(latest, generator.history_rows(events)[:5])
-        self.assertIn("|Vulnerable|Fix|Deployment scope|", rendered)
+        self.assertIn("|Vulnerable/Fix|[source]", rendered)
+        self.assertNotIn("| Notes |", rendered)
+        self.assertNotIn("Deployment scope", rendered)
         self.assertIn("software/changelog_software_list.md", rendered)
+
+
+class GeneratedListsTests(unittest.TestCase):
+    def setUp(self):
+        self.document = {
+            "@graph": [
+                {
+                    "type": "Organization",
+                    "spdxId": "urn:test:org:wordpress",
+                    "name": "WordPress",
+                },
+                {
+                    "type": "Organization",
+                    "spdxId": "urn:test:org:php",
+                    "name": "The PHP Group",
+                },
+                {
+                    "type": "software_Package",
+                    "spdxId": "urn:test:package:wordpress",
+                    "name": "WordPress",
+                    "suppliedBy": "urn:test:org:wordpress",
+                    "summary": "Requires PHP ^7.4|^8.0.",
+                    "externalRef": [
+                        {
+                            "type": "ExternalRef",
+                            "locator": ["https://example.test/wordpress"],
+                        }
+                    ],
+                },
+                {
+                    "type": "software_Package",
+                    "spdxId": "urn:test:package:php",
+                    "name": "PHP core",
+                    "suppliedBy": "urn:test:org:php",
+                    "software_packageVersion": "8.5.10",
+                },
+                {
+                    "type": "security_Vulnerability",
+                    "spdxId": "urn:test:vuln:CVE-2026-109618",
+                    "name": "CVE-2026-109618",
+                },
+                {
+                    "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+                    "spdxId": "urn:test:vex:1",
+                    "from": "urn:test:vuln:CVE-2026-109618",
+                    "to": ["urn:test:package:wordpress", "urn:test:package:php"],
+                    "relationshipType": "underInvestigationFor",
+                    "security_statusNotes": "PHP relationship confirmed; CVE match unknown",
+                },
+            ]
+        }
+
+    def test_writes_index_and_alphabetical_pages(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            total, counts = generator.write_lists(self.document, output_dir)
+
+            self.assertEqual(total, 2)
+            self.assertEqual(counts["T"], 1)
+            self.assertEqual(counts["W"], 1)
+            index = (output_dir / "software_list.md").read_text()
+            self.assertIn(generator.TITLE, index)
+            self.assertIn("[A](software_list_a.md)", index)
+            w_page = (output_dir / "software_list_w.md").read_text()
+            self.assertIn("|WordPress|WordPress||Investigation|", w_page)
+            self.assertIn("unknown<br>Requires PHP ^7.4\\|^8.0.", w_page)
+            self.assertIn("[source](<https://example.test/wordpress>)", w_page)
+
+    def test_resolves_bare_filename_from_default_spdx_directory(self):
+        self.assertEqual(
+            generator.resolve_spdx_path(Path("inventory.spdx3.json")),
+            Path("software") / "spdx" / "inventory.spdx3.json",
+        )
+
+    def test_keeps_explicit_spdx_path(self):
+        self.assertEqual(
+            generator.resolve_spdx_path(Path("custom") / "inventory.spdx3.json"),
+            Path("custom") / "inventory.spdx3.json",
+        )
+
+    def test_renders_locatorless_external_reference_comment_as_plain_text(self):
+        self.assertEqual(
+            generator.external_links(
+                {
+                    "externalRef": [
+                        {
+                            "type": "ExternalRef",
+                            "externalRefType": "other",
+                            "comment": "Reported to NCSC-NL by trusted party; no official vendor information available.",
+                        }
+                    ]
+                }
+            ),
+            "Reported to NCSC-NL by trusted party; no official vendor information available.",
+        )
+
+    def test_rejects_conflicting_statuses(self):
+        self.document["@graph"].append(
+            {
+                "type": "security_VexAffectedVulnAssessmentRelationship",
+                "spdxId": "urn:test:vex:2",
+                "from": "urn:test:vuln:CVE-2026-109618",
+                "to": ["urn:test:package:wordpress"],
+                "relationshipType": "affects",
+            }
+        )
+        with self.assertRaises(generator.GenerationError):
+            generator.build_entries(self.document)
 
 
 class MainlineHistoryTests(unittest.TestCase):
