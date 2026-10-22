@@ -4346,7 +4346,21 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:f5-bigip-research-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f5-bigip-research-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:fortiadc-research-20261021",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:fortiadc-research-20261021"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:fortiadc-research-20261021",
+        "urn:php2shell:inventory:package:PHP-0717",
+        "urn:php2shell:inventory:package:PHP-0718",
+        "urn:php2shell:inventory:package:PHP-0719",
+        "urn:php2shell:inventory:package:PHP-0720",
+        "urn:php2shell:inventory:package:PHP-0721",
+        "urn:php2shell:inventory:package:PHP-0722",
+        "urn:php2shell:inventory:relationship:PHP-0717",
+        "urn:php2shell:inventory:relationship:PHP-0718",
+        "urn:php2shell:inventory:relationship:PHP-0719",
+        "urn:php2shell:inventory:relationship:PHP-0720",
+        "urn:php2shell:inventory:relationship:PHP-0721",
+        "urn:php2shell:inventory:relationship:PHP-0722",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:qnap-qsa-26-18-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:qnap-qsa-26-18-20261022"
       ]
     },
     {
@@ -18854,6 +18868,7 @@
       "creationInfo": "_:creationinfo",
       "name": "QNAP QTS built-in PHP runtime",
       "software_primaryPurpose": "firmware",
+      "software_packageVersion": "QTS 6.1.0; QTS 5.2.11 and earlier",
       "externalIdentifier": [
         {
           "type": "ExternalIdentifier",
@@ -18862,9 +18877,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
-      "summary": "Prior built-in firmware mappings are retained. A separate QNAP FAQ documents retirement/disablement of the optional PHP7.4 application after5.1.x→5.2.0; this is not a replacement built-in PHP version table.",
+      "summary": "QNAP QSA-26-18 lists QTS 6.1.0 and QTS 5.2.11 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed versions are to be announced.",
       "description": "Firmware-bundled PHP; enabled services and exact SAPI unknown",
-      "comment": "Inventory record: PHP-0425\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Firmware-bundled PHP; enabled services and exact SAPI unknown\nPHP version scope: FAQ: QTS4.2.6–4.3.6→PHP5.6;4.4.x→7.3;5.0.1→7.4;5.1→8.2\nExtensions: Required/optional extensions and enabled modules: unknown\nLimitations: The 2024-03-05 table stops at5.1; later firmware and patch revisions are unknown. No manual built-in PHP upgrade is documented. No deployment total, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied. Public documents/static source only; no retrieved code or appliance image was installed, executed, built or tested. The optional PHP7.4 app is separately scoped as PHP-0610. Its removal in5.2 does not establish absence of built-in PHP or the exact later built-in runtime. Vendor OpenSSL compatibility prose applies to that app, not every PHP7.4 build.\nPatch owner: QNAP through firmware releases; NAS administrator for applicable update rollout\nDownstream surface: Only the named management component and its documented callers\nRelease pin: Built-in mapping FAQ2024-03-05 retained in earlier source; separate optional-app FAQ last modified2024-11-19; no binary pin\nSource accessed: 2026-10-19\nAliases: qnap:qts-built-in-php\nConditional downstream consequence: A matching PHP or enabled-module flaw could propagate to applications selecting this distributed runtime. Actual impact depends on the installed build, reachable code and service identity; package availability alone establishes no exposed installation or successful exploitation.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0425\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Firmware-bundled PHP; QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications.\nPHP version scope: QSA-26-18 lists QTS 6.1.0 and QTS 5.2.11 and earlier as affected; fixed versions are to be announced. Earlier QNAP FAQ mapping retained: QTS 4.2.6-4.3.6 -> PHP 5.6; 4.4.x -> 7.3; 5.0.1 -> 7.4; 5.1 -> 8.2.\nExtensions: Required/optional extensions and enabled modules: unknown\nLimitations: QSA-26-18 establishes affected QTS release scope, not a live deployment, exact embedded PHP patch build, enabled feature set, reachable path or exploitation. The optional PHP7.4 app remains separately scoped as PHP-0610. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP through firmware releases; NAS administrator for exposure reduction and update rollout\nDownstream surface: QNAP web components in the named QTS releases\nRelease pin: QSA-26-18 published 2026-10-22; earlier built-in mapping FAQ 2024-03-05 retained in source references\nSource accessed: 2026-10-22\nAliases: qnap:qts-built-in-php\nVulnerability status: QNAP QSA-26-18 lists the QTS release scope as affected; fixed versions are to be announced.\nCVE-2026-109618: Vendor-confirmed affected QTS scope; fixed versions to be announced\nCVE-2026-109619: Vendor-confirmed affected QTS scope; fixed versions to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -18881,6 +18896,14 @@
             "https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero"
           ],
           "comment": "Official project/vendor PHP relationship evidence - QNAP documents firmware-controlled built-in PHP versions for QTS."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
         }
       ]
     },
@@ -18890,6 +18913,7 @@
       "creationInfo": "_:creationinfo",
       "name": "QNAP QuTS hero built-in PHP runtime",
       "software_primaryPurpose": "firmware",
+      "software_packageVersion": "QuTS hero h6.1.0; QuTS hero h6.0.x; QuTS hero h5.2.11 and earlier",
       "externalIdentifier": [
         {
           "type": "ExternalIdentifier",
@@ -18898,9 +18922,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
-      "summary": "Prior built-in firmware mappings are retained. A separate QNAP FAQ documents retirement/disablement of the optional PHP7.4 application after5.1.x→5.2.0; this is not a replacement built-in PHP version table.",
+      "summary": "QNAP QSA-26-18 lists QuTS hero h6.1.0, QuTS hero h6.0.x and QuTS hero h5.2.11 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed versions are to be announced.",
       "description": "Firmware-bundled PHP; active workload/SAPI unmeasured",
-      "comment": "Inventory record: PHP-0426\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Firmware-bundled PHP; active workload/SAPI unmeasured\nPHP version scope: FAQ: QuTS hero h4.5.4→PHP7.3;h5.0.1→7.4;h5.1→8.2\nExtensions: Required/optional extensions and enabled modules: unknown\nLimitations: Do not inherit QTS versions or extrapolate beyondh5.1. Separate container PHP is a different update boundary. No deployment total, loaded-module set, reachability or exploitation was measured; no specific CVE was supplied. Public documents/static source only; no retrieved code or appliance image was installed, executed, built or tested. The optional PHP7.4 app is separately scoped as PHP-0610. Its removal in5.2 does not establish absence of built-in PHP or the exact later built-in runtime. Vendor OpenSSL compatibility prose applies to that app, not every PHP7.4 build.\nPatch owner: QNAP firmware maintainer; appliance administrator for updates\nDownstream surface: Only the named management component and its documented callers\nRelease pin: Built-in mapping FAQ2024-03-05 retained in earlier source; separate optional-app FAQ last modified2024-11-19; no binary pin\nSource accessed: 2026-10-19\nAliases: qnap:quts-hero-built-in-php\nConditional downstream consequence: A matching PHP or enabled-module flaw could propagate to applications selecting this distributed runtime. Actual impact depends on the installed build, reachable code and service identity; package availability alone establishes no exposed installation or successful exploitation.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0426\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Firmware-bundled PHP; QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications.\nPHP version scope: QSA-26-18 lists QuTS hero h6.1.0, QuTS hero h6.0.x and QuTS hero h5.2.11 and earlier as affected; fixed versions are to be announced. Earlier QNAP FAQ mapping retained: QuTS hero h4.5.4 -> PHP 7.3; h5.0.1 -> 7.4; h5.1 -> 8.2.\nExtensions: Required/optional extensions and enabled modules: unknown\nLimitations: QSA-26-18 establishes affected QuTS hero release scope, not a live deployment, exact embedded PHP patch build, enabled feature set, reachable path or exploitation. The optional PHP7.4 app remains separately scoped as PHP-0610. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP through firmware releases; NAS administrator for exposure reduction and update rollout\nDownstream surface: QNAP web components in the named QuTS hero releases\nRelease pin: QSA-26-18 published 2026-10-22; earlier built-in mapping FAQ 2024-03-05 retained in source references\nSource accessed: 2026-10-22\nAliases: qnap:quts-hero-built-in-php\nVulnerability status: QNAP QSA-26-18 lists the QuTS hero release scope as affected; fixed versions are to be announced.\nCVE-2026-109618: Vendor-confirmed affected QuTS hero scope; fixed versions to be announced\nCVE-2026-109619: Vendor-confirmed affected QuTS hero scope; fixed versions to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -18917,6 +18941,14 @@
             "https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero"
           ],
           "comment": "Official project/vendor PHP relationship evidence - The same QNAP FAQ separately scopes QuTS hero firmware mappings."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
         }
       ]
     },
@@ -34349,8 +34381,6 @@
         "urn:php2shell:inventory:package:PHP-0409",
         "urn:php2shell:inventory:package:PHP-0410",
         "urn:php2shell:inventory:package:PHP-0423",
-        "urn:php2shell:inventory:package:PHP-0425",
-        "urn:php2shell:inventory:package:PHP-0426",
         "urn:php2shell:inventory:package:PHP-0427",
         "urn:php2shell:inventory:package:PHP-0428",
         "urn:php2shell:inventory:package:PHP-0429",
@@ -34825,8 +34855,6 @@
         "urn:php2shell:inventory:package:PHP-0409",
         "urn:php2shell:inventory:package:PHP-0410",
         "urn:php2shell:inventory:package:PHP-0423",
-        "urn:php2shell:inventory:package:PHP-0425",
-        "urn:php2shell:inventory:package:PHP-0426",
         "urn:php2shell:inventory:package:PHP-0427",
         "urn:php2shell:inventory:package:PHP-0428",
         "urn:php2shell:inventory:package:PHP-0429",
@@ -38713,6 +38741,180 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0717",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP QuTScloud",
+      "software_primaryPurpose": "firmware",
+      "software_packageVersion": "QuTScloud c5.2.9 and earlier",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0717"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 lists QuTScloud c5.2.9 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.",
+      "description": "Cloud NAS operating system web components",
+      "comment": "Inventory record: PHP-0717\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists QuTScloud c5.2.9 and earlier as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP QuTScloud as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0718",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP QuMagie",
+      "software_primaryPurpose": "application",
+      "software_packageVersion": "QuMagie 2.10.1 and earlier",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0718"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 identifies QuMagie 2.10.1 and earlier in its affected-products header for CVE-2026-109618 and CVE-2026-109619; fixed version is not yet published.",
+      "description": "Multimedia application web components",
+      "comment": "Inventory record: PHP-0718\nCategory: Content management\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists QuMagie 2.10.1 and earlier as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage. QSA-26-18's affected-products header explicitly names QuMagie 2.10.1 and earlier, although the rendered affected-products table on the same page omits a separate QuMagie row; no fixed version is published.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP QuMagie as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0719",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP Note Station 3",
+      "software_primaryPurpose": "application",
+      "software_packageVersion": "Note Station 3 3.9.14 and earlier",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0719"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 lists Note Station 3 3.9.14 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.",
+      "description": "Note-taking application web components",
+      "comment": "Inventory record: PHP-0719\nCategory: Content management\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists Note Station 3 3.9.14 and earlier as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP Note Station 3 as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0720",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP QNE (ADRA)",
+      "software_primaryPurpose": "firmware",
+      "software_packageVersion": "QNE (ADRA) 1.0.7 and earlier",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0720"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 lists QNE (ADRA) 1.0.7 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.",
+      "description": "Network appliance operating system web components",
+      "comment": "Inventory record: PHP-0720\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists QNE (ADRA) 1.0.7 and earlier as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP QNE (ADRA) as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0721",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP QVR Surveillance",
+      "software_primaryPurpose": "application",
+      "software_packageVersion": "QVR Surveillance 3.0.3 and earlier (ARM32 models)",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0721"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 lists QVR Surveillance 3.0.3 and earlier on ARM32 models as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.",
+      "description": "Surveillance application web components",
+      "comment": "Inventory record: PHP-0721\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists QVR Surveillance 3.0.3 and earlier (ARM32 models) as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP QVR Surveillance as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0722",
+      "creationInfo": "_:creationinfo",
+      "name": "QNAP TVR OS",
+      "software_primaryPurpose": "firmware",
+      "software_packageVersion": "TVR OS 1.0.4 and earlier",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0722"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:qnap:01af88f7bc7a",
+      "summary": "QNAP QSA-26-18 lists TVR OS 1.0.4 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.",
+      "description": "Surveillance appliance operating system web components",
+      "comment": "Inventory record: PHP-0722\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: QNAP says PHP is used in web components of QNAP operating systems and several QNAP applications; exact component boundary and SAPI are not published for this product.\nPHP version scope: QSA-26-18 lists TVR OS 1.0.4 and earlier as affected; fixed version to be announced.\nExtensions: Unknown\nLimitations: QSA-26-18 establishes affected product scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. PHP included in containers running on Container Station or in third-party applications is outside QNAP update coverage.\nPatch owner: QNAP for supported product updates; operator for exposure reduction and update rollout\nSource accessed: 2026-10-22\nVulnerability status: QNAP QSA-26-18 lists QNAP TVR OS as affected; fixed version to be announced.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version to be announced\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version to be announced\nCVE assessment limit: Affected product release scope is vendor-confirmed; installed version, exposure, configuration and exploitation need separate evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.qnap.com/en/security-advisory/qsa-26-18"
+          ],
+          "comment": "QNAP Security Advisory QSA-26-18 (2026-10-22)"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -39394,6 +39596,78 @@
       ],
       "relationshipType": "dependsOn",
       "summary": "Inventory relationship for PHP-0716: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0717",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0717",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0717: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0718",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0718",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0718: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0719",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0719",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0719: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0720",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0720",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0720: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0721",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0721",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0721: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0722",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0722",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0722: requires (product_depends_on_php)",
       "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
@@ -40163,6 +40437,48 @@
       "summary": "CVE-2026-109619 assessment: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product under 'Products Confirmed Not Vulnerable'",
       "comment": "Added from Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, last updated 2026-10-22), section 'Products Confirmed Not Vulnerable'. Cisco Umbrella is also still listed under investigation in the same advisory version.",
       "security_impactStatement": "Cisco lists the product under 'Products Confirmed Not Vulnerable' in cisco-sa-php-october26-Jj384Daq."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:qnap-qsa-26-18-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0425",
+        "urn:php2shell:inventory:package:PHP-0426",
+        "urn:php2shell:inventory:package:PHP-0717",
+        "urn:php2shell:inventory:package:PHP-0718",
+        "urn:php2shell:inventory:package:PHP-0719",
+        "urn:php2shell:inventory:package:PHP-0720",
+        "urn:php2shell:inventory:package:PHP-0721",
+        "urn:php2shell:inventory:package:PHP-0722"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.",
+      "summary": "CVE-2026-109618 assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.",
+      "comment": "Added from QNAP Security Advisory QSA-26-18 released 2026-10-22 and reviewed 2026-10-22. The advisory states that PHP is used in web components of QNAP operating systems and several QNAP applications, lists these product versions as affected, and says fixed versions will be published later. The QuMagie scope is taken from the advisory's explicit affected-products header; the rendered affected-products table on the same page omits a separate QuMagie row.",
+      "security_actionStatement": "Keep affected devices off the internet where possible, disable direct exposure and unnecessary PHP-based services, use VPN and trusted-network restrictions, and apply QNAP fixes when released."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:qnap-qsa-26-18-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0425",
+        "urn:php2shell:inventory:package:PHP-0426",
+        "urn:php2shell:inventory:package:PHP-0717",
+        "urn:php2shell:inventory:package:PHP-0718",
+        "urn:php2shell:inventory:package:PHP-0719",
+        "urn:php2shell:inventory:package:PHP-0720",
+        "urn:php2shell:inventory:package:PHP-0721",
+        "urn:php2shell:inventory:package:PHP-0722"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.",
+      "summary": "CVE-2026-109619 assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.",
+      "comment": "Added from QNAP Security Advisory QSA-26-18 released 2026-10-22 and reviewed 2026-10-22. The advisory states that PHP is used in web components of QNAP operating systems and several QNAP applications, lists these product versions as affected, and says fixed versions will be published later. The QuMagie scope is taken from the advisory's explicit affected-products header; the rendered affected-products table on the same page omits a separate QuMagie row.",
+      "security_actionStatement": "Keep affected devices off the internet where possible, disable direct exposure and unnecessary PHP-based services, use VPN and trusted-network restrictions, and apply QNAP fixes when released."
     }
   ]
 }
