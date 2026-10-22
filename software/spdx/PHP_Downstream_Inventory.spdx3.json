@@ -4223,6 +4223,8 @@
         "urn:php2shell:inventory:relationship:PHP-0674",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:checkmk-appliance-1725-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:checkmk-appliance-1725-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:netgate-pfsense-php-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:netgate-pfsense-php-20261021",
         "urn:php2shell:inventory:package:PHP-0675",
         "urn:php2shell:inventory:relationship:PHP-0675",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:securepoint-resellerportal-20261022",
@@ -5413,10 +5415,18 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:netgate-pfsense:0f98ae3101be",
-      "summary": "Netgate explicitly identifies the legacy GUI as PHP, the new Plus GUI as Go, and continued availability of both during transition. Nexus controller options are separately enabled.",
+      "summary": "Netgate's 21 October 2026 advisory confirms pfSense Plus 26.07, 26.03.1 and CE 2.9.0, 2.8.1 are affected via the PHP GUI and Captive Portal, and ships updated PHP packages (8.5.12; 8.3.36 for CE 2.8.1). The legacy GUI is PHP, the new Plus GUI is Go.",
       "description": "PHP legacy management interface and retained bundled management runtime; new Plus/Nexus GUI is separately Go-based, with coexistence documented",
-      "comment": "Inventory record: PHP-0030\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: PHP legacy management interface and retained bundled management runtime; new Plus/Nexus GUI is separately Go-based, with coexistence documented\nPHP version scope: Prior CE2.9.0 notes list PHP8.5.7. Netgate’s 3 August 2026 announcement identifies a Go-based Plus GUI alongside the retained legacy PHP interface. Plus26.07 exact PHP build remains unknown; interface migration is not whole-platform PHP removal.\nExtensions: Optional extra modules include mysqli,pdo_mysql,pgsql; complete base module set is release-specific\nLimitations: CE and Plus do not share an assumed PHP patch. The new GUI does not establish removal of backend/CLI PHP or migration of every deployment. No WAN reachability, forwarding-plane PHP, tenant escape or compromise inferred. Full firmware/module/SBOM and enabled interfaces unknown.\nPatch owner: Appliance vendor and operator\nDownstream surface: Firewall configuration and administration\nRelease pin: Netgate announcement 3 August 2026; CE2.9.0/PHP8.5.7 declaration retained from prior source evidence; no firmware digest\nSource accessed: 2026-10-19\nAliases: pfsense:management-php\nConditional downstream consequence: Analyst judgment: a PHP flaw would need a matching still-used PHP runtime/component and reachable input. A Go GUI cannot automatically inherit a PHP bug, nor prove that PHP was removed elsewhere. Privileged configuration effects depend on the actual worker, rights and management path.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0030\nCategory: Appliances and embedded\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Vendor advisory confirms affected releases and fixed PHP packages\nDeployment status: Not measured\nPHP surface: PHP legacy management interface and retained bundled management runtime; new Plus/Nexus GUI is separately Go-based, with coexistence documented\nPHP version scope: Netgate's 21 October 2026 advisory names pfSense Plus 26.07, Plus 26.03.1, CE 2.9.0 and CE 2.8.1 as affected and releases updated PHP packages: PHP 8.5.12 for Plus 26.07, Plus 26.03.1 and CE 2.9.0; PHP 8.3.36 for CE 2.8.1. Prior CE2.9.0 notes list PHP8.5.7. Netgate’s 3 August 2026 announcement identifies a Go-based Plus GUI alongside the retained legacy PHP interface. Plus26.07 exact PHP build remains unknown; interface migration is not whole-platform PHP removal.\nExtensions: Optional extra modules include mysqli,pdo_mysql,pgsql; complete base module set is release-specific\nLimitations: CE and Plus do not share an assumed PHP patch. The new GUI does not establish removal of backend/CLI PHP or migration of every deployment. No WAN reachability, forwarding-plane PHP, tenant escape or compromise inferred. Full firmware/module/SBOM and enabled interfaces unknown.\nPatch owner: Appliance vendor and operator\nDownstream surface: Firewall configuration and administration\nRelease pin: Netgate announcement 3 August 2026; CE2.9.0/PHP8.5.7 declaration retained from prior source evidence; no firmware digest\nSource accessed: 2026-10-22\nAliases: pfsense:management-php\nConditional downstream consequence: Analyst judgment: a PHP flaw would need a matching still-used PHP runtime/component and reachable input. A Go GUI cannot automatically inherit a PHP bug, nor prove that PHP was removed elsewhere. Privileged configuration effects depend on the actual worker, rights and management path.\nVulnerability status: Vendor-confirmed affected; fixed PHP packages available per Netgate advisory of 21 October 2026. Netgate states the issues only matter if the PHP GUI or Captive Portal service is exposed to potential attackers; by default the GUI is LAN-only and Captive Portal is not active.\nCVE-2026-109618: Fixed via updated pfSense PHP package (8.5.12 / 8.3.36)\nCVE-2026-109619: Fixed via updated pfSense PHP package (8.5.12 / 8.3.36)\nCVE assessment limit: Updates are applied from the command line (SSH or console), not via the GUI. Exposure depends on GUI/Captive Portal reachability. Installed version, backport, configuration and reachable path need separate evidence.",
       "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.netgate.com/blog/critical-php-security-update"
+          ],
+          "comment": "Netgate advisory for CVE-2026-109618 and CVE-2026-109619 (21 October 2026): affected pfSense releases, updated PHP packages and command-line update methods"
+        },
         {
           "type": "ExternalRef",
           "externalRefType": "other",
@@ -33833,7 +33843,6 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0004",
         "urn:php2shell:inventory:package:PHP-0012",
-        "urn:php2shell:inventory:package:PHP-0030",
         "urn:php2shell:inventory:package:PHP-0031",
         "urn:php2shell:inventory:package:PHP-0033",
         "urn:php2shell:inventory:package:PHP-0038",
@@ -34323,7 +34332,6 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0004",
         "urn:php2shell:inventory:package:PHP-0012",
-        "urn:php2shell:inventory:package:PHP-0030",
         "urn:php2shell:inventory:package:PHP-0031",
         "urn:php2shell:inventory:package:PHP-0033",
         "urn:php2shell:inventory:package:PHP-0038",
@@ -37776,6 +37784,32 @@
       "security_statusNotes": "Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
       "summary": "CVE-2026-109619 assessment: Fixed in Checkmk Appliance 1.7.25 via bundled PHP 8.2.35 package update",
       "comment": "Added from the Checkmk Appliance 1.7.25 changed-package manifest published 2026-10-21 and the PHP upstream advisory. The manifest upgrades bundled PHP 8.2 packages from 8.2.34-1~deb12u1 to 8.2.35-1~deb12u1; PHP upstream identifies 8.2.35 as fixed for both CVEs.\nAction statement: Update the appliance to firmware 1.7.25 or later and verify the running appliance services use the updated packages."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:netgate-pfsense-php-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0030"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed via updated pfSense PHP packages: PHP 8.5.12 (Plus 26.07, Plus 26.03.1, CE 2.9.0) and PHP 8.3.36 (CE 2.8.1)",
+      "summary": "CVE-2026-109618 assessment: Fixed via updated pfSense PHP packages: PHP 8.5.12 (Plus 26.07, Plus 26.03.1, CE 2.9.0) and PHP 8.3.36 (CE 2.8.1)",
+      "comment": "Added from the Netgate advisory published 2026-10-21. Netgate lists pfSense Plus 26.07, Plus 26.03.1, CE 2.9.0 and CE 2.8.1 as affected and releases updated PHP packages (8.5.12; 8.3.36 for CE 2.8.1), the upstream fixed releases. Exposure requires a reachable PHP GUI or Captive Portal; the GUI is LAN-only by default and Captive Portal is off by default.\nAction statement: Install the updated PHP package from the command line (SSH or console) per the Netgate advisory, and confirm the GUI is not reachable from untrusted networks."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:netgate-pfsense-php-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0030"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fixed via updated pfSense PHP packages: PHP 8.5.12 (Plus 26.07, Plus 26.03.1, CE 2.9.0) and PHP 8.3.36 (CE 2.8.1)",
+      "summary": "CVE-2026-109619 assessment: Fixed via updated pfSense PHP packages: PHP 8.5.12 (Plus 26.07, Plus 26.03.1, CE 2.9.0) and PHP 8.3.36 (CE 2.8.1)",
+      "comment": "Added from the Netgate advisory published 2026-10-21. Netgate lists pfSense Plus 26.07, Plus 26.03.1, CE 2.9.0 and CE 2.8.1 as affected and releases updated PHP packages (8.5.12; 8.3.36 for CE 2.8.1), the upstream fixed releases. Exposure requires a reachable PHP GUI or Captive Portal; the GUI is LAN-only by default and Captive Portal is off by default.\nAction statement: Install the updated PHP package from the command line (SSH or console) per the Netgate advisory, and confirm the GUI is not reachable from untrusted networks."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
