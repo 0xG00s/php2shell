@@ -4387,7 +4387,6 @@
         "urn:php2shell:inventory:package:PHP-0681",
         "urn:php2shell:inventory:package:PHP-0682",
         "urn:php2shell:inventory:package:PHP-0683",
-        "urn:php2shell:inventory:package:PHP-0684",
         "urn:php2shell:inventory:package:PHP-0685",
         "urn:php2shell:inventory:relationship:PHP-0725",
         "urn:php2shell:inventory:relationship:PHP-0677",
@@ -4397,7 +4396,6 @@
         "urn:php2shell:inventory:relationship:PHP-0681",
         "urn:php2shell:inventory:relationship:PHP-0682",
         "urn:php2shell:inventory:relationship:PHP-0683",
-        "urn:php2shell:inventory:relationship:PHP-0684",
         "urn:php2shell:inventory:relationship:PHP-0685",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:fortinet-fg-ir-26-186-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:fortinet-fg-ir-26-186-20261021"
@@ -40638,7 +40636,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiADC Manager as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Central management for FortiADC application delivery controllers",
-      "comment": "Inventory record: PHP-0725\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiADC Manager under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0725\nCategory: Appliances and embedded\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiADC Manager under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40646,7 +40644,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40666,7 +40664,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "DDoS mitigation appliance",
-      "comment": "Inventory record: PHP-0677\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiDDoS under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0677\nCategory: Appliances and embedded\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiDDoS under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40674,7 +40672,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40694,7 +40692,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS-F as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "DDoS mitigation appliance (F-series)",
-      "comment": "Inventory record: PHP-0678\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiDDoS-F under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0678\nCategory: Appliances and embedded\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiDDoS-F under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40702,7 +40700,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40722,7 +40720,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiSIEM as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Security information and event management platform",
-      "comment": "Inventory record: PHP-0679\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiSIEM under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0679\nCategory: Monitoring and administration\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiSIEM under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40730,7 +40728,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40750,7 +40748,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiMonitor as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted infrastructure and digital experience monitoring service",
-      "comment": "Inventory record: PHP-0680\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiMonitor under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0680\nCategory: Monitoring and administration\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiMonitor under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40758,7 +40756,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40766,7 +40764,7 @@
       "type": "software_Package",
       "spdxId": "urn:php2shell:inventory:package:PHP-0681",
       "creationInfo": "_:creationinfo",
-      "name": "FortiClient Cloud",
+      "name": "FortiClient Cloud Services",
       "software_primaryPurpose": "application",
       "externalIdentifier": [
         {
@@ -40776,9 +40774,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
-      "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiClient Cloud as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiClient Cloud Services as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted endpoint management service",
-      "comment": "Inventory record: PHP-0681\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiClient Cloud under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0681\nCategory: Hosting and cloud\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiClient Cloud Services under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40786,7 +40784,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40806,7 +40804,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiSOAR as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Security orchestration, automation and response platform",
-      "comment": "Inventory record: PHP-0682\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiSOAR under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0682\nCategory: Monitoring and administration\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiSOAR under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40814,7 +40812,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40834,7 +40832,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiSOAR PaaS as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted security orchestration, automation and response service",
-      "comment": "Inventory record: PHP-0683\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiSOAR PaaS under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0683\nCategory: Hosting and cloud\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiSOAR PaaS under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40842,35 +40840,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
-        }
-      ]
-    },
-    {
-      "type": "software_Package",
-      "spdxId": "urn:php2shell:inventory:package:PHP-0684",
-      "creationInfo": "_:creationinfo",
-      "name": "FortiGuard",
-      "software_primaryPurpose": "application",
-      "externalIdentifier": [
-        {
-          "type": "ExternalIdentifier",
-          "externalIdentifierType": "other",
-          "identifier": "PHP-0684"
-        }
-      ],
-      "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
-      "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiGuard as under investigation for CVE-2026-109618 and CVE-2026-109619.",
-      "description": "Hosted threat intelligence and security services",
-      "comment": "Inventory record: PHP-0684\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiGuard under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
-      "externalRef": [
-        {
-          "type": "ExternalRef",
-          "externalRefType": "securityAdvisory",
-          "locator": [
-            "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
-          ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40890,7 +40860,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:fortinet:0dd4907ae878",
       "summary": "Fortinet PSIRT advisory FG-IR-26-186 lists FortiEndpoint as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Endpoint security platform",
-      "comment": "Inventory record: PHP-0685\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21) lists FortiEndpoint under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path. Fortinet states no virtual patch is available.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0685\nCategory: Monitoring and administration\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in the FG-IR-26-186 php2shell response; exact PHP component and SAPI are not published\nPHP version scope: Fortinet FG-IR-26-186 (published 2026-10-21, updated 2026-10-22) lists FortiEndpoint under 'Products Under Investigation'; affected and fixed product versions are not published.\nExtensions: Unknown\nLimitations: An under-investigation listing establishes vendor review scope, not a confirmed PHP dependency, affected build or reachable path.\nPatch owner: Fortinet; operator for deployment of fixed releases\nSource accessed: 2026-10-22\nVulnerability status: Vendor advisory FG-IR-26-186: under investigation.\nCVE-2026-109618: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE-2026-109619: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -40898,7 +40868,7 @@
           "locator": [
             "https://fortiguard.fortinet.com/psirt/FG-IR-26-186"
           ],
-          "comment": "Fortinet PSIRT advisory FG-IR-26-186 (PHP Core RCE, CVE-2026-109618 and CVE-2026-109619), published 2026-10-21"
+          "comment": "Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22; current investigation scope"
         }
       ]
     },
@@ -40910,9 +40880,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0725: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0725: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40922,9 +40892,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0677: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0677: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40934,9 +40904,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0678: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0678: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40946,9 +40916,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0679: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0679: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40958,9 +40928,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0680: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0680: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40970,9 +40940,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0681: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0681: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40982,9 +40952,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0682: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0682: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -40994,21 +40964,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0683: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
-    },
-    {
-      "type": "Relationship",
-      "spdxId": "urn:php2shell:inventory:relationship:PHP-0684",
-      "creationInfo": "_:creationinfo",
-      "from": "urn:php2shell:inventory:package:PHP-0684",
-      "to": [
-        "urn:php2shell:inventory:package:PHP-0037"
-      ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0684: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0683: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "Relationship",
@@ -41018,9 +40976,9 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "dependsOn",
-      "summary": "Inventory relationship for PHP-0685: requires (product_depends_on_php)",
-      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0685: vendor PHP advisory candidate",
+      "comment": "The vendor is investigating this product in its PHP advisory. This association records review scope only; a PHP dependency is not confirmed."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
@@ -41036,13 +40994,12 @@
         "urn:php2shell:inventory:package:PHP-0681",
         "urn:php2shell:inventory:package:PHP-0682",
         "urn:php2shell:inventory:package:PHP-0683",
-        "urn:php2shell:inventory:package:PHP-0684",
         "urn:php2shell:inventory:package:PHP-0685"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published",
       "summary": "CVE-2026-109618 assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published",
-      "comment": "Added from Fortinet PSIRT advisory FG-IR-26-186 published 2026-10-21 and reviewed 2026-10-22. Fortinet lists these products under investigation; affected and fixed versions are not yet published and no virtual patch is available. Products Fortinet confirms as not impacted (FortiOS, FortiManager, FortiAnalyzer, FortiWeb, FortiMail and others) are not added because no PHP relationship is established for them."
+      "comment": "Reviewed Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22. These products remain under investigation; no affected or fixed builds are specified. The advisory links OT IPS signatures 10009977 and 10009978, released in version 37.316, while its Virtual Patch field remains No. Signature availability does not establish a software fix. FortiADC retains its existing separate VEX assessments."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
@@ -41058,13 +41015,12 @@
         "urn:php2shell:inventory:package:PHP-0681",
         "urn:php2shell:inventory:package:PHP-0682",
         "urn:php2shell:inventory:package:PHP-0683",
-        "urn:php2shell:inventory:package:PHP-0684",
         "urn:php2shell:inventory:package:PHP-0685"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published",
       "summary": "CVE-2026-109619 assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published",
-      "comment": "Added from Fortinet PSIRT advisory FG-IR-26-186 published 2026-10-21 and reviewed 2026-10-22. Fortinet lists these products under investigation; affected and fixed versions are not yet published and no virtual patch is available. Products Fortinet confirms as not impacted (FortiOS, FortiManager, FortiAnalyzer, FortiWeb, FortiMail and others) are not added because no PHP relationship is established for them."
+      "comment": "Reviewed Fortinet PSIRT FG-IR-26-186, published 2026-10-21 and updated 2026-10-22. These products remain under investigation; no affected or fixed builds are specified. The advisory links OT IPS signatures 10009977 and 10009978, released in version 37.316, while its Virtual Patch field remains No. Signature availability does not establish a software fix. FortiADC retains its existing separate VEX assessments."
     }
   ]
 }

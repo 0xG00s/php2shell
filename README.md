@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information last significant change: 21 October 2026 17:25 CEST
-Software list last status update: 22 October 2026 17:21 CEST
+Software list last status update: 22 October 2026 17:23 CEST
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ Please note that this repository is not complete and is currently being expanded
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 | Status CVE-2026-109619 | Notes | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|:----------------------:|:------|------:|
-|2026-10-22 17:21:02 +0200|Fortinet|FortiADC Manager||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiADC Manager as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
-|2026-10-22 17:21:02 +0200|Fortinet|FortiClient Cloud||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiClient Cloud as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
-|2026-10-22 17:21:02 +0200|Fortinet|FortiDDoS||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
-|2026-10-22 17:21:02 +0200|Fortinet|FortiDDoS-F||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS-F as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
-|2026-10-22 17:21:02 +0200|Fortinet|FortiEndpoint||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiEndpoint as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
+|2026-10-22 17:23:16 +0200|Fortinet|FortiADC Manager||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiADC Manager as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
+|2026-10-22 17:23:16 +0200|Fortinet|FortiClient Cloud Services||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiClient Cloud Services as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
+|2026-10-22 17:23:16 +0200|Fortinet|FortiDDoS||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
+|2026-10-22 17:23:16 +0200|Fortinet|FortiDDoS-F||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiDDoS-F as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
+|2026-10-22 17:23:16 +0200|Fortinet|FortiEndpoint||Investigation|Investigation|CVE assessment: Fortinet PSIRT FG-IR-26-186 lists product as under investigation; affected/fixed versions not yet published<br>Fortinet PSIRT advisory FG-IR-26-186 lists FortiEndpoint as under investigation for CVE-2026-109618 and CVE-2026-109619.|[source](<https://fortiguard.fortinet.com/psirt/FG-IR-26-186>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
