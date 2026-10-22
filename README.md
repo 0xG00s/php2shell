@@ -1,6 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Readme last significant change: 21 October 2026 17:25 CEST
+Operational information last significant change: 21 October 2026 17:25 CEST
+Software list last status update: 22 October 2026 15:30 CEST
 TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -38,6 +39,18 @@ For additional information see:
 | [tools](tools) | Contains tools for using/generating files within this repo |
 
 Please note that this repository is not complete and is currently being expanded.
+
+## Latest software status updates
+
+| Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 | Status CVE-2026-109619 | Notes | Links |
+|:------------------------|:---------|:--------|:--------------------:|:----------------------:|:----------------------:|:------|------:|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP Note Station 3|Note Station 3 3.9.14 and earlier|Vulnerable|Vulnerable|CVE assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.<br>QNAP QSA-26-18 lists Note Station 3 3.9.14 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.|[source](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QNE (ADRA)|QNE (ADRA) 1.0.7 and earlier|Vulnerable|Vulnerable|CVE assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.<br>QNAP QSA-26-18 lists QNE (ADRA) 1.0.7 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed version is to be announced.|[source](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QTS built-in PHP runtime|QTS 6.1.0; QTS 5.2.11 and earlier|Vulnerable|Vulnerable|CVE assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.<br>QNAP QSA-26-18 lists QTS 6.1.0 and QTS 5.2.11 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed versions are to be announced.|[source 1](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)<br>[source 2](<https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero>)<br>[source 3](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QuMagie|QuMagie 2.10.1 and earlier|Vulnerable|Vulnerable|CVE assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.<br>QNAP QSA-26-18 identifies QuMagie 2.10.1 and earlier in its affected-products header for CVE-2026-109618 and CVE-2026-109619; fixed version is not yet published.|[source](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+|2026-10-22 15:30:07 +0200|QNAP|QNAP QuTS hero built-in PHP runtime|QuTS hero h6.1.0; QuTS hero h6.0.x; QuTS hero h5.2.11 and earlier|Vulnerable|Vulnerable|CVE assessment: QNAP QSA-26-18 lists these product versions as affected by both PHP2Shell CVEs; fixed versions are to be announced.<br>QNAP QSA-26-18 lists QuTS hero h6.1.0, QuTS hero h6.0.x and QuTS hero h5.2.11 and earlier as affected by CVE-2026-109618 and CVE-2026-109619; fixed versions are to be announced.|[source 1](<https://www.qnap.com/en-us/how-to/faq/article/why-i-cannot-use-php-74-after-updating-qts-quts-hero-to-520>)<br>[source 2](<https://www.qnap.com/en/how-to/faq/article/can-i-update-the-built-in-php-version-on-qts-and-quts-hero>)<br>[source 3](<https://www.qnap.com/en/security-advisory/qsa-26-18>)|
+
+See the [full software status update history](software/changelog_software_list.md).
 
 ## Contributions welcome
 
