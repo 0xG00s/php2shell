@@ -65,6 +65,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
         action="store_true",
         help="Also refresh the root README latest software status table and timestamp.",
     )
+    parser.add_argument(
+        "--history-ref",
+        default="HEAD",
+        help="Git revision for mainline status history; use origin/main when updating a PR branch.",
+    )
     return parser.parse_args(argv)
 
 
@@ -434,6 +439,7 @@ def load_history_snapshot(git: str, repo_root: Path, commit: str, relative_spdx_
 def build_status_history(
     document: dict[str, Any],
     spdx_path: Path,
+    history_ref: str = "HEAD",
 ) -> tuple[list[str], list[dict[str, Any]]]:
     git = git_executable()
     repo_root = repository_root(git)
@@ -450,6 +456,7 @@ def build_status_history(
         "--first-parent",
         "--reverse",
         "--format=%H%x09%aI",
+        history_ref,
         "--",
         relative_spdx_path,
     )
@@ -511,56 +518,9 @@ def latest_update_entries(events: list[dict[str, Any]], limit: int = 5) -> list[
     return history_rows(events)[:limit]
 
 
-def combined_status(entry: dict[str, str], cves: list[str]) -> str:
-    statuses = [entry.get(cve, "") for cve in cves]
-    if not statuses:
-        return ""
-    if all(status == statuses[0] for status in statuses[1:]):
-        return statuses[0]
-    return "/".join(statuses)
-
-
-def readme_table_header(cves: list[str]) -> list[str]:
-    status_heading = "Status"
-    if cves:
-        status_heading += " " + " / ".join(cves)
-    columns = [
-        "Date and time",
-        "Supplier",
-        "Product",
-        "Version (see Status)",
-        status_heading,
-        "Links",
-    ]
-    alignment = [
-        ":------------------------",
-        ":---------",
-        ":--------",
-        ":--------------------:",
-        ":----------------------:",
-        "------:",
-    ]
-    return [
-        "| " + " | ".join(columns) + " |",
-        "|" + "|".join(alignment) + "|",
-    ]
-
-
-def readme_table_row(date_time: str, entry: dict[str, str], cves: list[str]) -> str:
-    row = [
-        markdown_cell(date_time),
-        entry["supplier"],
-        entry["product"],
-        entry["version"],
-        markdown_cell(combined_status(entry, cves)),
-        entry["links"],
-    ]
-    return "|" + "|".join(row) + "|"
-
-
 def render_readme_updates(cves: list[str], entries: list[tuple[str, dict[str, str]]]) -> str:
-    lines = [README_UPDATES_HEADING, "", *readme_table_header(cves)]
-    lines.extend(readme_table_row(date_time, entry, cves) for date_time, entry in entries)
+    lines = [README_UPDATES_HEADING, "", *table_header(cves, include_date_time=True)]
+    lines.extend(table_row(entry, cves, date_time=date_time) for date_time, entry in entries)
     lines.extend(["", f"See the [full software status update history](software/{CHANGELOG_FILENAME})."])
     return "\n".join(lines)
 
@@ -647,10 +607,11 @@ def write_optional_outputs(
     *,
     update_history: bool,
     update_readme: bool,
+    history_ref: str = "HEAD",
 ) -> int:
     if not update_history and not update_readme:
         return 0
-    history_cves, events = build_status_history(document, spdx_path)
+    history_cves, events = build_status_history(document, spdx_path, history_ref)
     if update_history:
         write_generated_text(output_dir / CHANGELOG_FILENAME, render_updates_history(history_cves, events))
     if update_readme:
@@ -676,6 +637,7 @@ def main(argv: list[str] | None = None) -> int:
             args.output_dir,
             update_history=args.update_history,
             update_readme=args.update_readme,
+            history_ref=args.history_ref,
         )
     except GenerationError as exc:
         print(f"error: {exc}", file=sys.stderr)
