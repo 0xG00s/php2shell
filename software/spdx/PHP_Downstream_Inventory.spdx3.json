@@ -2708,6 +2708,12 @@
       "name": "Crater Invoice"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:quest-software:6a9ebaa7dc77",
+      "creationInfo": "_:creationinfo",
+      "name": "Quest Software"
+    },
+    {
       "type": "CreationInfo",
       "@id": "_:creationinfo",
       "specVersion": "3.0.1",
@@ -4199,6 +4205,8 @@
         "urn:php2shell:inventory:relationship:PHP-0670",
         "urn:php2shell:inventory:relationship:PHP-0671",
         "urn:php2shell:inventory:relationship:PHP-0672",
+        "urn:php2shell:inventory:package:PHP-0673",
+        "urn:php2shell:inventory:relationship:PHP-0673",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:github-sbom-php-web-candidates-20261021",
         "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:github-sbom-php-web-candidates-20261021"
       ]
@@ -37307,6 +37315,42 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0673",
+      "creationInfo": "_:creationinfo",
+      "name": "KACE Systems Management Appliance",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0673"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:quest-software:6a9ebaa7dc77",
+      "summary": "Quest published KB 4385046 in the KACE Systems Management Appliance support feed as a response to CVE-2026-109618 and CVE-2026-109619.",
+      "description": "Systems management virtual appliance",
+      "comment": "Inventory record: PHP-0673\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named appliance web/admin surface; exact PHP component and SAPI are not published in the accessible RSS evidence\nPHP version scope: Quest KB 4385046 names both CVEs in a KACE Systems Management Appliance support item; exact affected/fixed PHP build and appliance versions are not available from the accessible RSS evidence.\nExtensions: Unknown\nLimitations: The article body is blocked by Quest's WAF/JavaScript challenge in this pass; the RSS feed proves publication and product association, not exact affected versions, fix state or reachable path.\nPatch owner: Quest for appliance remediation\nDownstream surface: Device management, patching, asset inventory, service desk and administrative workflows\nRelease pin: Quest KB 4385046 published 2026-10-21 09:58:20 GMT in the KACE Systems Management Appliance RSS feed; appliance artifact and version not pinned\nSource accessed: 2026-10-22\nAliases: KACE SMA, Quest KACE Systems Management Appliance\nConditional downstream consequence: If a matching PHP or enabled native-extension flaw is reachable through the appliance web surface, possible effects include worker denial of service, disclosure of service-accessible secrets, data modification or code execution with the appliance service identity. Host privilege, tenant escape and lateral movement require separate evidence.\nVulnerability status: Vendor bulletin 2026-10-21: Quest published a KACE Systems Management Appliance response item for both php2shell CVEs; exact affected/fixed appliance scope remains unresolved.\nCVE-2026-109618: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE-2026-109619: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation\nCVE assessment limit: This candidate record confirms PHP relationship evidence only. Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path still need deployment-specific evidence.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.quest.com/kace-systems-management-appliance/kb/4385046/4385046"
+          ],
+          "comment": "Quest KB 4385046 response to CVE-2026-109618 and CVE-2026-109619"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://support.quest.com/kace-systems-management-appliance/rss"
+          ],
+          "comment": "Quest KACE Systems Management Appliance RSS feed listing KB 4385046"
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0651",
       "creationInfo": "_:creationinfo",
@@ -37571,6 +37615,18 @@
       "comment": "Mapped from inventory relationship 'requires' and direction 'depends_on_php' to SPDX relationshipType 'dependsOn'."
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0673",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0673",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0673: requires (product_depends_on_php)",
+      "comment": "Mapped from inventory relationship 'requires' and direction 'product_depends_on_php' to SPDX relationshipType 'dependsOn'."
+    },
+    {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:vendor-php2shell-candidates-20261021",
       "creationInfo": "_:creationinfo",
@@ -37582,12 +37638,13 @@
         "urn:php2shell:inventory:package:PHP-0654",
         "urn:php2shell:inventory:package:PHP-0655",
         "urn:php2shell:inventory:package:PHP-0656",
-        "urn:php2shell:inventory:package:PHP-0657"
+        "urn:php2shell:inventory:package:PHP-0657",
+        "urn:php2shell:inventory:package:PHP-0673"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
       "summary": "CVE-2026-109618 assessment: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
-      "comment": "Added from vendor php2shell notices reviewed 2026-10-21. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
+      "comment": "Added from vendor php2shell notices published 2026-10-21 and reviewed through 2026-10-22. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
@@ -37601,12 +37658,13 @@
         "urn:php2shell:inventory:package:PHP-0654",
         "urn:php2shell:inventory:package:PHP-0655",
         "urn:php2shell:inventory:package:PHP-0656",
-        "urn:php2shell:inventory:package:PHP-0657"
+        "urn:php2shell:inventory:package:PHP-0657",
+        "urn:php2shell:inventory:package:PHP-0673"
       ],
       "relationshipType": "underInvestigationFor",
       "security_statusNotes": "Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
       "summary": "CVE-2026-109619 assessment: Vendor advisory names product or service in php2shell response; exact affected/fixed product scope still under investigation",
-      "comment": "Added from vendor php2shell notices reviewed 2026-10-21. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
+      "comment": "Added from vendor php2shell notices published 2026-10-21 and reviewed through 2026-10-22. The notices name these products or hosted services in the response, but the exact affected/fixed PHP artifact scope and deployment state remain unresolved."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
