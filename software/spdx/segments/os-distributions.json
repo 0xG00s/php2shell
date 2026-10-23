@@ -504,9 +504,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:suse:26e43032c4d1",
-      "summary": "SUSE release notes establish PHP 8.2 availability; its published update lists versioned php8 runtime, FPM and extension packages.",
+      "summary": "Install the product-specific SUSE security update and restart affected PHP services; do not select a package built for another SLE branch.",
       "description": "Vendor package list includes php8-fpm, Apache module, FastCGI and embed packages; selection is product-specific",
-      "comment": "Inventory record: PHP-0365\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Vendor package list includes php8-fpm, Apache module, FastCGI and embed packages; selection is product-specific\nPHP version scope: SLES 15 SP6 release notes announce PHP 8.2 replacing8.0. Separate 2026 vendor update lists php8 8.0.30-150400.4.76.1 for its eligible product scopes\nExtensions: Bundled/required/optional extension inventory unknown; selected package or build recipe must be resolved\nLimitations: The advisory package build must not be assigned to every SLES 15 service pack or entitlement. Backported vendor releases cannot be assessed solely by upstream 8.0.30. No advisory CVE was assessed or copied into exposure claims. No binary/image was pulled, installed, built or executed. Presence is not proof of an affected build, reachable flaw or compromise. Deployments were not measured.\nPatch owner: SUSE vendor package/security maintenance for the entitled product; operator applies packages and restarts runtimes\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: Moving official documentation; immutable artifact pin pending\nSource accessed: 2026-10-17\nAliases: sles:php8\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0365\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Official public vendor/upstream CVE assessment\nDeployment status: Not measured\nPHP surface: Vendor package list includes php8-fpm, Apache module, FastCGI and embed packages; selection is product-specific\nPHP version scope: SLE 15 SP4: 8.0.30-150400.4.80.1; SP6: 8.2.35-150600.3.39.1; SP7: 8.3.36-150700.3.24.1; SLES 16.0: 8.4.27-160000.1.1\nExtensions: Bundled/required/optional extension inventory unknown; selected package or build recipe must be resolved\nLimitations: The advisory package build must not be assigned to every SLES 15 service pack or entitlement. Backported vendor releases cannot be assessed solely by upstream 8.0.30. No advisory CVE was assessed or copied into exposure claims. No binary/image was pulled, installed, built or executed. Presence is not proof of an affected build, reachable flaw or compromise. Deployments were not measured.\nPatch owner: SUSE vendor package/security maintenance for the entitled product; operator applies packages and restarts runtimes\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: SLE 15 SP4: 8.0.30-150400.4.80.1; SP6: 8.2.35-150600.3.39.1; SP7: 8.3.36-150700.3.24.1; SLES 16.0: 8.4.27-160000.1.1\nSource accessed: 2026-10-23\nAliases: sles:php8\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fix. SUSE publishes fixed PHP8 packages for the listed SLE product branches. This does not assert that every SLE service pack or PHP package family is fixed; use the matching product-specific advisory.\nCVE-2026-109618: Fix. SUSE publishes fixed PHP8 packages for the listed SLE product branches. This does not assert that every SLE service pack or PHP package family is fixed; use the matching product-specific advisory.\nCVE-2026-109619: Fix. SUSE publishes fixed PHP8 packages for the listed SLE product branches. This does not assert that every SLE service pack or PHP package family is fixed; use the matching product-specific advisory.\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://www.suse.com/security/cve/CVE-2026-109618.html ; https://www.suse.com/security/cve/CVE-2026-109619.html ; https://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264844-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264852-1/",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -523,8 +523,49 @@
             "https://www.suse.com/support/update/announcement/2026/suse-su-20264651-1/"
           ],
           "comment": "Official publisher/project distribution evidence - Vendor update enumerates php8 8.0.30-150400.4.76.1 packages for eligible products."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.suse.com/security/cve/CVE-2026-109618.html"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.suse.com/security/cve/CVE-2026-109619.html"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.suse.com/support/update/announcement/2026/suse-su-20264844-1/"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.suse.com/support/update/announcement/2026/suse-su-20264852-1/"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
         }
-      ]
+      ],
+      "software_packageVersion": "SLE 15 SP4: 8.0.30-150400.4.80.1; SP6: 8.2.35-150600.3.39.1; SP7: 8.3.36-150700.3.24.1; SLES 16.0: 8.4.27-160000.1.1"
     },
     {
       "type": "software_Package",
@@ -791,9 +832,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:nixos-nixpkgs-maintainers:4f3a9d20c67b",
-      "summary": "Nixpkgs documents a minimal PHP base wrapped with selected extensions and generated php.ini; PHP-built tools inherit their owning runtime.",
+      "summary": "Update the applicable Nixpkgs input/channel, rebuild and activate services, and verify the running PHP version.",
       "description": "Wrapped interpreter with generated php.ini; selected PHP-FPM pool or Apache integration; unwrapped runtime is separate",
-      "comment": "Inventory record: PHP-0595\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Wrapped interpreter with generated php.ini; selected PHP-FPM pool or Apache integration; unwrapped runtime is separate\nPHP version scope: Official stable manual plus pinned wiki revision33628; exact nixpkgs revision, PHP version, platform and output not pinned\nExtensions: php.withExtensions/buildEnv selects extensions and configuration; adding a standalone memcached extension to systemPackages alone does not enable it.\nLimitations: Manual examples are configuration syntax, not available/supported version declarations. Wiki examples containing php74, php81 or php1 are not used as current runtime inventory. Host NixOS and every derivation do not thereby require PHP. Availability is not default installation. Exact installed bytes, loaded features, inputs, privileges, deployments and vulnerabilities are not measured. No research code/package/image was installed, built, imported or executed.\nPatch owner: Nixpkgs maintainers for package expressions; flake/derivation owner for pinned revision, rebuild/switch and service restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: NixOS wiki PHP oldid33628 read; stable manual is moving; no exact derivation/hash\nSource accessed: 2026-10-19\nAliases: nixpkgs:php, nixos:phpfpm\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0595\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Official public vendor/upstream CVE assessment\nDeployment status: Not measured\nPHP surface: Wrapped interpreter with generated php.ini; selected PHP-FPM pool or Apache integration; unwrapped runtime is separate\nPHP version scope: Nixpkgs PHP 8.3.36 / 8.4.27 / 8.5.12; updated nixos-26.05-small and nixos-unstable-small inputs\nExtensions: php.withExtensions/buildEnv selects extensions and configuration; adding a standalone memcached extension to systemPackages alone does not enable it.\nLimitations: Manual examples are configuration syntax, not available/supported version declarations. Wiki examples containing php74, php81 or php1 are not used as current runtime inventory. Host NixOS and every derivation do not thereby require PHP. Availability is not default installation. Exact installed bytes, loaded features, inputs, privileges, deployments and vulnerabilities are not measured. No research code/package/image was installed, built, imported or executed.\nPatch owner: Nixpkgs maintainers for package expressions; flake/derivation owner for pinned revision, rebuild/switch and service restart\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: Nixpkgs PHP 8.3.36 / 8.4.27 / 8.5.12; updated nixos-26.05-small and nixos-unstable-small inputs\nSource accessed: 2026-10-23\nAliases: nixpkgs:php, nixos:phpfpm\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fix. Nixpkgs merged PR 576853 fixing both CVEs; a maintainer confirms delivery to the small channels. Other channels and pinned inputs are not assumed updated, and this finding does not claim a PHP 8.2 fix from that PR.\nCVE-2026-109618: Fix. Nixpkgs merged PR 576853 fixing both CVEs; a maintainer confirms delivery to the small channels. Other channels and pinned inputs are not assumed updated, and this finding does not claim a PHP 8.2 fix from that PR.\nCVE-2026-109619: Fix. Nixpkgs merged PR 576853 fixing both CVEs; a maintainer confirms delivery to the small channels. Other channels and pinned inputs are not assumed updated, and this finding does not claim a PHP 8.2 fix from that PR.\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://github.com/NixOS/nixpkgs/pull/576853 ; https://github.com/NixOS/nixpkgs/pull/576853#issuecomment-6337965090",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -810,8 +851,25 @@
             "https://wiki.nixos.org/w/index.php?title=PHP&oldid=33628"
           ],
           "comment": "Primary package, build, release or vendor distribution evidence - Pinned wiki revision illustrates runtime extension selection and warns standalone memcached package is not automatically enabled."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/NixOS/nixpkgs/pull/576853"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/NixOS/nixpkgs/pull/576853#issuecomment-6337965090"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
         }
-      ]
+      ],
+      "software_packageVersion": "Nixpkgs PHP 8.3.36 / 8.4.27 / 8.5.12; updated nixos-26.05-small and nixos-unstable-small inputs"
     },
     {
       "type": "software_Package",
@@ -2480,6 +2538,58 @@
       "security_statusNotes": "OpenWrt member-authored security update PRs explicitly name both CVEs and are merged into the named package-feed branches. This confirms fixed package source recipes, not a completed binary mirror or firmware rollout for every target. Devices without the optional PHP packages are outside this record's runtime scope.",
       "summary": "CVE-2026-109619 assessment: Fix available for the named runtime/build scope",
       "comment": "Official public vendor/upstream evidence independently reviewed 2026-10-22: https://github.com/openwrt/packages/pull/30844; https://github.com/openwrt/packages/pull/30845; https://github.com/openwrt/packages/pull/30847\nAction statement: Build/install PHP packages from the corresponding updated branch and restart the selected PHP services; verify binary package availability and installed versions for the device target."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0365-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0365"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "SUSE publishes fixed PHP8 packages for the listed SLE product branches. This does not assert that every SLE service pack or PHP package family is fixed; use the matching product-specific advisory.",
+      "summary": "CVE-2026-109618 assessment: Fix",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://www.suse.com/security/cve/CVE-2026-109618.html ; https://www.suse.com/security/cve/CVE-2026-109619.html ; https://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264844-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264852-1/\nAction statement: Install the product-specific SUSE security update and restart affected PHP services; do not select a package built for another SLE branch."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0365-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0365"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "SUSE publishes fixed PHP8 packages for the listed SLE product branches. This does not assert that every SLE service pack or PHP package family is fixed; use the matching product-specific advisory.",
+      "summary": "CVE-2026-109619 assessment: Fix",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://www.suse.com/security/cve/CVE-2026-109618.html ; https://www.suse.com/security/cve/CVE-2026-109619.html ; https://www.suse.com/support/update/announcement/2026/suse-su-20264843-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264844-1/ ; https://www.suse.com/support/update/announcement/2026/suse-su-20264852-1/\nAction statement: Install the product-specific SUSE security update and restart affected PHP services; do not select a package built for another SLE branch."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0595-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0595"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Nixpkgs merged PR 576853 fixing both CVEs; a maintainer confirms delivery to the small channels. Other channels and pinned inputs are not assumed updated, and this finding does not claim a PHP 8.2 fix from that PR.",
+      "summary": "CVE-2026-109618 assessment: Fix",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://github.com/NixOS/nixpkgs/pull/576853 ; https://github.com/NixOS/nixpkgs/pull/576853#issuecomment-6337965090\nAction statement: Update the applicable Nixpkgs input/channel, rebuild and activate services, and verify the running PHP version."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0595-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0595"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Nixpkgs merged PR 576853 fixing both CVEs; a maintainer confirms delivery to the small channels. Other channels and pinned inputs are not assumed updated, and this finding does not claim a PHP 8.2 fix from that PR.",
+      "summary": "CVE-2026-109619 assessment: Fix",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://github.com/NixOS/nixpkgs/pull/576853 ; https://github.com/NixOS/nixpkgs/pull/576853#issuecomment-6337965090\nAction statement: Update the applicable Nixpkgs input/channel, rebuild and activate services, and verify the running PHP version."
     }
   ]
 }
