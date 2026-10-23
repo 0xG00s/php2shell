@@ -1779,7 +1779,16 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0657-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0658-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0420-official-20261023",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023",
+        "urn:php2shell:inventory:package:PHP-0728",
+        "urn:php2shell:inventory:package:PHP-0729",
+        "urn:php2shell:inventory:relationship:PHP-0728",
+        "urn:php2shell:inventory:relationship:PHP-0729",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-securitycenter-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-securitycenter-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-enclave-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-enclave-sc202610-1",
+        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7"
       ]
     }
   ]

@@ -4513,7 +4513,16 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0657-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0658-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0420-official-20261023",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023",
+        "urn:php2shell:inventory:package:PHP-0728",
+        "urn:php2shell:inventory:package:PHP-0729",
+        "urn:php2shell:inventory:relationship:PHP-0728",
+        "urn:php2shell:inventory:relationship:PHP-0729",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-securitycenter-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-securitycenter-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-enclave-sc202610-1",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-enclave-sc202610-1",
+        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7"
       ]
     },
     {
@@ -41392,6 +41401,12 @@
       "name": "Server Side Up"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+      "creationInfo": "_:creationinfo",
+      "name": "Tenable"
+    },
+    {
       "type": "software_Package",
       "spdxId": "urn:php2shell:inventory:package:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -41429,6 +41444,80 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0728",
+      "creationInfo": "_:creationinfo",
+      "name": "Tenable Security Center (formerly Tenable.sc)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0728"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+      "summary": "Tenable Security Center bundles a PHP runtime for its web console; vendor advisory TNS-2026-28 confirms CVE-2026-109618/109619 (CVSSv3 9.8) and a fix.",
+      "description": "On-premises vulnerability management console with a bundled PHP runtime",
+      "comment": "Inventory record: PHP-0728\nCategory: Security operations and management consoles\nPHP surface: Bundled PHP runtime for the management console\nAffected versions: Security Center 6.9.1 and earlier\nFix: Patch SC-202610.1 (bundled PHP 8.2.35); supported scope: Security Center 6.6.0, 6.7.2, 6.8.0 and 6.9.1 on Oracle Linux or Red Hat Enterprise Linux 8 or later\nSeverity: Vendor CVSSv3 9.8 (Critical)\nSource accessed: 2026-10-23\nCVE-2026-109618: Fixed in Patch SC-202610.1\nCVE-2026-109619: Fixed in Patch SC-202610.1\nAction statement: Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully.\nDeployment status: Not measured; unpatched installations remain affected.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.tenable.com/security/tns-2026-28"
+          ],
+          "comment": "Tenable security advisory TNS-2026-28"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.tenable.com/release-notes/Content/security-center/2026.htm"
+          ],
+          "comment": "Vendor Patch 202610.1 release notes: supported versions, platforms and installation procedure"
+        }
+      ],
+      "software_packageVersion": "SC-202610.1 on Security Center 6.6.0 / 6.7.2 / 6.8.0 / 6.9.1 (PHP 8.2.35)"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0729",
+      "creationInfo": "_:creationinfo",
+      "name": "Tenable Enclave Security",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0729"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+      "summary": "Tenable Enclave Security bundles a PHP runtime; vendor advisory TNS-2026-29 confirms CVE-2026-109618/109619 and a fix.",
+      "description": "Containerized Tenable management/scanning platform with a bundled PHP runtime",
+      "comment": "Inventory record: PHP-0729\nCategory: Security operations and management consoles\nPHP surface: Bundled PHP runtime for the management console\nAffected versions: Enclave Security 1.9.1 and earlier\nFix: Patch SC-202610.1 (bundled PHP 8.2.35); supported scope: Security Center 6.7.5, 6.8.0 and 6.9.1 on Enclave Security 1.7.0, 1.8.0 and 1.9.1 respectively\nSeverity: Vendor advisory TNS-2026-29\nSource accessed: 2026-10-23\nCVE-2026-109618: Fixed in Patch SC-202610.1\nCVE-2026-109619: Fixed in Patch SC-202610.1\nAction statement: Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully.\nDeployment status: Not measured; unpatched installations remain affected.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.tenable.com/security/tns-2026-29"
+          ],
+          "comment": "Tenable security advisory TNS-2026-29"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm"
+          ],
+          "comment": "Vendor Patch 202610.1 release notes: supported versions, platforms and installation procedure"
+        }
+      ],
+      "software_packageVersion": "SC-202610.1 on Enclave Security 1.7.0 / 1.8.0 / 1.9.1 (PHP 8.2.35)"
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -41439,6 +41528,30 @@
       "relationshipType": "contains",
       "summary": "The scoped Server Side Up images are built on official Docker PHP images.",
       "comment": "The v5.0.2 publisher release says its images rebuild on patched official Docker PHP images; the relationship does not identify a running image digest."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0728",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0728",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0728: component (depends_on_php)",
+      "comment": "Bundles a PHP runtime (PHP core PHP-0037)."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0729",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0729",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0729: component (depends_on_php)",
+      "comment": "Bundles a PHP runtime (PHP core PHP-0037)."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -42203,6 +42316,34 @@
       "comment": "Based on the Server Side Up v5.0.2 release published 2026-10-21: https://github.com/serversideup/docker-php/releases/tag/v5.0.2. The release names both CVEs and fixed PHP versions but provides no individual image digest. Action statement: select the appropriate v5.0.2 or fixed patch tag, pull and redeploy, then verify the selected image digest and serving runtime."
     },
     {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-enclave-sc202610-1",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0729"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Enclave Security 1.9.1 and earlier. Patch-supported scope: Security Center 6.7.5, 6.8.0 and 6.9.1 on Enclave Security 1.7.0, 1.8.0 and 1.9.1 respectively. Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully. Unpatched installations remain affected.",
+      "summary": "CVE-2026-109618 assessment: Fixed in the documented Enclave Security Patch SC-202610.1 scope",
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm",
+      "security_actionStatement": "Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-securitycenter-sc202610-1",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0728"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Security Center 6.9.1 and earlier. Patch-supported scope: Security Center 6.6.0, 6.7.2, 6.8.0 and 6.9.1 on Oracle Linux or Red Hat Enterprise Linux 8 or later. Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully. Unpatched installations remain affected.",
+      "summary": "CVE-2026-109618 assessment: Fixed in the documented Security Center Patch SC-202610.1 scope",
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm",
+      "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
+    },
+    {
       "type": "security_VexAffectedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023",
       "creationInfo": "_:creationinfo",
@@ -42949,6 +43090,34 @@
       "security_statusNotes": "The publisher reports v5.0.2 images for PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12 rebuilt and tested for CVE-2026-109619. This assessment covers those versioned image variants only. PHP 8.1.34 remains unpatched; image digests and running deployments were not verified.",
       "summary": "CVE-2026-109619 assessment: publisher-reported fix in v5.0.2 image variants for PHP 8.2-8.5",
       "comment": "Based on the Server Side Up v5.0.2 release published 2026-10-21: https://github.com/serversideup/docker-php/releases/tag/v5.0.2. The release names both CVEs and fixed PHP versions but provides no individual image digest. Action statement: select the appropriate v5.0.2 or fixed patch tag, pull and redeploy, then verify the selected image digest and serving runtime."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-enclave-sc202610-1",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0729"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Enclave Security 1.9.1 and earlier. Patch-supported scope: Security Center 6.7.5, 6.8.0 and 6.9.1 on Enclave Security 1.7.0, 1.8.0 and 1.9.1 respectively. Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully. Unpatched installations remain affected.",
+      "summary": "CVE-2026-109619 assessment: Fixed in the documented Enclave Security Patch SC-202610.1 scope",
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm",
+      "security_actionStatement": "Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-securitycenter-sc202610-1",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0728"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Security Center 6.9.1 and earlier. Patch-supported scope: Security Center 6.6.0, 6.7.2, 6.8.0 and 6.9.1 on Oracle Linux or Red Hat Enterprise Linux 8 or later. Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully. Unpatched installations remain affected.",
+      "summary": "CVE-2026-109619 assessment: Fixed in the documented Security Center Patch SC-202610.1 scope",
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm",
+      "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
     }
   ]
 }
