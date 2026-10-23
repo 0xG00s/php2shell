@@ -569,8 +569,8 @@ def readme_table_row(date_time: str, entry: dict[str, str], cves: list[str]) -> 
 
 
 def render_readme_updates(cves: list[str], entries: list[tuple[str, dict[str, str]]]) -> str:
-    lines = [README_UPDATES_HEADING, "", *table_header(cves, include_date_time=True)]
-    lines.extend(table_row(entry, cves, date_time=date_time) for date_time, entry in entries)
+    lines = [README_UPDATES_HEADING, "", *readme_table_header(cves)]
+    lines.extend(readme_table_row(date_time, entry, cves) for date_time, entry in entries)
     lines.extend(["", f"See the [full software status update history](software/{CHANGELOG_FILENAME})."])
     return "\n".join(lines)
 

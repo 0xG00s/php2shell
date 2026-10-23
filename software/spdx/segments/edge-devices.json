@@ -1376,7 +1376,7 @@
       "type": "software_Package",
       "spdxId": "urn:php2shell:inventory:package:PHP-0624",
       "creationInfo": "_:creationinfo",
-      "name": "NetScaler ADC",
+      "name": "Citrix NetScaler ADC and Citrix NetScaler Gateway",
       "software_primaryPurpose": "firmware",
       "externalIdentifier": [
         {
@@ -1386,9 +1386,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:citrix-netscaler:410b5f07d390",
-      "summary": "Official vendor assessment: Vulnerable for CVE-2026-109618 and CVE-2026-109619 in the PHP-based NetScaler Management Portal; fixed package pending.",
+      "summary": "Official vendor assessment: CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted by CVE-2026-109618 and CVE-2026-109619; fixed PHP package pending for the PHP-based NetScaler Management Portal.",
       "description": "14.1 pooled notice includes PHP; separate guide identifies administration PHP controller.",
-      "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Vendor-confirmed affected product scope\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: NetScaler Product Security states that the NetScaler Management Portal uses PHP; affected management access includes the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI.\nPHP version scope: All supported NetScaler software versions are impacted; Citrix is working to upgrade the PHP software package to a fixed version.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This assessment is limited to PHP-based management access. NetScaler Console (Service and on premises) and NetScaler SVM are not impacted; do not extend it to all Gateway login/VPN or data-plane paths.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-22\nPublic vendor CVE review: 2026-10-22\nVendor advisory sources: https://community.citrix.com/techzone-blogs/110_security-updates/protecting-netscaler-management-access-from-php-cve-2026-109618-cve-2026-109619-r1640/\nVulnerability status: Vendor bulletin 2026-10-21: NetScaler is impacted by both CVEs through the PHP-based Management Portal; a fixed PHP package is pending.\nCVE-2026-109618: Affected in all supported NetScaler software versions for PHP-based management access; fixed PHP package pending\nCVE-2026-109619: Affected in all supported NetScaler software versions for PHP-based management access; fixed PHP package pending\nCVE assessment limit: The VEX relationships state the current vendor-confirmed management-interface scope. Installed builds, runtime activation, access control and deployment were not tested.",
+      "comment": "Inventory record: PHP-0624\nEdge inventory record: EDGE-002\nCategory: Appliances and embedded\nScope group: Network/security appliance\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037 runtime family reference\nEvidence status: Vendor-confirmed affected product scope\nRelationship confidence: Source supports the stated scope; actual deployment unknown\nDeployment status: Unknown: no installation count, live build, reachability, permissions, failover or exploitation measured\nService role: Application delivery and appliance administration\nPHP surface: NetScaler Product Security states that the NetScaler Management Portal uses PHP; affected management access includes the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI.\nPHP version scope: CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted; NetScaler Product Security says all supported NetScaler software versions are impacted and Citrix is working to upgrade the PHP software package to a fixed version.\nExtensions: Unknown unless explicitly recorded\nImportant boundary: This assessment is limited to PHP-based management access. CTX697263 says Citrix NetScaler Console is not impacted; NetScaler Product Security also excludes NetScaler SVM. Do not extend it to all Gateway login/VPN or data-plane paths.\nPatch owner: Citrix / NetScaler for supported firmware/component corrections; operator/provider for deployment, restart and service continuity\nPossible abuse: If a matching reachable PHP function is compromised, readable settings/credentials or permitted management actions could be misused. Wider appliance control requires separate privilege/path evidence.\nPHP component loss: The PHP-dependent interface/workflow could be unavailable. Independent traffic processing or other services may continue; exact behaviour is not measured.\nWhole appliance loss: Whole-ADC shutdown could interrupt published applications or configured remote-access services unless another path/failover maintains them.\nConditions: Requires a matching affected runtime/vendor build, enabled function, reachable input and relevant process permissions. PHP presence alone is insufficient.\nSource accessed: 2026-10-23\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.citrix.com/external/article/CTX697263/citrix-security-advisory-for-cve20261096.html; https://community.citrix.com/techzone-blogs/110_security-updates/protecting-netscaler-management-access-from-php-cve-2026-109618-cve-2026-109619-r1640/\nVulnerability status: Vulnerable. CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted by both CVEs; NetScaler Product Security scopes the PHP exposure to management interfaces and says a fixed PHP package is pending.\nCVE-2026-109618: Vulnerable. CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted; fixed PHP package pending for PHP-based management access\nCVE-2026-109619: Vulnerable. CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted; fixed PHP package pending for PHP-based management access\nCVE assessment limit: The VEX relationships state the current vendor-confirmed management-interface scope. Installed builds, runtime activation, access control and deployment were not tested.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -1410,9 +1410,17 @@
           "type": "ExternalRef",
           "externalRefType": "securityAdvisory",
           "locator": [
+            "https://support.citrix.com/external/article/CTX697263/citrix-security-advisory-for-cve20261096.html"
+          ],
+          "comment": "Citrix Security Advisory CTX697263 reviewed 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
             "https://community.citrix.com/techzone-blogs/110_security-updates/protecting-netscaler-management-access-from-php-cve-2026-109618-cve-2026-109619-r1640/"
           ],
-          "comment": "NetScaler Product Security guidance reviewed 2026-10-22"
+          "comment": "NetScaler Product Security guidance reviewed 2026-10-23"
         }
       ],
       "software_packageVersion": "All supported NetScaler software versions impacted; fixed PHP package pending"
@@ -2197,9 +2205,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
-      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Cisco Catalyst Center (formerly DNA Center) as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Catalyst Center (formerly DNA Center) as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Campus network management appliance",
-      "comment": "Inventory record: PHP-0689\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Cisco Catalyst Center (formerly DNA Center) under 'Products Under Investigation' (Network Management and Provisioning); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0689\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists Catalyst Center (formerly DNA Center) under 'Products Under Investigation' (Network Management and Provisioning); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2207,7 +2215,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -2312,9 +2320,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
-      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Cisco Unified Industrial Wireless Software as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Unified Industrial Wireless Software as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Industrial wireless software",
-      "comment": "Inventory record: PHP-0700\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Cisco Unified Industrial Wireless Software under 'Products Under Investigation' (Wireless); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0700\nCategory: Appliances and embedded\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists Unified Industrial Wireless Software under 'Products Under Investigation' (Wireless); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2322,7 +2330,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -2631,10 +2639,10 @@
         "urn:php2shell:inventory:package:PHP-0624"
       ],
       "relationshipType": "affects",
-      "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
-      "summary": "CVE-2026-109618 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "security_statusNotes": "CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted. NetScaler Product Security scopes the PHP exposure to the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, says all supported NetScaler software versions are impacted, and says a fixed PHP package is pending. Citrix NetScaler Console and NetScaler SVM are excluded.",
+      "summary": "CVE-2026-109618 assessment: CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted. NetScaler Product Security scopes the PHP exposure to the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, says all supported NetScaler software versions are impacted, and says a fixed PHP package is pending. Citrix NetScaler Console and NetScaler SVM are excluded.",
       "security_actionStatement": "Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available.",
-      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
+      "comment": "Added from Citrix Security Advisory CTX697263 and NetScaler Product Security guidance reviewed 2026-10-23. CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted by both PHP CVEs. The NetScaler guidance scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, states all supported NetScaler software versions are impacted, and excludes NetScaler Console and SVM.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -2645,10 +2653,10 @@
         "urn:php2shell:inventory:package:PHP-0624"
       ],
       "relationshipType": "affects",
-      "security_statusNotes": "NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
-      "summary": "CVE-2026-109619 assessment: NetScaler says its PHP-based Management Portal is impacted in all supported software versions; fix pending. Scope is the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI; Console and SVM are not impacted.",
+      "security_statusNotes": "CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted. NetScaler Product Security scopes the PHP exposure to the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, says all supported NetScaler software versions are impacted, and says a fixed PHP package is pending. Citrix NetScaler Console and NetScaler SVM are excluded.",
+      "summary": "CVE-2026-109619 assessment: CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted. NetScaler Product Security scopes the PHP exposure to the NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, says all supported NetScaler software versions are impacted, and says a fixed PHP package is pending. Citrix NetScaler Console and NetScaler SVM are excluded.",
       "security_actionStatement": "Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available.",
-      "comment": "Added from NetScaler Product Security guidance published 2026-10-21 and reviewed 2026-10-22. The vendor says the PHP-based Management Portal is impacted in all supported NetScaler software versions and scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI. NetScaler Console and SVM are excluded.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
+      "comment": "Added from Citrix Security Advisory CTX697263 and NetScaler Product Security guidance reviewed 2026-10-23. CTX697263 lists Citrix NetScaler ADC and Citrix NetScaler Gateway as impacted by both PHP CVEs. The NetScaler guidance scopes exposure to NSIP GUI, management-enabled SNIP GUI and Cluster IP GUI, states all supported NetScaler software versions are impacted, and excludes NetScaler Console and SVM.\nAction statement: Restrict NetScaler management GUI/API access on NSIP, management-enabled SNIPs and Cluster IPs to trusted administrative networks only; keep management interfaces off the Internet and verify authorized admin access remains available."
     },
     {
       "type": "software_Package",
@@ -3161,6 +3169,115 @@
       "summary": "CVE-2026-109619 assessment: Vulnerable",
       "comment": "Public official source reviewed 2026-10-23. Sources: https://my.f5.com/manage/s/article/K000163821",
       "security_actionStatement": "Apply F5's APM-specific mitigation guidance and restart requirements after staging validation; monitor for released fixes."
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0748",
+      "creationInfo": "_:creationinfo",
+      "name": "Cisco Identity Services Engine (ISE) Portal Builder",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0748"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Identity Services Engine (ISE) Portal Builder as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "description": "ISE portal customization component",
+      "comment": "Inventory record: PHP-0748\nCategory: Appliances and embedded\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists Identity Services Engine (ISE) Portal Builder under 'Products Under Investigation' (Network and Content Security Devices); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        }
+      ]
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0749",
+      "creationInfo": "_:creationinfo",
+      "name": "Cisco Expressway Select Series",
+      "software_primaryPurpose": "firmware",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0749"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
+      "summary": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround.",
+      "description": "Collaboration edge and traversal gateway",
+      "comment": "Inventory record: PHP-0749\nCategory: Appliances and embedded\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Official public vendor/upstream CVE assessment\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Expressway Select Series; affected release range not specified\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Vulnerable. Cisco lists Expressway Select Series as vulnerable under CSCwx37062. The listed 15.5.21 fix has a TBD availability date and is not a confirmed released fix.\nCVE-2026-109618: Vulnerable. Cisco lists Expressway Select Series as vulnerable under CSCwx37062. The listed 15.5.21 fix has a TBD availability date and is not a confirmed released fix.\nCVE-2026-109619: Vulnerable. Cisco lists Expressway Select Series as vulnerable under CSCwx37062. The listed 15.5.21 fix has a TBD availability date and is not a confirmed released fix.\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Expressway Select Series; affected release range not specified",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        }
+      ],
+      "software_packageVersion": "Expressway Select Series; affected release range not specified"
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0748",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0748",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0748: vendor PHP advisory candidate",
+      "comment": "Cisco advisory version 1.4 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0749",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0749",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0749: vendor PHP advisory candidate",
+      "comment": "Cisco advisory version 1.4 lists this product as vulnerable to PHP2Shell. This association records vendor review scope only; the exact PHP dependency is not published."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0749-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0749"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Cisco lists Expressway Select Series as vulnerable under CSCwx37062. The listed 15.5.21 fix has a TBD availability date and is not a confirmed released fix.",
+      "summary": "CVE-2026-109618 assessment: Vulnerable",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq",
+      "security_actionStatement": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0749-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0749"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Cisco lists Expressway Select Series as vulnerable under CSCwx37062. The listed 15.5.21 fix has a TBD availability date and is not a confirmed released fix.",
+      "summary": "CVE-2026-109619 assessment: Vulnerable",
+      "comment": "Public official source reviewed 2026-10-23. Sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq",
+      "security_actionStatement": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround."
     }
   ]
 }

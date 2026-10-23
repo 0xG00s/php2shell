@@ -2685,9 +2685,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
-      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Cisco CX Cloud as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists CX Cloud as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted customer experience portal",
-      "comment": "Inventory record: PHP-0704\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Cisco CX Cloud under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0704\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists CX Cloud under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2695,7 +2695,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -2742,9 +2742,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
-      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Cisco IoT Control Center as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists IoT Control Center as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted IoT connectivity management",
-      "comment": "Inventory record: PHP-0706\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Cisco IoT Control Center under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0706\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists IoT Control Center under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2752,7 +2752,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -2799,9 +2799,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
-      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Cisco Panoptica as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "summary": "Investigation retained: Cisco Panoptica appeared under investigation in advisory version 1.1 but is absent from the explicit version 1.4 status lists.",
       "description": "Hosted cloud-native application security",
-      "comment": "Inventory record: PHP-0708\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Cisco Panoptica under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0708\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq version 1.1 listed Cisco Panoptica under 'Products Under Investigation' (Cisco Cloud Hosted Services). Version 1.4, updated 2026-10-22 23:00 GMT, no longer names Panoptica in its explicit under-investigation, vulnerable or confirmed-not-vulnerable sections.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. Cisco's statement that unlisted products are initially indicated not affected is not an explicit product confirmation for this retained inventory scope.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation retained. Cisco advisory version 1.4 does not explicitly confirm affected, released-fixed or not-vulnerable status for this inventory scope.\nCVE-2026-109618: Investigation retained pending explicit Cisco product status\nCVE-2026-109619: Investigation retained pending explicit Cisco product status\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Retained investigation pending explicit Cisco status",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2809,7 +2809,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -2945,7 +2945,7 @@
       "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
       "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Slido as under investigation for CVE-2026-109618 and CVE-2026-109619.",
       "description": "Hosted audience interaction service",
-      "comment": "Inventory record: PHP-0713\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22) lists Slido under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-22\nVulnerability status: Cisco interim advisory: under investigation; no Cisco product confirmed vulnerable yet.\nCVE-2026-109618: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE-2026-109619: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product as under investigation; no Cisco product confirmed vulnerable yet\nCVE assessment limit: Installed version, vendor backport, configuration, SAPI, loaded modules and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0713\nCategory: Hosting and cloud\nOriginal relationship: requires\nRelationship direction: product_depends_on_php\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists Slido under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -2953,7 +2953,7 @@
           "locator": [
             "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
           ],
-          "comment": "Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, 2026-10-22)"
+          "comment": "Official public CVE review 2026-10-23"
         }
       ]
     },
@@ -4026,6 +4026,46 @@
       "security_statusNotes": "Plesk confirms released Windows hosted PHP fixes in 8.2.35, 8.3.36, 8.4.27 and 8.5.12. This covers hosted PHP handlers only. The internal plesk-engine requires its separate Plesk update; older or custom handlers are outside this fixed scope.",
       "summary": "CVE-2026-109619 assessment: Fix in the specified published release",
       "comment": "Official sources reviewed 2026-10-23: https://support.plesk.com/hc/en-us/articles/44397729587351-Vulnerability-CVE-2026-109618-and-CVE-2026-109619-PHP2Shell-Remote-code-execution-in-PHP-shipped-with-Plesk.\nAction statement: Install the stated fixed package or pull and recreate the stated container image, then verify the serving PHP runtime."
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0750",
+      "creationInfo": "_:creationinfo",
+      "name": "Cisco Meraki Dashboard",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0750"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:cisco:aa669b285cc1",
+      "summary": "Cisco advisory cisco-sa-php-october26-Jj384Daq lists Meraki Dashboard as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "description": "Hosted network management dashboard",
+      "comment": "Inventory record: PHP-0750\nCategory: Hosting and cloud\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Cisco's php2shell advisory; exact PHP component and SAPI are not published\nPHP version scope: Cisco advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, updated 2026-10-22 23:00 GMT) lists Meraki Dashboard under 'Products Under Investigation' (Cisco Cloud Hosted Services); affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes review scope, not a confirmed PHP dependency, affected build or reachable path. The advisory is interim and Cisco states there are no workarounds.\nPatch owner: Cisco; operator for deployment of fixed releases where on-premises\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Cisco advisory version 1.4 lists this product under investigation; affected and fixed releases are not published.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product/version/deployment scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq\nRelease pin: Cisco advisory version 1.4 under-investigation product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq"
+          ],
+          "comment": "Official public CVE review 2026-10-23"
+        }
+      ]
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0750",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0750",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0750: vendor PHP advisory candidate",
+      "comment": "Cisco advisory version 1.4 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
     }
   ]
 }

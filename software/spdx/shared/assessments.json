@@ -1350,12 +1350,14 @@
         "urn:php2shell:inventory:package:PHP-0704",
         "urn:php2shell:inventory:package:PHP-0706",
         "urn:php2shell:inventory:package:PHP-0708",
-        "urn:php2shell:inventory:package:PHP-0713"
+        "urn:php2shell:inventory:package:PHP-0713",
+        "urn:php2shell:inventory:package:PHP-0748",
+        "urn:php2shell:inventory:package:PHP-0750"
       ],
       "relationshipType": "underInvestigationFor",
-      "security_statusNotes": "Retained Investigation: Cisco advisory version 1.4 does not explicitly confirm affected, released-fixed or not-vulnerable status for these remaining inventory scopes. Absence from a product list is not treated as confirmed non-vulnerability.",
+      "security_statusNotes": "Retained Investigation: Cisco advisory version 1.4 explicitly lists nine current product scopes under investigation and does not explicitly resolve the retained Panoptica scope. A product's absence from the current list is not treated as confirmed non-vulnerability.",
       "summary": "CVE-2026-109618 assessment: Investigation retained for unresolved Cisco product scopes",
-      "comment": "Public official review 2026-10-23: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq (version 1.4, updated 2026-10-22 23:00 GMT). Seven remaining products are explicitly under investigation. Panoptica is absent from the updated lists; Cisco's preliminary absence-based indication is not an explicit product confirmation. Separately confirmed affected and not-vulnerable products have been removed from this assessment."
+      "comment": "Public official review 2026-10-23: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq (version 1.4, updated 2026-10-22 23:00 GMT). Nine current products are explicitly under investigation. Panoptica is absent from the updated lists; Cisco's preliminary absence-based indication is not an explicit product confirmation. Separately confirmed affected and not-vulnerable products have been removed from this assessment."
     },
     {
       "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
@@ -1370,12 +1372,14 @@
         "urn:php2shell:inventory:package:PHP-0704",
         "urn:php2shell:inventory:package:PHP-0706",
         "urn:php2shell:inventory:package:PHP-0708",
-        "urn:php2shell:inventory:package:PHP-0713"
+        "urn:php2shell:inventory:package:PHP-0713",
+        "urn:php2shell:inventory:package:PHP-0748",
+        "urn:php2shell:inventory:package:PHP-0750"
       ],
       "relationshipType": "underInvestigationFor",
-      "security_statusNotes": "Retained Investigation: Cisco advisory version 1.4 does not explicitly confirm affected, released-fixed or not-vulnerable status for these remaining inventory scopes. Absence from a product list is not treated as confirmed non-vulnerability.",
+      "security_statusNotes": "Retained Investigation: Cisco advisory version 1.4 explicitly lists nine current product scopes under investigation and does not explicitly resolve the retained Panoptica scope. A product's absence from the current list is not treated as confirmed non-vulnerability.",
       "summary": "CVE-2026-109619 assessment: Investigation retained for unresolved Cisco product scopes",
-      "comment": "Public official review 2026-10-23: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq (version 1.4, updated 2026-10-22 23:00 GMT). Seven remaining products are explicitly under investigation. Panoptica is absent from the updated lists; Cisco's preliminary absence-based indication is not an explicit product confirmation. Separately confirmed affected and not-vulnerable products have been removed from this assessment."
+      "comment": "Public official review 2026-10-23: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq (version 1.4, updated 2026-10-22 23:00 GMT). Nine current products are explicitly under investigation. Panoptica is absent from the updated lists; Cisco's preliminary absence-based indication is not an explicit product confirmation. Separately confirmed affected and not-vulnerable products have been removed from this assessment."
     },
     {
       "type": "security_VexNotAffectedVulnAssessmentRelationship",
@@ -1388,7 +1392,7 @@
       ],
       "relationshipType": "doesNotAffect",
       "summary": "CVE-2026-109618 assessment: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product under 'Products Confirmed Not Vulnerable'",
-      "comment": "Added from Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, last updated 2026-10-22), section 'Products Confirmed Not Vulnerable'. Cisco Umbrella is also still listed under investigation in the same advisory version.",
+      "comment": "Added from Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, last updated 2026-10-22 23:00 GMT), section 'Products Confirmed Not Vulnerable'.",
       "security_impactStatement": "Cisco lists the product under 'Products Confirmed Not Vulnerable' in cisco-sa-php-october26-Jj384Daq."
     },
     {
@@ -1402,7 +1406,7 @@
       ],
       "relationshipType": "doesNotAffect",
       "summary": "CVE-2026-109619 assessment: Cisco advisory cisco-sa-php-october26-Jj384Daq lists product under 'Products Confirmed Not Vulnerable'",
-      "comment": "Added from Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.1, last updated 2026-10-22), section 'Products Confirmed Not Vulnerable'. Cisco Umbrella is also still listed under investigation in the same advisory version.",
+      "comment": "Added from Cisco Security Advisory cisco-sa-php-october26-Jj384Daq (interim, version 1.4, last updated 2026-10-22 23:00 GMT), section 'Products Confirmed Not Vulnerable'.",
       "security_impactStatement": "Cisco lists the product under 'Products Confirmed Not Vulnerable' in cisco-sa-php-october26-Jj384Daq."
     },
     {
