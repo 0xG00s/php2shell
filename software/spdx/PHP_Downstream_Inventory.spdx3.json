@@ -4615,7 +4615,12 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0752-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:php-0752-official-20261023",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0731-maintainer-20261023",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0731-maintainer-20261023"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0731-maintainer-20261023",
+        "urn:php2shell:inventory:organization:ubiquiti",
+        "urn:php2shell:inventory:package:PHP-0753",
+        "urn:php2shell:inventory:relationship:PHP-0753",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:ubiquiti-uisp-crm-20261023",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:ubiquiti-uisp-crm-20261023"
       ]
     },
     {
@@ -41678,6 +41683,12 @@
       "name": "Tenable"
     },
     {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:ubiquiti",
+      "creationInfo": "_:creationinfo",
+      "name": "Ubiquiti"
+    },
+    {
       "type": "software_Package",
       "spdxId": "urn:php2shell:inventory:package:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -42534,6 +42545,43 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0753",
+      "creationInfo": "_:creationinfo",
+      "name": "UISP CRM (UCRM)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0753"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:ubiquiti",
+      "software_packageVersion": "CRM 4.6.13 / 4.6.15 (community-reported; unverified)",
+      "summary": "Scope: UISP CRM (UCRM). Community reports identify CRM 4.6.13 / PHP 8.3.32 and CRM 4.6.15 / PHP 8.3.35, and report CRM 4.6.16 / PHP 8.3.36 plus a fix in UISP Application 3.1.69 Early Access. The official 3.1.69 release page requires an EA login; its release notes were not verified. No public vendor confirmation or general-availability ETA was verified as of 2026-10-23. Community forum: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; Official Early Access release page (login required): https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc",
+      "description": "CRM component of UISP Application (formerly UNMS).",
+      "comment": "Source review: 2026-10-23. Community claims are investigation leads, not independently verified vendor statements. No claim is made about UniFi, UISP hardware, all earlier versions, or cloud rollout.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86"
+          ],
+          "comment": "Community reports; not a vendor advisory."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "releaseNotes",
+          "locator": [
+            "https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc"
+          ],
+          "comment": "Official release URL; EA access gate observed, release-note contents not verified."
+        }
+      ]
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -42844,6 +42892,17 @@
       "relationshipType": "dependsOn",
       "summary": "ONTAP 9 web services invoke PHP as confirmed by NetApp's advisory.",
       "comment": "NTAP-20261021-0021 version 3.0 describes Apache invoking PHP on vulnerable endpoints. The exact runtime version and SAPI are not published; the dependency targets the unversioned PHP core family."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0753",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0753",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Community-reported PHP runtime association; not independently verified."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -43925,6 +43984,18 @@
       "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
     },
     {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:ubiquiti-uisp-crm-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0753"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Community-reported PHP runtime exposure; vendor confirmation and fixed-version scope remain unverified. Investigation is this inventory assessment, not a statement that Ubiquiti has announced an investigation.",
+      "comment": "Sources reviewed 2026-10-23: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc"
+    },
+    {
       "type": "security_VexAffectedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:broadcom-esg-39404-20261022",
       "creationInfo": "_:creationinfo",
@@ -44988,6 +45059,18 @@
       "security_statusNotes": "Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) and Content Analysis as under investigation for both PHP2Shell CVEs; affected and fixed releases are not published.",
       "summary": "CVE-2026-109619 assessment: Broadcom ESG advisory 39404 under-investigation product scope",
       "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:ubiquiti-uisp-crm-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0753"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Community-reported PHP runtime exposure; vendor confirmation and fixed-version scope remain unverified. Investigation is this inventory assessment, not a statement that Ubiquiti has announced an investigation.",
+      "comment": "Sources reviewed 2026-10-23: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc"
     }
   ]
 }
