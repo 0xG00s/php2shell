@@ -3278,6 +3278,144 @@
       "summary": "CVE-2026-109619 assessment: Vulnerable",
       "comment": "Public official source reviewed 2026-10-23. Sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq",
       "security_actionStatement": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround."
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0751",
+      "creationInfo": "_:creationinfo",
+      "name": "HPE Networking ClearPass Policy Manager",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0751"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:hewlett-packard-enterprise:e2f8dff0f1e0",
+      "summary": "HPESBNW05171 rev.1 confirms both CVEs affect ClearPass. Releases 6.14.1 and 6.11.16 only restrict exploitation to authenticated cluster-admin users; full fixes are still in development.",
+      "description": "Network access policy management appliance with a PHP runtime",
+      "software_packageVersion": "6.14.0 and below / 6.11.15 and below; 6.14.1 / 6.11.16 partially mitigated, still affected",
+      "comment": "Inventory record: PHP-0751\nCategory: Appliances and embedded\nAliases: CPPM, Aruba ClearPass Policy Manager\nOriginal relationship: depends_on\nRelationship direction: uses_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed PHP dependency and affected scope\nDeployment status: Not measured\nPHP surface: PHP core library in ClearPass; exact bundled PHP version and SAPI are not published\nPHP version scope: HPESBNW05171 rev.1 names 6.14.0 and below and 6.11.15 and below as fully affected. Versions 6.14.1 and 6.11.16 remain affected but require authenticated cluster-admin privileges.\nLimitations: Partial mitigation is not a full fix. End-of-support installations have not been assessed by HPE. No conclusion is extended to other HPE products or unlisted future releases.\nPatch owner: Hewlett Packard Enterprise; operator for deployment\nSource accessed: 2026-10-23\nCVE-2026-109618: Vulnerable; partial mitigation only in 6.14.1 and 6.11.16\nCVE-2026-109619: Vulnerable; partial mitigation only in 6.14.1 and 6.11.16\nCVE assessment limit: Vendor product assessment only; no installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory: HPESBNW05171 rev.1, published and updated 2026-10-22",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US"
+          ],
+          "comment": "HPESBNW05171 rev.1; public vendor advisory reviewed 2026-10-23"
+        }
+      ]
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0751",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0751",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "ClearPass depends on the PHP core library identified in HPESBNW05171.",
+      "comment": "Vendor advisory reviewed 2026-10-23. The exact bundled PHP version and SAPI are not published; the dependency targets the unversioned PHP core family."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0751-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0751"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "HPESBNW05171 rev.1 confirms ClearPass 6.14.0 and below and 6.11.15 and below are fully affected. Versions 6.14.1 and 6.11.16 partially mitigate exposure by requiring authenticated cluster-admin privileges; full fixes remain in development.",
+      "summary": "CVE-2026-109618 assessment: Vulnerable",
+      "security_actionStatement": "Apply HPE's partial-mitigation releases and restrict CLI and web management access to dedicated networks or firewall policies with logging. Consider removing guest portals and management interfaces from public access as advised by HPE; monitor for full fixes.",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US"
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0751-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0751"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "HPESBNW05171 rev.1 confirms ClearPass 6.14.0 and below and 6.11.15 and below are fully affected. Versions 6.14.1 and 6.11.16 partially mitigate exposure by requiring authenticated cluster-admin privileges; full fixes remain in development.",
+      "summary": "CVE-2026-109619 assessment: Vulnerable",
+      "security_actionStatement": "Apply HPE's partial-mitigation releases and restrict CLI and web management access to dedicated networks or firewall policies with logging. Consider removing guest portals and management interfaces from public access as advised by HPE; monitor for full fixes.",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0752",
+      "creationInfo": "_:creationinfo",
+      "name": "ONTAP 9",
+      "software_primaryPurpose": "operatingSystem",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0752"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:netapp:35b1a7722289",
+      "summary": "NTAP-20261021-0021 version 3.0 confirms ONTAP 9 is affected only by CVE-2026-109618, not CVE-2026-109619. Exploitation is limited to the www user in the PHP jail. No fixed release is listed; workarounds have operational trade-offs.",
+      "description": "Storage operating system with PHP-backed web services",
+      "software_packageVersion": "ONTAP 9; affected maintenance releases and fixed releases not specified",
+      "comment": "Inventory record: PHP-0752\nCategory: Appliances and embedded\nOriginal relationship: depends_on\nRelationship direction: uses_php\nParent component: PHP-0037\nEvidence status: Vendor-confirmed PHP dependency and per-CVE assessment\nDeployment status: Not measured\nPHP surface: ONTAP web services invoke PHP; potential access is limited to the www user in the PHP jail\nPHP version scope: NTAP-20261021-0021 version 3.0 names ONTAP 9 without an affected maintenance-release range or fixed release.\nLimitations: The vendor explicitly excludes CVE-2026-109619 for ONTAP 9 but does not publish the technical reason. Jail confinement does not make CVE-2026-109618 unaffected. No conclusion is extended to other NetApp products.\nWorkarounds: Disable all external web services (most disruptive, also covers future SVMs); or enable SAML (unauthenticated exploitation blocked, authenticated attackers can still reach affected services); or disable only sysmgr and saml (less protection, preserves REST/ZAPI, repeat for new SVMs). Follow the vendor advisory when choosing an option.\nPatch owner: NetApp; operator for deployment\nSource accessed: 2026-10-23\nCVE-2026-109618: Vulnerable; no fixed release listed\nCVE-2026-109619: Not vuln; vendor states ONTAP 9 is affected only by CVE-2026-109618\nCVE assessment limit: Vendor product assessment only; no installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory: NTAP-20261021-0021 version 3.0, published 2026-10-21 and updated 2026-10-22",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://security.netapp.com/advisory/NTAP-20261021-0021"
+          ],
+          "comment": "NTAP-20261021-0021 version 3.0; public vendor advisory reviewed 2026-10-23"
+        }
+      ]
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0752",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0752",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "ONTAP 9 web services invoke PHP as confirmed by NetApp's advisory.",
+      "comment": "NTAP-20261021-0021 version 3.0 describes Apache invoking PHP on vulnerable endpoints. The exact runtime version and SAPI are not published; the dependency targets the unversioned PHP core family."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0752-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0752"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "NTAP-20261021-0021 version 3.0 lists ONTAP 9 as affected only by CVE-2026-109618. An unauthenticated attacker could gain www-user access restricted to the PHP jail. No fixed release is listed.",
+      "summary": "CVE-2026-109618 assessment: Vulnerable",
+      "security_actionStatement": "Choose a NetApp-documented workaround: disable all external web services (most disruptive and covers future SVMs); enable SAML (authenticated attackers remain a risk); or disable sysmgr and saml (less protection, preserves REST/ZAPI, repeat for new SVMs). Monitor for fixed releases.",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://security.netapp.com/advisory/NTAP-20261021-0021"
+    },
+    {
+      "type": "security_VexNotAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:php-0752-official-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0752"
+      ],
+      "relationshipType": "doesNotAffect",
+      "security_statusNotes": "NetApp explicitly states ONTAP 9 is affected only by CVE-2026-109618, excluding CVE-2026-109619. The vendor does not publish the technical reason for this exclusion.",
+      "summary": "CVE-2026-109619 assessment: Not vuln",
+      "security_impactStatement": "NTAP-20261021-0021 version 3.0 excludes CVE-2026-109619 from ONTAP 9's affected scope. This does not change ONTAP 9's vulnerable status for CVE-2026-109618.",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://security.netapp.com/advisory/NTAP-20261021-0021"
     }
   ]
 }
