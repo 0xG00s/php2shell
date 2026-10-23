@@ -204,9 +204,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:glpi-teclib:9df3cd869503",
-      "summary": "The official release catalogue and pinned version-bump diff establish GLPI 12.0.0 final. The installation guide still covers only 10/11 PHP minima; the 12 release Composer manifest read was denied.",
+      "summary": "The application remains affected on an unpatched PHP runtime; confirmed fixed distribution scopes are recorded separately in PHP-0735.",
       "description": "PHP web runtime; nginx PHP-FPM or documented Apache/other web-server setup",
-      "comment": "Inventory record: PHP-0024\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: PHP web runtime; nginx PHP-FPM or documented Apache/other web-server setup\nPHP version scope: Guide: GLPI 10.0.x PHP >=7.4; 11.0.x >=8.2. GLPI 12.0.0 was released 7 October 2026, but its exact PHP floor and extension set were not retrieved. Do not inherit the guide\u2019s 10/11 table as a 12 requirement.\nExtensions: Retained guide-scoped 10/11 requirements: dom, fileinfo, filter, libxml, simplexml, tokenizer, xmlreader, xmlwriter, curl, gd, intl, mysqli, session, zlib. GLPI 11 adds bcmath, mbstring, openssl. Full 12.0.0 list unknown; optional/emulated features remain separate.\nLimitations: A release identity is not a requirements manifest. PHP floors and required/optional arrays retained here apply only to the explicitly documented 10/11 scope. Version 12 minimums remain unknown. Official release advisory text was not treated as a PHP-core CVE or current product exposure. GLPI Agent/client, exact deployed build and plugin state remain separate.\nPatch owner: GLPI/Teclib and app maintainers for application releases; PHP package/hosting provider and deploying operator for compatible runtime/module updates\nDownstream surface: IT service, inventory and admin data\nRelease pin: GLPI 12.0.0, 7 October 2026, commit cd812fbc82eaa8d0356d0fb650842069c1c18f4e. Version/changelog diff read; requirements and archive bytes not verified.\nSource accessed: 2026-10-19\nAliases: GLPI Server, GLPI 10 server, GLPI 11 server\nConditional downstream consequence: A matching PHP runtime or loaded-extension flaw reached through web/API requests, mail parsing or attachments could cause denial of service, disclosure or worker-level code execution. Ticket contents, attachments, mailbox credentials, directory integrations and service-management records could then be affected according to configured permissions. Agent/endpoint compromise, host privilege and tenant escape are separate conditions.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0024\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: PHP web runtime; nginx PHP-FPM or documented Apache/other web-server setup\nPHP version scope: Guide: GLPI 10.0.x PHP >=7.4; 11.0.x >=8.2. GLPI 12.0.0 was released 7 October 2026, but its exact PHP floor and extension set were not retrieved. Do not inherit the guide\u2019s 10/11 table as a 12 requirement.\nExtensions: Retained guide-scoped 10/11 requirements: dom, fileinfo, filter, libxml, simplexml, tokenizer, xmlreader, xmlwriter, curl, gd, intl, mysqli, session, zlib. GLPI 11 adds bcmath, mbstring, openssl. Full 12.0.0 list unknown; optional/emulated features remain separate.\nLimitations: A release identity is not a requirements manifest. PHP floors and required/optional arrays retained here apply only to the explicitly documented 10/11 scope. Version 12 minimums remain unknown. Official release advisory text was not treated as a PHP-core CVE or current product exposure. GLPI Agent/client, exact deployed build and plugin state remain separate.\nPatch owner: GLPI/Teclib and app maintainers for application releases; PHP package/hosting provider and deploying operator for compatible runtime/module updates\nDownstream surface: IT service, inventory and admin data\nRelease pin: GLPI 12.0.0, 7 October 2026, commit cd812fbc82eaa8d0356d0fb650842069c1c18f4e. Version/changelog diff read; requirements and archive bytes not verified.\nSource accessed: 2026-10-19\nAliases: GLPI Server, GLPI 10 server, GLPI 11 server\nConditional downstream consequence: A matching PHP runtime or loaded-extension flaw reached through web/API requests, mail parsing or attachments could cause denial of service, disclosure or worker-level code execution. Ticket contents, attachments, mailbox credentials, directory integrations and service-management records could then be affected according to configured permissions. Agent/endpoint compromise, host privilege and tenant escape are separate conditions.\nVulnerability status: Vulnerable when using an affected PHP runtime; the vendor-confirmed fixed distribution is recorded separately.\nCVE-2026-109618: Vulnerable on affected PHP; see the separate fixed distribution scope.\nCVE-2026-109619: Vulnerable on affected PHP; see the separate fixed distribution scope.\nCVE assessment limit: A fixed vendor package or container does not repair other installations using externally supplied PHP; installed runtimes and deployment were not tested.\nPublished fix review (2026-10-23): PHP-0735: Official main / 12 / 11 / 10 image rebuilds announced 2026-10-21. These specific distributions do not establish a fix for other installations or externally supplied PHP.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -239,6 +239,14 @@
             "https://github.com/glpi-project/glpi/commit/cd812fbc82eaa8d0356d0fb650842069c1c18f4e"
           ],
           "comment": "Primary application release, compatibility or installer evidence - Pinned diff changes unreleased/RC3 identifiers to 12.0.0 and date 2026-10-07."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://www.glpi-project.org/en/%F0%9F%9A%A8-critical-php2shell-php-vulnerabilities-cve-2026-109618-cve-2026-109619-what-you-need-to-know-for-your-glpi-server/"
+          ],
+          "comment": "Official source reviewed 2026-10-23 for the scoped PHP2Shell fix."
         }
       ]
     },
@@ -696,9 +704,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:phpldapadmin-leenooks-project:b63ad108fc59",
-      "summary": "The current source manifest explicitly requires PHP and LDAP-related extensions for the directory administration web application.",
+      "summary": "The application remains affected on an unpatched PHP runtime; confirmed fixed distribution scopes are recorded separately in PHP-0738.",
       "description": "Server-side PHP web runtime; exact SAPI and any separate CLI phase deployment-dependent/unpinned",
-      "comment": "Inventory record: PHP-0284\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime; exact SAPI and any separate CLI phase deployment-dependent/unpinned\nPHP version scope: Inspected master manifest requires PHP ^8.5. Repository identifies the v2 application and says v1, originally for PHP 5, is deprecated; master is not applied to every released v2 build.\nExtensions: Required in stated source scope: fileinfo, ldap, iconv, openssl\nLimitations: Docker packaging and older v1/v2 releases have distinct requirements. LDAP server internals and administrator privileges are not inferred from this PHP frontend. PHP presence does not establish an affected build, reachability or exploitation. Deployments, loaded modules and enabled features were not measured.\nPatch owner: Application/module maintainer for product code; PHP package/image/hosting provider and deploying operator for compatible runtime/module updates\nDownstream surface: LDAP directory browser/administration, authentication and session credentials\nRelease pin: Version-scoped/moving official documentation or source branch; immutable release pin pending\nSource accessed: 2026-10-17\nAliases: PLA v2, leenooks/phpLDAPadmin\nConditional downstream consequence: A matching reachable PHP or loaded-extension flaw could cause denial of service, disclosure, integrity loss or code execution within the administration worker. Database or directory actions would depend on supplied/session/configured credentials and actual privileges. A PHP process is not automatically a database superuser, directory administrator, root account or route to another tenant.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0284\nCategory: Monitoring and administration\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Server-side PHP web runtime; exact SAPI and any separate CLI phase deployment-dependent/unpinned\nPHP version scope: Inspected master manifest requires PHP ^8.5. Repository identifies the v2 application and says v1, originally for PHP 5, is deprecated; master is not applied to every released v2 build.\nExtensions: Required in stated source scope: fileinfo, ldap, iconv, openssl\nLimitations: Docker packaging and older v1/v2 releases have distinct requirements. LDAP server internals and administrator privileges are not inferred from this PHP frontend. PHP presence does not establish an affected build, reachability or exploitation. Deployments, loaded modules and enabled features were not measured.\nPatch owner: Application/module maintainer for product code; PHP package/image/hosting provider and deploying operator for compatible runtime/module updates\nDownstream surface: LDAP directory browser/administration, authentication and session credentials\nRelease pin: Version-scoped/moving official documentation or source branch; immutable release pin pending\nSource accessed: 2026-10-17\nAliases: PLA v2, leenooks/phpLDAPadmin\nConditional downstream consequence: A matching reachable PHP or loaded-extension flaw could cause denial of service, disclosure, integrity loss or code execution within the administration worker. Database or directory actions would depend on supplied/session/configured credentials and actual privileges. A PHP process is not automatically a database superuser, directory administrator, root account or route to another tenant.\nVulnerability status: Vulnerable when using an affected PHP runtime; the vendor-confirmed fixed distribution is recorded separately.\nCVE-2026-109618: Vulnerable on affected PHP; see the separate fixed distribution scope.\nCVE-2026-109619: Vulnerable on affected PHP; see the separate fixed distribution scope.\nCVE assessment limit: A fixed vendor package or container does not repair other installations using externally supplied PHP; installed runtimes and deployment were not tested.\nPublished fix review (2026-10-23): PHP-0738: Docker release 2.3.12 (PHP 8.4.27). These specific distributions do not establish a fix for other installations or externally supplied PHP.",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -715,6 +723,14 @@
             "https://github.com/leenooks/phpLDAPadmin"
           ],
           "comment": "Official project/vendor documentation, repository manifest or publisher package metadata - The project distinguishes current v2 from the deprecated PHP-5-era v1 and documents PHP-server/container options."
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/leenooks/phpLDAPadmin/issues/491#issuecomment-6339838166"
+          ],
+          "comment": "Official source reviewed 2026-10-23 for the scoped PHP2Shell fix."
         }
       ]
     },
@@ -3199,8 +3215,7 @@
       "relationshipType": "fixedIn",
       "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Security Center 6.9.1 and earlier. Patch-supported scope: Security Center 6.6.0, 6.7.2, 6.8.0 and 6.9.1 on Oracle Linux or Red Hat Enterprise Linux 8 or later. Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully. Unpatched installations remain affected.",
       "summary": "CVE-2026-109618 assessment: Fixed in the documented Security Center Patch SC-202610.1 scope",
-      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm",
-      "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm\nAction statement: Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -3213,8 +3228,7 @@
       "relationshipType": "fixedIn",
       "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Security Center 6.9.1 and earlier. Patch-supported scope: Security Center 6.6.0, 6.7.2, 6.8.0 and 6.9.1 on Oracle Linux or Red Hat Enterprise Linux 8 or later. Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully. Unpatched installations remain affected.",
       "summary": "CVE-2026-109619 assessment: Fixed in the documented Security Center Patch SC-202610.1 scope",
-      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm",
-      "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm\nAction statement: Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -3227,8 +3241,7 @@
       "relationshipType": "fixedIn",
       "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Enclave Security 1.9.1 and earlier. Patch-supported scope: Security Center 6.7.5, 6.8.0 and 6.9.1 on Enclave Security 1.7.0, 1.8.0 and 1.9.1 respectively. Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully. Unpatched installations remain affected.",
       "summary": "CVE-2026-109618 assessment: Fixed in the documented Enclave Security Patch SC-202610.1 scope",
-      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm",
-      "security_actionStatement": "Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm\nAction statement: Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -3241,8 +3254,7 @@
       "relationshipType": "fixedIn",
       "security_statusNotes": "Patch SC-202610.1 updates the bundled PHP to 8.2.35. Affected: Enclave Security 1.9.1 and earlier. Patch-supported scope: Security Center 6.7.5, 6.8.0 and 6.9.1 on Enclave Security 1.7.0, 1.8.0 and 1.9.1 respectively. Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully. Unpatched installations remain affected.",
       "summary": "CVE-2026-109619 assessment: Fixed in the documented Enclave Security Patch SC-202610.1 scope",
-      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm",
-      "security_actionStatement": "Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
+      "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-29 ; https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm\nAction statement: Apply the matching vendor patch in the Security Center pod, following the documented service stop/start procedure; verify the patch applied successfully."
     },
     {
       "type": "software_Package",
