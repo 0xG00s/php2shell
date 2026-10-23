@@ -521,56 +521,9 @@ def latest_update_entries(events: list[dict[str, Any]], limit: int = 5) -> list[
     return history_rows(events)[:limit]
 
 
-def combined_status(entry: dict[str, str], cves: list[str]) -> str:
-    statuses = [entry.get(cve, "") for cve in cves]
-    if not statuses:
-        return ""
-    if all(status == statuses[0] for status in statuses[1:]):
-        return statuses[0]
-    return "/".join(statuses)
-
-
-def readme_table_header(cves: list[str]) -> list[str]:
-    status_heading = "Status"
-    if cves:
-        status_heading += " " + " / ".join(cves)
-    columns = [
-        "Date and time",
-        "Supplier",
-        "Product",
-        "Version (see Status)",
-        status_heading,
-        "Links",
-    ]
-    alignment = [
-        ":------------------------",
-        ":---------",
-        ":--------",
-        ":--------------------:",
-        ":----------------------:",
-        "------:",
-    ]
-    return [
-        "| " + " | ".join(columns) + " |",
-        "|" + "|".join(alignment) + "|",
-    ]
-
-
-def readme_table_row(date_time: str, entry: dict[str, str], cves: list[str]) -> str:
-    row = [
-        markdown_cell(date_time),
-        entry["supplier"],
-        entry["product"],
-        entry["version"],
-        markdown_cell(combined_status(entry, cves)),
-        entry["links"],
-    ]
-    return "|" + "|".join(row) + "|"
-
-
 def render_readme_updates(cves: list[str], entries: list[tuple[str, dict[str, str]]]) -> str:
-    lines = [README_UPDATES_HEADING, "", *readme_table_header(cves)]
-    lines.extend(readme_table_row(date_time, entry, cves) for date_time, entry in entries)
+    lines = [README_UPDATES_HEADING, "", *table_header(cves, include_date_time=True)]
+    lines.extend(table_row(entry, cves, date_time=date_time) for date_time, entry in entries)
     lines.extend(["", f"See the [full software status update history](software/{CHANGELOG_FILENAME})."])
     return "\n".join(lines)
 

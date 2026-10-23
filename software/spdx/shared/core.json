@@ -1669,7 +1669,12 @@
         "urn:php2shell:inventory:package:PHP-0726",
         "urn:php2shell:inventory:relationship:PHP-0726",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:unopim-docker-images-20261022",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:unopim-docker-images-20261022"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:unopim-docker-images-20261022",
+        "urn:php2shell:inventory:package:PHP-0727",
+        "urn:php2shell:inventory:relationship:PHP-0727",
+        "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:serversideup-v5-0-2-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:serversideup-v5-0-2-20261021"
       ]
     }
   ]

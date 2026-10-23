@@ -3203,6 +3203,12 @@
       "spdxId": "urn:php2shell:inventory:organization:entelliweb:73c2d38cb10f",
       "creationInfo": "_:creationinfo",
       "name": "Entelliweb"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
+      "creationInfo": "_:creationinfo",
+      "name": "Server Side Up"
     }
   ]
 }
