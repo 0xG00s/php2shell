@@ -3202,7 +3202,8 @@
       "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:entelliweb:73c2d38cb10f",
       "creationInfo": "_:creationinfo",
-      "name": "Entelliweb"
+      "name": "Delta Controls",
+      "comment": "Official supplier name confirmed by Delta Controls SecB0015; existing organization ID retained for compatibility."
     },
     {
       "type": "Organization",
