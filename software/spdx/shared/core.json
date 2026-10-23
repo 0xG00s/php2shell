@@ -1879,7 +1879,9 @@
         "urn:php2shell:inventory:package:PHP-0752",
         "urn:php2shell:inventory:relationship:PHP-0752",
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0752-official-20261023",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:php-0752-official-20261023"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:doesNotAffect:php-0752-official-20261023",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0731-maintainer-20261023",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0731-maintainer-20261023"
       ]
     }
   ]

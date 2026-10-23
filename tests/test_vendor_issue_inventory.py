@@ -38,6 +38,36 @@ class VendorIssueInventoryTests(unittest.TestCase):
         self.assertIn("authenticated attackers remain a risk", vex["security_actionStatement"])
         self.assertIn("repeat for new SVMs", vex["security_actionStatement"])
 
+    def test_sepm_fixed_builds_retain_report_provenance(self):
+        product = self.entries[PREFIX + "package:PHP-0731"]
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        self.assertEqual(product["version"], "14.3.27716.10000 / 14.4.494.0000")
+        self.assertIn("maintainer accepts issue #30", product["notes"])
+        self.assertIn("not independently verified", product["notes"])
+        self.assertIn("older releases", product["notes"])
+        self.assertIn("/39421", product["links"])
+        self.assertIn("https://github.com/NCSC-NL/php2shell/issues/30", product["links"])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0731-maintainer-20261023"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0731"])
+
+    def test_sepm_fix_does_not_change_other_broadcom_statuses(self):
+        carbon_black = self.entries[PREFIX + "package:PHP-0730"]
+        self.assertEqual(carbon_black["version"], "Broadcom ESG advisory 39404 affected product scope")
+        self.assertNotIn("/39421", carbon_black["links"])
+        self.assertNotIn("/issues/30", carbon_black["links"])
+        for identifier, status in (
+            ("PHP-0730", "Vulnerable"),
+            ("PHP-0732", "Investigation"),
+            ("PHP-0733", "Investigation"),
+        ):
+            with self.subTest(identifier=identifier):
+                product = self.entries[PREFIX + "package:" + identifier]
+                self.assertEqual([product[cve] for cve in CVES], [status, status])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:affects:broadcom-esg-39404-20261022"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0730"])
+
     def test_new_products_have_unique_identity_and_php_dependencies(self):
         for identifier, supplier, name in (
             ("PHP-0751", "Hewlett Packard Enterprise", "HPE Networking ClearPass Policy Manager"),

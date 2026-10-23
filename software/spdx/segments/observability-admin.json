@@ -3299,9 +3299,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
-      "summary": "Broadcom ESG advisory 39404 lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for CVE-2026-109618 and CVE-2026-109619; the umbrella advisory does not state fixed releases.",
+      "summary": "Fix status is limited to SEPM 14.3.27716.10000 and 14.4.494.0000, as reported in issue #30 and accepted by the maintainer. Product-specific advisory 39421 requires login and was not independently verified; older releases and deployed installations are not marked fixed.",
       "description": "Endpoint protection management server",
-      "comment": "Inventory record: PHP-0731\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-22, lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s); affected and fixed releases are not stated in the umbrella advisory.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. The umbrella advisory links a product-specific advisory, but this record does not infer unpublished version or remediation scope from that link.\nPatch owner: Broadcom; operator for exposure reduction and update rollout\nSource accessed: 2026-10-23\nVulnerability status: Vulnerable. Broadcom ESG advisory 39404 lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; no fixed version is stated in the umbrella advisory.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 affected product scope",
+      "comment": "Inventory record: PHP-0731\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Maintainer-accepted issue report for fixed builds; vendor-confirmed affected product family\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: SEPM 14.3.27716.10000 and 14.4.494.0000, reported as remediation updates in issue #30 citing Broadcom advisory 39421.\nExtensions: Unknown\nLimitations: The maintainer explicitly accepted issue #30 on 2026-10-23. The product-specific advisory requires customer login and its fixed-version wording was not independently verified. The umbrella advisory 39404 confirms both CVEs affect SEPM but does not identify fixed versions. No broader fixed range, other Broadcom product or deployed installation is inferred.\nPatch owner: Broadcom; operator for update rollout\nSource accessed: 2026-10-23 (public umbrella advisory and issue report only)\nVulnerability status: Fix for the two named builds, based on the maintainer-accepted issue report.\nCVE-2026-109618: Fix in SEPM 14.3.27716.10000 and 14.4.494.0000; maintainer-accepted report, not independently vendor-verified\nCVE-2026-109619: Fix in SEPM 14.3.27716.10000 and 14.4.494.0000; maintainer-accepted report, not independently vendor-verified\nCVE assessment limit: Only the named builds are assessed. No installation, reachability or exploitation test was performed.\nIssue source: https://github.com/NCSC-NL/php2shell/issues/30\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404 ; https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421\nRelease pin: SEPM 14.3.27716.10000 / 14.4.494.0000",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -3310,9 +3310,25 @@
             "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
           ],
           "comment": "Broadcom ESG advisory 39404 reviewed 2026-10-23"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421"
+          ],
+          "comment": "Product-specific advisory cited in issue #30; customer login required, not independently verified"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/NCSC-NL/php2shell/issues/30"
+          ],
+          "comment": "Reported fixed builds accepted by the maintainer on 2026-10-23"
         }
       ],
-      "software_packageVersion": "Broadcom ESG advisory 39404 affected product scope"
+      "software_packageVersion": "14.3.27716.10000 / 14.4.494.0000"
     },
     {
       "type": "software_Package",
@@ -3426,11 +3442,10 @@
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
       "to": [
-        "urn:php2shell:inventory:package:PHP-0730",
-        "urn:php2shell:inventory:package:PHP-0731"
+        "urn:php2shell:inventory:package:PHP-0730"
       ],
       "relationshipType": "affects",
-      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server and Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
       "summary": "CVE-2026-109618 assessment: Broadcom ESG advisory 39404 affected product scope",
       "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
       "security_actionStatement": "Monitor the linked Broadcom product advisories for remediation details and restrict management exposure until a fixed release is verified."
@@ -3441,11 +3456,10 @@
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
       "to": [
-        "urn:php2shell:inventory:package:PHP-0730",
-        "urn:php2shell:inventory:package:PHP-0731"
+        "urn:php2shell:inventory:package:PHP-0730"
       ],
       "relationshipType": "affects",
-      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server and Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
       "summary": "CVE-2026-109619 assessment: Broadcom ESG advisory 39404 affected product scope",
       "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
       "security_actionStatement": "Monitor the linked Broadcom product advisories for remediation details and restrict management exposure until a fixed release is verified."
@@ -3477,6 +3491,32 @@
       "security_statusNotes": "Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) and Content Analysis as under investigation for both PHP2Shell CVEs; affected and fixed releases are not published.",
       "summary": "CVE-2026-109619 assessment: Broadcom ESG advisory 39404 under-investigation product scope",
       "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0731-maintainer-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0731"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "The maintainer accepts issue #30's reported SEPM 14.3.27716.10000 and 14.4.494.0000 updates as fixes for both PHP2Shell CVEs. The report cites Broadcom advisory 39421, which requires login and was not independently verified. Fix status applies only to these two builds.",
+      "summary": "CVE-2026-109618 assessment: Fix (maintainer-accepted issue report)",
+      "comment": "Issue report reviewed and accepted by the maintainer on 2026-10-23: https://github.com/NCSC-NL/php2shell/issues/30\nCited vendor advisory, not independently read: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421\nAction statement: Deploy the appropriate reported SEPM update using Broadcom's product-specific instructions; verify the installed build. This assessment does not establish that existing deployments have been upgraded."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0731-maintainer-20261023",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0731"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "The maintainer accepts issue #30's reported SEPM 14.3.27716.10000 and 14.4.494.0000 updates as fixes for both PHP2Shell CVEs. The report cites Broadcom advisory 39421, which requires login and was not independently verified. Fix status applies only to these two builds.",
+      "summary": "CVE-2026-109619 assessment: Fix (maintainer-accepted issue report)",
+      "comment": "Issue report reviewed and accepted by the maintainer on 2026-10-23: https://github.com/NCSC-NL/php2shell/issues/30\nCited vendor advisory, not independently read: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421\nAction statement: Deploy the appropriate reported SEPM update using Broadcom's product-specific instructions; verify the installed build. This assessment does not establish that existing deployments have been upgraded."
     }
   ]
 }
