@@ -3216,6 +3216,12 @@
       "spdxId": "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
       "creationInfo": "_:creationinfo",
       "name": "Tenable"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "creationInfo": "_:creationinfo",
+      "name": "Broadcom"
     }
   ]
 }

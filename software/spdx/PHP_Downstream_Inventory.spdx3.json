@@ -4522,7 +4522,20 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-securitycenter-sc202610-1",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-enclave-sc202610-1",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-enclave-sc202610-1",
-        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7"
+        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+        "urn:php2shell:inventory:package:PHP-0730",
+        "urn:php2shell:inventory:package:PHP-0731",
+        "urn:php2shell:inventory:package:PHP-0732",
+        "urn:php2shell:inventory:package:PHP-0733",
+        "urn:php2shell:inventory:relationship:PHP-0730",
+        "urn:php2shell:inventory:relationship:PHP-0731",
+        "urn:php2shell:inventory:relationship:PHP-0732",
+        "urn:php2shell:inventory:relationship:PHP-0733",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:organization:broadcom:caf79e01972c"
       ]
     },
     {
@@ -41396,6 +41409,12 @@
     },
     {
       "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "creationInfo": "_:creationinfo",
+      "name": "Broadcom"
+    },
+    {
+      "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
       "creationInfo": "_:creationinfo",
       "name": "Server Side Up"
@@ -41518,6 +41537,122 @@
       "software_packageVersion": "SC-202610.1 on Enclave Security 1.7.0 / 1.8.0 / 1.9.1 (PHP 8.2.35)"
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0730",
+      "creationInfo": "_:creationinfo",
+      "name": "Carbon Black App Control Server",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0730"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server under Affected Product(s) for CVE-2026-109618 and CVE-2026-109619; the umbrella advisory does not state fixed releases.",
+      "description": "Application control management server",
+      "comment": "Inventory record: PHP-0730\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-22, lists Carbon Black App Control Server under Affected Product(s); affected and fixed releases are not stated in the umbrella advisory.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. The umbrella advisory links a product-specific advisory, but this record does not infer unpublished version or remediation scope from that link.\nPatch owner: Broadcom; operator for exposure reduction and update rollout\nSource accessed: 2026-10-23\nVulnerability status: Vulnerable. Broadcom ESG advisory 39404 lists Carbon Black App Control Server under Affected Product(s) for both PHP2Shell CVEs; no fixed version is stated in the umbrella advisory.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 affected product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Broadcom ESG advisory 39404 reviewed 2026-10-23"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 affected product scope"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0731",
+      "creationInfo": "_:creationinfo",
+      "name": "Symantec Endpoint Protection Manager (SEPM)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0731"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom ESG advisory 39404 lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for CVE-2026-109618 and CVE-2026-109619; the umbrella advisory does not state fixed releases.",
+      "description": "Endpoint protection management server",
+      "comment": "Inventory record: PHP-0731\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-22, lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s); affected and fixed releases are not stated in the umbrella advisory.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. The umbrella advisory links a product-specific advisory, but this record does not infer unpublished version or remediation scope from that link.\nPatch owner: Broadcom; operator for exposure reduction and update rollout\nSource accessed: 2026-10-23\nVulnerability status: Vulnerable. Broadcom ESG advisory 39404 lists Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; no fixed version is stated in the umbrella advisory.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 affected product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Broadcom ESG advisory 39404 reviewed 2026-10-23"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 affected product scope"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0732",
+      "creationInfo": "_:creationinfo",
+      "name": "CloudSOC Cloud Access Security Broker (CASB)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0732"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "description": "Cloud access security broker",
+      "comment": "Inventory record: PHP-0732\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-22, lists CloudSOC Cloud Access Security Broker (CASB) under investigation; affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a confirmed PHP dependency, affected build, enabled feature set, reachable path or exploitation.\nPatch owner: Broadcom; operator for exposure review and future remediation rollout\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) under investigation for both PHP2Shell CVEs.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 under-investigation product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Broadcom ESG advisory 39404 reviewed 2026-10-23"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 under-investigation product scope"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0733",
+      "creationInfo": "_:creationinfo",
+      "name": "Content Analysis",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0733"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom ESG advisory 39404 lists Content Analysis as under investigation for CVE-2026-109618 and CVE-2026-109619.",
+      "description": "Content analysis security product",
+      "comment": "Inventory record: PHP-0733\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor advisory candidate\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-22, lists Content Analysis under investigation; affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a confirmed PHP dependency, affected build, enabled feature set, reachable path or exploitation.\nPatch owner: Broadcom; operator for exposure review and future remediation rollout\nSource accessed: 2026-10-23\nVulnerability status: Investigation. Broadcom ESG advisory 39404 lists Content Analysis under investigation for both PHP2Shell CVEs.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-23\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 under-investigation product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Broadcom ESG advisory 39404 reviewed 2026-10-23"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 under-investigation product scope"
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -41552,6 +41687,69 @@
       "relationshipType": "dependsOn",
       "summary": "Inventory relationship for PHP-0729: component (depends_on_php)",
       "comment": "Bundles a PHP runtime (PHP core PHP-0037)."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0730",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0730",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0730: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product as affected by PHP2Shell. This association records vendor review scope only; the exact PHP dependency is not published."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0731",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0731",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0731: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product as affected by PHP2Shell. This association records vendor review scope only; the exact PHP dependency is not published."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0732",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0732",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0732: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0733",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0733",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0733: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:broadcom-esg-39404-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0730",
+        "urn:php2shell:inventory:package:PHP-0731"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server and Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "summary": "CVE-2026-109618 assessment: Broadcom ESG advisory 39404 affected product scope",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor the linked Broadcom product advisories for remediation details and restrict management exposure until a fixed release is verified."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -42344,6 +42542,35 @@
       "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
     },
     {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:broadcom-esg-39404-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0732",
+        "urn:php2shell:inventory:package:PHP-0733"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) and Content Analysis as under investigation for both PHP2Shell CVEs; affected and fixed releases are not published.",
+      "summary": "CVE-2026-109618 assessment: Broadcom ESG advisory 39404 under-investigation product scope",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:broadcom-esg-39404-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0730",
+        "urn:php2shell:inventory:package:PHP-0731"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists Carbon Black App Control Server and Symantec Endpoint Protection Manager (SEPM) under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "summary": "CVE-2026-109619 assessment: Broadcom ESG advisory 39404 affected product scope",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor the linked Broadcom product advisories for remediation details and restrict management exposure until a fixed release is verified."
+    },
+    {
       "type": "security_VexAffectedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0420-official-20261023",
       "creationInfo": "_:creationinfo",
@@ -43118,6 +43345,20 @@
       "summary": "CVE-2026-109619 assessment: Fixed in the documented Security Center Patch SC-202610.1 scope",
       "comment": "Public vendor assessment reviewed 2026-10-23. Sources: https://www.tenable.com/security/tns-2026-28 ; https://docs.tenable.com/release-notes/Content/security-center/2026.htm",
       "security_actionStatement": "Install the matching vendor patch and restart Security Center after installation; verify the patch applied successfully."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:broadcom-esg-39404-20261022",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0732",
+        "urn:php2shell:inventory:package:PHP-0733"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Broadcom ESG advisory 39404 lists CloudSOC Cloud Access Security Broker (CASB) and Content Analysis as under investigation for both PHP2Shell CVEs; affected and fixed releases are not published.",
+      "summary": "CVE-2026-109619 assessment: Broadcom ESG advisory 39404 under-investigation product scope",
+      "comment": "Public official source reviewed 2026-10-23. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
     }
   ]
 }

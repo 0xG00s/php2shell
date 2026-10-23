@@ -1788,7 +1788,20 @@
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-securitycenter-sc202610-1",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:tenable-enclave-sc202610-1",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:tenable-enclave-sc202610-1",
-        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7"
+        "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+        "urn:php2shell:inventory:package:PHP-0730",
+        "urn:php2shell:inventory:package:PHP-0731",
+        "urn:php2shell:inventory:package:PHP-0732",
+        "urn:php2shell:inventory:package:PHP-0733",
+        "urn:php2shell:inventory:relationship:PHP-0730",
+        "urn:php2shell:inventory:relationship:PHP-0731",
+        "urn:php2shell:inventory:relationship:PHP-0732",
+        "urn:php2shell:inventory:relationship:PHP-0733",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:broadcom-esg-39404-20261022",
+        "urn:php2shell:inventory:organization:broadcom:caf79e01972c"
       ]
     }
   ]

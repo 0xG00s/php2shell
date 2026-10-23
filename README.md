@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 21 October 2026 17:25 CEST<br>
-Software list last status update: 23 October 2026 11:44 CEST<br>
+Software list last status update: 23 October 2026 12:53 CEST<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
+|2026-10-23 12:53:11 +0200|Broadcom|Carbon Black App Control Server|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-23 12:53:11 +0200|Broadcom|CloudSOC Cloud Access Security Broker (CASB)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-23 12:53:11 +0200|Broadcom|Content Analysis|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-23 12:53:11 +0200|Broadcom|Symantec Endpoint Protection Manager (SEPM)|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
 |2026-10-23 11:44:18 +0200|Tenable|Tenable Enclave Security|SC-202610.1 on Enclave Security 1.7.0 / 1.8.0 / 1.9.1 (PHP 8.2.35)|Fix|[source 1](<https://www.tenable.com/security/tns-2026-29>)<br>[source 2](<https://docs.tenable.com/release-notes/Content/enclave-security/2026.htm>)|
-|2026-10-23 11:44:18 +0200|Tenable|Tenable Security Center (formerly Tenable.sc)|SC-202610.1 on Security Center 6.6.0 / 6.7.2 / 6.8.0 / 6.9.1 (PHP 8.2.35)|Fix|[source 1](<https://www.tenable.com/security/tns-2026-28>)<br>[source 2](<https://docs.tenable.com/release-notes/Content/security-center/2026.htm>)|
-|2026-10-23 11:34:29 +0200|Amazon Web Services|AWS Elastic Beanstalk PHP platform|AL2023 PHP 8.2-8.5 platform version 4.13.13|Fix|[source 1](<https://docs.aws.amazon.com/elasticbeanstalk/latest/platforms/platforms-supported.html>)<br>[source 2](<https://aws.amazon.com/security/security-bulletins/2026-143-aws/>)<br>[source 3](<https://docs.aws.amazon.com/elasticbeanstalk/latest/relnotes/release-2026-10-21-al2023-php84-php85.html>)<br>[source 4](<https://docs.aws.amazon.com/elasticbeanstalk/latest/relnotes/release-2026-10-22-al2023-php82-php83.html>)|
-|2026-10-23 11:34:29 +0200|Cisco|AppDynamics On-Premises Secure Application|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-23 11:34:29 +0200|Cisco|AppDynamics PHP Agent|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
