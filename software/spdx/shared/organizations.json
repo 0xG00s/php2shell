@@ -3209,6 +3209,12 @@
       "spdxId": "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
       "creationInfo": "_:creationinfo",
       "name": "Server Side Up"
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:tenable:97a4c423fdc7",
+      "creationInfo": "_:creationinfo",
+      "name": "Tenable"
     }
   ]
 }
