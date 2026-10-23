@@ -4402,7 +4402,12 @@
         "urn:php2shell:inventory:package:PHP-0726",
         "urn:php2shell:inventory:relationship:PHP-0726",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:unopim-docker-images-20261022",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:unopim-docker-images-20261022"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:unopim-docker-images-20261022",
+        "urn:php2shell:inventory:package:PHP-0727",
+        "urn:php2shell:inventory:relationship:PHP-0727",
+        "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:serversideup-v5-0-2-20261021",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:serversideup-v5-0-2-20261021"
       ]
     },
     {
@@ -41100,6 +41105,87 @@
       "security_statusNotes": "UnoPim's v3.1.3 release note confirms the official webkul/unopim and webkul/unopim-queue images were rebuilt on PHP 8.4.27 for both CVEs. This confirms the named Docker image scope only; self-hosted installs must update their own PHP runtime and cached/running containers require pull and redeploy.",
       "summary": "CVE-2026-109619 assessment: Fixed in the named official UnoPim Docker images rebuilt on PHP 8.4.27",
       "comment": "Added from the official UnoPim v3.1.3 release note reviewed 2026-10-23: https://github.com/unopim/unopim/releases/tag/v3.1.3. The release note explicitly names both CVEs, publishes fixed image tags and digests, and states self-hosted installs must update PHP separately.\nAction statement: Pull and redeploy the named official images and verify PHP 8.4.27; self-hosted non-Docker installs must update PHP to 8.4.27, 8.3.36 or 8.2.35 or later and restart PHP-FPM or Apache."
+    },
+    {
+      "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
+      "creationInfo": "_:creationinfo",
+      "name": "Server Side Up"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0727",
+      "creationInfo": "_:creationinfo",
+      "name": "Server Side Up PHP Docker images, v5.0.2 for PHP 8.2-8.5",
+      "software_packageVersion": "v5.0.2: PHP 8.2.35, 8.3.36, 8.4.27, 8.5.12 image variants",
+      "software_primaryPurpose": "container",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0727"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:server-side-up:b8dc6cf91ab8",
+      "summary": "Publisher reports fixed v5.0.2 Docker images for PHP 8.2-8.5; image digests and deployed workers were not verified.",
+      "description": "Server Side Up PHP Docker images built on official Docker PHP images; variant-specific web and CLI surfaces",
+      "comment": "Inventory record: PHP-0727\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0032\nEvidence status: Publisher-reported fixed image release\nDeployment status: Not measured\nPHP surface: Variant-specific; the release illustrates an 8.4-fpm-nginx image, but this record does not identify a running SAPI\nPHP version scope: The v5.0.2 release reports images rebuilt and tested for PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12. Its PHP 8.1.34 image is explicitly unpatched and excluded from this fixed-release record.\nExtensions: Variant-specific; loaded native extension set not measured\nLimitations: This is a publisher release statement, not an independently verified image digest or running worker observation. Floating tags require a fresh pull and redeploy; old v5.0.1 release tags and older patch tags do not acquire the fix. Custom and derived images need their own rebuild and rollout.\nPatch owner: Server Side Up for published image rebuilds; derived-image publisher and operator for rebuild, pull and redeploy\nDownstream surface: Applications and jobs using the named image variants\nRelease pin: Server Side Up v5.0.2 published 2026-10-21; image digests not supplied in the cited release and not independently measured\nSource accessed: 2026-10-23\nAliases: serversideup/php\nConditional downstream consequence: A vulnerable PHP runtime serving web requests could expose application data or worker-level code execution. The publisher reports fixed replacement images in the scoped release, but a tag name, cached layer or package version does not prove what an operator is running.\nVulnerability status: Publisher reports fixed v5.0.2 images for PHP 8.2-8.5; PHP 8.1 remains unpatched and deployed image contents are unknown.\nCVE-2026-109618: Publisher-reported fix in v5.0.2 images for PHP 8.2-8.5 only\nCVE-2026-109619: Publisher-reported fix in v5.0.2 images for PHP 8.2-8.5 only\nCVE assessment limit: The cited release does not establish individual image digests, all tags, custom builds, or running deployments; verify selected digest, serving runtime and rollout separately.",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://github.com/serversideup/docker-php/releases/tag/v5.0.2"
+          ],
+          "comment": "Server Side Up v5.0.2 publisher release announcing rebuilt and tested fixed PHP image variants and tag update instructions"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/docker-library/php/pull/1694"
+          ],
+          "comment": "Official Docker PHP source update to fixed PHP releases; it does not prove Server Side Up image bytes"
+        }
+      ]
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0727",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0032"
+      ],
+      "relationshipType": "contains",
+      "summary": "The scoped Server Side Up images are built on official Docker PHP images.",
+      "comment": "The v5.0.2 publisher release says its images rebuild on patched official Docker PHP images; the relationship does not identify a running image digest."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:serversideup-v5-0-2-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0727"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "The publisher reports v5.0.2 images for PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12 rebuilt and tested for CVE-2026-109618. This assessment covers those versioned image variants only. PHP 8.1.34 remains unpatched; image digests and running deployments were not verified.",
+      "summary": "CVE-2026-109618 assessment: publisher-reported fix in v5.0.2 image variants for PHP 8.2-8.5",
+      "comment": "Based on the Server Side Up v5.0.2 release published 2026-10-21: https://github.com/serversideup/docker-php/releases/tag/v5.0.2. The release names both CVEs and fixed PHP versions but provides no individual image digest. Action statement: select the appropriate v5.0.2 or fixed patch tag, pull and redeploy, then verify the selected image digest and serving runtime."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:serversideup-v5-0-2-20261021",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0727"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "The publisher reports v5.0.2 images for PHP 8.2.35, 8.3.36, 8.4.27 and 8.5.12 rebuilt and tested for CVE-2026-109619. This assessment covers those versioned image variants only. PHP 8.1.34 remains unpatched; image digests and running deployments were not verified.",
+      "summary": "CVE-2026-109619 assessment: publisher-reported fix in v5.0.2 image variants for PHP 8.2-8.5",
+      "comment": "Based on the Server Side Up v5.0.2 release published 2026-10-21: https://github.com/serversideup/docker-php/releases/tag/v5.0.2. The release names both CVEs and fixed PHP versions but provides no individual image digest. Action statement: select the appropriate v5.0.2 or fixed patch tag, pull and redeploy, then verify the selected image digest and serving runtime."
     }
   ]
 }
