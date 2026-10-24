@@ -1885,8 +1885,8 @@
         "urn:php2shell:inventory:organization:ubiquiti",
         "urn:php2shell:inventory:package:PHP-0753",
         "urn:php2shell:inventory:relationship:PHP-0753",
-        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:ubiquiti-uisp-crm-20261023",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:ubiquiti-uisp-crm-20261023"
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:ubiquiti-uisp-crm-20261024",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:ubiquiti-uisp-crm-20261024"
       ]
     }
   ]

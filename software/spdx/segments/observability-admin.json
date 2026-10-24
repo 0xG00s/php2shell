@@ -3532,11 +3532,19 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:ubiquiti",
-      "software_packageVersion": "CRM 4.6.13 / 4.6.15 (community-reported; unverified)",
-      "summary": "Scope: UISP CRM (UCRM). Community reports identify CRM 4.6.13 / PHP 8.3.32 and CRM 4.6.15 / PHP 8.3.35, and report CRM 4.6.16 / PHP 8.3.36 plus a fix in UISP Application 3.1.69 Early Access. The official 3.1.69 release page requires an EA login; its release notes were not verified. No public vendor confirmation or general-availability ETA was verified as of 2026-10-23. Community forum: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; Official Early Access release page (login required): https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc",
+      "software_packageVersion": "UISP Application 3.1.70 (CRM module)",
+      "summary": "Public official release dated 2026-10-23; Ubiquiti recommends updating promptly. The release notes do not specify a standalone CRM version, bundled PHP version, or complete affected-version range. Official release: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67 ; Historical community discussion: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; Earlier EA release (contents not independently verified): https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc",
       "description": "CRM component of UISP Application (formerly UNMS).",
-      "comment": "Source review: 2026-10-23. Community claims are investigation leads, not independently verified vendor statements. No claim is made about UniFi, UISP hardware, all earlier versions, or cloud rollout.",
+      "comment": "Official release notes reviewed 2026-10-24. Assessment is limited to CVE-2026-109618 and CVE-2026-109619 in the UISP CRM module of UISP Application 3.1.70. No claim is made about UniFi, UISP hardware, the complete range of earlier affected releases, other CVEs, or cloud rollout.",
       "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "releaseNotes",
+          "locator": [
+            "https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67"
+          ],
+          "comment": "Public official UISP Application 3.1.70 release notes; explicitly confirms fixes for both CVEs in the CRM PHP runtime. Reviewed 2026-10-24."
+        },
         {
           "type": "ExternalRef",
           "externalRefType": "other",
@@ -3563,32 +3571,33 @@
       "to": [
         "urn:php2shell:inventory:package:PHP-0037"
       ],
-      "relationshipType": "other",
-      "summary": "Community-reported PHP runtime association; not independently verified."
+      "relationshipType": "dependsOn",
+      "summary": "Vendor-confirmed PHP runtime dependency in the UISP CRM module.",
+      "comment": "UISP Application 3.1.70 official release notes identify the PHP runtime used by the CRM module. Source: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67"
     },
     {
-      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
-      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:ubiquiti-uisp-crm-20261023",
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:ubiquiti-uisp-crm-20261024",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
       "to": [
         "urn:php2shell:inventory:package:PHP-0753"
       ],
-      "relationshipType": "underInvestigationFor",
-      "security_statusNotes": "Community-reported PHP runtime exposure; vendor confirmation and fixed-version scope remain unverified. Investigation is this inventory assessment, not a statement that Ubiquiti has announced an investigation.",
-      "comment": "Sources reviewed 2026-10-23: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc"
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Ubiquiti confirms that UISP Application 3.1.70 fixes both PHP2Shell CVEs in the PHP runtime used by the UISP CRM module. Fix status applies to that release; it does not establish that existing deployments or cloud instances have been upgraded.",
+      "comment": "Public official source reviewed 2026-10-24: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67\nAction statement: Update to UISP Application 3.1.70 using vendor instructions and verify successful deployment."
     },
     {
-      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
-      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:ubiquiti-uisp-crm-20261023",
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:ubiquiti-uisp-crm-20261024",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
       "to": [
         "urn:php2shell:inventory:package:PHP-0753"
       ],
-      "relationshipType": "underInvestigationFor",
-      "security_statusNotes": "Community-reported PHP runtime exposure; vendor confirmation and fixed-version scope remain unverified. Investigation is this inventory assessment, not a statement that Ubiquiti has announced an investigation.",
-      "comment": "Sources reviewed 2026-10-23: https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86 ; https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc"
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Ubiquiti confirms that UISP Application 3.1.70 fixes both PHP2Shell CVEs in the PHP runtime used by the UISP CRM module. Fix status applies to that release; it does not establish that existing deployments or cloud instances have been upgraded.",
+      "comment": "Public official source reviewed 2026-10-24: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67\nAction statement: Update to UISP Application 3.1.70 using vendor instructions and verify successful deployment."
     }
   ]
 }
