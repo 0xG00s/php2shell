@@ -257,9 +257,9 @@
         }
       ],
       "suppliedBy": "urn:php2shell:inventory:organization:fedora-project-php-maintainers:006582aa5697",
-      "summary": "The official package catalogue identifies PHP and gives distinct stable, testing and Rawhide release entries.",
+      "summary": "Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.",
       "description": "Packaged server-side PHP runtime; exact SAPI subpackage/configuration must be selected",
-      "comment": "Inventory record: PHP-0360\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Confirmed relationship\nDeployment status: Not measured\nPHP surface: Packaged server-side PHP runtime; exact SAPI subpackage/configuration must be selected\nPHP version scope: Page lists Fedora 45 8.5.11-2.fc45; Fedora 44 8.5.11-1.fc44; Fedora 43 8.4.26-1.fc43; Rawhide 8.5.12~RC1-1.fc46\nExtensions: Bundled/required/optional extension inventory unknown; selected package or build recipe must be resolved\nLimitations: Rawhide RC is not a stable upstream release. Catalogue labels do not establish OS-release availability on any host or which SAPI/modules were installed. No binary/image was pulled, installed, built or executed. Presence is not proof of an affected build, reachable flaw or compromise. Deployments were not measured.\nPatch owner: Fedora PHP package maintainers, Fedora update process and deploying operator\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: Dated package catalogue observations; no RPM bytes or signatures verified\nSource accessed: 2026-10-17\nAliases: rpm:fedora/php\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Preliminary CVE-REVIEW-20261021-01: PHP relationship confirmed; CVE match unknown. No affected deployment established.\nCVE-2026-109618: PHP relationship confirmed; CVE match unknown\nCVE-2026-109619: PHP relationship confirmed; CVE match unknown\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.",
+      "comment": "Inventory record: PHP-0360\nCategory: Containers and distribution\nOriginal relationship: bundles\nRelationship direction: distributes_php\nParent component: PHP-0037\nEvidence status: Official public vendor/upstream CVE assessment\nDeployment status: Not measured\nPHP surface: Packaged server-side PHP runtime; exact SAPI subpackage/configuration must be selected\nPHP version scope: php-8.4.27-2.fc43; php-8.5.12-1.fc44; php-8.5.12-1.fc45; php-8.5.12-1.fc46 (Rawhide)\nExtensions: Bundled/required/optional extension inventory unknown; selected package or build recipe must be resolved\nLimitations: Only the named vendor product and version scope is assessed. Installed versions, exposure and exploitation were not tested.\nPatch owner: Fedora PHP package maintainers, Fedora update process and deploying operator\nDownstream surface: Only applications/jobs using the selected installed runtime or image\nRelease pin: php-8.4.27-2.fc43; php-8.5.12-1.fc44; php-8.5.12-1.fc45; php-8.5.12-1.fc46 (Rawhide)\nSource accessed: 2026-10-26\nAliases: rpm:fedora/php\nConditional downstream consequence: A matching flaw could affect applications or jobs actually using this installed package and its loaded modules. Package availability alone creates no exposure. Distribution backports, SAPI, configuration and reachable input must be matched before assessing disclosure, DoS, integrity or code-execution consequences.\nVulnerability status: Fix / Fix. Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.\nCVE-2026-109618: Fix. Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.\nCVE-2026-109619: Fix. Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.\nCVE assessment limit: Pre-release public-source review. Affected/fixed builds, SAPI/features and exploit prerequisites are not established. Installed version, backport, configuration and reachable path need separate evidence.\nPublic vendor CVE review: 2026-10-26\nVendor advisory sources: https://bugzilla.redhat.com/show_bug.cgi?id=2556842",
       "externalRef": [
         {
           "type": "ExternalRef",
@@ -268,8 +268,17 @@
             "https://packages.fedoraproject.org/pkgs/php/php/"
           ],
           "comment": "Official PHP distribution, package or build declaration"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://bugzilla.redhat.com/show_bug.cgi?id=2556842"
+          ],
+          "comment": "Official public vendor source reviewed 2026-10-26"
         }
-      ]
+      ],
+      "software_packageVersion": "php-8.4.27-2.fc43; php-8.5.12-1.fc44; php-8.5.12-1.fc45; php-8.5.12-1.fc46 (Rawhide)"
     },
     {
       "type": "software_Package",
@@ -3001,6 +3010,34 @@
       "security_statusNotes": "CloudLinux confirms fixed ea-php52 through ea-php85 packages in stable for EL7/8/9/10. Use the exact vendor package revisions, not the upstream PHP number alone: for example ea-php84 8.4.26-2.elX.cloudlinux.1 contains both fixes. CL6 and other platforms are not included in this fixed scope.",
       "summary": "CVE-2026-109619 assessment: Fix in the specified published release",
       "comment": "Official sources reviewed 2026-10-23: https://cloudlinux.statuspage.io/incidents/zl0vt1yq3dj5.\nAction statement: Install the stated fixed package or pull and recreate the stated container image, then verify the serving PHP runtime."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0360-official-20261026",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0360"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.",
+      "summary": "CVE-2026-109618 assessment: Fix. Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.",
+      "comment": "Official public source reviewed 2026-10-26. Source: https://bugzilla.redhat.com/show_bug.cgi?id=2556842",
+      "security_actionStatement": "Install the fixed RPM for the Fedora release and restart the PHP web workers. Rawhide is a development release."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0360-official-20261026",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0360"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.",
+      "summary": "CVE-2026-109619 assessment: Fix. Fedora bug 2556842 names both CVEs and the fixed RPMs. Fedora Update System confirms the Fedora 43 and 45 updates reached stable; the report also records the Fedora 44 update as live and Fedora 46/Rawhide as pushed. Only the listed builds are assessed as fixed.",
+      "comment": "Official public source reviewed 2026-10-26. Source: https://bugzilla.redhat.com/show_bug.cgi?id=2556842",
+      "security_actionStatement": "Install the fixed RPM for the Fedora release and restart the PHP web workers. Rawhide is a development release."
     },
     {
       "type": "software_Package",

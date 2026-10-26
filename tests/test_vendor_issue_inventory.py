@@ -18,25 +18,26 @@ class VendorIssueInventoryTests(unittest.TestCase):
                      for node in cls.document["@graph"]}
         _, cls.entries = generator.build_entry_map(cls.document)
 
-    def test_clearpass_partial_mitigations_are_not_full_fixes(self):
+    def test_clearpass_requires_the_released_php_hotfix(self):
         product = self.entries[PREFIX + "package:PHP-0751"]
-        self.assertEqual([product[cve] for cve in CVES], ["Vulnerable", "Vulnerable"])
-        for version in ("6.14.0", "6.11.15", "6.14.1", "6.11.16"):
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        for version in ("6.14.1", "6.11.16"):
             self.assertIn(version, product["version"])
-        self.assertIn("cluster-admin", product["notes"])
-        self.assertIn("full fixes remain in development", product["notes"])
+        self.assertIn("hotfix", product["version"])
+        self.assertIn("without the hotfix remain affected", product["notes"])
         self.assertIn("hpesbnw05171en_us", product["links"])
 
     def test_ontap_keeps_distinct_cve_assessments(self):
         product = self.entries[PREFIX + "package:PHP-0752"]
-        self.assertEqual([product[cve] for cve in CVES], ["Vulnerable", "Not vuln"])
-        self.assertEqual(generator.combined_status(product, CVES), "Vulnerable/Not vuln")
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Not vuln"])
+        self.assertEqual(generator.combined_status(product, CVES), "Fix/Not vuln")
         self.assertIn("PHP jail", product["notes"])
-        self.assertIn("No fixed release is listed", product["notes"])
+        for release in ("9.15.1P20HF1", "9.16.1P16HF1", "9.17.1P11HF1",
+                        "9.18.1P8HF1", "9.19.1P3HF1"):
+            self.assertIn(release, product["version"])
         self.assertIn("NTAP-20261021-0021", product["links"])
-        vex = self.nodes[PREFIX + "vex:CVE-2026-109618:affects:php-0752-official-20261023"]
-        self.assertIn("authenticated attackers remain a risk", vex["security_actionStatement"])
-        self.assertIn("repeat for new SVMs", vex["security_actionStatement"])
+        vex = self.nodes[PREFIX + "vex:CVE-2026-109618:fixedIn:php-0752-official-20261026"]
+        self.assertIn("first fixed release", vex["security_actionStatement"])
 
     def test_sepm_fixed_builds_retain_report_provenance(self):
         product = self.entries[PREFIX + "package:PHP-0731"]
@@ -51,14 +52,14 @@ class VendorIssueInventoryTests(unittest.TestCase):
             vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0731-maintainer-20261023"]
             self.assertEqual(vex["to"], [PREFIX + "package:PHP-0731"])
 
-    def test_sepm_fix_does_not_change_other_broadcom_statuses(self):
+    def test_broadcom_products_keep_independent_vendor_assessments(self):
         carbon_black = self.entries[PREFIX + "package:PHP-0730"]
         self.assertEqual(carbon_black["version"], "Broadcom ESG advisory 39404 affected product scope")
         self.assertNotIn("/39421", carbon_black["links"])
         self.assertNotIn("/issues/30", carbon_black["links"])
         for identifier, status in (
             ("PHP-0730", "Vulnerable"),
-            ("PHP-0732", "Investigation"),
+            ("PHP-0732", "Not vuln"),
             ("PHP-0733", "Investigation"),
         ):
             with self.subTest(identifier=identifier):
