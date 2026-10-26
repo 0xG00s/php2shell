@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 23 October 2026 12:59 CEST<br>
-Software list last status update: 23 October 2026 14:46 CEST<br>
+Software list last status update: 26 October 2026 03:24 CET<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -48,11 +48,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-23 14:46:29 +0200|Broadcom|Symantec Endpoint Protection Manager (SEPM)|14.3.27716.10000 / 14.4.494.0000|Fix|[source 1](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)<br>[source 2](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421>)<br>[source 3](<https://github.com/NCSC-NL/php2shell/issues/30>)|
-|2026-10-23 14:46:29 +0200|Hewlett Packard Enterprise|HPE Networking ClearPass Policy Manager|6.14.0 and below / 6.11.15 and below; 6.14.1 / 6.11.16 partially mitigated, still affected|Vulnerable|[source](<https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US>)|
-|2026-10-23 14:46:29 +0200|NetApp|ONTAP 9|ONTAP 9; affected maintenance releases and fixed releases not specified|Vulnerable/Not vuln|[source](<https://security.netapp.com/advisory/NTAP-20261021-0021>)|
-|2026-10-23 13:48:52 +0200|Cisco|Cisco Expressway Select Series|Expressway Select Series; affected release range not specified|Vulnerable|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-23 13:48:52 +0200|Cisco|Cisco Identity Services Engine (ISE) Portal Builder||Investigation|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-26 03:24:33 +0100|GetPageSpeed|GetPageSpeed PHP 5.6-8.4 backport packages for CentOS 7 / EL7|Known patched EL7 builds: 5.6.40-44.el7; 7.0.33-46.el7; 7.1.33-35.el7; 7.2.34-30.el7; 7.3.33-26.el7; 7.4.33-35.el7; 8.0.30-25.el7; 8.1.34-8.el7; 8.2.35-2.el7; 8.3.36-2.el7; 8.4.27-3.el7|Fix|[source 1](<https://www.getpagespeed.com/php2shell#eol>)<br>[source 2](<https://www.getpagespeed.com/server-setup/php/php2shell-on-centos-7>)<br>[source 3](<https://www.getpagespeed.com/eol/centos-7>)|
+|2026-10-26 03:19:07 +0100|Broadcom|CloudSOC Cloud Access Security Broker (CASB)|CloudSOC CASB service; excludes the separate SpanVA appliance|Not vuln|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-26 03:19:07 +0100|Cisco|Cisco Catalyst Center (formerly DNA Center)|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-26 03:19:07 +0100|Cisco|Cisco CX Cloud|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-26 03:19:07 +0100|Cisco|Cisco IoT Control Center|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
