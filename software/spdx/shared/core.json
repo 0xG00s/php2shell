@@ -1926,6 +1926,10 @@
         "urn:php2shell:inventory:relationship:PHP-0753",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:getpagespeed-el7-php-20261024",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:getpagespeed-el7-php-20261024",
+        "urn:php2shell:inventory:package:PHP-0754",
+        "urn:php2shell:inventory:relationship:PHP-0754",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:getpagespeed-deb-php-20261026",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:getpagespeed-deb-php-20261026",
         "urn:php2shell:inventory:organization:getpagespeed:5d1f0c2a9b3e"
       ]
     }

@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 21 October 2026 17:25 CEST<br>
-Software list last status update: 26 October 2026 03:24 CET<br>
+Software list last status update: 26 October 2026 15:39 UTC+07:00<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-26 03:24:33 +0100|GetPageSpeed|GetPageSpeed PHP 5.6-8.4 backport packages for CentOS 7 / EL7|Known patched EL7 builds: 5.6.40-44.el7; 7.0.33-46.el7; 7.1.33-35.el7; 7.2.34-30.el7; 7.3.33-26.el7; 7.4.33-35.el7; 8.0.30-25.el7; 8.1.34-8.el7; 8.2.35-2.el7; 8.3.36-2.el7; 8.4.27-3.el7|Fix|[source 1](<https://www.getpagespeed.com/php2shell#eol>)<br>[source 2](<https://www.getpagespeed.com/server-setup/php/php2shell-on-centos-7>)<br>[source 3](<https://www.getpagespeed.com/eol/centos-7>)|
+|2026-10-26 15:39:55 +0700|GetPageSpeed|GetPageSpeed PHP 7.2-8.4 packages for Ubuntu 18.04/20.04 and Debian 10|Known patched builds (not necessarily first fixed revisions): bionic PHP 7.2 7.2.34-66+gps1+ubuntu1804+stable.1; buster PHP 7.3 7.3.33-35+gps1+deb10+stable.1; focal PHP 7.4 1:7.4.33-31+gps1+ubuntu2004+stable.1; PHP 8.0 1:8.0.30-25+gps1+ubuntu2004+stable.1; PHP 8.1 8.1.34-9+gps1+ubuntu2004+stable.1; PHP 8.2 8.2.35-1+gps1+ubuntu2004+stable.1; PHP 8.3 8.3.36-1+gps1+ubuntu2004+stable.1; PHP 8.4 8.4.27-1+gps1+ubuntu2004+stable.1|Fix|[source 1](<https://www.getpagespeed.com/server-setup/php/php2shell-on-ubuntu-debian>)<br>[source 2](<https://www.getpagespeed.com/php2shell>)<br>[source 3](<https://extras.getpagespeed.com/ubuntu/dists/bionic/main/binary-amd64/Packages.gz>)<br>[source 4](<https://extras.getpagespeed.com/debian/dists/buster/main/binary-amd64/Packages.gz>)<br>[source 5](<https://extras.getpagespeed.com/ubuntu/dists/focal/main/binary-amd64/Packages.gz>)|
+|2026-10-26 03:46:58 +0100|GetPageSpeed|GetPageSpeed PHP 5.6-8.4 backport packages for CentOS 7 / EL7|Known patched EL7 builds: 5.6.40-44.el7; 7.0.33-46.el7; 7.1.33-35.el7; 7.2.34-30.el7; 7.3.33-26.el7; 7.4.33-35.el7; 8.0.30-25.el7; 8.1.34-8.el7; 8.2.35-2.el7; 8.3.36-2.el7; 8.4.27-3.el7|Fix|[source 1](<https://www.getpagespeed.com/php2shell#eol>)<br>[source 2](<https://www.getpagespeed.com/server-setup/php/php2shell-on-centos-7>)<br>[source 3](<https://www.getpagespeed.com/eol/centos-7>)|
 |2026-10-26 03:19:07 +0100|Broadcom|CloudSOC Cloud Access Security Broker (CASB)|CloudSOC CASB service; excludes the separate SpanVA appliance|Not vuln|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
 |2026-10-26 03:19:07 +0100|Cisco|Cisco Catalyst Center (formerly DNA Center)|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
 |2026-10-26 03:19:07 +0100|Cisco|Cisco CX Cloud|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-26 03:19:07 +0100|Cisco|Cisco IoT Control Center|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
