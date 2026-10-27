@@ -14,8 +14,6 @@
       "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:6f4f7fc812ed": 1745,
       "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:4292cdcd32c3": 1746,
       "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:f70b575bbd8c": 1747,
-      "urn:php2shell:inventory:vex:CVE-2026-109618:affects:c73d82a3c63d": 1844,
-      "urn:php2shell:inventory:vex:CVE-2026-109619:affects:28f39ad32d6d": 1845,
       "urn:php2shell:inventory:vex:CVE-2026-109618:affects:calif-confirmed-php-apps-20261021": 1860,
       "urn:php2shell:inventory:vex:CVE-2026-109619:affects:calif-confirmed-php-apps-20261021": 1861,
       "urn:php2shell:inventory:vex:CVE-2026-109618:affects:documented-php-web-products-20261021": 1862,
@@ -729,34 +727,34 @@
       "comment": "Generated from inventory field 'cve_2026_109619'. This assessment preserves the source inventory wording and does not assert an affected deployment."
     },
     {
-      "type": "security_VexAffectedVulnAssessmentRelationship",
-      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:c73d82a3c63d",
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:paloalto-panos-panorama-20261027",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
       "to": [
         "urn:php2shell:inventory:package:PHP-0623",
         "urn:php2shell:inventory:package:PHP-0625"
       ],
-      "relationshipType": "affects",
-      "security_statusNotes": "Palo Alto Networks lists all PAN-OS and Panorama versions as affected by both CVEs. Fixed releases are forthcoming; restrict management access. No claim of appliance-specific remote code execution is added.",
-      "summary": "CVE-2026-109618 assessment: Palo Alto Networks lists all PAN-OS and Panorama versions as affected by both CVEs. Fixed releases are forthcoming; restrict management access. No claim of appliance-specific remote code execution is added.",
-      "comment": "Public vendor assessment reviewed 2026-10-21 and re-checked 2026-10-22. Affected scope: PAN-OS 12.2, 12.1, 11.2, 11.1, 10.2 and all Panorama versions; management web interface only. Sources: https://security.paloaltonetworks.com/CVE-2026-109618",
-      "security_actionStatement": "Limit HTTPS web UI and XML API access to trusted internal IP addresses and monitor the advisory for fixed releases. For signature mitigation, a Threat Prevention subscription and Applications and Threats content version 9162 or later are required; enable Threat IDs 543004 and 97622-97625. Route MGT-bound traffic through a dataplane (DP) port, replace the inbound-management certificate as documented by the vendor, configure inbound TLS decryption for inspection, and apply Threat Prevention to that management traffic. Frontier Virtual Patching (ATP Plus) provides Threat ID 543004 on PAN-OS 12.2.4 and later; the traffic inspection prerequisites still apply. These mitigations do not constitute a software fix."
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Palo Alto Networks advisory, updated 2026-10-27, lists fixed hotfix releases for every affected PAN-OS branch; the same releases apply to PA-Series, VM-Series and Panorama (virtual and M-Series). Earlier builds remain affected. Scope is the management web interface (HTTPS web UI and XML API).",
+      "summary": "CVE-2026-109618 assessment: Palo Alto Networks advisory, updated 2026-10-27, lists fixed hotfix releases for every affected PAN-OS branch; the same releases apply to PA-Series, VM-Series and Panorama (virtual and M-Series). Earlier builds remain affected. Scope is the management web interface (HTTPS web UI and XML API).",
+      "security_actionStatement": "Upgrade PAN-OS and Panorama to the fixed hotfix release for the deployed branch (12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13) or later. Until upgraded, limit HTTPS web UI and XML API access to trusted internal IP addresses; Threat Prevention signatures (Applications and Threats content 9162 or later) are a mitigation, not a software fix.",
+      "comment": "Public vendor assessment reviewed 2026-10-27; replaces the earlier 'affects' assessment (fixed releases not yet announced). Fixed in >= 12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13. Sources: https://security.paloaltonetworks.com/CVE-2026-109618\nAction statement: Upgrade PAN-OS and Panorama to the fixed hotfix release for the deployed branch (12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13) or later. Until upgraded, limit HTTPS web UI and XML API access to trusted internal IP addresses; Threat Prevention signatures (Applications and Threats content 9162 or later) are a mitigation, not a software fix."
     },
     {
-      "type": "security_VexAffectedVulnAssessmentRelationship",
-      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:28f39ad32d6d",
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:paloalto-panos-panorama-20261027",
       "creationInfo": "_:creationinfo",
       "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
       "to": [
         "urn:php2shell:inventory:package:PHP-0623",
         "urn:php2shell:inventory:package:PHP-0625"
       ],
-      "relationshipType": "affects",
-      "security_statusNotes": "Palo Alto Networks lists all PAN-OS and Panorama versions as affected by both CVEs. Fixed releases are forthcoming; restrict management access. No claim of appliance-specific remote code execution is added.",
-      "summary": "CVE-2026-109619 assessment: Palo Alto Networks lists all PAN-OS and Panorama versions as affected by both CVEs. Fixed releases are forthcoming; restrict management access. No claim of appliance-specific remote code execution is added.",
-      "comment": "Public vendor assessment reviewed 2026-10-21 and re-checked 2026-10-22. Affected scope: PAN-OS 12.2, 12.1, 11.2, 11.1, 10.2 and all Panorama versions; management web interface only. Sources: https://security.paloaltonetworks.com/CVE-2026-109618",
-      "security_actionStatement": "Limit HTTPS web UI and XML API access to trusted internal IP addresses and monitor the advisory for fixed releases. For signature mitigation, a Threat Prevention subscription and Applications and Threats content version 9162 or later are required; enable Threat IDs 543004 and 97622-97625. Route MGT-bound traffic through a dataplane (DP) port, replace the inbound-management certificate as documented by the vendor, configure inbound TLS decryption for inspection, and apply Threat Prevention to that management traffic. Frontier Virtual Patching (ATP Plus) provides Threat ID 543004 on PAN-OS 12.2.4 and later; the traffic inspection prerequisites still apply. These mitigations do not constitute a software fix."
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Palo Alto Networks advisory, updated 2026-10-27, lists fixed hotfix releases for every affected PAN-OS branch; the same releases apply to PA-Series, VM-Series and Panorama (virtual and M-Series). Earlier builds remain affected. Scope is the management web interface (HTTPS web UI and XML API).",
+      "summary": "CVE-2026-109619 assessment: Palo Alto Networks advisory, updated 2026-10-27, lists fixed hotfix releases for every affected PAN-OS branch; the same releases apply to PA-Series, VM-Series and Panorama (virtual and M-Series). Earlier builds remain affected. Scope is the management web interface (HTTPS web UI and XML API).",
+      "security_actionStatement": "Upgrade PAN-OS and Panorama to the fixed hotfix release for the deployed branch (12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13) or later. Until upgraded, limit HTTPS web UI and XML API access to trusted internal IP addresses; Threat Prevention signatures (Applications and Threats content 9162 or later) are a mitigation, not a software fix.",
+      "comment": "Public vendor assessment reviewed 2026-10-27; replaces the earlier 'affects' assessment (fixed releases not yet announced). Fixed in >= 12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13. Sources: https://security.paloaltonetworks.com/CVE-2026-109618\nAction statement: Upgrade PAN-OS and Panorama to the fixed hotfix release for the deployed branch (12.2.4-h1; 12.1.4-h13, 12.1.7-h11, 12.1.10-h3; 11.2.4-h23, 11.2.7-h23, 11.2.10-h16, 11.2.13-h4, 11.2.16-h1; 11.1.4-h38, 11.1.6-h40, 11.1.7-h12, 11.1.10-h36, 11.1.13-h16, 11.1.16-h4; 10.2.7-h39, 10.2.10-h42, 10.2.13-h27, 10.2.16-h12, 10.2.18-h13) or later. Until upgraded, limit HTTPS web UI and XML API access to trusted internal IP addresses; Threat Prevention signatures (Applications and Threats content 9162 or later) are a mitigation, not a software fix."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
