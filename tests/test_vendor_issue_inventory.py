@@ -60,7 +60,7 @@ class VendorIssueInventoryTests(unittest.TestCase):
         for identifier, status in (
             ("PHP-0730", "Vulnerable"),
             ("PHP-0732", "Not vuln"),
-            ("PHP-0733", "Investigation"),
+            ("PHP-0733", "Not vuln"),
         ):
             with self.subTest(identifier=identifier):
                 product = self.entries[PREFIX + "package:" + identifier]
