@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 21 October 2026 17:25 CEST<br>
-Software list last status update: 27 October 2026 08:41 CET<br>
+Software list last status update: 27 October 2026 11:18 CET<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-27 08:41:21 +0100|Alpine Linux package maintainers|Alpine Linux v3.22 php84 package family|8.4.27-r0|Fix|[source 1](<https://pkgs.alpinelinux.org/package/v3.22/community/x86_64/php84>)<br>[source 2](<https://raw.githubusercontent.com/alpinelinux/aports/3.22-stable/community/php84/APKBUILD>)|
-|2026-10-27 08:41:21 +0100|Antagonist|Antagonist DirectAdmin PHP hosting selector|Provider-patched managed hosting, including PHP Extended Support, by 2026-10-22; build numbers unpublished|Fix|[source 1](<https://help.antagonist.nl/hc/nl/articles/8523972848401-Wat-kan-ik-met-de-PHP-selector-in-DirectAdmin>)<br>[source 2](<https://www.antagonist.nl/blog/php-lekken-gedicht-zo-hebben-we-het-aangepakt/>)|
-|2026-10-27 08:41:21 +0100|Automattic / WordPress.com|WordPress.com plugin-enabled PHP hosting environment|WordPress.com managed service protected as of 2026-10-21; patched build unpublished|Fix|[source 1](<https://wordpress.com/support/php-environment/>)<br>[source 2](<https://wordpress.com/support/php-security-update-october-2026-cve-2026-109618-and-cve-2026-109619-php2shell/>)|
-|2026-10-27 08:41:21 +0100|Broadcom|Content Analysis|Content Analysis (CAS) only; excludes CASMA|Not vuln|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
-|2026-10-27 08:41:21 +0100|Cisco|Cisco Ultra Cloud Core - Converged Policy and Charging|Cisco advisory 1.7 confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-27 11:18:10 +0100|Broadcom|CloudSOC SpanVA Appliance|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:18:10 +0100|Broadcom|Content Analysis and Malware Analysis (CASMA)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:06:35 +0100|Alpine Linux package maintainers|Alpine Linux v3.22 php84 package family|8.4.27-r0|Fix|[source 1](<https://pkgs.alpinelinux.org/package/v3.22/community/x86_64/php84>)<br>[source 2](<https://raw.githubusercontent.com/alpinelinux/aports/3.22-stable/community/php84/APKBUILD>)|
+|2026-10-27 11:06:35 +0100|Antagonist|Antagonist DirectAdmin PHP hosting selector|Provider-patched managed hosting, including PHP Extended Support, by 2026-10-22; build numbers unpublished|Fix|[source 1](<https://help.antagonist.nl/hc/nl/articles/8523972848401-Wat-kan-ik-met-de-PHP-selector-in-DirectAdmin>)<br>[source 2](<https://www.antagonist.nl/blog/php-lekken-gedicht-zo-hebben-we-het-aangepakt/>)|
+|2026-10-27 11:06:35 +0100|Automattic / WordPress.com|WordPress.com plugin-enabled PHP hosting environment|WordPress.com managed service protected as of 2026-10-21; patched build unpublished|Fix|[source 1](<https://wordpress.com/support/php-environment/>)<br>[source 2](<https://wordpress.com/support/php-security-update-october-2026-cve-2026-109618-and-cve-2026-109619-php2shell/>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 

@@ -61,6 +61,8 @@ class VendorIssueInventoryTests(unittest.TestCase):
             ("PHP-0730", "Vulnerable"),
             ("PHP-0732", "Not vuln"),
             ("PHP-0733", "Not vuln"),
+            ("PHP-0754", "Vulnerable"),
+            ("PHP-0755", "Investigation"),
         ):
             with self.subTest(identifier=identifier):
                 product = self.entries[PREFIX + "package:" + identifier]
@@ -68,6 +70,10 @@ class VendorIssueInventoryTests(unittest.TestCase):
         for cve in CVES:
             vex = self.nodes[PREFIX + f"vex:{cve}:affects:broadcom-esg-39404-20261022"]
             self.assertEqual(vex["to"], [PREFIX + "package:PHP-0730"])
+            spanva = self.nodes[PREFIX + f"vex:{cve}:affects:php-0754-official-20261027"]
+            self.assertEqual(spanva["to"], [PREFIX + "package:PHP-0754"])
+            casma = self.nodes[PREFIX + f"vex:{cve}:underInvestigationFor:php-0755-official-20261027"]
+            self.assertEqual(casma["to"], [PREFIX + "package:PHP-0755"])
 
     def test_new_products_have_unique_identity_and_php_dependencies(self):
         for identifier, supplier, name in (
