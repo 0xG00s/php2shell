@@ -52,6 +52,18 @@ class VendorIssueInventoryTests(unittest.TestCase):
             vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0731-maintainer-20261023"]
             self.assertEqual(vex["to"], [PREFIX + "package:PHP-0731"])
 
+    def test_cleo_streem_fix_keeps_pull_request_provenance(self):
+        product = self.entries[PREFIX + "package:PHP-0757"]
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        self.assertEqual(product["version"], "Patch available by mail; fixed release not publicly stated")
+        self.assertIn("Fix available by mail according to maintainer-accepted PR #41", product["notes"])
+        self.assertIn("no public fixed build was independently verified", product["notes"])
+        self.assertIn("https://github.com/NCSC-NL/php2shell/pull/41", product["links"])
+        self.assertIn("Cleo-Streem-Release-Notes", product["links"])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0757-maintainer-20261027"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0757"])
+
     def test_broadcom_products_keep_independent_vendor_assessments(self):
         carbon_black = self.entries[PREFIX + "package:PHP-0730"]
         self.assertEqual(carbon_black["version"], "Broadcom ESG advisory 39404 affected product scope")
@@ -79,6 +91,7 @@ class VendorIssueInventoryTests(unittest.TestCase):
         for identifier, supplier, name in (
             ("PHP-0751", "Hewlett Packard Enterprise", "HPE Networking ClearPass Policy Manager"),
             ("PHP-0752", "NetApp", "ONTAP 9"),
+            ("PHP-0757", "Cleo", "Cleo Streem (Streem Print)"),
         ):
             with self.subTest(identifier=identifier):
                 matches = [entry for entry in self.entries.values()

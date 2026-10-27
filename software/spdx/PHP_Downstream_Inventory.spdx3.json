@@ -4700,7 +4700,12 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0755-official-20261027",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0755-official-20261027",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:php-0756-official-20261027",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027",
+        "urn:php2shell:inventory:organization:cleo:a86b18c73aa8",
+        "urn:php2shell:inventory:package:PHP-0757",
+        "urn:php2shell:inventory:relationship:PHP-0757",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0757-maintainer-20261027",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0757-maintainer-20261027"
       ]
     },
     {
@@ -41879,6 +41884,12 @@
     },
     {
       "type": "Organization",
+      "spdxId": "urn:php2shell:inventory:organization:cleo:a86b18c73aa8",
+      "creationInfo": "_:creationinfo",
+      "name": "Cleo"
+    },
+    {
+      "type": "Organization",
       "spdxId": "urn:php2shell:inventory:organization:getpagespeed:5d1f0c2a9b3e",
       "creationInfo": "_:creationinfo",
       "name": "GetPageSpeed"
@@ -42919,6 +42930,43 @@
       "software_packageVersion": "Broadcom ESG advisory 39404 under-investigation product scope"
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0757",
+      "creationInfo": "_:creationinfo",
+      "name": "Cleo Streem (Streem Print)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0757"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:cleo:a86b18c73aa8",
+      "summary": "Cleo Streem release notes establish a PHP-bearing product scope. PR #41 reports that the PHP2Shell fix is distributed by email from Streem support; no public fixed build was independently verified.",
+      "description": "Fax and communications application",
+      "comment": "Inventory record: PHP-0757\nCategory: Business applications\nOriginal relationship: requires\nRelationship direction: depends_on_php\nParent component: PHP-0037\nEvidence status: Maintainer-accepted pull request report for fix availability; official public product PHP evidence\nDeployment status: Not measured\nPHP surface: Cleo Streem server platform; public release notes for 7.6 state that PHP was updated to PHP 8.3.29\nPHP version scope: Patch available by mail from Cleo Streem support; fixed release not publicly stated\nExtensions: Unknown\nLimitations: PR #41 reports that the security patch is distributed by email from Cleo Streem support. No public Streem PHP2Shell bulletin or fixed build number was independently verified. Cleo's public PHP2Shell advisory reviewed 2026-10-27 does not list Streem. No broader fixed range or deployed installation is inferred.\nPatch owner: Cleo; operator for requesting and applying the support-provided patch\nSource accessed: 2026-10-27 (public Streem release notes, public Cleo PHP2Shell advisory and PR report)\nVulnerability status: Fix available by mail according to maintainer-accepted PR #41; fixed release not publicly stated.\nCVE-2026-109618: Fix available by mail according to maintainer-accepted PR #41; fixed release not publicly stated\nCVE-2026-109619: Fix available by mail according to maintainer-accepted PR #41; fixed release not publicly stated\nCVE assessment limit: This assessment records support-provided patch availability only. It does not establish a public fixed version, installed patch, reachability or exploitation status.\nPull request source: https://github.com/NCSC-NL/php2shell/pull/41\nPublic product source: https://support.cleo.com/hc/en-us/articles/39285811298327-Cleo-Streem-Release-Notes\nPublic advisory context: https://support.cleo.com/hc/en-us/articles/44429839247383-Cleo-Product-Security-Advisory-PHP2Shell-CVE-2026-109618-and-CVE-2026-109619-CVSS-v4-0-Critical\nRelease pin: Patch available by mail; fixed release not publicly stated",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://support.cleo.com/hc/en-us/articles/39285811298327-Cleo-Streem-Release-Notes"
+          ],
+          "comment": "Official Cleo Streem release notes reviewed 2026-10-27; establishes the PHP-bearing product scope only"
+        },
+        {
+          "type": "ExternalRef",
+          "externalRefType": "other",
+          "locator": [
+            "https://github.com/NCSC-NL/php2shell/pull/41"
+          ],
+          "comment": "Contributor report accepted by the maintainer on 2026-10-27; patch available by mail"
+        }
+      ],
+      "software_packageVersion": "Patch available by mail; fixed release not publicly stated"
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -43277,6 +43325,18 @@
       "relationshipType": "other",
       "summary": "Inventory association for PHP-0756: vendor PHP advisory candidate",
       "comment": "Broadcom ESG advisory 39404 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0757",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0757",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "dependsOn",
+      "summary": "Inventory relationship for PHP-0757: requires (depends_on_php)",
+      "comment": "Official Cleo Streem release notes state that version 7.6 updated PHP to PHP 8.3.29, establishing a PHP-bearing product scope."
     },
     {
       "type": "security_VexAffectedVulnAssessmentRelationship",
@@ -44822,6 +44882,20 @@
       "summary": "CVE-2026-109618 assessment: Fix. NetApp NTAP-20261021-0021 version 7.0 (2026-10-25) lists these currently available ONTAP 9 patches. ONTAP 9 is affected only by CVE-2026-109618; CVE-2026-109619 does not affect it. Exploitation of an unpatched release is limited to the www user in the PHP jail.",
       "comment": "Official public source reviewed 2026-10-26. Source: https://security.netapp.com/advisory/NTAP-20261021-0021",
       "security_actionStatement": "Install the first fixed release for the deployed ONTAP branch. The available workaround options have operational trade-offs."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0757-maintainer-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0757"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fix available by mail according to maintainer-accepted PR #41; fixed release not publicly stated.",
+      "summary": "CVE-2026-109618 assessment: Fix (maintainer-accepted PR report)",
+      "comment": "PR #41 reviewed and accepted by the maintainer on 2026-10-27: https://github.com/NCSC-NL/php2shell/pull/41\nPublic Cleo Streem release notes reviewed 2026-10-27: https://support.cleo.com/hc/en-us/articles/39285811298327-Cleo-Streem-Release-Notes\nAction statement: Contact Cleo Streem support for the security patch and verify the installed build. This assessment does not establish that existing deployments have been upgraded.",
+      "security_actionStatement": "Contact Cleo Streem support for the security patch and verify the installed build; the public fixed release is not stated."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",
@@ -46419,6 +46493,20 @@
       "summary": "CVE-2026-109619 assessment: Fix. HPESBNW05171 rev.2 lists released ClearPass 6.14.1 and 6.11.16 Hotfix Patches to Address PHP Vulnerabilities CVE-2026-109618 and CVE-2026-109619. Both base releases without the hotfix remain affected; their earlier mitigations are not full fixes.",
       "comment": "Official public source reviewed 2026-10-26. Source: https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US",
       "security_actionStatement": "Install the named PHP hotfix for ClearPass 6.14.1 or 6.11.16. Upgrading only to those base releases is insufficient."
+    },
+    {
+      "type": "security_VexFixedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0757-maintainer-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0757"
+      ],
+      "relationshipType": "fixedIn",
+      "security_statusNotes": "Fix available by mail according to maintainer-accepted PR #41; fixed release not publicly stated.",
+      "summary": "CVE-2026-109619 assessment: Fix (maintainer-accepted PR report)",
+      "comment": "PR #41 reviewed and accepted by the maintainer on 2026-10-27: https://github.com/NCSC-NL/php2shell/pull/41\nPublic Cleo Streem release notes reviewed 2026-10-27: https://support.cleo.com/hc/en-us/articles/39285811298327-Cleo-Streem-Release-Notes\nAction statement: Contact Cleo Streem support for the security patch and verify the installed build. This assessment does not establish that existing deployments have been upgraded.",
+      "security_actionStatement": "Contact Cleo Streem support for the security patch and verify the installed build; the public fixed release is not stated."
     },
     {
       "type": "security_VexFixedVulnAssessmentRelationship",

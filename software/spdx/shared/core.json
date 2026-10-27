@@ -1966,7 +1966,12 @@
         "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0755-official-20261027",
         "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0755-official-20261027",
         "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:php-0756-official-20261027",
-        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027"
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027",
+        "urn:php2shell:inventory:organization:cleo:a86b18c73aa8",
+        "urn:php2shell:inventory:package:PHP-0757",
+        "urn:php2shell:inventory:relationship:PHP-0757",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:php-0757-maintainer-20261027",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:php-0757-maintainer-20261027"
       ]
     }
   ]
