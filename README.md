@@ -1,6 +1,6 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Operational information: 21 October 2026 17:25 CEST<br>
+Operational information: 27 October 2026 15:02 CET<br>
 Software list last status update: 27 October 2026 11:52 CET<br>
 ## TLP:CLEAR
 
@@ -14,7 +14,7 @@ On 21 October 2026, PHP published fixed releases for CVE-2026-109618 and CVE-202
 
 PHP describes CVE-2026-109618 as remote code execution via out-of-memory corruption during request cleanup, and CVE-2026-109619 as remote code execution via stale request-owned global state reused by a later request on the same worker. PHP 8.1 and older are no longer supported by the PHP project; distributions and LTS vendors may provide backported packages, and PHP has published minimal source backports for PHP 7.4, 8.0 and 8.1.
 
-On 23 October 2026, PHP published an informational advisory recommending that `session.upload_progress.enabled=0` be kept in place, also on fixed releases, until the next regular bugfix release. This covers an additional remote code execution vector, CVE-2026-115560, which PHP considers unlikely in practice: it only applies when an application configures `session.serialize_handler` as `php_binary` or `php_serialize` and switches it to `php` at runtime with `ini_set()` before `session_start()`, while session upload progress is enabled. Applications that never change the serialize handler at runtime can keep the feature enabled. PHP will publish a full advisory for CVE-2026-115560 with the next release. This repository does not track CVE-2026-115560 separately in the software list.
+On 23 October 2026, PHP published an [informational advisory](https://www.php.net/archive/2026.php#2026-10-23-1) suggesting `session.upload_progress.enabled=0` until the next regular bugfix release to fully protect from an unlikely RCE vector (CVE-2026-115560). The issue can only occur under an unusual combination of configuration and application code: `session.serialize_handler` must be set to `php_binary` or `php_serialize`, switched to `php` at runtime with `ini_set()` before `session_start()`, and session upload progress must still be enabled. Applications that never change the serialize handler at runtime can keep the feature enabled. PHP will publish a full advisory with the next release; this repository does not track CVE-2026-115560 separately in the software list.
 
 The impact is not limited to websites: PHP is also embedded in appliances, network devices, management interfaces and other vendor products where administrators may not be able to update PHP directly.
 
