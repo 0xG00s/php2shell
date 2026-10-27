@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 21 October 2026 17:25 CEST<br>
-Software list last status update: 27 October 2026 11:18 CET<br>
+Software list last status update: 27 October 2026 11:31 CET<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-27 11:18:10 +0100|Broadcom|CloudSOC SpanVA Appliance|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
-|2026-10-27 11:18:10 +0100|Broadcom|Content Analysis and Malware Analysis (CASMA)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:31:59 +0100|Broadcom|CloudSOC SpanVA Appliance|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:31:59 +0100|Broadcom|Content Analysis and Malware Analysis (CASMA)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:21:24 +0100|Ubiquiti|UISP CRM (UCRM)|UISP Application 3.1.70 (CRM module)|Fix|[source 1](<https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67>)<br>[source 2](<https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86>)<br>[source 3](<https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc>)|
 |2026-10-27 11:06:35 +0100|Alpine Linux package maintainers|Alpine Linux v3.22 php84 package family|8.4.27-r0|Fix|[source 1](<https://pkgs.alpinelinux.org/package/v3.22/community/x86_64/php84>)<br>[source 2](<https://raw.githubusercontent.com/alpinelinux/aports/3.22-stable/community/php84/APKBUILD>)|
 |2026-10-27 11:06:35 +0100|Antagonist|Antagonist DirectAdmin PHP hosting selector|Provider-patched managed hosting, including PHP Extended Support, by 2026-10-22; build numbers unpublished|Fix|[source 1](<https://help.antagonist.nl/hc/nl/articles/8523972848401-Wat-kan-ik-met-de-PHP-selector-in-DirectAdmin>)<br>[source 2](<https://www.antagonist.nl/blog/php-lekken-gedicht-zo-hebben-we-het-aangepakt/>)|
-|2026-10-27 11:06:35 +0100|Automattic / WordPress.com|WordPress.com plugin-enabled PHP hosting environment|WordPress.com managed service protected as of 2026-10-21; patched build unpublished|Fix|[source 1](<https://wordpress.com/support/php-environment/>)<br>[source 2](<https://wordpress.com/support/php-security-update-october-2026-cve-2026-109618-and-cve-2026-109619-php2shell/>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
