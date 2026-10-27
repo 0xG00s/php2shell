@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
 Operational information: 21 October 2026 17:25 CEST<br>
-Software list last status update: 23 October 2026 14:46 CEST<br>
+Software list last status update: 27 October 2026 11:31 CET<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -44,11 +44,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-23 14:46:29 +0200|Broadcom|Symantec Endpoint Protection Manager (SEPM)|14.3.27716.10000 / 14.4.494.0000|Fix|[source 1](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)<br>[source 2](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Symantec-Endpoint-Protection-Security-Update-for-PHP2Shell/39421>)<br>[source 3](<https://github.com/NCSC-NL/php2shell/issues/30>)|
-|2026-10-23 14:46:29 +0200|Hewlett Packard Enterprise|HPE Networking ClearPass Policy Manager|6.14.0 and below / 6.11.15 and below; 6.14.1 / 6.11.16 partially mitigated, still affected|Vulnerable|[source](<https://support.hpe.com/hpesc/public/docDisplay?docId=hpesbnw05171en_us&docLocale=en_US>)|
-|2026-10-23 14:46:29 +0200|NetApp|ONTAP 9|ONTAP 9; affected maintenance releases and fixed releases not specified|Vulnerable/Not vuln|[source](<https://security.netapp.com/advisory/NTAP-20261021-0021>)|
-|2026-10-23 13:48:52 +0200|Cisco|Cisco Expressway Select Series|Expressway Select Series; affected release range not specified|Vulnerable|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-23 13:48:52 +0200|Cisco|Cisco Identity Services Engine (ISE) Portal Builder||Investigation|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-27 11:31:59 +0100|Broadcom|CloudSOC SpanVA Appliance|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:31:59 +0100|Broadcom|Content Analysis and Malware Analysis (CASMA)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:21:24 +0100|Ubiquiti|UISP CRM (UCRM)|UISP Application 3.1.70 (CRM module)|Fix|[source 1](<https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67>)<br>[source 2](<https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86>)<br>[source 3](<https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc>)|
+|2026-10-27 11:06:35 +0100|Alpine Linux package maintainers|Alpine Linux v3.22 php84 package family|8.4.27-r0|Fix|[source 1](<https://pkgs.alpinelinux.org/package/v3.22/community/x86_64/php84>)<br>[source 2](<https://raw.githubusercontent.com/alpinelinux/aports/3.22-stable/community/php84/APKBUILD>)|
+|2026-10-27 11:06:35 +0100|Antagonist|Antagonist DirectAdmin PHP hosting selector|Provider-patched managed hosting, including PHP Extended Support, by 2026-10-22; build numbers unpublished|Fix|[source 1](<https://help.antagonist.nl/hc/nl/articles/8523972848401-Wat-kan-ik-met-de-PHP-selector-in-DirectAdmin>)<br>[source 2](<https://www.antagonist.nl/blog/php-lekken-gedicht-zo-hebben-we-het-aangepakt/>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
