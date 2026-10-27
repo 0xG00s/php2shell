@@ -4692,7 +4692,15 @@
         "urn:php2shell:inventory:relationship:PHP-0754",
         "urn:php2shell:inventory:vex:CVE-2026-109618:fixedIn:ubiquiti-uisp-crm-20261024",
         "urn:php2shell:inventory:vex:CVE-2026-109619:fixedIn:ubiquiti-uisp-crm-20261024",
-        "urn:php2shell:inventory:organization:ubiquiti"
+        "urn:php2shell:inventory:organization:ubiquiti",
+        "urn:php2shell:inventory:package:PHP-0755",
+        "urn:php2shell:inventory:package:PHP-0756",
+        "urn:php2shell:inventory:relationship:PHP-0755",
+        "urn:php2shell:inventory:relationship:PHP-0756",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0755-official-20261027",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0755-official-20261027",
+        "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:php-0756-official-20261027",
+        "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027"
       ]
     },
     {
@@ -42853,6 +42861,64 @@
       ]
     },
     {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0755",
+      "creationInfo": "_:creationinfo",
+      "name": "CloudSOC SpanVA Appliance",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0755"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom ESG advisory 39404 lists CloudSOC SpanVA Appliance under Affected Product(s) for CVE-2026-109618 and CVE-2026-109619; the umbrella advisory does not state fixed releases.",
+      "description": "CloudSOC SpanVA security appliance",
+      "comment": "Inventory record: PHP-0755\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor-confirmed affected product scope\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-26, lists CloudSOC SpanVA Appliance under Affected Product(s); affected and fixed releases are not stated in the umbrella advisory.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a live deployment, exact embedded PHP build, enabled feature set, reachable path or exploitation. The umbrella advisory links a product-specific advisory, but this record does not infer unpublished version or remediation scope from that link.\nPatch owner: Broadcom; operator for exposure reduction and update rollout\nSource accessed: 2026-10-27\nVulnerability status: Vulnerable. Broadcom ESG advisory 39404 lists CloudSOC SpanVA Appliance under Affected Product(s) for both PHP2Shell CVEs; no fixed version is stated in the umbrella advisory.\nCVE-2026-109618: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE-2026-109619: Vendor-confirmed affected product scope; fixed version not stated in umbrella advisory\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-27\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 affected product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Enterprise Security Group Advisory for PHP2Shell; 2026-10-26; reviewed 2026-10-27"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 affected product scope"
+    },
+    {
+      "type": "software_Package",
+      "spdxId": "urn:php2shell:inventory:package:PHP-0756",
+      "creationInfo": "_:creationinfo",
+      "name": "Content Analysis and Malware Analysis (CASMA)",
+      "software_primaryPurpose": "application",
+      "externalIdentifier": [
+        {
+          "type": "ExternalIdentifier",
+          "externalIdentifierType": "other",
+          "identifier": "PHP-0756"
+        }
+      ],
+      "suppliedBy": "urn:php2shell:inventory:organization:broadcom:caf79e01972c",
+      "summary": "Broadcom advisory 39404, updated 26 October, lists Content Analysis and Malware Analysis (CASMA) under investigation for both PHP2Shell CVEs; affected and fixed releases are not published.",
+      "description": "Content analysis and malware analysis security product",
+      "comment": "Inventory record: PHP-0756\nCategory: Security operations and management consoles\nOriginal relationship: candidate association\nRelationship direction: unconfirmed\nParent component: PHP-0037\nEvidence status: Vendor-confirmed under-investigation product scope\nDeployment status: Not measured\nPHP surface: Vendor-named product in Broadcom ESG advisory 39404; exact PHP component and SAPI are not published\nPHP version scope: Broadcom ESG advisory 39404, updated 2026-10-26, lists Content Analysis and Malware Analysis (CASMA) under investigation; affected and fixed releases are not published.\nExtensions: Unknown\nLimitations: A vendor advisory listing establishes product review scope, not a confirmed PHP dependency, affected build, enabled feature set, reachable path or exploitation. The separate Content Analysis (CAS) not-vulnerable assessment does not transfer to CASMA.\nPatch owner: Broadcom; operator for exposure review and future remediation rollout\nSource accessed: 2026-10-27\nVulnerability status: Investigation. Broadcom ESG advisory 39404 lists Content Analysis and Malware Analysis (CASMA) under investigation for both PHP2Shell CVEs.\nCVE-2026-109618: Under investigation; affected and fixed releases not published\nCVE-2026-109619: Under investigation; affected and fixed releases not published\nCVE assessment limit: Only the stated product scope is assessed. No installation, reachability or exploitation test was performed.\nPublic vendor CVE review: 2026-10-27\nVendor advisory sources: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404\nRelease pin: Broadcom ESG advisory 39404 under-investigation product scope",
+      "externalRef": [
+        {
+          "type": "ExternalRef",
+          "externalRefType": "securityAdvisory",
+          "locator": [
+            "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404"
+          ],
+          "comment": "Enterprise Security Group Advisory for PHP2Shell; 2026-10-26; reviewed 2026-10-27"
+        }
+      ],
+      "software_packageVersion": "Broadcom ESG advisory 39404 under-investigation product scope"
+    },
+    {
       "type": "Relationship",
       "spdxId": "urn:php2shell:inventory:relationship:PHP-0727",
       "creationInfo": "_:creationinfo",
@@ -43189,6 +43255,30 @@
       "comment": "UISP Application 3.1.70 official release notes identify the PHP runtime used by the CRM module. Source: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67"
     },
     {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0755",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0755",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0755: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product as affected by PHP2Shell. This association records vendor review scope only; the exact PHP dependency is not published."
+    },
+    {
+      "type": "Relationship",
+      "spdxId": "urn:php2shell:inventory:relationship:PHP-0756",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:package:PHP-0756",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0037"
+      ],
+      "relationshipType": "other",
+      "summary": "Inventory association for PHP-0756: vendor PHP advisory candidate",
+      "comment": "Broadcom ESG advisory 39404 lists this product under investigation for PHP2Shell. This association records vendor review scope only; a PHP dependency is not confirmed."
+    },
+    {
       "type": "security_VexAffectedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:broadcom-esg-39404-20261022",
       "creationInfo": "_:creationinfo",
@@ -43467,6 +43557,20 @@
       "summary": "CVE-2026-109618 assessment: Vulnerable",
       "comment": "Public official source reviewed 2026-10-23. Sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq",
       "security_actionStatement": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:affects:php-0755-official-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0755"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Broadcom ESG advisory 39404, updated 2026-10-26, explicitly lists CloudSOC SpanVA Appliance under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "summary": "CVE-2026-109618 assessment: Vulnerable",
+      "comment": "Public official sources reviewed 2026-10-27. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor the linked Broadcom product advisory for remediation details and restrict management exposure until a fixed release is verified."
     },
     {
       "type": "security_VexNotAffectedVulnAssessmentRelationship",
@@ -44771,6 +44875,20 @@
       "comment": "Public official source reviewed 2026-10-24: https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67\nAction statement: Update to UISP Application 3.1.70 using vendor instructions and verify successful deployment."
     },
     {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109618:underInvestigationFor:php-0756-official-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109618",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0756"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Broadcom advisory 39404, updated 26 October, lists Content Analysis and Malware Analysis (CASMA) under investigation for both PHP2Shell CVEs. The separate Content Analysis (CAS) product is not vulnerable; that assessment does not transfer to CASMA.",
+      "summary": "CVE-2026-109618 assessment: Investigation",
+      "comment": "Public official sources reviewed 2026-10-27. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor Broadcom advisory 39404 for a resolved product status; do not inherit the separate Content Analysis (CAS) not-vulnerable assessment."
+    },
+    {
       "type": "security_VexAffectedVulnAssessmentRelationship",
       "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:broadcom-esg-39404-20261022",
       "creationInfo": "_:creationinfo",
@@ -45021,6 +45139,20 @@
       "summary": "CVE-2026-109619 assessment: Vulnerable",
       "comment": "Public official source reviewed 2026-10-23. Sources: https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq",
       "security_actionStatement": "Monitor CSCwx37062 for an available fixed release; Cisco lists no workaround."
+    },
+    {
+      "type": "security_VexAffectedVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:affects:php-0755-official-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0755"
+      ],
+      "relationshipType": "affects",
+      "security_statusNotes": "Broadcom ESG advisory 39404, updated 2026-10-26, explicitly lists CloudSOC SpanVA Appliance under Affected Product(s) for both PHP2Shell CVEs; the umbrella advisory does not state affected or fixed releases.",
+      "summary": "CVE-2026-109619 assessment: Vulnerable",
+      "comment": "Public official sources reviewed 2026-10-27. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor the linked Broadcom product advisory for remediation details and restrict management exposure until a fixed release is verified."
     },
     {
       "type": "security_VexNotAffectedVulnAssessmentRelationship",
@@ -46352,6 +46484,20 @@
       "summary": "CVE-2026-109619 assessment: Investigation. Juniper JSA112681 (2026-10-23) explicitly confirms Junos OS is vulnerable to CVE-2026-109618. SRX no longer uses PHP starting with 25.2R1. The advisory names both CVEs overall but does not explicitly resolve CVE-2026-109619 for the Junos OS row; its status remains Investigation.",
       "comment": "Official public source reviewed 2026-10-26. Source: https://supportportal.juniper.net/s/article/2026-10-Reference-Advisory-Status-of-PHP2Shell-vulnerabilities-on-Juniper-Products-CVE-2026-109618-CVE-2026-109619",
       "security_actionStatement": "Follow JSA112681: upgrade SRX to 25.2R1 where applicable, or disable/restrict J-Web and the other vendor-named web services. Do not assume the same remediation applies to EX."
+    },
+    {
+      "type": "security_VexUnderInvestigationVulnAssessmentRelationship",
+      "spdxId": "urn:php2shell:inventory:vex:CVE-2026-109619:underInvestigationFor:php-0756-official-20261027",
+      "creationInfo": "_:creationinfo",
+      "from": "urn:php2shell:inventory:vulnerability:CVE-2026-109619",
+      "to": [
+        "urn:php2shell:inventory:package:PHP-0756"
+      ],
+      "relationshipType": "underInvestigationFor",
+      "security_statusNotes": "Broadcom advisory 39404, updated 26 October, lists Content Analysis and Malware Analysis (CASMA) under investigation for both PHP2Shell CVEs. The separate Content Analysis (CAS) product is not vulnerable; that assessment does not transfer to CASMA.",
+      "summary": "CVE-2026-109619 assessment: Investigation",
+      "comment": "Public official sources reviewed 2026-10-27. Source: https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404",
+      "security_actionStatement": "Monitor Broadcom advisory 39404 for a resolved product status; do not inherit the separate Content Analysis (CAS) not-vulnerable assessment."
     }
   ]
 }
