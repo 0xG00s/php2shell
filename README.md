@@ -1,7 +1,7 @@
 # php2shell vulnerabilities (CVE-2026-109618, CVE-2026-109619)
 
-Operational information: 23 October 2026 12:59 CEST<br>
-Software list last status update: 26 October 2026 03:24 CET<br>
+Operational information: 21 October 2026 17:25 CEST<br>
+Software list last status update: 27 October 2026 11:31 CET<br>
 ## TLP:CLEAR
 
 This repository contains operational information regarding the critical PHP vulnerabilities tracked by CERT-EU as CVE-2026-109618 and CVE-2026-109619.
@@ -48,11 +48,11 @@ The repository is being updated as the situation develops. Check back for update
 
 | Date and time | Supplier | Product | Version (see Status) | Status CVE-2026-109618 / CVE-2026-109619 | Links |
 |:------------------------|:---------|:--------|:--------------------:|:----------------------:|------:|
-|2026-10-26 03:24:33 +0100|GetPageSpeed|GetPageSpeed PHP 5.6-8.4 backport packages for CentOS 7 / EL7|Known patched EL7 builds: 5.6.40-44.el7; 7.0.33-46.el7; 7.1.33-35.el7; 7.2.34-30.el7; 7.3.33-26.el7; 7.4.33-35.el7; 8.0.30-25.el7; 8.1.34-8.el7; 8.2.35-2.el7; 8.3.36-2.el7; 8.4.27-3.el7|Fix|[source 1](<https://www.getpagespeed.com/php2shell#eol>)<br>[source 2](<https://www.getpagespeed.com/server-setup/php/php2shell-on-centos-7>)<br>[source 3](<https://www.getpagespeed.com/eol/centos-7>)|
-|2026-10-26 03:19:07 +0100|Broadcom|CloudSOC Cloud Access Security Broker (CASB)|CloudSOC CASB service; excludes the separate SpanVA appliance|Not vuln|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
-|2026-10-26 03:19:07 +0100|Cisco|Cisco Catalyst Center (formerly DNA Center)|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-26 03:19:07 +0100|Cisco|Cisco CX Cloud|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
-|2026-10-26 03:19:07 +0100|Cisco|Cisco IoT Control Center|Vendor-confirmed not vulnerable product scope|Not vuln|[source](<https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-php-october26-Jj384Daq>)|
+|2026-10-27 11:31:59 +0100|Broadcom|CloudSOC SpanVA Appliance|Broadcom ESG advisory 39404 affected product scope|Vulnerable|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:31:59 +0100|Broadcom|Content Analysis and Malware Analysis (CASMA)|Broadcom ESG advisory 39404 under-investigation product scope|Investigation|[source](<https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/Enterprise-Security-Group-Advisory-for-PHP2Shell/39404>)|
+|2026-10-27 11:21:24 +0100|Ubiquiti|UISP CRM (UCRM)|UISP Application 3.1.70 (CRM module)|Fix|[source 1](<https://uisp.community.ui.com/releases/UISP-Application-3-1-70/8292c6cb-4eb4-447d-9c90-455ca41b4f67>)<br>[source 2](<https://uisp.community.ui.com/questions/UCRM-4-6-15-remains-exposed-to-CVSS-9-2-RCEs-CVE-2026-109618-109619-ETA-for-PHP-8-3-36/d0fae711-2df1-4550-80e3-2b395a6a5c86>)<br>[source 3](<https://uisp.community.ui.com/releases/UISP-Application-3-1-69/d19ae117-04f7-42b3-bf53-f77d2b9e09fc>)|
+|2026-10-27 11:06:35 +0100|Alpine Linux package maintainers|Alpine Linux v3.22 php84 package family|8.4.27-r0|Fix|[source 1](<https://pkgs.alpinelinux.org/package/v3.22/community/x86_64/php84>)<br>[source 2](<https://raw.githubusercontent.com/alpinelinux/aports/3.22-stable/community/php84/APKBUILD>)|
+|2026-10-27 11:06:35 +0100|Antagonist|Antagonist DirectAdmin PHP hosting selector|Provider-patched managed hosting, including PHP Extended Support, by 2026-10-22; build numbers unpublished|Fix|[source 1](<https://help.antagonist.nl/hc/nl/articles/8523972848401-Wat-kan-ik-met-de-PHP-selector-in-DirectAdmin>)<br>[source 2](<https://www.antagonist.nl/blog/php-lekken-gedicht-zo-hebben-we-het-aangepakt/>)|
 
 See the [full software status update history](software/changelog_software_list.md).
 
