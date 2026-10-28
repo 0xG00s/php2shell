@@ -64,6 +64,35 @@ class VendorIssueInventoryTests(unittest.TestCase):
             vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0757-maintainer-20261027"]
             self.assertEqual(vex["to"], [PREFIX + "package:PHP-0757"])
 
+    def test_securepoint_fix_keeps_issue_and_pull_request_provenance(self):
+        product = self.entries[PREFIX + "package:PHP-0675"]
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        self.assertEqual(
+            product["version"],
+            "Patched before 2026-10-22 inventory entry; fixed release not publicly stated",
+        )
+        self.assertIn("issue #58", product["notes"])
+        self.assertIn("PR #10", product["notes"])
+        self.assertIn("no public fixed build was independently verified", product["notes"])
+        self.assertIn("https://github.com/NCSC-NL/php2shell/issues/58", product["links"])
+        self.assertIn("https://github.com/NCSC-NL/php2shell/pull/10", product["links"])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:php-0675-maintainer-20261028"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0675"])
+
+    def test_netscaler_fix_keeps_release_scope_and_management_boundary(self):
+        product = self.entries[PREFIX + "package:PHP-0624"]
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        for release in ("14.1-73.49", "13.1-64.32", "13.1.37.286"):
+            self.assertIn(release, product["version"])
+        self.assertIn("earlier builds impacted", product["version"])
+        self.assertIn("PHP-based management access", product["notes"])
+        self.assertIn("NetScaler Console", product["notes"])
+        self.assertIn("CTX697263", product["links"])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:netscaler-management-20261027"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0624"])
+
     def test_broadcom_products_keep_independent_vendor_assessments(self):
         carbon_black = self.entries[PREFIX + "package:PHP-0730"]
         self.assertEqual(carbon_black["version"], "Broadcom ESG advisory 39404 affected product scope")
