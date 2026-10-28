@@ -96,6 +96,19 @@ class VendorIssueInventoryTests(unittest.TestCase):
             self.assertEqual(vex["to"], [PREFIX + "package:PHP-0623", PREFIX + "package:PHP-0625"])
             self.assertIn("still lists ETAs", vex["security_actionStatement"])
 
+    def test_netscaler_fix_keeps_release_scope_and_management_boundary(self):
+        product = self.entries[PREFIX + "package:PHP-0624"]
+        self.assertEqual([product[cve] for cve in CVES], ["Fix", "Fix"])
+        for release in ("14.1-73.49", "13.1-64.32", "13.1.37.286"):
+            self.assertIn(release, product["version"])
+        self.assertIn("earlier builds impacted", product["version"])
+        self.assertIn("PHP-based management access", product["notes"])
+        self.assertIn("NetScaler Console", product["notes"])
+        self.assertIn("CTX697263", product["links"])
+        for cve in CVES:
+            vex = self.nodes[PREFIX + f"vex:{cve}:fixedIn:netscaler-management-20261027"]
+            self.assertEqual(vex["to"], [PREFIX + "package:PHP-0624"])
+
     def test_broadcom_products_keep_independent_vendor_assessments(self):
         carbon_black = self.entries[PREFIX + "package:PHP-0730"]
         self.assertEqual(carbon_black["version"], "Broadcom ESG advisory 39404 affected product scope")
